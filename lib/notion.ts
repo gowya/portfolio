@@ -13,49 +13,66 @@ const PLACEHOLDER_PROJECTS: Project[] = ALL_PROJECTS.map(
 )
 
 const PLACEHOLDER_ABOUT: AboutContent = {
-  bio: "Moi c'est Margaux. Lead Design System et Product Designer chez Waalaxy, obsédée par Figma, Notion, et les interfaces qui font ce qu'elles promettent. Mon truc, c'est l'espace entre le business et l'utilisateur : comprendre pourquoi quelqu'un abandonne un parcours, trouver ce qui coince, concevoir des solutions qui convertissent sans forcer.",
+  bio: "Lead Design System et Product Designer chez Waalaxy, obsédée par Figma, Notion, (maintenant Claude Code), et les interfaces qui font ce qu'elles promettent. Mon point d'entrée c'est toujours l'utilisateur. Ce qu'il fait, ce qu'il évite, ce qu'il cherche sans trouver les mots. Parce que c'est là que se trouvent les décisions qui font bouger les chiffres. Mon chien, lui, vient au bureau et ne comprend toujours pas pourquoi il n'a pas son propre accès Figma.",
   experiences: [
     {
       id: 'e1',
-      company: 'Waalaxy · Montpellier',
-      role: 'Lead Design System & Product Designer',
-      period: 'Nov. 2023 — Présent',
+      company: 'Waalaxy · CDI · Montpellier',
+      role: 'Lead Design System',
+      period: 'Nov. 2023 • Présent',
       description:
-        "Conception d'expériences pour des centaines de milliers d'utilisateurs. Construction et maintien du Design System from scratch. Double casquette : Product Designer sur les features produit, Lead DS sur les fondations.",
+        "En plus de mon rôle de product designer, je suis chargée de la construction et du maintien du Design System from scratch. Définition de la roadmap, priorisation, construction de la bibliothèque de composants dans Figma et Storybook, documentation, accompagnement des équipes produit et dev pour l'adoption du Design System.",
     },
     {
       id: 'e2',
-      company: 'Waalaxy · Montpellier',
+      company: 'Waalaxy · CDI · Montpellier',
       role: 'Product Designer',
-      period: '2022 — 2023',
+      period: 'Fev. 2023 • Présent',
       description:
-        "Conception des interfaces produit, recherche utilisateur, définition des parcours clés de l'application SaaS B2B.",
+        "Recherche utilisateur, conception d'expériences pour des centaines de milliers d'utilisateurs, définition des parcours clés de l'app et priorisation, mise en place des prototypes pour pouvoir tester rapidement des idées de parcours.",
+    },
+    {
+      id: 'e3',
+      company: 'Gowya Studio · Freelance · Paris',
+      role: 'Brand & Web Designer',
+      period: 'Avr. 2021 • Août 2023',
+      description:
+        "Création de sites web vitrine WordPress pour petits commerces, restaurants, golfs, etc... J'accompagne mes clients pour produire des interfaces web : UX Research & analyses concurrentielles, maquettage et prototypage Figma ",
+    },
+    {
+      id: 'e4',
+      company: 'SOS Accessoire · Alternance · Versailles',
+      role: 'UX/UI Designer',
+      period: 'Sept. 2020 • Août 2022',
+      description:
+        "Solo designer de la boîte. Maquettage, intégration et maintien du WordPress, mise en place du projet de refonte des 2 sites web de marque (blog et réservation visio) en 1 seul",
     },
   ],
   formations: [
     {
       id: 'f1',
-      school: 'The Design Crew',
-      degree: 'Design System Expertise',
-      year: 'Juin 2024',
+      school: 'Notion Academy',
+      degree: 'Certification Advanced · Workflows Path · Essential',
+      year: '2025',
     },
     {
       id: 'f2',
-      school: 'Sup de Pub · Paris',
-      degree: 'M2 Direction Artistique et de la Création · 17,21/20',
-      year: 'Juin 2022',
+      school: 'The Design Crew',
+      degree: 'Design System Expertise',
+      year: '2024',
+      
     },
     {
       id: 'f3',
       school: 'Sup de Pub · Paris',
-      degree: 'Bachelor Communication Digitale et Création',
-      year: '2020',
+      degree: 'M2 Direction Artistique et de la Création · 17,5/20',
+      year: '2022',
     },
     {
       id: 'f4',
-      school: 'Notion Academy',
-      degree: 'Advanced · Workflows Path · Essential',
-      year: 'Déc. 2025',
+      school: 'Sup de Pub · Paris',
+      degree: 'Bachelor Communication Digitale et Création',
+      year: '2020',
     },
   ],
 }

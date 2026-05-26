@@ -8,7 +8,7 @@ export const revalidate = 3600
 export const metadata: Metadata = {
   title: 'À propos',
   description:
-    'Margaux Francillard — Lead Design System & Product Designer chez Waalaxy, basée à Marseille. Parcours, expériences et formations.',
+    'Margaux Francillard • Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Parcours, expériences et formations.',
   alternates: { canonical: '/about' },
 }
 
@@ -36,7 +36,7 @@ export default async function AboutPage() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24">
 
-          {/* Left — sticky sidebar */}
+          {/* Left • sticky sidebar */}
           <aside className="lg:sticky lg:top-32 lg:self-start">
 
             {/* Photo */}
@@ -92,7 +92,7 @@ export default async function AboutPage() {
             </div>
           </aside>
 
-          {/* Right — timeline */}
+          {/* Right • timeline */}
           <main>
             <Timeline experiences={experiences} formations={formations} />
           </main>

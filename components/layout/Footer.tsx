@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-border mt-32">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-muted text-sm">
-          © {year} Margaux Francillard — Marseille
+          © {year} Margaux Francillard • Montpellier
         </p>
 
         <div className="flex items-center gap-6">

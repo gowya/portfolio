@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Syne } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
@@ -20,15 +21,15 @@ const syne = Syne({
 export const metadata: Metadata = {
   metadataBase: new URL('https://margauxfrancillard.com'),
   title: {
-    default: 'Margaux Francillard — Product & System Designer SaaS B2B',
+    default: 'Margaux Francillard • Product & System Designer SaaS B2B',
     template: '%s | Margaux Francillard',
   },
   description:
-    'Lead Design System & Product Designer chez Waalaxy, basée à Marseille. Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée.',
+    'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée.',
   keywords: [
     'product designer SaaS B2B',
     'lead design system',
-    'product designer Marseille',
+    'product designer Montpellier',
     'UX designer SaaS',
     'design system Figma',
     'Margaux Francillard',
@@ -41,23 +42,23 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://margauxfrancillard.com',
     siteName: 'Margaux Francillard',
-    title: 'Margaux Francillard — Product & System Designer SaaS B2B',
+    title: 'Margaux Francillard • Product & System Designer SaaS B2B',
     description:
-      'Lead Design System & Product Designer chez Waalaxy, basée à Marseille. Interfaces qui convertissent, design systems qui tiennent dans la durée.',
+      'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Interfaces qui convertissent, design systems qui tiennent dans la durée.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Margaux Francillard — Product Designer spécialisée IA',
+        alt: 'Margaux Francillard • Product Designer spécialisée IA',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Margaux Francillard — Product & System Designer SaaS B2B',
+    title: 'Margaux Francillard • Product & System Designer SaaS B2B',
     description:
-      'Lead Design System & Product Designer chez Waalaxy, basée à Marseille.',
+      'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -74,10 +75,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${syne.variable}`}>
-      <body className="grain">
+      <body>
         <NavBar />
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )

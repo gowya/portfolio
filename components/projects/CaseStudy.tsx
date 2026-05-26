@@ -36,7 +36,7 @@ function BlockRenderer({ block }: { block: Block }) {
           </p>
           {block.source && (
             <cite className="block mt-2 text-muted text-sm not-italic">
-              — {block.source}
+              • {block.source}
             </cite>
           )}
         </blockquote>

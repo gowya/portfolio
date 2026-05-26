@@ -77,12 +77,12 @@ export default function Hero() {
         <div className="hero-badge mb-10">
           <span className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.12em] uppercase text-muted border border-border rounded-full px-3.5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Disponible — Marseille
+            Disponible • Montpellier
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-display font-bold mb-8" aria-label="Product & System Designer — SaaS B2B">
+        <h1 className="font-display font-bold mb-8" aria-label="Product & System Designer • SaaS B2B">
           <span className="clip-text block">
             <span className="hero-line block text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-[-0.03em] text-text">
               Product &amp; System
@@ -91,7 +91,7 @@ export default function Hero() {
           <span className="clip-text block">
             <span className="hero-line block text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-[-0.03em]">
               <span className="text-text">Designer</span>
-              <span className="text-muted italic font-medium text-[0.75em]"> — SaaS B2B</span>
+              <span className="text-muted italic font-medium text-[0.75em]"> • SaaS B2B</span>
             </span>
           </span>
         </h1>
@@ -99,7 +99,7 @@ export default function Hero() {
         {/* Sub */}
         <p className="hero-sub max-w-xl text-muted text-lg leading-relaxed mb-10 text-balance">
           Je conçois des interfaces qui convertissent et des design systems
-          qui tiennent dans la durée — chez Waalaxy depuis 3 ans.
+          qui tiennent dans la durée • 3 ans chez Waalaxy.
         </p>
 
         {/* CTAs */}
@@ -118,7 +118,7 @@ export default function Hero() {
         {/* Meta */}
         <div className="hero-meta flex items-center gap-6 mt-16 pt-8 border-t border-border">
           <p className="text-muted text-sm">
-            <span className="text-text font-medium">3+ ans</span> chez Waalaxy
+            <span className="text-text font-medium">5 ans</span> d'expérience
           </p>
           <span className="w-px h-4 bg-border" />
           <p className="text-muted text-sm">
@@ -126,7 +126,7 @@ export default function Hero() {
           </p>
           <span className="w-px h-4 bg-border" />
           <p className="text-muted text-sm">
-            Figma · Design System · IA
+            Figma · Design System · IA · Notion
           </p>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { getFeaturedProjects } from '@/lib/notion'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Margaux Francillard — Product Designer spécialisée IA',
+  title: 'Margaux Francillard • Product Designer spécialisée IA',
   alternates: { canonical: '/' },
 }
 
