@@ -36,6 +36,10 @@
   --card-overlay-stripe-b: rgba(180,100,30,0.03);
   --card-overlay-stripe-c: rgba(255,255,255,0.006);
 
+  /* Scrolled navbar */
+  --nav-scrolled-bg:     rgba(10, 8, 6, 0.4);
+  --nav-scrolled-border: rgba(255, 255, 255, 0.06);
+
   /* Hero layer variables */
   --hero-bg:            rgba(20, 12, 5, 1);
   --hero-photo-overlay: linear-gradient(rgba(10,8,6,0.78), rgba(10,8,6,0.85));
@@ -72,6 +76,10 @@
   --card-overlay-stripe-a: rgba(0,0,0,0.008);
   --card-overlay-stripe-b: rgba(120,70,20,0.04);
   --card-overlay-stripe-c: rgba(0,0,0,0.004);
+
+  /* Scrolled navbar */
+  --nav-scrolled-bg:     rgba(245, 239, 230, 0.85);
+  --nav-scrolled-border: rgba(184, 92, 42, 0.1);
 
   --hero-bg:            rgba(245, 235, 218, 1);
   --hero-photo-overlay: linear-gradient(rgba(245,239,230,0.42), rgba(245,239,230,0.62));

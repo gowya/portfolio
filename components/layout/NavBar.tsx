@@ -139,8 +139,8 @@ export default function NavBar() {
           scrolled ? 'py-3 backdrop-blur-[20px]' : 'py-5'
         }`}
         style={scrolled ? {
-          background: 'rgba(10, 8, 6, 0.4)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+          background: 'var(--nav-scrolled-bg)',
+          borderBottom: '1px solid var(--nav-scrolled-border)',
         } : undefined}
       >
         <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -216,7 +216,7 @@ export default function NavBar() {
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Ouvrir le menu"
-              className="p-2 rounded-full text-muted hover:text-accent transition-colors"
+              className="p-2 rounded-full text-text hover:text-accent transition-colors"
             >
               <BurgerIcon />
             </button>
