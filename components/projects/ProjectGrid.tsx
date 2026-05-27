@@ -23,8 +23,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <Link href={`/projects/${project.slug}`} className="block project-item">
       <article
         ref={articleRef}
-        className="relative bg-bg-card border border-border rounded-2xl overflow-hidden h-full"
-        style={{ willChange: 'transform' }}
+        className="relative border border-border rounded-2xl overflow-hidden h-full"
+        style={{ background: 'var(--bg-card)', willChange: 'transform' }}
       >
         <div className="relative p-6 sm:p-7">
           <div className="flex flex-wrap gap-2 mb-4">

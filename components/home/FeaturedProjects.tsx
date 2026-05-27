@@ -24,8 +24,8 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
         ref={cardRef}
         className="feat-card relative overflow-hidden h-full flex flex-col"
         style={{
-          background: '#0f0d0b',
-          border: '0.5px solid rgba(255,255,255,0.07)',
+          background: 'var(--bg-card)',
+          border: '0.5px solid var(--border)',
           borderRadius: '12px',
           padding: isHero ? '40px' : '32px',
           minHeight: isHero ? '260px' : '200px',
@@ -53,7 +53,7 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
           </p>
 
           <div className="mt-auto pt-5">
-            <span data-card-cta className="inline-flex items-center gap-1" style={{ fontSize: '13px', color: '#B85C2A' }}>
+            <span data-card-cta className="inline-flex items-center gap-1" style={{ fontSize: '13px', color: 'var(--accent)' }}>
               Voir le case study →
             </span>
           </div>

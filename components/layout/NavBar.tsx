@@ -6,6 +6,17 @@ import { usePathname } from 'next/navigation'
 
 type Theme = 'dark' | 'light'
 
+function GridIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+      <rect x="1" y="1" width="5" height="5" rx="1" />
+      <rect x="8" y="1" width="5" height="5" rx="1" />
+      <rect x="1" y="8" width="5" height="5" rx="1" />
+      <rect x="8" y="8" width="5" height="5" rx="1" />
+    </svg>
+  )
+}
+
 function SunIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -77,9 +88,9 @@ export default function NavBar() {
 
         <ul className="flex items-center gap-1">
           {[
-            { href: '/', label: 'Home' },
-            { href: '/projects', label: 'Projets' },
-            { href: '/about', label: 'À propos' },
+            { href: '/', label: 'Accueil' },
+            { href: '/projects', label: 'Mes projets' },
+            { href: '/about', label: 'Qui je suis' },
           ].map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -97,6 +108,14 @@ export default function NavBar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <Link
+            href="/design-system"
+            aria-label="Design System"
+            title="Design System"
+            className="p-2 rounded-full text-muted hover:text-accent hover:bg-surface transition-colors"
+          >
+            <GridIcon />
+          </Link>
           <button
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}

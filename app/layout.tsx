@@ -40,8 +40,7 @@ export const metadata: Metadata = {
     'product designer Montpellier',
     'UX designer SaaS',
     'design system Figma',
-    'Margaux Francillard',
-    'Waalaxy designer',
+    'vibecode designer',
   ],
   authors: [{ name: 'Margaux Francillard' }],
   creator: 'Margaux Francillard',
@@ -58,16 +57,9 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Margaux Francillard • Product Designer et Lead Design system qui vibecode',
+        alt: 'Product Designer et Lead Design system qui vibecode',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Margaux Francillard • Product & System Designer SaaS B2B',
-    description:
-      'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,

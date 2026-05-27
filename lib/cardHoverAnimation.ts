@@ -10,8 +10,8 @@ export function applyCardHoverAnimation(card: HTMLElement): () => void {
     'position:absolute',
     'inset:0',
     'pointer-events:none',
-    'background-color:rgba(10,8,6,0.85)',
-    'background-image:radial-gradient(ellipse at center, rgba(160,80,20,0.175) 0%, transparent 70%), repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(180,100,30,0.08) 1.5px, rgba(255,255,255,0.008) 2px, transparent 2.5px, transparent 6px)',
+    'background-color:var(--card-overlay-base)',
+    'background-image:radial-gradient(ellipse at center, var(--card-overlay-glow) 0%, transparent 70%), repeating-linear-gradient(90deg, var(--card-overlay-stripe-a) 0px, var(--card-overlay-stripe-b) 1.5px, var(--card-overlay-stripe-c) 2px, transparent 2.5px, transparent 6px)',
     'background-size:100% 100%, 6px 100%',
     'border-radius:inherit',
     'opacity:0',
@@ -30,7 +30,7 @@ export function applyCardHoverAnimation(card: HTMLElement): () => void {
   const setRotX = gsap.quickTo(card, 'rotationX', { duration: 0.35, ease: 'power3.out' })
 
   const onEnter = () => {
-    gsap.to(overlay, { opacity: 1, duration: 0.4, ease: 'power2.out' })
+    gsap.to(overlay, { opacity: 0.35, duration: 0.4, ease: 'power2.out' })
     gsap.to(card,    { scale: 1.015, borderColor: 'rgba(184,92,42,0.4)', duration: 0.3, ease: 'power2.out' })
     if (title) gsap.to(title, { color: '#B85C2A', duration: 0.3, ease: 'power2.out' })
     if (cta)   gsap.to(cta,   { x: 6, duration: 0.25, ease: 'power2.out' })

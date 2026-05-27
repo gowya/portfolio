@@ -11,7 +11,7 @@
   /* RGB channels — used with Tailwind: rgb(var(--color-X) / opacity) */
   --color-bg:         10 10 10;
   --color-bg-subtle:  14 13 12;
-  --color-bg-card:    19 17 16;
+  --color-bg-card:    15 13 11;
   --color-surface:    26 24 22;
   --color-border:     38 34 32;
   --color-text:       240 230 211;
@@ -22,11 +22,19 @@
   --color-sienna:     122 59 30;
 
   /* Flat resolved values — used wherever rgb(var()) isn't practical */
-  --bg:     #0a0a0a;
-  --text:   #F0E6D3;
-  --accent: #B85C2A;
-  --muted:  #7A6248;
-  --border: #262220;
+  --bg:      #0a0a0a;
+  --bg-card: #0f0d0b;
+  --text:    #F0E6D3;
+  --accent:  #B85C2A;
+  --muted:   #7A6248;
+  --border:  #262220;
+
+  /* Card hover overlay */
+  --card-overlay-base:     rgba(10,8,6,0.85);
+  --card-overlay-glow:     rgba(160,80,20,0.08);
+  --card-overlay-stripe-a: rgba(255,255,255,0.015);
+  --card-overlay-stripe-b: rgba(180,100,30,0.03);
+  --card-overlay-stripe-c: rgba(255,255,255,0.006);
 
   /* Hero layer variables */
   --hero-bg:            rgba(20, 12, 5, 1);
@@ -51,11 +59,19 @@
   --color-ember:      212 115 59;
   --color-sienna:     122 59 30;
 
-  --bg:     #F5EFE6;
-  --text:   #1A1208;
-  --accent: #B85C2A;
-  --muted:  #785F44;
-  --border: #D2C3AF;
+  --bg:      #F5EFE6;
+  --bg-card: #EDE4D6;
+  --text:    #1A1208;
+  --accent:  #B85C2A;
+  --muted:   #785F44;
+  --border:  #D2C3AF;
+
+  /* Card hover overlay */
+  --card-overlay-base:     rgba(245,239,230,0.85);
+  --card-overlay-glow:     rgba(140,70,20,0.06);
+  --card-overlay-stripe-a: rgba(0,0,0,0.008);
+  --card-overlay-stripe-b: rgba(120,70,20,0.04);
+  --card-overlay-stripe-c: rgba(0,0,0,0.004);
 
   --hero-bg:            rgba(245, 235, 218, 1);
   --hero-photo-overlay: linear-gradient(rgba(245,239,230,0.42), rgba(245,239,230,0.62));

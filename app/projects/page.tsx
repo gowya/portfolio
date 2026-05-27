@@ -40,7 +40,7 @@ export default async function ProjectsPage() {
           className="absolute bottom-0 left-0 right-0 pointer-events-none"
           style={{
             height: '80px',
-            background: 'linear-gradient(to bottom, transparent, #0a0a0a)',
+            background: 'linear-gradient(to bottom, transparent, var(--bg))',
           }}
         />
       </header>

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "smoke": "node scripts/smoke-test.js",
+    "smoke:prod": "node scripts/smoke-test.js https://portfolio-gilt-two-umm2k0jmsh.vercel.app"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.15",
