@@ -1,21 +1,29 @@
 import type { Metadata } from 'next'
-import { Inter, Syne } from 'next/font/google'
+import { Inter, Italiana, Space_Grotesk } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
+import Cursor from '@/components/ui/Cursor'
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
   display: 'swap',
 })
 
-const syne = Syne({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-syne',
+  variable: '--font-grotesk',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600'],
+})
+
+const italiana = Italiana({
+  subsets: ['latin'],
+  variable: '--font-italiana',
+  display: 'swap',
+  weight: '400',
 })
 
 export const metadata: Metadata = {
@@ -50,7 +58,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Margaux Francillard • Product Designer spécialisée IA',
+        alt: 'Margaux Francillard • Product Designer et Lead Design system qui vibecode',
       },
     ],
   },
@@ -74,8 +82,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${syne.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable} ${italiana.variable}`}>
+      <head>
+        {/* Runs before first paint — prevents flash of wrong theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body>
+        <Cursor />
         <NavBar />
         <main>{children}</main>
         <Footer />

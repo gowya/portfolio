@@ -9,19 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#0a0a0a',
-        'bg-subtle': '#111111',
-        'bg-card': '#141414',
-        surface: '#1a1a1a',
-        border: '#222222',
-        text: '#f0ece6',
-        muted: '#666660',
-        accent: '#b8ff57',
-        'accent-dim': '#8fcf3a',
+        bg:           'rgb(var(--color-bg) / <alpha-value>)',
+        'bg-subtle':  'rgb(var(--color-bg-subtle) / <alpha-value>)',
+        'bg-card':    'rgb(var(--color-bg-card) / <alpha-value>)',
+        surface:      'rgb(var(--color-surface) / <alpha-value>)',
+        border:       'rgb(var(--color-border) / <alpha-value>)',
+        text:         'rgb(var(--color-text) / <alpha-value>)',
+        muted:        'rgb(var(--color-muted) / <alpha-value>)',
+        accent:       'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-dim': 'rgb(var(--color-accent-dim) / <alpha-value>)',
+        ember:        'rgb(var(--color-ember) / <alpha-value>)',
+        sienna:       'rgb(var(--color-sienna) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-syne)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        grotesk: ['var(--font-grotesk)', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 0 40px rgb(var(--color-accent) / 0.15)',
+        'glow-lg': '0 0 70px rgb(var(--color-accent) / 0.24)',
       },
       fontSize: {
         '7xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.03em' }],

@@ -2,75 +2,76 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { Project } from '@/lib/types'
+import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({ project, isHero }: { project: Project; isHero: boolean }) {
+  const cardRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const card = cardRef.current
+    if (!card) return
+    return applyCardHoverAnimation(card)
+  }, [])
+
   return (
-    <Link href={`/projects/${project.slug}`} className="block">
-    <article
-      className="project-card group relative bg-bg-card border border-border rounded-2xl overflow-hidden transition-colors hover:border-accent/30"
-      style={{ '--index': index } as React.CSSProperties}
-    >
-      {/* Cover image / placeholder */}
-      <div className="relative aspect-[16/9] bg-surface overflow-hidden">
-        {project.coverImage ? (
-          <Image
-            src={project.coverImage}
-            alt={project.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center">
-              <span className="text-muted text-xs font-display font-bold">
-                {index + 1 < 10 ? `0${index + 1}` : index + 1}
-              </span>
-            </div>
-          </div>
-        )}
+    <Link href={`/projects/${project.slug}`} className="block h-full">
+      <div
+        ref={cardRef}
+        className="feat-card relative overflow-hidden h-full flex flex-col"
+        style={{
+          background: '#0f0d0b',
+          border: '0.5px solid rgba(255,255,255,0.07)',
+          borderRadius: '12px',
+          padding: isHero ? '40px' : '32px',
+          minHeight: isHero ? '260px' : '200px',
+          willChange: 'transform',
+        }}
+      >
+        {/* Content — sits above utility-injected overlay via DOM order */}
+        <div className="relative z-10 flex flex-col flex-1">
+          <p
+            className="font-sans text-muted mb-4"
+            style={{ fontSize: '11px', letterSpacing: '0.08em', opacity: 0.5, textTransform: 'uppercase' }}
+          >
+            {project.tags.slice(0, 3).join(' · ')}
+          </p>
 
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/5 transition-colors duration-300" />
-      </div>
+          <h3
+            className="font-sans font-bold text-text leading-tight mb-3"
+            style={{ fontSize: isHero ? 'clamp(1.4rem, 2.5vw, 1.9rem)' : 'clamp(1.1rem, 1.8vw, 1.4rem)' }}
+          >
+            {project.title}
+          </h3>
 
-      {/* Card body */}
-      <div className="p-6">
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="tag">
-              {tag}
+          <p className="text-muted text-sm leading-relaxed line-clamp-2">
+            {project.description}
+          </p>
+
+          <div className="mt-auto pt-5">
+            <span data-card-cta className="inline-flex items-center gap-1" style={{ fontSize: '13px', color: '#B85C2A' }}>
+              Voir le case study →
             </span>
-          ))}
+          </div>
         </div>
-
-        <h3 className="font-display font-semibold text-lg text-text mb-2 leading-snug group-hover:text-accent transition-colors">
-          {project.title}
-        </h3>
-        <p className="text-muted text-sm leading-relaxed line-clamp-2">
-          {project.description}
-        </p>
-
-        <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-accent group-hover:gap-2.5 transition-all">
-          Voir le case study
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </span>
       </div>
-    </article>
     </Link>
   )
 }
 
 export default function FeaturedProjects({ projects }: { projects: Project[] }) {
   const sectionRef = useRef<HTMLElement>(null)
+
+  const bySlug = (slug: string, fallback: number) =>
+    projects.find((p) => p.slug === slug) ?? projects[fallback]
+
+  const hero  = bySlug('parcours-upgrade', 0)
+  const card1 = bySlug('trial-by-card',    1)
+  const card2 = bySlug('csv-import',       2)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -79,27 +80,24 @@ export default function FeaturedProjects({ projects }: { projects: Project[] }) 
         y: 24,
         duration: 0.7,
         ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.section-header',
-          start: 'top 85%',
-        },
+        scrollTrigger: { trigger: '.section-header', start: 'top 85%', once: true },
       })
 
-      gsap.from('.project-card', {
+      gsap.from('.feat-card', {
         opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.12,
+        y: 28,
+        duration: 0.7,
+        stagger: 0.1,
         ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.project-card',
-          start: 'top 85%',
-        },
+        immediateRender: false,
+        scrollTrigger: { trigger: '.feat-card', start: 'top 88%', once: true },
       })
     }, sectionRef)
 
     return () => ctx.revert()
   }, [])
+
+  if (!hero || !card1 || !card2) return null
 
   return (
     <section ref={sectionRef} className="px-6 py-24">
@@ -123,11 +121,15 @@ export default function FeaturedProjects({ projects }: { projects: Project[] }) 
           </Link>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
-          ))}
+        {/* Hero card */}
+        <div className="mb-5">
+          <ProjectCard project={hero} isHero={true} />
+        </div>
+
+        {/* Two small cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <ProjectCard project={card1} isHero={false} />
+          <ProjectCard project={card2} isHero={false} />
         </div>
 
         {/* Mobile CTA */}

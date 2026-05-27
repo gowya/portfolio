@@ -5,12 +5,12 @@ export const ALL_PROJECTS: ProjectDetail[] = [
   {
     id: '1',
     slug: 'trial-by-card',
-    title: 'Trial by Card : ×2,5 sur la conversion',
+    title: 'L\'onboarding\ qui a multiplié la conversion par 2,5',
     tagline: 'Transformer un creu dans le flow d entrée en machine de conversion',
     description:
-      "Conception d'un flow de fin d'onboarding de trial with credit card - audit, 2 rounds d'A/B tests, contraintes légales et cognitives. Résultat validé par le CEO : ×2,5 sur les premiers abonnements Business.",
+      "Conception d'un flow de fin d'onboarding pour améliorer la valeur perçue de l'app - audit, 2 rounds d'A/B tests, contraintes légales et cognitives. Résultat validé par le CEO : ×2,5 sur les premiers abonnements Business.",
     coverImage: '/projects/trial-by-card.png',
-    tags: ['A/B Testing', 'Conversion', 'Product Design'],
+    tags: ['Conversion', 'Product Design'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -143,10 +143,10 @@ export const ALL_PROJECTS: ProjectDetail[] = [
   {
     id: '2',
     slug: 'parcours-upgrade',
-    title: "Personnaliser le parcours d'upgrade",
+    title: "Pousser l'achat au bon moment",
     tagline: 'Passer de 2% à 10% de conversion avec des modales contextuelles',
     description:
-      "Refonte du parcours d'upgrade de Waalaxy : modales comparatives contextuelles + modale de paiement unifiée. Les CTA contextuels convertissent à 10% vs 2% depuis la page tarifs.",
+      "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l\'utilisateur\.",
     coverImage: '/projects/parcours-upgrade.png',
     tags: ['Conversion', 'Product Design', 'UX'],
     caseStudyUrl: null,
@@ -283,12 +283,12 @@ export const ALL_PROJECTS: ProjectDetail[] = [
   {
     id: '3',
     slug: 'csv-import',
-    title: 'CSV Import : mapper ses données sans se perdre',
+    title: 'Mapping de données pour débutants',
     tagline: "De l'URL LinkedIn unique au mapping multi-colonnes",
     description:
-      "Refonte du flow d'import CSV pour permettre le mapping multi-colonnes. 83,5% des utilisateurs utilisent désormais les nouvelles colonnes • 24 colonnes importées en moyenne.",
+      "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font, pas de ce qu'on espère qu'ils fassent.",
     coverImage: '/projects/csv-import.png',
-    tags: ['Product Design', 'Design System', 'UX'],
+    tags: ['Product Design', 'UX'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -300,7 +300,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
       { value: '83,5%', label: 'utilisent le mapping multi-colonnes' },
       { value: '24', label: 'colonnes importées en moyenne' },
       { value: '10 485', label: 'imports analysés (3 mois)' },
-      { value: '25%', label: 'des fichiers viennent de Waalaxy lui-même' },
+      { value: '25%', label: "des fichiers proviennent de Waalaxy lui-même" },
     ],
     intro:
       "L'import CSV de Waalaxy n'acceptait qu'une seule colonne : l'URL LinkedIn. Un utilisateur avec une base Apollo ou un export HubSpot devait jeter 90% de ses données pour pouvoir importer. L'objectif : permettre d'importer un CSV avec autant de colonnes qu'on veut, en mappant chaque colonne vers le bon champ Waalaxy.",
@@ -310,7 +310,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "Avant de concevoir, j'ai analysé les flows de mapping sur les outils CRM et d'import de données. Trois principes retenus.",
+            text: "Avant de concevoir, j'ai analysé les flows de mapping sur les outils CRM et d'import de données. 3 principes retenus.",
           },
           {
             type: 'list',
@@ -336,7 +336,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Volontairement simple : choix de la liste d'import et upload par drag&drop. Pas de décision à prendre • si le fichier est valide, on passe automatiquement à l'étape suivante. Le parser gère les cas complexes en arrière-plan sans les exposer à l'utilisateur.",
+            text: "Volontairement simple : choix de la liste d'import et upload par drag&drop. Pas de décision à prendre, si le fichier est valide, on passe automatiquement à l'étape suivante. Le parser gère les cas complexes en arrière-plan sans les exposer à l'utilisateur.",
           },
           {
             type: 'img',
@@ -345,7 +345,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           },
           {
             type: 'h3',
-            text: "Étape 2 : Match data • l'écran central",
+            text: "Étape 2 : Match data - l'écran central",
           },
           {
             type: 'p',
@@ -356,7 +356,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
             items: [
               "Le nombre de prospects détectés est mis en avant dans le titre • rassurer l'utilisateur qu'il a bien le bon fichier et lui permettre de détecter immédiatement une erreur.",
               "La checkbox par ligne permet de choisir quelles colonnes importer. Pas obligé de mapper tout le CSV.",
-              "Le dropdown liste toutes les propriétés disponibles. Quand une propriété est déjà utilisée, un tooltip \"This property is already used\" apparaît • l'utilisateur ne peut pas mapper deux colonnes sur le même champ sans s'en rendre compte.",
+              "Le dropdown liste toutes les propriétés disponibles. Quand une propriété est déjà utilisée, un tooltip \"This property is already used\" apparaît ; l'utilisateur ne peut pas mapper 2 colonnes sur le même champ sans s'en rendre compte.",
             ],
           },
           {
@@ -370,7 +370,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "3 toggles couvrent les cas d'usage principaux : Team duplicate security (activé par défaut), Move duplicates to import list, Overwrite and replace existing prospect information. Chacun a une description courte. Activés par défaut sur les paramètres les plus sécurisés.",
+            text: "3 toggles couvrent les cas d'usage principaux : Team duplicate security (activé par défaut), Move duplicates to import list, Overwrite and replace existing prospect information. Chacun a une description courte travaillée pour comprendre dès la 1ère lecture. Activés par défaut sur les paramètres les plus sécurisés.",
           },
           {
             type: 'img',
@@ -384,7 +384,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "Ce projet introduisait des composants et patterns nouveaux • notamment le stepper et le tableau de mapping avec ses 3 colonnes et ses états multiples. Mon travail DS : conception et documentation d'un nouveau composant stepper interactif, revue ISO Figma/Storybook, et suivi des allers-retours dev pour les états d'erreur.",
+            text: "Ce projet introduisait des composants et patterns nouveaux, notamment le stepper et le tableau de mapping avec ses 3 colonnes et ses états multiples. Mon travail DS : conception et documentation d'un nouveau composant stepper interactif, revue ISO Figma/Storybook, et suivi des allers-retours dev pour les états d'erreur.",
           },
           {
             type: 'p',
@@ -408,8 +408,8 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              "83,5% utilisent le mapping multi-colonnes. Seulement 16,5% importent encore uniquement l'URL LinkedIn • l'ancienne façon de faire.",
-              "Moyenne de 24 colonnes par import • des sources qui auraient été inutilisables avec l'ancien flow.",
+              "83,5% utilisent le mapping multi-colonnes. Seulement 16,5% importent encore uniquement l'URL LinkedIn (l'ancienne façon de faire).",
+              "Moyenne de 24 colonnes par import : les sources qui auraient été inutilisables avec l'ancien flow.",
               "25% des fichiers proviennent de Waalaxy lui-même : des utilisateurs qui exportent leurs contacts d'un compte pour les réimporter dans un autre. Un cas d'usage qui n'existait pas avant.",
             ],
           },
@@ -417,7 +417,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Ce projet m'a rappelé que les features \"techniques\" demandent autant d'attention UX que les features visibles. Le mapping de colonnes, c'est une interface qui parle à des données que l'utilisateur a souvent mis du temps à constituer. Une erreur de mapping, c'est des heures perdues. La conception des états d'erreur et des guards n'était pas un détail • c'était le cœur du projet.",
+      "Ce projet m'a rappelé que les features \"techniques\" demandent autant d'attention UX que les features visibles. Le mapping de colonnes, c'est une interface qui parle à des données que l'utilisateur a souvent mis du temps à constituer. Une erreur de mapping, c'est des heures perdues. La conception des états d'erreur et des guards c'était le cœur du projet.",
   },
 
   // ─── 4. Ajout de l'IA ──────────────────────────────────────────────────────
@@ -693,7 +693,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     description:
       "Création et maintien du Design System de Waalaxy depuis nov. 2023 • composants Figma documentés, espace Notion opérationnel, process DS, revue ISO Figma/Storybook à chaque sprint.",
     coverImage: '/projects/design-system.png',
-    tags: ['Design System', 'Figma', 'Storybook'],
+    tags: ['Design System'],
     caseStudyUrl: null,
     featured: false,
     role: 'Lead Design System & Product Designer',
@@ -803,7 +803,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     description:
       "Conception d'une marketplace mettant en relation chasseurs de têtes et candidats • UX à double entrée, onboarding distinct pour chaque profil, logique de matching et interfaces adaptées.",
     coverImage: '/projects/saas-recrutement.png',
-    tags: ['Product Design', 'Freelance', 'Marketplace'],
+    tags: ['Product Design', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer',
@@ -879,7 +879,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     description:
       "Dashboard Notion sur mesure pour un praticien de santé libéral • centralisation de l'agenda, du suivi patient, de la facturation et des notes de consultation dans un seul espace cohérent.",
     coverImage: null,
-    tags: ['Notion', 'Freelance', 'Dashboard'],
+    tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Designer Notion',
@@ -904,8 +904,8 @@ export const ALL_PROJECTS: ProjectDetail[] = [
             type: 'list',
             items: [
               "Le point de douleur principal : trouver les informations d'un patient avant la consultation (antécédents, dernière séance, notes) prenait 5 à 10 minutes à chaque fois",
-              "Deuxième point : la facturation manuelle en fin de mois • retranscrire des données de l'agenda papier vers Excel avec un risque d'oubli constant",
-              "Contrainte non-négociable : aucune donnée patient nominative ne pouvait être stockée dans Notion (RGPD, secret médical) • le système devait fonctionner avec des identifiants anonymisés",
+              "Deuxième point : la facturation manuelle en fin de mois et retranscrire des données de l'agenda papier vers Excel avec un risque d'oubli constant",
+              "Contrainte non-négociable : aucune donnée patient nominative ne pouvait être stockée dans Notion (RGPD, secret médical). Le système devait fonctionner avec des identifiants anonymisés",
             ],
           },
         ],
@@ -959,7 +959,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     description:
       "Tableau de bord Notion pour le suivi stratégique et financier d'une activité freelance • vision consolidée des revenus, du pipeline, et des objectifs en un seul espace actionnable.",
     coverImage: null,
-    tags: ['Notion', 'Freelance', 'Dashboard'],
+    tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Designer Notion',
@@ -968,7 +968,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     status: 'Livré',
     metrics: [
       { value: '3j', label: 'de conception et livraison' },
-      { value: '1 vue', label: 'pour tout voir : CA, pipeline, objectifs' },
+      { value: '4 vues', label: 'pour tout voir : CA, pipeline, objectifs' },
     ],
     intro:
       "Un freelance avec une activité bien lancée, mais une vision floue de sa situation réelle : combien il avait facturé ce mois-ci, combien restait en attente de paiement, combien de prospects étaient dans le pipe. Les données existaient dans différents endroits • l'enjeu était de les connecter dans un espace qui donne une lecture instantanée et actionnable.",
@@ -983,7 +983,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              "Revenus facturés vs objectif mensuel • un écart visible en temps réel, pas en fin de mois",
+              "Revenus facturés vs objectif mensuel : un écart visible en temps réel, pas en fin de mois",
               "Pipeline commercial : leads en discussion, propositions envoyées, projets signés, en cours, livrés",
               "Trésorerie prévisionnelle : ce qui est signé mais pas encore facturé, ce qui est facturé mais pas encaissé",
               "Rétrospective trimestrielle : un espace dédié à la prise de recul sur les 3 derniers mois",

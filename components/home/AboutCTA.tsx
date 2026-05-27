@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -30,14 +31,14 @@ export default function AboutCTA() {
   return (
     <section ref={sectionRef} className="px-6 pb-24">
       <div className="max-w-6xl mx-auto">
-        <div className="about-cta-inner relative overflow-hidden rounded-2xl border border-border bg-bg-card p-10 sm:p-14">
+        <div className="about-cta-inner relative rounded-2xl border border-border bg-bg-card p-10 sm:p-14 overflow-hidden flex items-center gap-10">
           {/* Accent glow */}
           <div
             className="absolute -top-32 -right-32 w-64 h-64 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(184,255,87,0.08) 0%, transparent 70%)' }}
+            style={{ background: 'radial-gradient(circle, rgba(184,92,42,0.12) 0%, transparent 70%)' }}
           />
 
-          <div className="relative max-w-2xl">
+          <div className="relative flex-1">
             <p className="section-label mb-5">À propos</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text leading-tight mb-5 text-balance">
               La designer derrière les projets
@@ -53,6 +54,17 @@ export default function AboutCTA() {
                 <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
+          </div>
+
+          {/* Portrait photo */}
+          <div className="relative hidden md:block w-48 h-56 shrink-0 self-center">
+            <Image
+              src="/margaux.png"
+              alt="Margaux Francillard"
+              fill
+              sizes="192px"
+              className="object-cover object-top rounded-xl border border-accent/30"
+            />
           </div>
         </div>
       </div>

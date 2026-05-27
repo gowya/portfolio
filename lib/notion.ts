@@ -13,15 +13,14 @@ const PLACEHOLDER_PROJECTS: Project[] = ALL_PROJECTS.map(
 )
 
 const PLACEHOLDER_ABOUT: AboutContent = {
-  bio: "Lead Design System et Product Designer chez Waalaxy, obsédée par Figma, Notion, (maintenant Claude Code), et les interfaces qui font ce qu'elles promettent. Mon point d'entrée c'est toujours l'utilisateur. Ce qu'il fait, ce qu'il évite, ce qu'il cherche sans trouver les mots. Parce que c'est là que se trouvent les décisions qui font bouger les chiffres. Mon chien, lui, vient au bureau et ne comprend toujours pas pourquoi il n'a pas son propre accès Figma.",
-  experiences: [
+  bio: "Product Designer & Lead Design System chez Waalaxy. Mon point d'entrée c'est toujours l'utilisateur : ce qu'il fait, ce qu'il évite, ce qu'il ne sait pas encore formuler. C'est là que se cachent les décisions qui font bouger les chiffres.\n\n  Mon chien, lui, vient au bureau et réclame toujours son accès Figma.",  experiences: [
     {
       id: 'e1',
       company: 'Waalaxy · CDI · Montpellier',
       role: 'Lead Design System',
       period: 'Nov. 2023 • Présent',
       description:
-        "En plus de mon rôle de product designer, je suis chargée de la construction et du maintien du Design System from scratch. Définition de la roadmap, priorisation, construction de la bibliothèque de composants dans Figma et Storybook, documentation, accompagnement des équipes produit et dev pour l'adoption du Design System.",
+        "Construction, maintien et gouvernance du Design System from scratch. Roadmap, management des devs front DS, bibliothèque de composants Figma/Storybook ISO, documentation et accompagnement des équipes pour l'adoption.",
     },
     {
       id: 'e2',
@@ -37,7 +36,7 @@ const PLACEHOLDER_ABOUT: AboutContent = {
       role: 'Brand & Web Designer',
       period: 'Avr. 2021 • Août 2023',
       description:
-        "Création de sites web vitrine WordPress pour petits commerces, restaurants, golfs, etc... J'accompagne mes clients pour produire des interfaces web : UX Research & analyses concurrentielles, maquettage et prototypage Figma ",
+        "Création de branding et landing page WordPress pour petits commerces et restaurants. UX Research, maquettage app ou SaaS et accompagnement client de A à Z  ",
     },
     {
       id: 'e4',
@@ -45,7 +44,7 @@ const PLACEHOLDER_ABOUT: AboutContent = {
       role: 'UX/UI Designer',
       period: 'Sept. 2020 • Août 2022',
       description:
-        "Solo designer de la boîte. Maquettage, intégration et maintien du WordPress, mise en place du projet de refonte des 2 sites web de marque (blog et réservation visio) en 1 seul",
+        "Solo designer de la boîte. Refonte de 2 sites de marque, maquettage, intégration et maintien WordPress. Création d'une bibliothèque de composants pour uniformiser les interfaces et accélérer les développements.",
     },
   ],
   formations: [

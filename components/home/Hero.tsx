@@ -16,40 +16,26 @@ export default function Hero() {
         y: 12,
         duration: 0.6,
       })
-        .from(
+        .fromTo(
           '.hero-line',
-          {
-            yPercent: 110,
-            duration: 1,
-            stagger: 0.08,
-          },
+          { yPercent: 110, filter: 'brightness(2)' },
+          { yPercent: 0, filter: 'brightness(1)', duration: 1, stagger: 0.1 },
           '-=0.3'
         )
         .from(
           '.hero-sub',
-          {
-            opacity: 0,
-            y: 16,
-            duration: 0.7,
-          },
+          { opacity: 0, y: 16, duration: 0.7 },
           '-=0.5'
         )
         .from(
           '.hero-ctas',
-          {
-            opacity: 0,
-            y: 12,
-            duration: 0.6,
-          },
+          { opacity: 0, y: 12, duration: 0.6 },
           '-=0.4'
         )
         .from(
-          '.hero-meta',
-          {
-            opacity: 0,
-            duration: 0.6,
-          },
-          '-=0.4'
+          '.hero-stat',
+          { opacity: 0, y: 16, duration: 0.5, stagger: 0.1 },
+          '-=0.3'
         )
     }, containerRef)
 
@@ -60,74 +46,93 @@ export default function Hero() {
     <section
       ref={containerRef}
       className="relative min-h-screen flex flex-col justify-end pb-20 pt-36 px-6"
+      style={{
+        backgroundColor: 'var(--hero-bg)',
+        backgroundImage: 'var(--hero-photo-overlay), url(/hero-bg.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
     >
-      {/* Subtle grid */}
+      {/* Reeded glass texture — theme-aware */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
-          backgroundSize: '80px 80px',
-          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%)',
+          backgroundImage: 'var(--hero-reed-top), var(--hero-reed-glow), var(--hero-reed-stripes)',
+          backgroundSize: '100% 100%, 100% 100%, 6px 100%',
         }}
       />
 
       <div className="max-w-6xl mx-auto w-full">
         {/* Badge */}
         <div className="hero-badge mb-10">
-          <span className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.12em] uppercase text-muted border border-border rounded-full px-3.5 py-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Disponible • Montpellier
+          <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
+            <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
+            Montpellier & Remote
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-display font-bold mb-8" aria-label="Product & System Designer • SaaS B2B">
-          <span className="clip-text block">
-            <span className="hero-line block text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-[-0.03em] text-text">
+        <h1 className="mb-10" aria-label="Product & System Designer qui vibecode">
+          {/* Line 1 */}
+          <span className="block overflow-hidden">
+            <span className="hero-line block font-black text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em] text-text" style={{ fontFamily: 'var(--font-italiana), Georgia, serif' }}>
               Product &amp; System
             </span>
           </span>
-          <span className="clip-text block">
-            <span className="hero-line block text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-[-0.03em]">
-              <span className="text-text">Designer</span>
-              <span className="text-muted italic font-medium text-[0.75em]"> • SaaS B2B</span>
+
+          {/* Line 2: Designer + QUI VIBECODE inline on md+, stacked on mobile */}
+          <span className="block" style={{ overflow: 'visible', paddingBottom: '0.2em' }}>
+            <span className="hero-line flex flex-wrap md:flex-nowrap md:justify-start" style={{ overflow: 'visible', alignItems: 'flex-end' }}>
+              <span
+                className="block font-black text-[clamp(4rem,10vw,9.5rem)] leading-[0.88] tracking-[-0.03em] text-text"
+                style={{ fontFamily: 'var(--font-italiana), Georgia, serif' }}
+              >
+                Designer
+              </span>
+              <span
+                className="block mt-2 md:mt-0 md:ml-[0.4em] font-medium text-[clamp(1.3rem,1.5vw,1.75rem)] uppercase tracking-[0.22em] text-accent whitespace-nowrap"
+                style={{ fontFamily: 'var(--font-grotesk), system-ui, sans-serif', marginBottom: '0.15em' }}
+              >
+                • spécialisée IA
+              </span>
             </span>
           </span>
         </h1>
 
         {/* Sub */}
-        <p className="hero-sub max-w-xl text-muted text-lg leading-relaxed mb-10 text-balance">
-          Je conçois des interfaces qui convertissent et des design systems
-          qui tiennent dans la durée • 3 ans chez Waalaxy.
+        <p className="hero-sub max-w-lg text-muted text-[0.9rem] leading-relaxed mb-10 text-balance">
+          Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée 
+          • 3 ans chez Waalaxy.
         </p>
 
         {/* CTAs */}
-        <div className="hero-ctas flex flex-wrap gap-3">
+        <div className="hero-ctas flex flex-wrap gap-3 mb-20">
           <Link href="/projects" className="btn-primary">
             Voir mes projets
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
-          <a href="mailto:margaux@waalaxy.com" className="btn-ghost">
-            Me contacter
+          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            On en parle ?
           </a>
         </div>
 
-        {/* Meta */}
-        <div className="hero-meta flex items-center gap-6 mt-16 pt-8 border-t border-border">
-          <p className="text-muted text-sm">
-            <span className="text-text font-medium">5 ans</span> d'expérience
-          </p>
-          <span className="w-px h-4 bg-border" />
-          <p className="text-muted text-sm">
-            <span className="text-text font-medium">9</span> projets documentés
-          </p>
-          <span className="w-px h-4 bg-border" />
-          <p className="text-muted text-sm">
-            Figma · Design System · IA · Notion
-          </p>
+        {/* Stats — editorial 3-column */}
+        <div className="grid grid-cols-3 border-t border-border pt-10 gap-0">
+          <div className="hero-stat pr-8 border-r border-border">
+            <div className="font-sans font-black italic text-5xl sm:text-6xl text-accent leading-none mb-2">x2,5</div>
+            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">sur la conversion</div>
+          </div>
+          <div className="hero-stat px-8 border-r border-border">
+            <div className="font-sans font-black italic text-5xl sm:text-6xl text-accent leading-none mb-2">83,5%</div>
+            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">d'utilisation au 1er essai</div>
+          </div>
+          <div className="hero-stat pl-8">
+            <div className="font-sans font-black italic text-5xl sm:text-6xl text-text/30 leading-none mb-2">1</div>
+            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">chien au bureau</div>
+          </div>
         </div>
       </div>
     </section>

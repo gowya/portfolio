@@ -15,21 +15,40 @@ export default async function ProjectsPage() {
   const projects = await getProjects()
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="mb-16">
+    <div className="min-h-screen pb-20">
+      <header
+        className="relative pt-40 pb-20 px-6"
+        style={{
+          backgroundImage: [
+            'radial-gradient(ellipse 80% 35% at 50% 0%, rgba(160,80,20,0.18) 0%, transparent 60%)',
+            'var(--hero-reed-stripes)',
+          ].join(', '),
+          backgroundSize: '100% 100%, 6px 100%',
+        }}
+      >
+        <div className="max-w-6xl mx-auto">
           <p className="section-label mb-4">Portfolio</p>
-          <h1 className="font-display font-bold text-4xl sm:text-5xl text-text mb-4 tracking-tight">
+          <h1 className="text-text mb-4 tracking-tight" style={{ fontFamily: 'var(--font-italiana), Georgia, serif', fontSize: 'clamp(4rem, 8vw, 7rem)' }}>
             Projets
           </h1>
           <p className="text-muted text-lg max-w-xl leading-relaxed">
-            Design d'interfaces IA, design systems, et expériences utilisateur
-            pensées pour des produits qui comptent.
+            Des projets qui partent de l'utilisateur, qui finissent par faire bouger les bons chiffres.
           </p>
-        </header>
+        </div>
+        {/* Fade the reed background into the page at the hero's bottom edge */}
+        <div
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: '80px',
+            background: 'linear-gradient(to bottom, transparent, #0a0a0a)',
+          }}
+        />
+      </header>
 
-        <ProjectGrid projects={projects} />
+      <div className="px-6 pt-8">
+        <div className="max-w-6xl mx-auto">
+          <ProjectGrid projects={projects} />
+        </div>
       </div>
     </div>
   )

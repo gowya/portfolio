@@ -19,10 +19,11 @@ const SKILLS = [
   'Storybook',
   'Notion',
   'UX Research',
+  'Claude Code',
   'A/B Testing',
   'Prompting IA',
-  'PostHog',
-  'Intercom',
+  'Mixpanel/PostHog',
+  'Micro-interactions',
   'HTML/CSS',
   'Suite Adobe',
   'Anglais B2/C1',
@@ -40,7 +41,7 @@ export default async function AboutPage() {
           <aside className="lg:sticky lg:top-32 lg:self-start">
 
             {/* Photo */}
-            <div className="relative w-24 h-24 rounded-2xl overflow-hidden mb-6 border border-border">
+            <div className="relative w-40 h-40 rounded-2xl overflow-hidden mb-6 border border-border">
               <Image
                 src="/margaux.png"
                 alt="Margaux Francillard"
@@ -52,7 +53,7 @@ export default async function AboutPage() {
             </div>
 
             <p className="section-label mb-4">À propos</p>
-            <h1 className="font-display font-bold text-3xl sm:text-4xl text-text mb-6 leading-tight tracking-tight">
+            <h1 className="text-text mb-6 leading-tight tracking-tight" style={{ fontFamily: 'var(--font-italiana), Georgia, serif', fontSize: 'clamp(3.5rem, 7vw, 6rem)' }}>
               Margaux
               <br />
               Francillard
@@ -61,10 +62,12 @@ export default async function AboutPage() {
 
             <div className="flex flex-col gap-3 mb-10">
               <a
-                href="mailto:margaux@waalaxy.com"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary w-fit"
               >
-                Me contacter
+                On en parle ?
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                   <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

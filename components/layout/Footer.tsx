@@ -20,10 +20,12 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:margaux@waalaxy.com"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-muted text-sm hover:text-text transition-colors"
           >
-            Email
+            On en parle ?
           </a>
           <Link
             href="/projects"
