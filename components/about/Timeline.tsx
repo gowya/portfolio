@@ -19,10 +19,10 @@ function TimelineItem({
   description?: string
 }) {
   return (
-    <div className="timeline-item group flex gap-6 sm:gap-10">
+    <div className="timeline-item group flex gap-3 sm:gap-10">
       {/* Left: period */}
-      <div className="w-28 sm:w-36 shrink-0 pt-0.5">
-        <span className="text-xs font-medium text-muted">{period}</span>
+      <div className="w-20 sm:w-36 shrink-0 pt-0.5">
+        <span className="text-[11px] sm:text-xs font-medium text-muted whitespace-nowrap">{period}</span>
       </div>
 
       {/* Center: line */}
@@ -32,11 +32,11 @@ function TimelineItem({
       </div>
 
       {/* Right: content */}
-      <div className="pb-10">
-        <h3 className="font-display font-semibold text-text mb-0.5">{title}</h3>
-        <p className="text-accent text-sm mb-2">{subtitle}</p>
+      <div className="flex-1 pb-10">
+        <h3 className="font-display font-semibold text-text text-[14px] sm:text-base mb-0.5">{title}</h3>
+        <p className="text-accent text-[14px] sm:text-sm mb-2">{subtitle}</p>
         {description && (
-          <p className="text-muted text-sm leading-relaxed max-w-lg">{description}</p>
+          <p className="text-muted text-[13px] sm:text-sm leading-relaxed max-w-lg">{description}</p>
         )}
       </div>
     </div>
