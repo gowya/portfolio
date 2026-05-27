@@ -34,20 +34,25 @@ export default function Ticker() {
       gsap.to(tl, { timeScale: 1, duration: 0.6, ease: 'power2.inOut' })
     }
 
-    container.addEventListener('mouseenter', handleEnter)
-    container.addEventListener('mouseleave', handleLeave)
+    const isTouch = 'ontouchstart' in window
+    if (!isTouch) {
+      container.addEventListener('mouseenter', handleEnter)
+      container.addEventListener('mouseleave', handleLeave)
+    }
 
     return () => {
       tl.kill()
-      container.removeEventListener('mouseenter', handleEnter)
-      container.removeEventListener('mouseleave', handleLeave)
+      if (!isTouch) {
+        container.removeEventListener('mouseenter', handleEnter)
+        container.removeEventListener('mouseleave', handleLeave)
+      }
     }
   }, [])
 
   return (
     <div
       ref={containerRef}
-      className="hidden md:block overflow-hidden border-y border-border py-3.5 select-none cursor-default"
+      className="block overflow-hidden border-y border-border py-3.5 select-none cursor-default"
       style={{
         opacity: 0,
         maskImage:
@@ -61,7 +66,7 @@ export default function Ticker() {
         {[0, 1].map((i) => (
           <span
             key={i}
-            className="text-xs font-semibold tracking-[0.18em] uppercase text-accent/70"
+            className="text-[11px] md:text-xs font-semibold tracking-[0.08em] md:tracking-[0.18em] uppercase text-accent/70"
           >
             {ITEMS.repeat(6)}
           </span>
