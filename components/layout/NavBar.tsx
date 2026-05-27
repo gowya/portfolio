@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import gsap from 'gsap'
 
 type Theme = 'dark' | 'light'
 
@@ -41,10 +42,38 @@ function MoonIcon() {
   )
 }
 
+function BurgerIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+      <line x1="2" y1="4" x2="14" y2="4" />
+      <line x1="2" y1="8" x2="14" y2="8" />
+      <line x1="2" y1="12" x2="14" y2="12" />
+    </svg>
+  )
+}
+
+function CloseIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
+      <line x1="3" y1="3" x2="13" y2="13" />
+      <line x1="13" y1="3" x2="3" y2="13" />
+    </svg>
+  )
+}
+
+const NAV_LINKS = [
+  { href: '/', label: 'Accueil' },
+  { href: '/projects', label: 'Mes projets' },
+  { href: '/about', label: 'Qui je suis' },
+]
+
 export default function NavBar() {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState<Theme>('dark')
+  const [menuOpen, setMenuOpen] = useState(false)
+  const overlayRef = useRef<HTMLDivElement>(null)
+  const menuLinksRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40)
@@ -53,14 +82,49 @@ export default function NavBar() {
   }, [])
 
   useEffect(() => {
-    // Read the theme that was set by the anti-flash script
     const current = document.documentElement.getAttribute('data-theme') as Theme
     setTheme(current === 'light' ? 'light' : 'dark')
   }, [])
 
+  // Close menu on route change
+  useEffect(() => {
+    closeMenu()
+  }, [pathname])
+
+  // GSAP overlay animation
+  useEffect(() => {
+    const overlay = overlayRef.current
+    const links = menuLinksRef.current
+    if (!overlay) return
+
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+      overlay.style.pointerEvents = 'auto'
+      gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: 'power2.out' })
+      if (links) {
+        gsap.fromTo(
+          links.children,
+          { opacity: 0, x: 20 },
+          { opacity: 1, x: 0, duration: 0.3, stagger: 0.06, ease: 'power3.out', delay: 0.1 }
+        )
+      }
+    } else {
+      gsap.to(overlay, {
+        opacity: 0,
+        duration: 0.2,
+        ease: 'power2.in',
+        onComplete: () => {
+          overlay.style.pointerEvents = 'none'
+          document.body.style.overflow = ''
+        },
+      })
+    }
+  }, [menuOpen])
+
+  const closeMenu = () => setMenuOpen(false)
+
   const toggleTheme = () => {
     const next: Theme = theme === 'dark' ? 'light' : 'dark'
-    // Briefly enable smooth transitions across all elements
     document.documentElement.classList.add('theme-changing')
     document.documentElement.setAttribute('data-theme', next)
     try { localStorage.setItem('theme', next) } catch (_) {}
@@ -69,71 +133,170 @@ export default function NavBar() {
   }
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'py-3 backdrop-blur-[20px]' : 'py-5'
-      }`}
-      style={scrolled ? {
-        background: 'rgba(10, 8, 6, 0.4)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-      } : undefined}
-    >
-      <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-bold text-sm tracking-tight text-text hover:text-accent transition-colors"
-        >
-          MF
-        </Link>
-
-        <ul className="flex items-center gap-1">
-          {[
-            { href: '/', label: 'Accueil' },
-            { href: '/projects', label: 'Mes projets' },
-            { href: '/about', label: 'Qui je suis' },
-          ].map(({ href, label }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`px-4 py-2 text-sm rounded-full transition-colors ${
-                  pathname === href
-                    ? 'text-text bg-surface'
-                    : 'text-muted hover:text-text'
-                }`}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-2">
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? 'py-3 backdrop-blur-[20px]' : 'py-5'
+        }`}
+        style={scrolled ? {
+          background: 'rgba(10, 8, 6, 0.4)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+        } : undefined}
+      >
+        <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <Link
-            href="/design-system"
-            aria-label="Design System"
-            title="Design System"
-            className="p-2 rounded-full text-muted hover:text-accent hover:bg-surface transition-colors"
+            href="/"
+            className="font-bold text-sm tracking-tight text-text hover:text-accent transition-colors"
           >
-            <ColorSwatchIcon />
+            MF
           </Link>
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
-            className="p-2 rounded-full text-muted hover:text-text hover:bg-surface transition-colors"
+
+          {/* Desktop nav links */}
+          <ul className="hidden md:flex items-center gap-1">
+            {NAV_LINKS.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`px-4 py-2 text-sm rounded-full transition-colors ${
+                    pathname === href
+                      ? 'text-text bg-surface'
+                      : 'text-muted hover:text-text'
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop right controls */}
+          <div className="hidden md:flex items-center gap-2">
+            <Link
+              href="/design-system"
+              aria-label="Design System"
+              title="Design System"
+              className="p-2 rounded-full text-muted hover:text-accent hover:bg-surface transition-colors"
+            >
+              <ColorSwatchIcon />
+            </Link>
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              className="p-2 rounded-full text-muted hover:text-text hover:bg-surface transition-colors"
+            >
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
+            >
+              On en parle ?
+            </a>
+          </div>
+
+          {/* Mobile right controls: DS icon · theme toggle · burger */}
+          <div className="md:hidden flex items-center gap-3">
+            <Link
+              href="/design-system"
+              aria-label="Design System"
+              title="Design System"
+              className="p-2 rounded-full text-muted hover:text-accent transition-colors"
+            >
+              <ColorSwatchIcon />
+            </Link>
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              className="p-2 rounded-full text-muted hover:text-text transition-colors"
+            >
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+            <button
+              onClick={() => setMenuOpen(true)}
+              aria-label="Ouvrir le menu"
+              className="p-2 rounded-full text-muted hover:text-accent transition-colors"
+            >
+              <BurgerIcon />
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile full-screen overlay */}
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 z-[100] flex flex-col md:hidden"
+        style={{ background: '#0a0a0a', opacity: 0, pointerEvents: 'none' }}
+        aria-modal="true"
+        role="dialog"
+        aria-label="Menu de navigation"
+      >
+        {/* Overlay header */}
+        <div className="flex items-center justify-between px-6 py-5">
+          <Link
+            href="/"
+            onClick={closeMenu}
+            className="font-bold text-sm tracking-tight text-text"
           >
-            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-          </button>
+            MF
+          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/design-system"
+              onClick={closeMenu}
+              aria-label="Design System"
+              className="p-2 rounded-full text-muted hover:text-accent transition-colors"
+            >
+              <ColorSwatchIcon />
+            </Link>
+            <button
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              className="p-2 rounded-full text-muted hover:text-text transition-colors"
+            >
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+            <button
+              onClick={closeMenu}
+              aria-label="Fermer le menu"
+              className="p-2 rounded-full text-muted hover:text-text transition-colors"
+            >
+              <CloseIcon />
+            </button>
+          </div>
+        </div>
+
+        {/* Nav links — vertically centered */}
+        <div
+          ref={menuLinksRef}
+          className="flex flex-col items-center justify-center flex-1 gap-8"
+        >
+          {NAV_LINKS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={closeMenu}
+              className={`text-3xl font-medium transition-colors ${
+                pathname === href ? 'text-accent' : 'text-text hover:text-accent'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
 
           <a
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
+            onClick={closeMenu}
+            className="mt-4 inline-flex items-center gap-1.5 px-6 py-3 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
           >
             On en parle ?
           </a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </>
   )
 }

@@ -119,18 +119,18 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats — editorial 3-column */}
-        <div className="grid grid-cols-3 border-t border-border pt-10 gap-0">
-          <div className="hero-stat pr-8 border-r border-border">
-            <div className="font-sans font-black italic text-5xl sm:text-6xl text-accent leading-none mb-2">x2,5</div>
-            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">sur la conversion</div>
+        {/* Stats — 2 cols on mobile, 3 on md+ */}
+        <div className="grid grid-cols-2 md:grid-cols-3 border-t border-border pt-10 gap-0">
+          <div className="hero-stat pr-4 sm:pr-8 border-r border-border">
+            <div className="font-sans font-black italic text-[1.5rem] sm:text-5xl md:text-6xl text-accent leading-none mb-2">x2,5</div>
+            <div className="text-muted text-[9px] sm:text-[0.65rem] tracking-[0.12em] sm:tracking-[0.2em] uppercase">sur la conversion</div>
           </div>
-          <div className="hero-stat px-8 border-r border-border">
-            <div className="font-sans font-black italic text-5xl sm:text-6xl text-accent leading-none mb-2">83,5%</div>
-            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">d'utilisation au 1er essai</div>
+          <div className="hero-stat pl-4 sm:px-8 md:border-r border-border">
+            <div className="font-sans font-black italic text-[1.5rem] sm:text-5xl md:text-6xl text-accent leading-none mb-2">83,5%</div>
+            <div className="text-muted text-[9px] sm:text-[0.65rem] tracking-[0.12em] sm:tracking-[0.2em] uppercase">d'utilisation au 1er essai</div>
           </div>
-          <div className="hero-stat pl-8">
-            <div className="font-sans font-black italic text-5xl sm:text-6xl text-text/30 leading-none mb-2">1</div>
+          <div className="hero-stat hidden md:block pl-8">
+            <div className="font-sans font-black italic text-5xl md:text-6xl text-text/30 leading-none mb-2">1</div>
             <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">chien au bureau</div>
           </div>
         </div>

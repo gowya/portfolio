@@ -47,7 +47,7 @@ export default function Ticker() {
   return (
     <div
       ref={containerRef}
-      className="overflow-hidden border-y border-border py-3.5 select-none cursor-default"
+      className="hidden md:block overflow-hidden border-y border-border py-3.5 select-none cursor-default"
       style={{
         opacity: 0,
         maskImage:
