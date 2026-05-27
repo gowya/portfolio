@@ -12,7 +12,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href="https://linkedin.com/in/margauxfrancillard"
+            href="https://www.linkedin.com/in/margaux-francillard/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted text-sm hover:text-text transition-colors"

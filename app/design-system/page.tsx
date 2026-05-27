@@ -340,11 +340,11 @@ export default function DesignSystemPage() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
                 <div style={{ padding: '6px', borderRadius: '50%', color: 'var(--accent)', display: 'flex' }}>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
-                    <rect x="1" y="1" width="5" height="5" rx="1" />
-                    <rect x="8" y="1" width="5" height="5" rx="1" />
-                    <rect x="1" y="8" width="5" height="5" rx="1" />
-                    <rect x="8" y="8" width="5" height="5" rx="1" />
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M10 4.5V18C10 19.08 9.56 20.07 8.86 20.79L8.82 20.83C8.73 20.92 8.63 21.01 8.54 21.08C8.24 21.34 7.9 21.54 7.55 21.68C7.44 21.73 7.33 21.77 7.22 21.81C6.83 21.94 6.41 22 6 22C5.73 22 5.46 21.97 5.2 21.92C5.07 21.89 4.94 21.86 4.81 21.82C4.65 21.77 4.5 21.72 4.35 21.65C4.06 21.51 3.79 21.35 3.54 21.16L3.53 21.15C3.4 21.05 3.28 20.95 3.17 20.83C3.06 20.71 2.95 20.59 2.84 20.46C2.65 20.21 2.49 19.94 2.35 19.66C2.28 19.49 2.23 19.34 2.18 19.19C2.14 19.06 2.11 18.93 2.08 18.8C2.03 18.54 2 18.27 2 18V4.5C2 3 3 2 4.5 2H7.5C9 2 10 3 10 4.5Z" />
+                    <path d="M22 16.5V19.5C22 21 21 22 19.5 22H6C6.41 22 6.83 21.94 7.22 21.81C7.33 21.77 7.44 21.73 7.55 21.68C7.9 21.54 8.24 21.34 8.54 21.08C8.63 21.01 8.73 20.92 8.82 20.83L8.86 20.79L15.66 14H19.5C21 14 22 15 22 16.5Z" />
+                    <path d="M18.37 11.29L15.66 14L8.86 20.79C9.56 20.07 10 19.08 10 18V8.34L12.71 5.63C13.77 4.57 15.19 4.57 16.25 5.63L18.37 7.75C19.43 8.81 19.43 10.23 18.37 11.29Z" />
+                    <circle cx="6" cy="18" r="1" fill="currentColor" stroke="none" />
                   </svg>
                 </div>
                 <div style={{ padding: '6px', borderRadius: '50%', color: 'var(--muted)', display: 'flex' }}>
@@ -392,11 +392,11 @@ export default function DesignSystemPage() {
               ].map(({ label, color }) => (
                 <div key={label}>
                   <div style={{ padding: '6px', borderRadius: '50%', background: 'rgb(var(--color-surface) / 0.3)', marginBottom: '6px', display: 'inline-flex', color }}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
-                      <rect x="1" y="1" width="5" height="5" rx="1" />
-                      <rect x="8" y="1" width="5" height="5" rx="1" />
-                      <rect x="1" y="8" width="5" height="5" rx="1" />
-                      <rect x="8" y="8" width="5" height="5" rx="1" />
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M10 4.5V18C10 19.08 9.56 20.07 8.86 20.79L8.82 20.83C8.54 21.08 8.24 21.34 7.9 21.54 7.55 21.68 7.22 21.81 6.83 21.94 6.41 22 6 22 5.73 22 5.46 21.97 5.2 21.92 4.94 21.86 4.65 21.77 4.35 21.65 4.06 21.51 3.79 21.35 3.54 21.16L3.53 21.15C3.4 21.05 3.17 20.83 2.95 20.59 2.65 20.21 2.35 19.66 2.18 19.19 2.03 18.54 2 18.27 2 18V4.5C2 3 3 2 4.5 2H7.5C9 2 10 3 10 4.5Z" />
+                      <path d="M22 16.5V19.5C22 21 21 22 19.5 22H6C6.83 21.94 7.55 21.68 8.54 21.08L8.86 20.79 15.66 14H19.5C21 14 22 15 22 16.5Z" />
+                      <path d="M18.37 11.29L15.66 14 8.86 20.79C9.56 20.07 10 19.08 10 18V8.34L12.71 5.63C13.77 4.57 15.19 4.57 16.25 5.63L18.37 7.75C19.43 8.81 19.43 10.23 18.37 11.29Z" />
+                      <circle cx="6" cy="18" r="1" fill="currentColor" stroke="none" />
                     </svg>
                   </div>
                   <p style={MONO}>{label}</p>

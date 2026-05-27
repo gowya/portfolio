@@ -73,7 +73,7 @@ export default async function AboutPage() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/margauxfrancillard"
+                href="https://www.linkedin.com/in/margaux-francillard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost w-fit"
