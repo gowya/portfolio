@@ -22,7 +22,7 @@ function TimelineItem({
     <div className="timeline-item group flex gap-3 sm:gap-10">
       {/* Left: period */}
       <div className="w-20 sm:w-36 shrink-0 pt-0.5">
-        <span className="text-[11px] sm:text-xs font-medium text-muted whitespace-nowrap">{period}</span>
+        <span className="text-[11px] sm:text-xs font-medium text-muted leading-[1.3] sm:leading-normal">{period}</span>
       </div>
 
       {/* Center: line */}
