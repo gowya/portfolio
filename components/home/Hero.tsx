@@ -94,7 +94,7 @@ export default function Hero() {
                 className="block mt-2 md:mt-0 md:ml-[0.4em] font-medium text-[clamp(1.3rem,1.5vw,1.75rem)] uppercase tracking-[0.22em] text-accent whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-grotesk), system-ui, sans-serif', marginBottom: '0.15em' }}
               >
-                • spécialisée IA
+                • qui Vibecode
               </span>
             </span>
           </span>
