@@ -425,9 +425,9 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     id: '4',
     slug: 'ajout-de-lia',
     title: "Ajout de l'IA",
-    tagline: "Designer l'IA dans un outil de prospection B2B sans perdre l'utilisateur",
+    tagline: "Corriger la forme des messages de prospection grâce à l'IA, sans toucher au fond",
     description:
-      "Intégration de fonctionnalités IA dans le produit Waalaxy • conception des interactions, des patterns de génération de contenu, et des états intermédiaires pour des expériences augmentées sans friction.",
+      "Les utilisateurs débutants de Waalaxy savent quoi dire — ils ne savent pas comment le formuler. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
     coverImage: '/projects/ajout-ia.png',
     tags: ['IA', 'Product Design'],
     caseStudyUrl: null,
@@ -437,85 +437,85 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     period: 'Jan. • Mai 2026',
     status: 'Livré en production',
     metrics: [
-      { value: '∅→IA', label: "de zéro feature IA à une suite complète" },
-      { value: '3', label: "surfaces touchées : message, séquence, campagne" },
+      { value: '3', label: "surfaces couvertes : message, invitation, email" },
+      { value: 'Keep / Retry / Cancel', label: "contrôle total sur le résultat IA" },
     ],
     intro:
-      "La décision d'intégrer l'IA dans Waalaxy n'était pas une tendance à suivre • c'était une réponse à un vrai problème utilisateur. La rédaction de messages LinkedIn personnalisés est la friction numéro un citée dans les interviews : les gens savent ce qu'ils veulent dire, mais ils ne savent pas comment le dire à chaque prospect différemment. L'IA pouvait résoudre ça. Le challenge design : le faire de façon à ce que l'utilisateur garde le contrôle.",
+      "Le problème n'était pas le manque de motivation. Les utilisateurs débutants de Waalaxy savent ce qu'ils veulent dire. Ce qu'ils ne maîtrisent pas, c'est la forme : les codes du message LinkedIn efficace, ce qui distingue un message qui obtient une réponse d'un message qui finit dans la corbeille. L'IA pouvait corriger ça. Le challenge design : le faire sans se substituer à l'utilisateur.",
     sections: [
       {
-        title: "Comprendre le problème avant de concevoir la feature",
+        title: "Le vrai problème : la forme, pas le fond",
         blocks: [
           {
             type: 'p',
-            text: "Waalaxy permet d'envoyer des séquences de messages automatisés sur LinkedIn. La personnalisation manuelle à l'échelle est impossible • personne ne rédige 200 messages différents. L'IA générative ouvre une piste, mais mal conçue, elle produit des messages génériques que les destinataires détectent immédiatement.",
+            text: "Waalaxy est positionné comme l'outil de prospection le plus simple du marché. 75% des utilisateurs n'ont jamais utilisé ce type d'outil. Résultat : les taux de réponse sont plombés par des erreurs de forme basiques — messages trop longs, ton trop commercial, absence de personnalisation visible — pas par un manque d'idées.",
           },
           {
             type: 'callout',
-            text: "L'enjeu UX central : comment permettre à l'IA de générer du contenu personnalisé, tout en donnant à l'utilisateur suffisamment de contrôle pour que le résultat lui ressemble ? Une IA qui écrit à la place de l'utilisateur crée de la méfiance. Une IA qui assiste l'utilisateur dans sa voix crée de la valeur.",
+            text: "Job story : en tant qu'utilisateur débutant, je veux itérer sur mon message de prospection en suivant les meilleures pratiques Waalaxy. L'objectif feature : augmenter les taux de réponse aux invitations, emails et messages en éliminant les erreurs de forme, tout en laissant à l'utilisateur la maîtrise du fond.",
           },
           {
             type: 'list',
             items: [
-              "Analyse des sessions Mixpanel sur les étapes de rédaction de message : 40% des users abandonnent à la première étape de personnalisation",
-              "Interviews utilisateurs : le blocage principal n'est pas technique • c'est le syndrome de la page blanche face à un champ de texte vide",
-              "Benchmark des outils IA génératifs B2B : les meilleurs patterns montrent le résultat avant de demander des paramètres, pas après",
+              "Interviews utilisateurs : le blocage n'est pas 'je ne sais pas quoi dire' • c'est 'je ne sais pas si ça sonne bien'",
+              "Analyse Mixpanel : corrélation entre messages trop longs / trop formels et taux de réponse faibles",
+              "Positionnement produit : Waalaxy recommande des bonnes pratiques dans sa documentation — l'IA devait les incarner, pas les remplacer",
             ],
           },
         ],
       },
       {
-        title: "Conception des interactions IA",
+        title: "Une intégration directe dans les zones de rédaction",
         blocks: [
           {
             type: 'p',
-            text: "Le premier défi : concevoir les états intermédiaires. Quand l'IA génère, que voit l'utilisateur ? Un loader vide, c'est de l'anxiété. Une animation de texte qui s'écrit, c'est de la transparence sur le processus. On a opté pour un streaming visible du résultat, avec un indicateur d'état clair.",
+            text: "Le principe : des boutons d'action accessibles directement depuis les zones de saisie (message LinkedIn, invitation, email). L'utilisateur n'a pas à quitter son workflow. Il sélectionne une option d'amélioration, le contenu est envoyé à GPT pour être réécrit selon les bonnes pratiques correspondantes, et une prévisualisation s'affiche.",
           },
           {
             type: 'img',
             src: '/projects/ajout-de-lia/Enregistrement_de_lecran_2026-01-22_a_17.49.41.gif',
-            caption: "Feature IA en action • génération de messages personnalisés avec streaming visible",
+            caption: "Feature IA en action • réécriture de message avec prévisualisation du résultat",
           },
           {
             type: 'p',
-            text: "Deuxième défi : les paramètres d'entrée. Plutôt qu'un formulaire avec 10 champs, on a réduit à l'essentiel • le contexte du prospect, le ton souhaité, et l'objectif du message. Trois paramètres maximum, pré-remplis par le profil LinkedIn du prospect quand la donnée est disponible.",
+            text: "La prévisualisation propose trois actions : Garder (le message réécrit remplace le contenu original), Réessayer (une nouvelle version est générée), ou Annuler (rien ne change). Le message original n'est jamais écrasé sans action explicite de l'utilisateur.",
           },
           {
             type: 'grid',
             images: [
               {
                 src: '/projects/ajout-de-lia/image.png',
-                caption: "Interface de paramétrage de la génération IA",
+                caption: "Boutons d'amélioration IA dans la zone de rédaction",
               },
               {
                 src: '/projects/ajout-de-lia/image-1.png',
-                caption: "Résultat généré avec actions d'édition inline",
+                caption: "Prévisualisation du résultat avec actions Keep / Retry / Cancel",
               },
             ],
           },
         ],
       },
       {
-        title: "Design System : intégrer les patterns IA",
+        title: "Design System : les composants de la boucle IA",
         blocks: [
           {
             type: 'p',
-            text: "L'ajout de l'IA a nécessité de créer de nouveaux patterns dans le DS : l'état de chargement IA (différent d'un loader standard • il signale une attente plus longue et un processus non-déterministe), le composant de suggestion avec accept/regenerate/edit, et les indicateurs de confiance.",
+            text: "Cette feature a nécessité de créer de nouveaux patterns dans le DS : le composant de prévisualisation IA avec ses trois états (loading, result, error), les boutons d'action contextuels dans les zones de saisie, et les micro-interactions de transition entre l'état original et le résultat généré.",
           },
           {
             type: 'img',
             src: '/projects/ajout-de-lia/image-2.png',
-            caption: "Nouveaux composants DS pour les interactions IA",
+            caption: "Composants DS pour la boucle d'amélioration IA",
           },
           {
             type: 'p',
-            text: "Ces patterns ont été documentés dans Storybook et dans l'espace Notion DS pour qu'ils soient réutilisables sur toutes les futures features IA, sans avoir à reposer les mêmes questions de conception à chaque fois.",
+            text: "Ces patterns ont été documentés dans Storybook pour être réutilisables sur les prochaines features IA du produit — le principe keep/retry/cancel s'applique à n'importe quelle génération de contenu, quelle que soit la surface.",
           },
         ],
       },
     ],
     learnings:
-      "L'IA en product design, c'est d'abord un problème de confiance. Les utilisateurs acceptent que l'IA fasse des erreurs • ce qu'ils n'acceptent pas, c'est de ne pas comprendre ce qui s'est passé ni de pouvoir corriger facilement. Le principe directeur sur tout ce projet : l'IA propose, l'utilisateur dispose. Chaque génération était modifiable, chaque résultat était rejettable sans friction. Ce n'est pas l'IA la plus impressionnante techniquement • c'est celle qui intègre le mieux le workflow existant de l'utilisateur.",
+      "Ce projet m'a appris à distinguer deux types d'assistance IA : celle qui écrit à la place de l'utilisateur, et celle qui améliore ce que l'utilisateur a commencé. La deuxième crée beaucoup moins de résistance. Le flow keep/retry/cancel n'est pas un détail d'UX — c'est ce qui fait que l'utilisateur reste auteur de son message. Sans ce contrôle explicite, l'IA devient une boîte noire. Avec lui, elle devient un outil.",
   },
 
   // ─── 5. Refacto Campaign Manager ───────────────────────────────────────────
