@@ -437,29 +437,31 @@ export const ALL_PROJECTS: ProjectDetail[] = [
     period: 'Jan. • Mai 2026',
     status: 'Livré en production',
     metrics: [
-      { value: '3', label: "surfaces couvertes : message, invitation, email" },
+      { value: '4% à 7%', label: "taux de réponse moyen d'une campagne de prospection" },
+      { value: '15% à 20%', label: "objectif x3 du taux de réponse moyen" },
+      { value: '3', label: "surfaces couvertes : message, note d'invitation, email" },
       { value: 'Keep / Retry / Cancel', label: "contrôle total sur le résultat IA" },
     ],
     intro:
-      "Le problème n'était pas le manque de motivation. Les utilisateurs débutants de Waalaxy savent ce qu'ils veulent dire. Ce qu'ils ne maîtrisent pas, c'est la forme : les codes du message LinkedIn efficace, ce qui distingue un message qui obtient une réponse d'un message qui finit dans la corbeille. L'IA pouvait corriger ça. Le challenge design : le faire sans se substituer à l'utilisateur.",
+      "En analysant 64 millions de campagnes LinkedIn sur la base Waalaxy, nous avons pu identifier les patterns rédactionnels qui impactent les taux de réponse : le top 1% des utilisateurs atteint 47,4% de réponses, contre 5% en moyenne selon les personas.",
     sections: [
       {
         title: "Le vrai problème : la forme, pas le fond",
         blocks: [
           {
             type: 'p',
-            text: "Waalaxy est positionné comme l'outil de prospection le plus simple du marché. 75% des utilisateurs n'ont jamais utilisé ce type d'outil. Résultat : les taux de réponse sont plombés par des erreurs de forme basiques — messages trop longs, ton trop commercial, absence de personnalisation visible — pas par un manque d'idées.",
+            text: "Waalaxy est positionné comme l'outil de prospection le plus simple du marché. 75% des utilisateurs n'ont jamais utilisé ce type d'outil. Résultat : les taux de réponse sont plombés par des erreurs de forme basiques (messages trop longs, ton trop commercial, absence de personnalisation visible...) pas par un manque d'idées.",
           },
           {
             type: 'callout',
-            text: "Job story : en tant qu'utilisateur débutant, je veux itérer sur mon message de prospection en suivant les meilleures pratiques Waalaxy. L'objectif feature : augmenter les taux de réponse aux invitations, emails et messages en éliminant les erreurs de forme, tout en laissant à l'utilisateur la maîtrise du fond.",
+            text: "User story : en tant qu'utilisateur débutant, je veux itérer sur mon message de prospection en suivant les meilleures pratiques Waalaxy. L'objectif feature : augmenter les taux de réponse aux invitations, emails et messages en éliminant les erreurs de forme, tout en laissant à l'utilisateur la maîtrise du fond.",
           },
           {
             type: 'list',
             items: [
-              "Interviews utilisateurs : le blocage n'est pas 'je ne sais pas quoi dire' • c'est 'je ne sais pas si ça sonne bien'",
+              "Analyse Waalaxy : corrélation entre le peu d'expérience en prospection et le taux de réponse faible",
               "Analyse Mixpanel : corrélation entre messages trop longs / trop formels et taux de réponse faibles",
-              "Positionnement produit : Waalaxy recommande des bonnes pratiques dans sa documentation — l'IA devait les incarner, pas les remplacer",
+              "Positionnement produit : Waalaxy recommande des bonnes pratiques dans sa documentation, l'IA doit les incarner pour les rendre accessibles à tous les utilisateurs, pas seulement à ceux qui savent déjà comment faire.",
             ],
           },
         ],
@@ -474,7 +476,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/ajout-de-lia/Enregistrement_de_lecran_2026-01-22_a_17.49.41.gif',
-            caption: "Feature IA en action • réécriture de message avec prévisualisation du résultat",
+            caption: "Feature IA - réécriture de message avec prévisualisation du résultat",
           },
           {
             type: 'p',
@@ -509,7 +511,7 @@ export const ALL_PROJECTS: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Ces patterns ont été documentés dans Storybook pour être réutilisables sur les prochaines features IA du produit — le principe keep/retry/cancel s'applique à n'importe quelle génération de contenu, quelle que soit la surface.",
+            text: "Ces patterns ont été documentés dans Storybook pour être réutilisables sur les prochaines features IA du produit : le principe keep/retry/cancel s'applique à n'importe quelle génération de contenu, quelle que soit la surface.",
           },
         ],
       },
