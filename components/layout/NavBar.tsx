@@ -109,14 +109,12 @@ export default function NavBar() {
         )
       }
     } else {
+      overlay.style.pointerEvents = 'none'
+      document.body.style.overflow = ''
       gsap.to(overlay, {
         opacity: 0,
         duration: 0.2,
         ease: 'power2.in',
-        onComplete: () => {
-          overlay.style.pointerEvents = 'none'
-          document.body.style.overflow = ''
-        },
       })
     }
   }, [menuOpen])
@@ -228,7 +226,7 @@ export default function NavBar() {
       <div
         ref={overlayRef}
         className="fixed inset-0 z-[100] flex flex-col md:hidden"
-        style={{ background: '#0a0a0a', opacity: 0, pointerEvents: 'none' }}
+        style={{ background: 'var(--bg)', opacity: 0, pointerEvents: 'none' }}
         aria-modal="true"
         role="dialog"
         aria-label="Menu de navigation"

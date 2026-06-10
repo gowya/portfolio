@@ -51,7 +51,6 @@ export default function Hero() {
         backgroundImage: 'var(--hero-photo-overlay), url(/hero-bg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
       }}
     >
       {/* Reeded glass texture — theme-aware */}

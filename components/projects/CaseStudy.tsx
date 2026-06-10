@@ -122,7 +122,7 @@ function MetricsBar({ metrics }: { metrics: Metric[] }) {
           key={i}
           className="bg-bg-card border border-border rounded-xl p-5 sm:p-6"
         >
-          <div className="font-display font-bold text-2xl sm:text-3xl text-accent mb-1 leading-none">
+          <div className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-accent mb-1 leading-tight break-words">
             {m.value}
           </div>
           <div className="text-muted text-xs sm:text-sm leading-snug">{m.label}</div>

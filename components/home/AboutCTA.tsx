@@ -46,7 +46,7 @@ export default function AboutCTA() {
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text leading-tight mb-4 text-balance">
               La designer derrière les projets
             </h2>
-            <p className="mb-5" style={{ fontSize: '14px', color: '#7A6A58', lineHeight: 1.6 }}>
+            <p className="mb-5" style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.6 }}>
               Lead Design System &amp; Product Designer · Waalaxy · Nov. 2023 → Présent
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
