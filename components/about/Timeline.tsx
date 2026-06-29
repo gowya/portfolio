@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { Experience, Formation } from '@/lib/types'
+import { useLang } from '@/lib/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -51,6 +52,7 @@ export default function Timeline({
   formations: Formation[]
 }) {
   const ref = useRef<HTMLDivElement>(null)
+  const { t } = useLang()
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -74,7 +76,7 @@ export default function Timeline({
     <div ref={ref} className="space-y-16">
       {/* Experiences */}
       <div>
-        <p className="section-label mb-8">Expériences</p>
+        <p className="section-label mb-8">{t.timeline.experience}</p>
         <div>
           {experiences.map((exp) => (
             <TimelineItem
@@ -90,7 +92,7 @@ export default function Timeline({
 
       {/* Formations */}
       <div>
-        <p className="section-label mb-8">Formations</p>
+        <p className="section-label mb-8">{t.timeline.education}</p>
         <div>
           {formations.map((f) => (
             <TimelineItem

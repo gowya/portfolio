@@ -5,6 +5,7 @@ import './globals.css'
 import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
 import Cursor from '@/components/ui/Cursor'
+import { LanguageProvider } from '@/lib/i18n'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -84,10 +85,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Cursor />
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Cursor />
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
         <SpeedInsights />
       </body>
     </html>

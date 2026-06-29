@@ -7,21 +7,32 @@ import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const COLORS = [
-  { token: 'Background/Primary',  value: '#0a0a0a',                bg: '#0a0a0a',    border: false },
-  { token: 'Background/Surface',  value: '#0f0d0b',                bg: '#0f0d0b',    border: false },
-  { token: 'Background/Elevated', value: '#141210',                bg: '#141210',    border: false },
-  { token: 'Text/Primary',        value: '#F0E6D3',                bg: '#F0E6D3',    border: false },
-  { token: 'Text/Secondary',      value: '#8A7A6A',                bg: '#8A7A6A',    border: false },
-  { token: 'Text/Muted',          value: '#5A4A3A',                bg: '#5A4A3A',    border: false },
-  { token: 'Accent/Default',      value: '#B85C2A',                bg: '#B85C2A',    border: false },
-  { token: 'Accent/Hover',        value: '#C8704A',                bg: '#C8704A',    border: false },
-  { token: 'Border/Default',      value: 'rgba(255,255,255,0.07)', bg: 'transparent', border: true },
-  { token: 'Border/Accent',       value: 'rgba(184,92,42,0.3)',    bg: 'transparent', border: true },
+// Swatches are driven by live CSS variables so they stay accurate AND adapt to
+// the active theme (dark/light). The "value" shown is the token reference — the
+// resolved hex differs per theme, so quoting a fixed hex would be wrong in one of them.
+const COLORS: { token: string; css: string; group: string; isBorder?: boolean }[] = [
+  { token: 'bg',         css: '--color-bg',         group: 'Background' },
+  { token: 'bg-subtle',  css: '--color-bg-subtle',  group: 'Background' },
+  { token: 'bg-card',    css: '--color-bg-card',    group: 'Background' },
+  { token: 'surface',    css: '--color-surface',    group: 'Background' },
+  { token: 'text',       css: '--color-text',       group: 'Text' },
+  { token: 'muted',      css: '--color-muted',      group: 'Text' },
+  { token: 'accent',     css: '--color-accent',     group: 'Accent' },
+  { token: 'accent-dim', css: '--color-accent-dim', group: 'Accent' },
+  { token: 'ember',      css: '--color-ember',      group: 'Accent' },
+  { token: 'sienna',     css: '--color-sienna',     group: 'Accent' },
+  { token: 'border',     css: '--color-border',     group: 'Border', isBorder: true },
 ]
 
-// Type example colors are intentionally hardcoded — they demonstrate the design system tokens,
-// not the current theme's UI colors.
+const RADII = [
+  { name: 'sm',   value: '8px',   note: 'swatches, inputs' },
+  { name: 'md',   value: '12px',  note: 'cards, navbar' },
+  { name: 'lg',   value: '16px',  note: 'bento cells' },
+  { name: 'full', value: '999px', note: 'pills, tags, badge' },
+]
+
+// Type example colors use the live theme tokens (var(--text), var(--muted), var(--accent))
+// so the specimens render exactly as they do on the site, in either theme.
 const TYPE_SCALE: { name: string; spec: string; text: string; style: React.CSSProperties }[] = [
   { name: 'Display/Hero',  spec: 'Italiana · clamp(2.5rem,5vw,4rem)',   text: 'Product & System Designer',                style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: 'var(--text)', lineHeight: 1.1 } },
   { name: 'Display/Title', spec: 'Italiana · clamp(1.5rem,3vw,2.5rem)', text: 'Projets récents',                          style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.3rem,2.5vw,2rem)',   color: 'var(--text)', lineHeight: 1.15 } },
@@ -130,6 +141,7 @@ export default function DesignSystemPage() {
         .cell-buttons    { grid-column: 1 / span 4;  grid-row: 5 / span 2; }
         .cell-tags       { grid-column: 5 / span 4;  grid-row: 5 / span 1; }
         .cell-badge      { grid-column: 5 / span 4;  grid-row: 6 / span 1; }
+        .cell-radius     { grid-column: 9 / span 4;  grid-row: 5 / span 2; }
         .cell-cards      { grid-column: 1 / span 6;  grid-row: 7 / span 3; }
         .cell-nav        { grid-column: 7 / span 6;  grid-row: 7 / span 3; }
 
@@ -162,6 +174,7 @@ export default function DesignSystemPage() {
           .cell-buttons,
           .cell-tags,
           .cell-badge,
+          .cell-radius,
           .cell-cards,
           .cell-nav {
             grid-column: 1 / -1;
@@ -188,7 +201,7 @@ export default function DesignSystemPage() {
           <h1 style={{ fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(2.2rem,5vw,4rem)', color: 'var(--text)', lineHeight: 1 }}>
             Design System
           </h1>
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)', border: '1px solid rgba(184,92,42,0.3)', borderRadius: '999px', padding: '3px 10px', whiteSpace: 'nowrap' }}>
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)', border: '1px solid rgb(var(--color-accent) / 0.3)', borderRadius: '999px', padding: '3px 10px', whiteSpace: 'nowrap' }}>
             — internal use only
           </span>
         </div>
@@ -209,18 +222,20 @@ export default function DesignSystemPage() {
             <CellLabel>Core</CellLabel>
             <CellTitle>Colors</CellTitle>
             <div className="colors-grid">
-              {COLORS.map(({ token, value, bg, border }) => (
+              {COLORS.map(({ token, css, group, isBorder }) => (
                 <div key={token}>
-                  {/* swatch bg/border intentionally hardcoded — shows actual color tokens */}
+                  {/* swatch renders the live CSS variable → always accurate + theme-aware */}
                   <div style={{
                     height: '60px',
                     borderRadius: '8px',
-                    background: border ? 'transparent' : bg,
-                    border: border ? `3px solid ${value}` : '1px solid rgba(255,255,255,0.06)',
+                    background: isBorder ? 'transparent' : `rgb(var(${css}))`,
+                    border: isBorder
+                      ? `3px solid rgb(var(${css}))`
+                      : '1px solid rgb(var(--color-border))',
                     marginBottom: '8px',
                   }} />
-                  <p style={{ ...MONO, color: 'var(--text)', fontSize: '10px', marginBottom: '2px', lineHeight: 1.4 }}>{token}</p>
-                  <p style={{ ...MONO, fontSize: '10px' }}>{value}</p>
+                  <p style={{ ...MONO, color: 'var(--text)', fontSize: '10px', marginBottom: '2px', lineHeight: 1.4 }}>{group}/{token}</p>
+                  <p style={{ ...MONO, fontSize: '9px' }}>{css}</p>
                 </div>
               ))}
             </div>
@@ -291,7 +306,7 @@ export default function DesignSystemPage() {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', alignItems: 'center' }}>
               {TAGS.slice(0, 2).map(t => (
-                <span key={t} className="tag" style={{ borderColor: 'rgba(184,92,42,0.5)', color: 'var(--accent)' }}>{t}</span>
+                <span key={t} className="tag" style={{ borderColor: 'rgb(var(--color-accent) / 0.5)', color: 'var(--accent)' }}>{t}</span>
               ))}
               <span style={{ ...MONO, fontSize: '10px' }}>← active</span>
             </div>
@@ -301,16 +316,34 @@ export default function DesignSystemPage() {
           <div className="bento-cell cell-badge" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Badge</CellTitle>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 14px', borderRadius: '999px', border: '1px solid var(--border)', background: 'rgb(var(--color-surface) / 0.4)' }}>
-              <span
-                className="animate-pulse"
-                style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#4ADE80', display: 'inline-block', flexShrink: 0 }}
-              />
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text)' }}>
-                Disponible • Montpellier
-              </span>
+            {/* Mirrors the live hero badge exactly — accent dot, muted/70 text, border-border/50 */}
+            <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
+              <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
+              Montpellier &amp; Remote
+            </span>
+            <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>Accent dot · pulse · 0.6rem uppercase · ls 0.22em · pill border</p>
+          </div>
+
+          {/* ── RADIUS — 4×2 ─────────────────────────────────────────────── */}
+          <div className="bento-cell cell-radius" style={CELL_BASE}>
+            <CellLabel>Core</CellLabel>
+            <CellTitle>Radius</CellTitle>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              {RADII.map(({ name, value, note }) => (
+                <div key={name} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{
+                    width: '40px', height: '40px', flexShrink: 0,
+                    background: 'rgb(var(--color-surface) / 0.5)',
+                    border: '1px solid rgb(var(--color-accent) / 0.4)',
+                    borderRadius: value,
+                  }} />
+                  <div>
+                    <p style={{ ...MONO, color: 'var(--text)', fontSize: '11px', marginBottom: '2px' }}>{name} · {value}</p>
+                    <p style={{ ...MONO, fontSize: '10px' }}>{note}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <p style={{ ...MONO, marginTop: '10px', fontSize: '10px' }}>Green dot · pulse · 11px uppercase · pill border</p>
           </div>
 
           {/* ── CARDS — 6×3 ──────────────────────────────────────────────── */}

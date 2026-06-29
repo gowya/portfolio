@@ -2,10 +2,11 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-
-const ITEMS = 'FIGMA · POPPY · DESIGN SYSTEM · BLEU KLEIN · SAAS B2B · PLUIE SUR VELUX · CLAUDE CODE · EAU FRAÎCHE OU VIN BLANC · RECHERCHE UTILISATEUR · COUCHERS DE SOLEIL · IA · WAALAXY · PLAYLIST EN BOUCLE · '
+import { useLang } from '@/lib/i18n'
 
 export default function Ticker() {
+  const { t } = useLang()
+  const ITEMS = t.ticker
   const containerRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const tlRef = useRef<gsap.core.Timeline | null>(null)

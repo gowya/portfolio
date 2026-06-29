@@ -6,11 +6,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { Project } from '@/lib/types'
 import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
+import { useLang } from '@/lib/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const articleRef = useRef<HTMLElement>(null)
+  const { t } = useLang()
 
   useEffect(() => {
     const el = articleRef.current
@@ -43,7 +45,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </p>
 
           <span data-card-cta className="inline-flex items-center gap-1.5 mt-5 text-sm font-medium text-accent">
-            Voir le case study
+            {t.projectGrid.viewCase}
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
               <path d="M2 6.5h9M6.5 2l4.5 4.5L6.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -56,9 +58,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export default function ProjectGrid({ projects }: { projects: Project[] }) {
   const gridRef = useRef<HTMLDivElement>(null)
+  const { t } = useLang()
   const [activeTag, setActiveTag] = useState<string | null>(null)
 
-  const allTags = ['Product Design', 'Conversion', 'Design System', 'IA', 'UX Research', 'Freelance']
+  const allTags = t.projectGrid.tags
 
   const filtered = activeTag
     ? projects.filter((p) => p.tags.includes(activeTag))
@@ -93,7 +96,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
             activeTag === null ? 'border-accent/50 text-accent' : 'hover:border-text/30 hover:text-text'
           }`}
         >
-          Tous
+          {t.projectGrid.all}
         </button>
         {allTags.map((tag) => (
           <button
@@ -118,7 +121,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
 
       {filtered.length === 0 && (
         <p className="text-muted text-center py-16">
-          Aucun projet pour ce filtre.
+          {t.projectGrid.empty}
         </p>
       )}
     </div>

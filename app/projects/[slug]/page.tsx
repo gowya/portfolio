@@ -38,5 +38,5 @@ export async function generateMetadata({
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = getProjectBySlug(params.slug)
   if (!project) notFound()
-  return <CaseStudy project={project} />
+  return <CaseStudy slug={params.slug} />
 }

@@ -1,6 +1,10 @@
+'use client'
+
 import Link from 'next/link'
+import { useLang } from '@/lib/i18n'
 
 export default function Footer() {
+  const { t } = useLang()
   const year = new Date().getFullYear()
 
   return (
@@ -25,13 +29,13 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-muted text-sm hover:text-text transition-colors"
           >
-            On en parle ?
+            {t.footer.talk}
           </a>
           <Link
             href="/projects"
             className="text-muted text-sm hover:text-text transition-colors"
           >
-            Projets
+            {t.footer.work}
           </Link>
         </div>
       </div>

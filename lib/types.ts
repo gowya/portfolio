@@ -1,3 +1,5 @@
+export type Lang = 'fr' | 'en'
+
 export interface Project {
   id: string
   slug: string

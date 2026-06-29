@@ -5,13 +5,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLang } from '@/lib/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const SKILLS = ['Figma', 'Vibe Code', 'Design System']
-
 export default function AboutCTA() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLang()
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -42,15 +42,15 @@ export default function AboutCTA() {
 
           {/* Left: text content — 60% */}
           <div className="relative flex-[3] p-10 sm:p-14 flex flex-col justify-center min-h-[320px]">
-            <p className="section-label mb-5">À propos</p>
+            <p className="section-label mb-5">{t.aboutCta.label}</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text leading-tight mb-4 text-balance">
-              La designer derrière les projets
+              {t.aboutCta.title}
             </h2>
             <p className="mb-5" style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.6 }}>
-              Lead Design System &amp; Product Designer · Waalaxy · Nov. 2023 → Présent
+              {t.aboutCta.subtitle}
             </p>
             <div className="flex flex-wrap gap-2 mb-8">
-              {SKILLS.map((skill) => (
+              {t.aboutCta.skills.map((skill) => (
                 <span
                   key={skill}
                   className="font-sans"
@@ -68,7 +68,7 @@ export default function AboutCTA() {
               ))}
             </div>
             <Link href="/about" className="btn-primary w-fit">
-              Voir mon parcours
+              {t.aboutCta.cta}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -79,7 +79,7 @@ export default function AboutCTA() {
           <div className="relative flex-[2] hidden md:block">
             <Image
               src="/margaux.png"
-              alt="Portrait"
+              alt={t.aboutCta.photoAlt}
               fill
               sizes="(max-width: 1280px) 40vw, 480px"
               className="object-cover object-top"

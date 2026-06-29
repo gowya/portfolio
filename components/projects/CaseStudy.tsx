@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import type { ProjectDetail, Block, Metric } from '@/lib/types'
-import { ALL_PROJECTS } from '@/lib/projects-data'
+import type { Block, Metric } from '@/lib/types'
+import { useLang, getProjectBySlug, getAllProjects } from '@/lib/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -134,13 +134,17 @@ function MetricsBar({ metrics }: { metrics: Metric[] }) {
 
 // ─── Main component ───────────────────────────────────────────────────────────
 
-export default function CaseStudy({ project }: { project: ProjectDetail }) {
+export default function CaseStudy({ slug }: { slug: string }) {
   const ref = useRef<HTMLDivElement>(null)
+  const { t, lang } = useLang()
+
+  const project = getProjectBySlug(slug, lang)
 
   // adjacent project navigation
-  const idx = ALL_PROJECTS.findIndex((p) => p.slug === project.slug)
-  const prev = ALL_PROJECTS[idx - 1] ?? null
-  const next = ALL_PROJECTS[idx + 1] ?? null
+  const all = getAllProjects(lang)
+  const idx = all.findIndex((p) => p.slug === slug)
+  const prev = all[idx - 1] ?? null
+  const next = all[idx + 1] ?? null
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -166,7 +170,9 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
     }, ref)
 
     return () => ctx.revert()
-  }, [project.slug])
+  }, [slug])
+
+  if (!project) return null
 
   return (
     <div ref={ref} className="min-h-screen pt-24 pb-32">
@@ -179,7 +185,7 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M12 7H2M7 12l-5-5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Projets
+          {t.caseStudy.back}
         </Link>
       </div>
 
@@ -204,20 +210,20 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
 
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted text-sm border-t border-border pt-6">
           <span>
-            <span className="text-text/60 mr-1.5">Rôle</span>
+            <span className="text-text/60 mr-1.5">{t.caseStudy.role}</span>
             {project.role}
           </span>
           <span>
-            <span className="text-text/60 mr-1.5">Entreprise</span>
+            <span className="text-text/60 mr-1.5">{t.caseStudy.company}</span>
             {project.company}
           </span>
           <span>
-            <span className="text-text/60 mr-1.5">Période</span>
+            <span className="text-text/60 mr-1.5">{t.caseStudy.period}</span>
             {project.period}
           </span>
           {project.team && (
             <span>
-              <span className="text-text/60 mr-1.5">Équipe</span>
+              <span className="text-text/60 mr-1.5">{t.caseStudy.team}</span>
               {project.team}
             </span>
           )}
@@ -275,7 +281,7 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
         {/* Learnings */}
         {project.learnings && (
           <div className="cs-section bg-bg-card border border-border rounded-2xl p-8 mb-16">
-            <p className="section-label mb-4">Ce que j'ai retenu</p>
+            <p className="section-label mb-4">{t.caseStudy.learnings}</p>
             <p className="text-text/85 leading-relaxed text-[1.0625rem]">
               {project.learnings}
             </p>
@@ -296,7 +302,7 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M10 6H2M6 10l-4-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  Précédent
+                  {t.caseStudy.previous}
                 </span>
                 <span className="text-text text-sm font-medium leading-snug group-hover:text-accent transition-colors">
                   {prev.title}
@@ -312,7 +318,7 @@ export default function CaseStudy({ project }: { project: ProjectDetail }) {
                 className="group flex flex-col gap-1 max-w-xs text-right ml-auto"
               >
                 <span className="text-muted text-xs flex items-center gap-1.5 justify-end">
-                  Suivant
+                  {t.caseStudy.next}
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

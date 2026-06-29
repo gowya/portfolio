@@ -6,11 +6,13 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { Project } from '@/lib/types'
 import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
+import { useLang, getFeaturedProjects } from '@/lib/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function ProjectCard({ project, isHero }: { project: Project; isHero: boolean }) {
   const cardRef = useRef<HTMLDivElement>(null)
+  const { t } = useLang()
 
   useEffect(() => {
     const card = cardRef.current
@@ -54,7 +56,7 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
 
           <div className="mt-auto pt-5">
             <span data-card-cta className="inline-flex items-center gap-1" style={{ fontSize: '13px', color: 'var(--accent)' }}>
-              Voir le case study →
+              {t.featured.viewCase}
             </span>
           </div>
         </div>
@@ -63,8 +65,10 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
   )
 }
 
-export default function FeaturedProjects({ projects }: { projects: Project[] }) {
+export default function FeaturedProjects() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t, lang } = useLang()
+  const projects = getFeaturedProjects(lang)
 
   const bySlug = (slug: string, fallback: number) =>
     projects.find((p) => p.slug === slug) ?? projects[fallback]
@@ -105,16 +109,16 @@ export default function FeaturedProjects({ projects }: { projects: Project[] }) 
         {/* Header */}
         <div className="section-header flex items-end justify-between mb-12">
           <div>
-            <p className="section-label mb-3">Travaux sélectionnés</p>
+            <p className="section-label mb-3">{t.featured.label}</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text">
-              Projets récents
+              {t.featured.title}
             </h2>
           </div>
           <Link
             href="/projects"
             className="hidden sm:inline-flex items-center gap-2 text-sm text-muted hover:text-text transition-colors"
           >
-            Voir tout
+            {t.featured.viewAll}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -135,7 +139,7 @@ export default function FeaturedProjects({ projects }: { projects: Project[] }) 
         {/* Mobile CTA */}
         <div className="mt-8 sm:hidden text-center">
           <Link href="/projects" className="btn-ghost">
-            Voir tous les projets
+            {t.featured.viewAllProjects}
           </Link>
         </div>
       </div>

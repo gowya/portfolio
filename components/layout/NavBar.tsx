@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import gsap from 'gsap'
+import { useLang } from '@/lib/i18n'
 
 type Theme = 'dark' | 'light'
 
@@ -61,14 +62,44 @@ function CloseIcon() {
   )
 }
 
-const NAV_LINKS = [
-  { href: '/', label: 'Accueil' },
-  { href: '/projects', label: 'Mes projets' },
-  { href: '/about', label: 'Qui je suis' },
-]
+const NAV_ITEMS = [
+  { href: '/', key: 'home' },
+  { href: '/projects', key: 'work' },
+  { href: '/about', key: 'about' },
+] as const
+
+function LangToggle() {
+  const { lang, setLang } = useLang()
+  return (
+    <div className="flex items-center gap-1 text-sm" role="group" aria-label="Language / Langue">
+      <button
+        type="button"
+        onClick={() => setLang('fr')}
+        aria-pressed={lang === 'fr'}
+        className={`px-1 transition-colors ${
+          lang === 'fr' ? 'text-accent font-semibold' : 'text-muted font-normal hover:text-text'
+        }`}
+      >
+        FR
+      </button>
+      <span className="text-muted/40" aria-hidden="true">|</span>
+      <button
+        type="button"
+        onClick={() => setLang('en')}
+        aria-pressed={lang === 'en'}
+        className={`px-1 transition-colors ${
+          lang === 'en' ? 'text-accent font-semibold' : 'text-muted font-normal hover:text-text'
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  )
+}
 
 export default function NavBar() {
   const pathname = usePathname()
+  const { t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState<Theme>('dark')
   const [menuOpen, setMenuOpen] = useState(false)
@@ -151,7 +182,7 @@ export default function NavBar() {
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map(({ href, label }) => (
+            {NAV_ITEMS.map(({ href, key }) => (
               <li key={href}>
                 <Link
                   href={href}
@@ -161,7 +192,7 @@ export default function NavBar() {
                       : 'text-muted hover:text-text'
                   }`}
                 >
-                  {label}
+                  {t.nav[key]}
                 </Link>
               </li>
             ))}
@@ -171,49 +202,51 @@ export default function NavBar() {
           <div className="hidden md:flex items-center gap-2">
             <Link
               href="/design-system"
-              aria-label="Design System"
-              title="Design System"
+              aria-label={t.nav.designSystem}
+              title={t.nav.designSystem}
               className="p-2 rounded-full text-muted hover:text-accent hover:bg-surface transition-colors"
             >
               <ColorSwatchIcon />
             </Link>
             <button
               onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              aria-label={theme === 'dark' ? t.nav.toLight : t.nav.toDark}
               className="p-2 rounded-full text-muted hover:text-text hover:bg-surface transition-colors"
             >
               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
             </button>
+            <LangToggle />
             <a
               href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
             >
-              On en parle ?
+              {t.nav.talk}
             </a>
           </div>
 
-          {/* Mobile right controls: DS icon · theme toggle · burger */}
-          <div className="md:hidden flex items-center gap-3">
+          {/* Mobile right controls: lang · DS icon · theme toggle · burger */}
+          <div className="md:hidden flex items-center gap-2">
+            <LangToggle />
             <Link
               href="/design-system"
-              aria-label="Design System"
-              title="Design System"
+              aria-label={t.nav.designSystem}
+              title={t.nav.designSystem}
               className="p-2 rounded-full text-muted hover:text-accent transition-colors"
             >
               <ColorSwatchIcon />
             </Link>
             <button
               onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              aria-label={theme === 'dark' ? t.nav.toLight : t.nav.toDark}
               className="p-2 rounded-full text-muted hover:text-text transition-colors"
             >
               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
             </button>
             <button
               onClick={() => setMenuOpen(true)}
-              aria-label="Ouvrir le menu"
+              aria-label={t.nav.openMenu}
               className="p-2 rounded-full text-text hover:text-accent transition-colors"
             >
               <BurgerIcon />
@@ -229,7 +262,7 @@ export default function NavBar() {
         style={{ background: 'var(--bg)', opacity: 0, pointerEvents: 'none' }}
         aria-modal="true"
         role="dialog"
-        aria-label="Menu de navigation"
+        aria-label={t.nav.navMenu}
       >
         {/* Overlay header */}
         <div className="flex items-center justify-between px-6 py-5">
@@ -241,24 +274,25 @@ export default function NavBar() {
             MF
           </Link>
           <div className="flex items-center gap-2">
+            <LangToggle />
             <Link
               href="/design-system"
               onClick={closeMenu}
-              aria-label="Design System"
+              aria-label={t.nav.designSystem}
               className="p-2 rounded-full text-muted hover:text-accent transition-colors"
             >
               <ColorSwatchIcon />
             </Link>
             <button
               onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+              aria-label={theme === 'dark' ? t.nav.toLight : t.nav.toDark}
               className="p-2 rounded-full text-muted hover:text-text transition-colors"
             >
               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
             </button>
             <button
               onClick={closeMenu}
-              aria-label="Fermer le menu"
+              aria-label={t.nav.closeMenu}
               className="p-2 rounded-full text-muted hover:text-text transition-colors"
             >
               <CloseIcon />
@@ -271,7 +305,7 @@ export default function NavBar() {
           ref={menuLinksRef}
           className="flex flex-col items-center justify-center flex-1 gap-8"
         >
-          {NAV_LINKS.map(({ href, label }) => (
+          {NAV_ITEMS.map(({ href, key }) => (
             <Link
               key={href}
               href={href}
@@ -280,7 +314,7 @@ export default function NavBar() {
                 pathname === href ? 'text-accent' : 'text-text hover:text-accent'
               }`}
             >
-              {label}
+              {t.nav[key]}
             </Link>
           ))}
 
@@ -291,7 +325,7 @@ export default function NavBar() {
             onClick={closeMenu}
             className="mt-4 inline-flex items-center gap-1.5 px-6 py-3 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
           >
-            On en parle ?
+            {t.nav.talk}
           </a>
         </div>
       </div>
