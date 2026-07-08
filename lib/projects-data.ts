@@ -708,9 +708,9 @@ const PROJECTS_FR: ProjectDetail[] = [
     id: '6',
     slug: 'design-system',
     title: 'Lead Design System from scratch',
-    tagline: 'Construire les fondations qui permettent de livrer vite et cohérent',
+    tagline: "Product Designer & Lead Design System chez Waalaxy. WAATOM, c'est le nom du bébé.",
     description:
-      "Création et maintien du Design System de Waalaxy depuis nov. 2023 • composants Figma documentés, espace Notion opérationnel, process DS, revue ISO Figma/Storybook à chaque sprint.",
+      "Construction du Design System de Waalaxy depuis zéro • audit complet, fondations en tokens, triangle Main Component/Storybook/documentation, process de contribution et de deprecation, aujourd'hui poussé plus loin via MCP avec Claude.",
     coverImage: '/projects/design-system.png',
     tags: ['Design System'],
     caseStudyUrl: null,
@@ -725,92 +725,121 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: '30 min', label: 'ateliers mensuels avec les devs' },
     ],
     intro:
-      "Quand Waalaxy m'a proposé le poste de Lead DS, il n'y avait pas vraiment de Design System. Il y avait des composants Figma éparpillés, des pratiques différentes d'un designer à l'autre, et aucun process clair entre le design et le dev. Chaque projet générait des allers-retours inutiles parce que personne n'avait la même vision de ce qui existait ou de comment l'utiliser.",
+      "Au début, WAATOM c'était un dossier Figma avec des composants qui se ressemblaient sans jamais être vraiment pareils. Trois boutons \"primary\" avec trois radius différents. Un input qui existait en quatre versions selon qui l'avait fait. Les devs recodaient à chaque fois ce qui existait déjà, juste un peu différemment.",
     sections: [
       {
-        title: 'Figma : reconstruire depuis la base',
+        title: 'Le point de départ',
         blocks: [
           {
             type: 'p',
-            text: "Tous les composants existants ont été audités, reconstruits ou corrigés. L'objectif : des composants qui respectent une logique cohérente de props, de variants et d'états, pour que n'importe quel designer puisse les utiliser sans avoir à deviner.",
+            text: "Sans système, chaque designer invente sa propre logique. Et à un moment donné, l'app entière commence à parler plusieurs langues en même temps.",
           },
           {
             type: 'p',
-            text: "Chaque composant est documenté directement dans Figma : définition, anatomie, props disponibles, états, use cases et ce qu'il ne faut pas faire. La documentation n'est pas séparée du composant. Les chantiers principaux : boutons, inputs, icônes et variables. Puis uniformisation des props entre Figma et Storybook.",
+            text: "Mon point d'entrée a toujours été le même : un composant a besoin d'un système derrière lui pour avoir sa place dans le produit. Des tokens partout, des composants pensés pour vivre ensemble. Ça a l'air simple à dire. Ça prend des années à tenir.",
+          },
+        ],
+      },
+      {
+        title: 'Poser les fondations',
+        blocks: [
+          {
+            type: 'p',
+            text: "J'ai commencé par un audit complet. Inventaire de toutes les interfaces, screenshots de chaque variante de chaque pattern (jusqu'à lister toutes les façons de fermer une modale dans l'app, oui, toutes). Un travail de fourmi, mais c'est exactement ce qui révèle où est le vrai chaos.",
+          },
+          {
+            type: 'p',
+            text: "Ensuite, structurer la library en couches : les fondations (couleurs, typo, spacing, radius, tous en variables Figma), les composants core, puis les composants plus spécifiques au métier. Chaque couche a sa raison d'être, chaque token a une seule source de vérité. C'est la base qui permet à tout le reste de tenir debout, même quand la couleur de marque change du jour au lendemain.",
           },
           {
             type: 'img',
             src: '/projects/design-system/image.png',
-            caption: 'Documentation Figma du composant Input • anatomie, props et states',
-          },
-        ],
-      },
-      {
-        title: 'Notion : la documentation centrale',
-        blocks: [
-          {
-            type: 'p',
-            text: "J'ai construit l'espace Notion du DS from scratch. Ce n'est pas juste un wiki • c'est une FAQ opérationnelle : les bons liens, des tutos étape par étape, les process design illustrés, des arbres de décisions, les Initial Mockup Templates qui répertorient les principales pages de l'app avec les maquettes les plus récentes.",
-          },
-          {
-            type: 'callout',
-            text: "L'objectif : que n'importe qui, designer ou dev, puisse trouver une réponse sans avoir à me pinger.",
-          },
-          {
-            type: 'img',
-            src: '/projects/design-system/image-1.png',
-            caption: "Page d'accueil de l'espace Notion Waatom DS",
-          },
-        ],
-      },
-      {
-        title: 'Process DS & Storybook',
-        blocks: [
-          {
-            type: 'p',
-            text: "J'ai mis en place un process complet de l'ouverture de Figma jusqu'à la validation DS. Avant chaque kick-off, je passe sur les maquettes pour valider l'usage des composants. Un message systématique dans #design-system prévient l'équipe avant chaque kick-off.",
-          },
-          {
-            type: 'img',
-            src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
-            caption: 'Tuto pour contribution sur des branches Figma',
+            caption: 'Le Main Component dans la library • anatomie, props et states',
           },
           {
             type: 'p',
-            text: "Le Storybook est maintenu par les devs. Je me charge de piloter les priorités, valide la conformité avec Figma, et m'assure que ce qui est documenté côté code correspond à ce qui est designé.",
+            text: "Un composant WAATOM, c'est trois choses qui doivent rester alignées en permanence : le Main Component dans la library, le code dans Storybook, et la documentation qui explique comment l'utiliser (et comment l'éviter).",
           },
           {
             type: 'img',
             src: '/projects/design-system/image-2.png',
-            caption: 'Storybook : composant Button avec ses props documentées',
+            caption: 'Le code dans Storybook, synchronisé avec Figma',
+          },
+          {
+            type: 'img',
+            src: '/projects/design-system/image-1.png',
+            caption: "La documentation qui explique comment utiliser un composant, et comment l'éviter",
+          },
+          {
+            type: 'callout',
+            text: "Le jour où l'une des trois traîne derrière les deux autres, le système commence à se désynchroniser. Et un design system désynchronisé, c'est le pire scénario : plus personne ne sait à quoi se fier.",
           },
         ],
       },
       {
-        title: "L'aspect humain : convaincre, former, embarquer",
+        title: 'Faire vivre le process',
         blocks: [
           {
             type: 'p',
-            text: "Un DS ne vit que si les gens qui travaillent avec ont envie de s'en servir. J'ai organisé des sessions de 30min avec les devs : 10min de présentation, puis 20min d'atelier où chacun pouvait donner ses idées.",
+            text: "Une bibliothèque de composants, c'est le début. Ce qui la fait tenir sur la durée, c'est le process de contribution derrière. J'ai mis en place des types de contribution (Light, Medium, Heavy) pour que tout le monde sache dans quoi il met les pieds avant de commencer. Des branches Figma nommées [NEW], [MAJ], [FIX], toujours en branche, toujours une seule personne par composant à la fois. Une Definition of Ready avant même de penser à dev, une Definition of Done avant de dire qu'un composant est livrable, avec une vraie checklist qualité derrière : cohérence UI, cohérence des comportements, accessibilité vraiment testée.",
           },
           {
-            type: 'quote',
-            text: "Ton atelier micro-interaction a vraiment plu, les devs aimeraient faire un peu plus de produit. Go les monter en compétence, c'est top !",
-            source: 'CPO Waalaxy',
-          },
-          {
-            type: 'h3',
-            text: 'S\'adapter quand les ressources diminuent',
+            type: 'img',
+            src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
+            caption: 'Tuto pour contribuer sur des branches Figma [NEW], [MAJ], [FIX]',
           },
           {
             type: 'p',
-            text: "Fin 2025, des coupes budgétaires ont réduit le nombre de contributeurs disponibles. Le modèle \"chacun contribue sur son temps libre\" ne tenait plus. J'ai adapté : plutôt qu'attendre des contributions, je les ai incrustées dans les projets en cours. Et lorsque le plan A ne passait pas, je \"kidnappais\" un dev pendant 2h pour travailler en duo • sessions pair, décisions rapides, moins de tickets qui traînent. Ce n'est pas le modèle idéal, mais c'est celui qui a permis de continuer à avancer dans un contexte contraint.",
+            text: "Côté rituels, j'ai posé un cadre volontairement léger : stand-up async tous les deux jours, office hours hebdo pour être dispo en direct, reviews portées par les contributeurs eux-mêmes une fois formés (l'objectif, c'est qu'ils deviennent autonomes, pas que je valide tout à vie), et une rétro trimestrielle pour prendre du recul. Pour canaliser les demandes, une automatisation Slack toute bête : une commande, un emoji, une carte qui se crée toute seule dans le bon board.",
+          },
+          {
+            type: 'p',
+            text: "Deprecate un composant, c'est aussi tout un sujet. On vérifie d'abord les occurrences en prod avec les devs, on renomme avec un petit \".\" et [OLD] devant, on ajoute un \"DEPRECATE 💀\" bien visible au publish. Histoire que la disparition d'un composant reste une décision assumée, pas une surprise en pleine intégration un vendredi 17h.",
+          },
+        ],
+      },
+      {
+        title: 'Ce qui a été dur',
+        blocks: [
+          {
+            type: 'p',
+            text: "Faire adopter un design system, c'est 20% de Figma et 80% de communication. Convaincre un dev de reprendre le composant existant plutôt que de recoder le sien \"parce que c'est plus rapide comme ça\". Prioriser entre ce qui fait plaisir à designer et ce qui a vraiment un impact business. Accepter qu'un système grandit avec le produit et se réévalue sans arrêt.",
+          },
+          {
+            type: 'p',
+            text: "Le plus dur, honnêtement, ça a été d'endosser le rôle de garde-fou. Rappeler qu'un composant a besoin de plus de travail avant de sortir. Défendre la documentation même quand tout le monde est pressé. Tenir la ligne sur les exceptions. Rester la personne vers qui les gens ont envie de venir tout en tenant cette ligne, c'est un équilibre qui m'a pris du temps à trouver.",
+          },
+        ],
+      },
+      {
+        title: 'Ce que ça a changé',
+        blocks: [
+          {
+            type: 'p',
+            text: "Aujourd'hui, WAATOM est devenu un vrai langage commun entre design et dev. Les designers savent où chercher avant de recréer. Les devs savent ce qu'ils intègrent avant de commencer. Et moi, je suis passée de \"celle qui fait des boutons\" à garante d'une cohérence qui tient sur des dizaines d'écrans et plusieurs équipes.",
+          },
+          {
+            type: 'callout',
+            text: "C'est ce travail-là, invisible la plupart du temps, qui garde un produit cohérent sprint après sprint.",
+          },
+        ],
+      },
+      {
+        title: 'Et maintenant',
+        blocks: [
+          {
+            type: 'p',
+            text: "Ce système que j'ai construit à la main pendant des années, je suis en train de le pousser plus loin. Sur Vela, mon propre produit, je pars direct sur les bonnes bases : tokens propres, un DS pensé dès le premier composant plutôt que rattrapé trois ans après.",
+          },
+          {
+            type: 'p',
+            text: "Et j'explore aujourd'hui un truc qui m'obsède un peu : connecter mon design system directement à Claude et à Claude Design via MCP, pour que le système devienne une contrainte que l'IA respecte nativement quand elle génère du front, plutôt qu'une référence que je vais chercher à côté. Moins de temps passé à corriger des couleurs hors token ou des espacements approximatifs, plus de temps sur ce qui compte vraiment : les décisions produit.",
           },
         ],
       },
     ],
     learnings:
-      "Le Lead DS, c'est un poste qui demande autant de compétences relationnelles que techniques. Construire des composants propres et rédiger de la doc, c'est la partie visible. La partie invisible, c'est convaincre que ça vaut le coup d'investir du temps dedans, adapter le process quand le contexte change, et être présente au bon moment pour éviter que les bonnes pratiques s'oublient sous la pression. Ce que j'ai surtout appris : un DS n'est jamais fini. Il est vivant, il évolue avec le produit.",
+      "Après des années à faire respecter un système à des humains, la suite logique, c'est de le faire respecter à l'IA aussi.",
   },
 
   // ─── 7. SaaS recrutement ───────────────────────────────────────────────────
