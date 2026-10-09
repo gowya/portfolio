@@ -19,13 +19,12 @@ const PROJECTS_FR: ProjectDetail[] = [
     status: 'MVP testé, archivé en oct. 2026',
     team: 'Solo, avec Claude Code',
     metrics: [
+      { value: '100%', label: 'conçu et codé avec Claude Code' },
       { value: '2', label: 'tests utilisateurs, dont une praticienne en activité' },
-      { value: '5', label: 'pages légales rédigées et intégrées' },
       { value: '0', label: 'valeur hard-codée dans le code' },
-      { value: '1', label: 'seule couleur forte, le Vin' },
     ],
     intro:
-      "Les praticiens de l'accompagnement (psys, sexologues, hypnothérapeutes, coachs) suivent leurs patients entre un carnet, Notion et leur mémoire. Les logiciels médicaux existent, mais ils sont froids et pensés pour des cabinets. Vela, c'est l'outil que j'ai imaginé pour eux : aussi rigoureux qu'un logiciel médical, aussi silencieux qu'un carnet de notes. Et je l'ai fait de bout en bout, seule.",
+      "Les praticiens de l'accompagnement (psys, sexologues, hypnothérapeutes, coachs) qui viennent de lancer leur activité suivent leurs patients entre un carnet, Notion et leur mémoire. Les gros logiciels connus existent, mais ils coûtent cher, ils sont froids et pensés pour des cabinets installés. Avec quatre ou cinq patients en suivi, impossible de justifier l'abonnement. Vela, c'est l'outil que j'ai imaginé pour eux : aussi rigoureux qu'un logiciel médical, aussi silencieux qu'un carnet de notes. Et je l'ai fait de bout en bout, seule.",
     sections: [
       {
         title: 'Une marque qui sait se taire',
@@ -95,16 +94,11 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'h3',
-            text: 'Test 1 : la mauvaise persona, les bons bugs',
+            text: 'Test 1 : un dev pour éprouver la robustesse',
           },
           {
             type: 'p',
-            text: "Premier test avec un profil technique, loin de la cible. Les hypothèses métier sont restées entières, mais la session a sorti deux bugs critiques : une consultation dupliquée à chaque aller-retour de navigation, et des rendez-vous qu'on pouvait planifier dans le passé. Elle a aussi révélé un paradoxe : le badge d'enregistrement automatique, pensé pour rassurer, stressait.",
-          },
-          {
-            type: 'quote',
-            text: "Ça enregistre trop souvent, à chaque saisie, ça stresse.",
-            source: 'Test utilisateur #1',
+            text: "Premier test avec un profil technique, volontairement loin de la persona. Son regard a servi de crash test : garde-fous à l'inscription, gestion de la sécurité, validation des données. La session a sorti deux bugs critiques avant qu'un vrai praticien ne tombe dessus : une consultation dupliquée à chaque aller-retour de navigation, et des rendez-vous qu'on pouvait planifier dans le passé.",
           },
           {
             type: 'h3',
@@ -116,7 +110,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'quote',
-            text: "Je n'ai jamais compris comment créer une consultation, mais finalement c'est super clair.",
+            text: "J'avais peur de ne pas m'y retrouver, mais finalement c'est super clair.",
             source: 'Sexologue, test utilisateur #2',
           },
           {
@@ -127,7 +121,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Vela m'a fait tenir toute la chaîne, de la marque à la base de données. J'en retiens trois choses. Un test avec la mauvaise persona reste utile, à condition de savoir ce qu'il valide vraiment. Une réassurance mal dosée devient une source de stress. Et dans la santé, la conformité se conçoit dès le premier écran, au même titre que le parcours.",
+      "Vela m'a fait tenir toute la chaîne, de la marque à la base de données. J'en retiens trois choses. Un test avec un profil hors cible reste utile, à condition de savoir ce qu'il valide vraiment : ici, la robustesse avant le métier. Construire avec l'IA va vite, alors les garde-fous doivent être testés tout aussi vite. Et dans la santé, la conformité se conçoit dès le premier écran, au même titre que le parcours.",
   },
 
   // ─── 1. Trial by Card ──────────────────────────────────────────────────────
@@ -436,7 +430,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     coverImage: '/projects/csv-import.png',
     tags: ['Product Design', 'UX'],
     caseStudyUrl: null,
-    featured: true,
+    featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
     period: 'Déc. 2024',
@@ -1068,13 +1062,12 @@ const PROJECTS_EN: ProjectDetail[] = [
     status: 'MVP tested, archived Oct 2026',
     team: 'Solo, with Claude Code',
     metrics: [
+      { value: '100%', label: 'designed and coded with Claude Code' },
       { value: '2', label: 'user tests, including one practising therapist' },
-      { value: '5', label: 'legal pages written and shipped' },
       { value: '0', label: 'hard-coded values in the code' },
-      { value: '1', label: 'single strong colour, the Wine' },
     ],
     intro:
-      "Care practitioners (psychologists, sexologists, hypnotherapists, coaches) track their patients across a notebook, Notion and their memory. Medical software exists, but it's cold and built for clinics. Vela is the tool I imagined for them: as rigorous as medical software, as quiet as a notebook. And I built it end to end, on my own.",
+      "Care practitioners (psychologists, sexologists, hypnotherapists, coaches) who have just started their practice track their patients across a notebook, Notion and their memory. The big, well-known tools exist, but they're expensive, cold and built for established clinics. With four or five patients in follow-up, the subscription is impossible to justify. Vela is the tool I imagined for them: as rigorous as medical software, as quiet as a notebook. And I built it end to end, on my own.",
     sections: [
       {
         title: 'A brand that knows how to stay quiet',
@@ -1144,16 +1137,11 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'h3',
-            text: 'Test 1: the wrong persona, the right bugs',
+            text: 'Test 1: a developer to stress-test the build',
           },
           {
             type: 'p',
-            text: 'First test with a technical profile, far from the target. The business hypotheses stayed open, but the session surfaced two critical bugs: a consultation duplicated on every back-and-forth navigation, and appointments that could be scheduled in the past. It also revealed a paradox: the auto-save badge, meant to reassure, was stressful.',
-          },
-          {
-            type: 'quote',
-            text: 'It saves too often, on every keystroke, it stresses me out.',
-            source: 'User test #1',
+            text: 'First test with a technical profile, deliberately far from the persona. His eye worked as a crash test: sign-up guardrails, security handling, data validation. The session surfaced two critical bugs before a real practitioner could hit them: a consultation duplicated on every back-and-forth navigation, and appointments that could be scheduled in the past.',
           },
           {
             type: 'h3',
@@ -1165,7 +1153,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'quote',
-            text: "I never understood how to create a consultation, but in the end it's super clear.",
+            text: "I was worried I'd get lost, but in the end it's super clear.",
             source: 'Sexologist, user test #2',
           },
           {
@@ -1176,7 +1164,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       },
     ],
     learnings:
-      'Vela had me hold the whole chain, from the brand to the database. Three things stuck. A test with the wrong persona is still useful, as long as you know what it actually validates. Badly dosed reassurance turns into stress. And in health, compliance gets designed from the first screen, just like the journey.',
+      'Vela had me hold the whole chain, from the brand to the database. Three things stuck. A test with an off-target profile is still useful, as long as you know what it actually validates: here, robustness before the business needs. Building with AI moves fast, so the guardrails have to be tested just as fast. And in health, compliance gets designed from the first screen, just like the journey.',
   },
 
   // ─── 1. Trial by Card ──────────────────────────────────────────────────────
@@ -1485,7 +1473,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     coverImage: '/projects/csv-import.png',
     tags: ['Product Design', 'UX'],
     caseStudyUrl: null,
-    featured: true,
+    featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
     period: 'Dec 2024',
