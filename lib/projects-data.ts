@@ -5,7 +5,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '8',
     slug: 'vela',
-    title: 'Vela, un SaaS conçu et codé en solo',
+    title: "Un SaaS santé conçu et codé seule avec l'IA",
     tagline: 'Le logiciel de suivi patient qui ne se fait jamais remarquer pendant la consultation',
     description:
       "Un SaaS de gestion de patientèle pour psys, sexologues et coachs. Marque, design system, front Next.js, base de données, conformité RGPD et tests utilisateurs : tout, de A à Z, avec Claude Code branché sur le design system.",
@@ -128,7 +128,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '1',
     slug: 'trial-by-card',
-    title: "L'onboarding qui a multiplié la conversion par 2,5",
+    title: 'Essai avec carte bancaire : ×2,5 sur les abonnements Business',
     tagline: "Transformer un creux du flow d'entrée en machine à conversion",
     description:
       "Conception d'un flow de fin d'onboarding pour améliorer la valeur perçue de l'app : audit, A/B tests, contraintes légales et cognitives. Résultat : +25% d'utilisateurs qui ajoutent leur CB, et ×2,5 sur les premiers abonnements Business.",
@@ -283,7 +283,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '2',
     slug: 'parcours-upgrade',
-    title: "Pousser l'achat au bon moment",
+    title: "Modales d'upgrade contextuelles : de 2% à ~10%",
     tagline: 'Passer de 2% à environ 10% de conversion avec des modales contextuelles',
     description:
       "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
@@ -423,7 +423,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '3',
     slug: 'csv-import',
-    title: 'Mapping de données pour débutants',
+    title: 'Import CSV : 83,5% de réussite au 1er essai',
     tagline: "De l'URL LinkedIn unique au mapping multi-colonnes",
     description:
       "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font vraiment.",
@@ -564,7 +564,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '4',
     slug: 'ajout-de-lia',
-    title: "Ajout de l'IA",
+    title: 'Réécriture IA des messages de prospection',
     tagline: "Corriger la forme des messages de prospection grâce à l'IA, sans toucher au fond",
     description:
       "Les utilisateurs débutants de Waalaxy savent quoi dire. Ce qui coince, c'est la formulation. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
@@ -664,7 +664,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '5',
     slug: 'campaign-manager',
-    title: 'Refacto du Manager de Campagne',
+    title: 'Campaign Manager : des cards à une vue de pilotage',
     tagline: "Des cards illisibles à une liste de pilotage",
     description:
       "Refonte de la page centrale de Waalaxy : d'une grille de cards à une vue liste avec métriques en temps réel. Basée sur des interviews d'utilisateurs churners et un opportunity tree.",
@@ -830,7 +830,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '6',
     slug: 'design-system',
-    title: 'Lead Design System from scratch',
+    title: 'WAATOM : un design system construit de zéro',
     tagline: "Product Designer & Lead Design System chez Waalaxy. WAATOM, c'est le nom du bébé.",
     description:
       "Construction du design system de Waalaxy depuis zéro : audit complet, fondations en tokens, triangle Main Component/Storybook/documentation, process de contribution et de deprecation. Puis la suite logique : brancher un design system sur Claude via MCP.",
@@ -969,7 +969,7 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '7',
     slug: 'saas-recrutement',
-    title: 'SaaS de recrutement à double entrée',
+    title: 'Marketplace de recrutement : deux personas, un produit',
     tagline: "Deux types d'utilisateurs, une seule cohérence de produit",
     description:
       "Conception d'une marketplace qui met en relation chasseurs de têtes et candidats : UX à double entrée, onboarding distinct pour chaque profil, logique de matching et interfaces adaptées.",
@@ -1048,7 +1048,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '8',
     slug: 'vela',
-    title: 'Vela, a SaaS designed and built solo',
+    title: 'A health SaaS designed and coded solo with AI',
     tagline: 'The patient-tracking tool that never gets noticed during a session',
     description:
       'A practice management SaaS for psychologists, sexologists and coaches. Brand, design system, Next.js front end, database, GDPR compliance and user testing: all of it, end to end, with Claude Code plugged into the design system.',
@@ -1171,7 +1171,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '1',
     slug: 'trial-by-card',
-    title: 'The onboarding that multiplied conversion by 2.5',
+    title: 'Card-required free trial: ×2.5 on Business subscriptions',
     tagline: 'Turning a gap in the entry flow into a conversion engine',
     description:
       "Designing an end-of-onboarding flow to lift the app's perceived value: audit, A/B tests, legal and cognitive constraints. The redesign drove a +25% increase in users adding their card, and ×2.5 on first Business subscriptions.",
@@ -1326,7 +1326,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '2',
     slug: 'parcours-upgrade',
-    title: 'Nudging the purchase at the right moment',
+    title: 'Contextual upgrade modals: from 2% to ~10%',
     tagline: 'From 2% to around 10% conversion with contextual modals',
     description:
       "Reworking the upgrade journey: tailoring the message to each user's situation.",
@@ -1466,7 +1466,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '3',
     slug: 'csv-import',
-    title: 'Data mapping for beginners',
+    title: 'CSV import: 83.5% success on the first try',
     tagline: 'From a single LinkedIn URL to multi-column mapping',
     description:
       "83.5% of users get their mapping right on the first try. The result of a flow designed around what people actually do.",
@@ -1607,7 +1607,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '4',
     slug: 'ajout-de-lia',
-    title: 'Adding AI',
+    title: 'AI rewriting for outreach messages',
     tagline: 'Using AI to fix the form of outreach messages, without touching the substance',
     description:
       "Beginner Waalaxy users know what to say. What trips them up is the phrasing. Adding AI-improvement buttons inside the writing areas: the message is rewritten following best practices, and the user stays in control of the result.",
@@ -1707,7 +1707,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '5',
     slug: 'campaign-manager',
-    title: 'Refactoring the Campaign Manager',
+    title: 'Campaign Manager: from cards to a control view',
     tagline: 'From unreadable cards to a control-room list',
     description:
       "Redesigning Waalaxy's central page: moving from a grid of cards to a list view with real-time metrics. Based on interviews with churned users and an opportunity tree.",
@@ -1873,7 +1873,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '6',
     slug: 'design-system',
-    title: 'Leading a Design System from scratch',
+    title: 'WAATOM: a design system built from zero',
     tagline: "Product Designer & Lead Design System at Waalaxy. WAATOM is the baby's name.",
     description:
       "Building Waalaxy's design system from zero: full audit, token foundations, the Main Component/Storybook/documentation triangle, contribution and deprecation processes. Then the logical next step: plugging a design system into Claude through MCP.",
@@ -2012,7 +2012,7 @@ const PROJECTS_EN: ProjectDetail[] = [
   {
     id: '7',
     slug: 'saas-recrutement',
-    title: 'A two-sided recruitment SaaS',
+    title: 'Recruitment marketplace: two personas, one product',
     tagline: 'Two kinds of users, one coherent product',
     description:
       'Designing a marketplace connecting headhunters and candidates: two-sided UX, a distinct onboarding for each profile, matching logic and tailored interfaces.',
