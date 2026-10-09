@@ -10,7 +10,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Un SaaS de gestion de patientèle pour psys, sexologues et coachs. Marque, design system, front Next.js, base de données, conformité RGPD et tests utilisateurs : tout, de A à Z, avec Claude Code branché sur le design system.",
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'IA', 'Design System', 'UX Research'],
+    tags: ['Product Design', 'IA', 'Design System', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & développeuse',
@@ -288,7 +288,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
     coverImage: '/projects/parcours-upgrade.png',
-    tags: ['Conversion', 'Product Design', 'UX'],
+    tags: ['Conversion', 'Product Design', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -428,7 +428,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font vraiment.",
     coverImage: '/projects/csv-import.png',
-    tags: ['Product Design', 'UX'],
+    tags: ['Product Design', 'Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -669,7 +669,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Refonte de la page centrale de Waalaxy : d'une grille de cards à une vue liste avec métriques en temps réel. Basée sur des interviews d'utilisateurs churners et un opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
-    tags: ['UX Research', 'Product Design'],
+    tags: ['Discovery', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -1053,7 +1053,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       'A practice management SaaS for psychologists, sexologists and coaches. Brand, design system, Next.js front end, database, GDPR compliance and user testing: all of it, end to end, with Claude Code plugged into the design system.',
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'AI', 'Design System', 'UX Research'],
+    tags: ['Product Design', 'AI', 'Design System', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & developer',
@@ -1331,7 +1331,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Reworking the upgrade journey: tailoring the message to each user's situation.",
     coverImage: '/projects/parcours-upgrade.png',
-    tags: ['Conversion', 'Product Design', 'UX'],
+    tags: ['Conversion', 'Product Design', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -1471,7 +1471,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "83.5% of users get their mapping right on the first try. The result of a flow designed around what people actually do.",
     coverImage: '/projects/csv-import.png',
-    tags: ['Product Design', 'UX'],
+    tags: ['Product Design', 'Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -1712,7 +1712,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Redesigning Waalaxy's central page: moving from a grid of cards to a list view with real-time metrics. Based on interviews with churned users and an opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
-    tags: ['UX Research', 'Product Design'],
+    tags: ['Discovery', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',

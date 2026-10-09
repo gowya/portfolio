@@ -85,7 +85,7 @@ const UI_FR = {
     all: 'Tous',
     viewCase: 'Voir le case study',
     empty: 'Aucun projet pour ce filtre.',
-    tags: ['Product Design', 'Conversion', 'Design System', 'IA', 'UX Research', 'Freelance'],
+    tags: ['Product Design', 'Conversion', 'Design System', 'IA', 'Discovery', 'Freelance'],
   },
   caseStudy: {
     back: 'Projets',
@@ -189,7 +189,7 @@ const UI_EN: UIStrings = {
     all: 'All',
     viewCase: 'View case study',
     empty: 'No projects match this filter.',
-    tags: ['Product Design', 'Conversion', 'Design System', 'AI', 'UX Research', 'Freelance'],
+    tags: ['Product Design', 'Conversion', 'Design System', 'AI', 'Discovery', 'Freelance'],
   },
   caseStudy: {
     back: 'Work',

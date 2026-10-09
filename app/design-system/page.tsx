@@ -45,7 +45,7 @@ const TYPE_SCALE: { name: string; spec: string; text: string; style: React.CSSPr
 
 const SPACING_VALUES = [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80]
 
-const TAGS = ['Product Design', 'Conversion', 'Design System', 'IA', 'UX Research']
+const TAGS = ['Product Design', 'Conversion', 'Design System', 'IA', 'Discovery']
 
 // ─── Primitives ───────────────────────────────────────────────────────────────
 
