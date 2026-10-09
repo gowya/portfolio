@@ -10,7 +10,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Un SaaS de gestion de patientèle pour psys, sexologues et coachs. Marque, design system, front Next.js, base de données, conformité RGPD et tests utilisateurs : tout, de A à Z, avec Claude Code branché sur le design system.",
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'IA', 'Design System', 'Discovery', 'Freelance'],
+    tags: ['IA', 'Design System', 'Discovery', 'Freelance'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & développeuse',
@@ -133,7 +133,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Conception d'un flow de fin d'onboarding pour améliorer la valeur perçue de l'app : audit, A/B tests, contraintes légales et cognitives. Résultat : +25% d'utilisateurs qui ajoutent leur CB, et ×2,5 sur les premiers abonnements Business.",
     coverImage: '/projects/trial-by-card.png',
-    tags: ['Conversion', 'Product Design'],
+    tags: ['Conversion'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -288,7 +288,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
     coverImage: '/projects/parcours-upgrade.png',
-    tags: ['Conversion', 'Product Design', 'Discovery'],
+    tags: ['Conversion', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -428,7 +428,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font vraiment.",
     coverImage: '/projects/csv-import.png',
-    tags: ['Product Design', 'Discovery'],
+    tags: ['Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -569,7 +569,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Les utilisateurs débutants de Waalaxy savent quoi dire. Ce qui coince, c'est la formulation. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
     coverImage: '/projects/ajout-ia.png',
-    tags: ['IA', 'Product Design'],
+    tags: ['IA'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -669,7 +669,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Refonte de la page centrale de Waalaxy : d'une grille de cards à une vue liste avec métriques en temps réel. Basée sur des interviews d'utilisateurs churners et un opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
-    tags: ['Discovery', 'Product Design'],
+    tags: ['Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -974,7 +974,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Conception d'une marketplace qui met en relation chasseurs de têtes et candidats : UX à double entrée, onboarding distinct pour chaque profil, logique de matching et interfaces adaptées.",
     coverImage: '/projects/saas-recrutement.png',
-    tags: ['Product Design', 'Freelance'],
+    tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer',
@@ -1053,7 +1053,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       'A practice management SaaS for psychologists, sexologists and coaches. Brand, design system, Next.js front end, database, GDPR compliance and user testing: all of it, end to end, with Claude Code plugged into the design system.',
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'AI', 'Design System', 'Discovery', 'Freelance'],
+    tags: ['AI', 'Design System', 'Discovery', 'Freelance'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & developer',
@@ -1176,7 +1176,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Designing an end-of-onboarding flow to lift the app's perceived value: audit, A/B tests, legal and cognitive constraints. The redesign drove a +25% increase in users adding their card, and ×2.5 on first Business subscriptions.",
     coverImage: '/projects/trial-by-card.png',
-    tags: ['Conversion', 'Product Design'],
+    tags: ['Conversion'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -1331,7 +1331,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Reworking the upgrade journey: tailoring the message to each user's situation.",
     coverImage: '/projects/parcours-upgrade.png',
-    tags: ['Conversion', 'Product Design', 'Discovery'],
+    tags: ['Conversion', 'Discovery'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
@@ -1471,7 +1471,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "83.5% of users get their mapping right on the first try. The result of a flow designed around what people actually do.",
     coverImage: '/projects/csv-import.png',
-    tags: ['Product Design', 'Discovery'],
+    tags: ['Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -1612,7 +1612,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Beginner Waalaxy users know what to say. What trips them up is the phrasing. Adding AI-improvement buttons inside the writing areas: the message is rewritten following best practices, and the user stays in control of the result.",
     coverImage: '/projects/ajout-ia.png',
-    tags: ['AI', 'Product Design'],
+    tags: ['AI'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -1712,7 +1712,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Redesigning Waalaxy's central page: moving from a grid of cards to a list view with real-time metrics. Based on interviews with churned users and an opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
-    tags: ['Discovery', 'Product Design'],
+    tags: ['Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -2017,7 +2017,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       'Designing a marketplace connecting headhunters and candidates: two-sided UX, a distinct onboarding for each profile, matching logic and tailored interfaces.',
     coverImage: '/projects/saas-recrutement.png',
-    tags: ['Product Design', 'Freelance'],
+    tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer',

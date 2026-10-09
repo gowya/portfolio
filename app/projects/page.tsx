@@ -4,7 +4,7 @@ import ProjectsView from '@/components/projects/ProjectsView'
 export const metadata: Metadata = {
   title: 'Projets',
   description:
-    'Tous mes projets de product design • interfaces IA, design systems, recherche utilisateur.',
+    'Tous mes projets de product design : interfaces IA, design systems, discovery.',
   alternates: { canonical: '/projects' },
 }
 
