@@ -567,7 +567,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Les utilisateurs débutants de Waalaxy savent quoi dire. Ce qui coince, c'est la formulation. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
     coverImage: '/projects/ajout-ia.png',
-    tags: ['IA'],
+    tags: ['IA', 'Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
@@ -1608,7 +1608,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Beginner Waalaxy users know what to say. What trips them up is the phrasing. Adding AI-improvement buttons inside the writing areas: the message is rewritten following best practices, and the user stays in control of the result.",
     coverImage: '/projects/ajout-ia.png',
-    tags: ['AI'],
+    tags: ['AI', 'Discovery'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
