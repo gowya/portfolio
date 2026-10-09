@@ -10,7 +10,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Un SaaS de gestion de patientèle pour psys, sexologues et coachs. Marque, design system, front Next.js, base de données, conformité RGPD et tests utilisateurs : tout, de A à Z, avec Claude Code branché sur le design system.",
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'IA', 'Design System', 'Discovery'],
+    tags: ['Product Design', 'IA', 'Design System', 'Discovery', 'Freelance'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & développeuse',
@@ -1053,7 +1053,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       'A practice management SaaS for psychologists, sexologists and coaches. Brand, design system, Next.js front end, database, GDPR compliance and user testing: all of it, end to end, with Claude Code plugged into the design system.',
     coverImage: '/projects/vela.png',
-    tags: ['Product Design', 'AI', 'Design System', 'Discovery'],
+    tags: ['Product Design', 'AI', 'Design System', 'Discovery', 'Freelance'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & developer',
