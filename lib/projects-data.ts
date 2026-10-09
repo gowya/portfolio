@@ -161,7 +161,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     id: '2',
     slug: 'parcours-upgrade',
     title: "Pousser l'achat au bon moment",
-    tagline: 'Passer de 2% à 10% de conversion avec des modales contextuelles',
+    tagline: 'Passer de 2% à environ 10% de conversion avec des modales contextuelles',
     description:
       "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
     coverImage: '/projects/parcours-upgrade.png',
@@ -174,7 +174,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     status: 'Livré en production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
-      { value: '10%', label: 'de conversion depuis CTA contextuels' },
+      { value: '~10%', label: 'de conversion depuis les CTA contextuels' },
       { value: '2%', label: 'taux de conversion initial (page tarifs)' },
       { value: '13,61%', label: "ouverture modale depuis CTA in-app" },
       { value: '3 CTA', label: 'personnalisés selon le flow de chaque user' },
@@ -842,6 +842,133 @@ const PROJECTS_FR: ProjectDetail[] = [
       "Après des années à faire respecter un système à des humains, la suite logique, c'est de le faire respecter à l'IA aussi.",
   },
 
+  // ─── 8. Vela ───────────────────────────────────────────────────────────────
+  {
+    id: '8',
+    slug: 'vela',
+    title: 'Vela, un SaaS conçu et codé en solo',
+    tagline: 'Le logiciel de suivi patient qui ne se fait jamais remarquer pendant la consultation',
+    description:
+      "Un SaaS de gestion de patientèle pour psys, sexologues et coachs. Marque, design system, front Next.js, base de données, conformité RGPD et tests utilisateurs : tout, de A à Z, avec Claude Code branché sur le design system.",
+    coverImage: '/projects/vela.png',
+    tags: ['Product Design', 'Design System', 'UX Research'],
+    caseStudyUrl: null,
+    featured: false,
+    role: 'Product Designer & développeuse',
+    company: 'Vela, projet perso',
+    period: '2026',
+    status: 'MVP testé, archivé en oct. 2026',
+    team: 'Solo, avec Claude Code',
+    metrics: [
+      { value: '2', label: 'tests utilisateurs, dont une praticienne en activité' },
+      { value: '5', label: 'pages légales rédigées et intégrées' },
+      { value: '0', label: 'valeur hard-codée dans le code' },
+      { value: '1', label: 'seule couleur forte, le Vin' },
+    ],
+    intro:
+      "Les praticiens de l'accompagnement (psys, sexologues, hypnothérapeutes, coachs) suivent leurs patients entre un carnet, Notion et leur mémoire. Les logiciels médicaux existent, mais ils sont froids et pensés pour des cabinets. Vela, c'est l'outil que j'ai imaginé pour eux : aussi rigoureux qu'un logiciel médical, aussi silencieux qu'un carnet de notes. Et je l'ai fait de bout en bout, seule.",
+    sections: [
+      {
+        title: 'Une marque qui sait se taire',
+        blocks: [
+          {
+            type: 'p',
+            text: "Vela vient du latin velum, le voile. Le logo est un arc ouvert, tracé d'un seul geste, qui ne se referme jamais : une présence en retrait, disponible. Tout le reste découle de cette idée. Territoire de référence : Notion, Linear, Cron. Des outils pro qui inspirent confiance par leur discrétion.",
+          },
+          {
+            type: 'list',
+            items: [
+              "Une palette chaude et sobre : Sable en fond, Encre pour le texte, Sauge pour les états discrets, et le Vin comme seule note de couleur forte.",
+              "Fraunces réservée à la marque, Inter pour toute l'interface, IBM Plex Mono pour les données factuelles (dates, identifiants). Le serif ne rentre jamais dans le produit.",
+              "Un ton direct : phrases courtes, vocabulaire du praticien, zéro point d'exclamation, zéro emoji dans l'interface.",
+            ],
+          },
+          {
+            type: 'callout',
+            text: "Le Vin reste rare : un bouton principal, le logo, un lien. C'est cette rareté qui rend Vela discrète pendant la consultation, quand le praticien est concentré sur la personne en face.",
+          },
+          {
+            type: 'img',
+            src: '/projects/vela/dashboard.png',
+            caption: "Le tableau de bord : les rendez-vous du jour et de la semaine, deux actions, rien d'autre",
+          },
+        ],
+      },
+      {
+        title: 'Un design system avant le premier écran',
+        blocks: [
+          {
+            type: 'p',
+            text: "Après WAATOM, je voulais vérifier une intuition : un DS posé dès le départ change la vitesse de tout le reste. Base shadcn/ui en marque blanche, tokens sémantiques dans un seul fichier, et les couleurs du brand book réassignées aux variables existantes. Toute nouvelle interface compose avec les composants en place avant d'en créer un nouveau.",
+          },
+          {
+            type: 'p',
+            text: "Le design system est branché sur Claude Code via MCP. Quand je génère un écran, l'IA pioche dans les vrais tokens et les vrais composants. Résultat : un front cohérent sans repasser derrière pour corriger des couleurs hors token ou des marges approximatives.",
+          },
+          {
+            type: 'img',
+            src: '/projects/vela/nouvelle-consultation.png',
+            caption: 'Nouvelle consultation : un champ, une action',
+          },
+        ],
+      },
+      {
+        title: 'Designer jusque dans le code',
+        blocks: [
+          {
+            type: 'p',
+            text: "Vela traite des données de santé. Chaque décision technique est donc aussi une décision de design, parce qu'elle touche à la confiance.",
+          },
+          {
+            type: 'list',
+            items: [
+              "Next.js, TypeScript, PostgreSQL. Chaque requête est filtrée par praticien, et des tests d'intégration vérifient qu'un praticien ne voit jamais les patients d'un autre.",
+              "Consentement RGPD obligatoire à l'inscription, et 5 pages légales rédigées puis intégrées : CGU, confidentialité, mentions légales, cookies, accord de sous-traitance.",
+              "Monitoring d'erreurs sans replay de session : une capture d'écran pourrait contenir une note de consultation. Les corps de requête sont supprimés avant chaque envoi.",
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Deux tests utilisateurs, deux leçons',
+        blocks: [
+          {
+            type: 'h3',
+            text: 'Test 1 : la mauvaise persona, les bons bugs',
+          },
+          {
+            type: 'p',
+            text: "Premier test avec un profil technique, loin de la cible. Les hypothèses métier sont restées entières, mais la session a sorti deux bugs critiques : une consultation dupliquée à chaque aller-retour de navigation, et des rendez-vous qu'on pouvait planifier dans le passé. Elle a aussi révélé un paradoxe : le badge d'enregistrement automatique, pensé pour rassurer, stressait.",
+          },
+          {
+            type: 'quote',
+            text: "Ça enregistre trop souvent, à chaque saisie, ça stresse.",
+            source: 'Test utilisateur #1',
+          },
+          {
+            type: 'h3',
+            text: 'Test 2 : une vraie praticienne',
+          },
+          {
+            type: 'p',
+            text: "Deuxième test avec une sexologue en début d'activité, qui suivait ses patients entre un carnet et Notion. Parcours complet réussi sans blocage : inscription, création d'un patient, première consultation. Les champs personnalisés et le vert Sauge ont fait mouche. Les frictions restantes étaient précises : pas de recherche patients, une liste de spécialités floue, la différence entre modèle et consultation à clarifier.",
+          },
+          {
+            type: 'quote',
+            text: "Je n'ai jamais compris comment créer une consultation, mais finalement c'est super clair.",
+            source: 'Sexologue, test utilisateur #2',
+          },
+          {
+            type: 'callout',
+            text: "Le vrai mur est apparu à la fin de la session : l'hébergement de données de santé certifié HDS. Démarches commerciales, coûts élevés, incompatibles avec un abonnement simple. « On ne peut pas juste payer 10€/mois ? »",
+          },
+        ],
+      },
+    ],
+    learnings:
+      "Vela m'a fait tenir toute la chaîne, de la marque à la base de données. J'en retiens trois choses. Un test avec la mauvaise persona reste utile, à condition de savoir ce qu'il valide vraiment. Une réassurance mal dosée devient une source de stress. Et dans la santé, la conformité se conçoit dès le premier écran, au même titre que le parcours.",
+  },
+
   // ─── 7. SaaS recrutement ───────────────────────────────────────────────────
   {
     id: '7',
@@ -856,7 +983,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     featured: false,
     role: 'Product Designer',
     company: 'Kilpailutapalkkasi.fi',
-    period: '2023',
+    period: '2022',
     status: 'Livré',
     metrics: [
       { value: '2', label: "types d'utilisateurs distincts" },
@@ -918,161 +1045,6 @@ const PROJECTS_FR: ProjectDetail[] = [
       "Les marketplaces à double entrée sont parmi les exercices les plus exigeants en product design, parce qu'une mauvaise décision côté offre impacte immédiatement le côté demande, et vice versa. Ce projet m'a appris à cartographier les tensions avant de concevoir, et à trouver des patterns qui résolvent les deux sides en même temps plutôt que de compromettre l'un pour l'autre.",
   },
 
-  // ─── 8. Dashboard Praticien ────────────────────────────────────────────────
-  {
-    id: '8',
-    slug: 'dashboard-praticien',
-    title: 'Dashboard Praticien, gestion de consultations',
-    tagline: "Remplacer 4 outils éparpillés par un seul espace qui tient la route",
-    description:
-      "Dashboard Notion sur mesure pour un praticien de santé libéral : centralisation de l'agenda, du suivi patient, de la facturation et des notes de consultation dans un seul espace cohérent.",
-    coverImage: null,
-    tags: ['Freelance'],
-    caseStudyUrl: null,
-    featured: false,
-    role: 'Designer Notion',
-    company: 'Client freelance',
-    period: 'Déc. 2024 → Janv. 2025',
-    status: 'Livré',
-    metrics: [
-      { value: '4→1', label: 'outils remplacés par un seul espace' },
-      { value: '6 sem.', label: "d'utilisation avant retour client positif" },
-    ],
-    intro:
-      "Un praticien de santé libéral qui gérait son activité entre un agenda papier, un tableur Excel pour la facturation, une application de notes, et des post-its pour le suivi patient. Il voulait simplifier : un seul endroit où tout se trouve, accessible depuis n'importe quel appareil.",
-    sections: [
-      {
-        title: "Cadrage : comprendre le quotidien du praticien",
-        blocks: [
-          {
-            type: 'p',
-            text: "Avant de toucher à Notion, j'ai passé une heure à cartographier le flux réel de travail : comment commence une journée de consultation ? Qu'est-ce qui prend du temps inutilement ? Qu'est-ce qui ne peut pas disparaître même si c'est contraignant (obligations légales, confidentialité des données patient) ?",
-          },
-          {
-            type: 'list',
-            items: [
-              "Le point de douleur principal : trouver les informations d'un patient avant la consultation (antécédents, dernière séance, notes) prenait 5 à 10 minutes à chaque fois",
-              "Deuxième point : la facturation manuelle en fin de mois et retranscrire des données de l'agenda papier vers Excel avec un risque d'oubli constant",
-              "Contrainte non-négociable : aucune donnée patient nominative ne pouvait être stockée dans Notion (RGPD, secret médical). Le système devait fonctionner avec des identifiants anonymisés",
-            ],
-          },
-        ],
-      },
-      {
-        title: "Architecture de l'espace Notion",
-        blocks: [
-          {
-            type: 'p',
-            text: "L'espace a été structuré autour de trois bases de données liées : Patients (anonymisés), Consultations, et Facturation. Une vue Dashboard en page d'accueil synthétise les informations du jour : consultations prévues, en attente de note, et factures à émettre.",
-          },
-          {
-            type: 'callout',
-            text: "Le principe directeur : chaque information ne doit être saisie qu'une seule fois. La relation entre les bases de données fait le reste : une consultation crée automatiquement une entrée liée dans la facturation, sans ressaisie.",
-          },
-          {
-            type: 'list',
-            items: [
-              "Page d'accueil : vue du jour avec consultations filtrées par date + compteurs synthétiques",
-              "Base Patients : fiches avec antécédents, fréquence de consultation, historique des séances",
-              "Base Consultations : template de note standardisé, lien vers la fiche patient, durée, type",
-              "Base Facturation : générée automatiquement depuis les consultations, avec statut de paiement",
-            ],
-          },
-        ],
-      },
-      {
-        title: "Adoption et formation",
-        blocks: [
-          {
-            type: 'p',
-            text: "Le livrable : un espace Notion fonctionnel, avec les bases de données pré-structurées, des entrées de test, et une vidéo tutoriel de 15 minutes enregistrée pour le client. Le client n'avait jamais ouvert Notion, la courbe d'apprentissage devait être quasi nulle.",
-          },
-          {
-            type: 'p',
-            text: "Six semaines après la livraison, le retour : l'espace était utilisé quotidiennement, la facturation mensuelle prenait désormais 20 minutes au lieu de 2 heures, et aucun rendez-vous n'avait été oublié depuis le déploiement.",
-          },
-        ],
-      },
-    ],
-    learnings:
-      "Concevoir pour un utilisateur non-technique, c'est concevoir pour ses contraintes réelles. Notion peut faire des choses complexes. Mais si l'utilisateur final ne comprend pas pourquoi il doit cliquer là, le système ne sera pas utilisé. Ce projet m'a rappelé que la valeur d'un bon système d'information, c'est avant tout son taux d'adoption.",
-  },
-
-  // ─── 9. Dashboard Stratégie ────────────────────────────────────────────────
-  {
-    id: '9',
-    slug: 'dashboard-strategie',
-    title: 'Dashboard Stratégie financière et suivi',
-    tagline: "Transformer un tableur en outil de pilotage stratégique",
-    description:
-      "Tableau de bord Notion pour le suivi stratégique et financier d'une activité freelance : vision consolidée des revenus, du pipeline, et des objectifs en un seul espace actionnable.",
-    coverImage: null,
-    tags: ['Freelance'],
-    caseStudyUrl: null,
-    featured: false,
-    role: 'Designer Notion',
-    company: 'Client freelance',
-    period: 'Août 2024',
-    status: 'Livré',
-    metrics: [
-      { value: '3j', label: 'de conception et livraison' },
-      { value: '4 vues', label: 'pour tout voir : CA, pipeline, objectifs' },
-    ],
-    intro:
-      "Un freelance avec une activité bien lancée, mais une vision floue de sa situation réelle : combien il avait facturé ce mois-ci, combien restait en attente de paiement, combien de prospects étaient dans le pipe. Les données existaient à différents endroits. L'enjeu : les connecter dans un espace qui donne une lecture instantanée et actionnable.",
-    sections: [
-      {
-        title: "Le problème : des données qui n'ont pas de sens isolément",
-        blocks: [
-          {
-            type: 'p',
-            text: "Un freelance qui gère seul son activité porte plusieurs casquettes simultanément : prestataire, commercial, comptable, stratège. Le risque : être tellement dans l'opérationnel qu'on ne prend plus de recul sur la trajectoire globale. Est-ce que l'objectif annuel est atteignable ? Est-ce qu'il faut signer plus de projets ce mois ou se concentrer sur les livrables en cours ?",
-          },
-          {
-            type: 'list',
-            items: [
-              "Revenus facturés vs objectif mensuel : un écart visible en temps réel, pas en fin de mois",
-              "Pipeline commercial : leads en discussion, propositions envoyées, projets signés, en cours, livrés",
-              "Trésorerie prévisionnelle : ce qui est signé mais pas encore facturé, ce qui est facturé mais pas encaissé",
-              "Rétrospective trimestrielle : un espace dédié à la prise de recul sur les 3 derniers mois",
-            ],
-          },
-        ],
-      },
-      {
-        title: "Architecture et logique des bases de données",
-        blocks: [
-          {
-            type: 'p',
-            text: "Deux bases de données centrales : Projets (avec statut, montant, dates) et Factures (liées aux projets, avec statut de paiement). Les propriétés calculées font le travail : CA du mois en cours, CA en attente, objectif atteint en pourcentage.",
-          },
-          {
-            type: 'callout',
-            text: "Le dashboard principal est une simple page Notion, faite uniquement de vues filtrées des deux bases, arrangées pour répondre à une question précise par section. La lisibilité vient de la mise en page.",
-          },
-          {
-            type: 'p',
-            text: "La vue pipeline (kanban par statut) donne une lecture commerciale instantanée. La vue facturation (tableau avec filtres par mois) donne la lecture financière. La vue dashboard synthétise les deux avec des indicateurs clés en haut de page.",
-          },
-        ],
-      },
-      {
-        title: "Ce que ça change concrètement",
-        blocks: [
-          {
-            type: 'p',
-            text: "La promesse de ce type de système : des décisions plus claires. Quand on voit que 80% de l'objectif mensuel est atteint le 15, on peut se permettre de refuser un projet mal cadré. Quand on voit que le pipeline est vide, on sait qu'il faut prospecter maintenant.",
-          },
-          {
-            type: 'p',
-            text: "La livraison incluait une session de passation de 30 minutes et un court guide des mises à jour mensuelles : ce qui doit être fait, quand, et comment interpréter les chiffres affichés.",
-          },
-        ],
-      },
-    ],
-    learnings:
-      "La conception d'outils de pilotage demande de comprendre comment la personne prend ses décisions, au-delà des données qu'elle a. Deux freelances avec les mêmes métriques peuvent avoir besoin de visualisations très différentes selon leur façon de travailler. Ce projet a été court (3 jours), mais dense en questions de cadrage. Et c'est ce cadrage qui a fait que l'outil était utilisé une semaine après la livraison.",
-  },
 ]
 
 const PROJECTS_EN: ProjectDetail[] = [
@@ -1236,7 +1208,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     id: '2',
     slug: 'parcours-upgrade',
     title: 'Nudging the purchase at the right moment',
-    tagline: 'From 2% to 10% conversion with contextual modals',
+    tagline: 'From 2% to around 10% conversion with contextual modals',
     description:
       "Reworking the upgrade journey: tailoring the message to each user's situation.",
     coverImage: '/projects/parcours-upgrade.png',
@@ -1249,7 +1221,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     status: 'Shipped to production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
-      { value: '10%', label: 'conversion from contextual CTAs' },
+      { value: '~10%', label: 'conversion from contextual CTAs' },
       { value: '2%', label: 'initial conversion rate (pricing page)' },
       { value: '13.61%', label: 'modal open rate from in-app CTAs' },
       { value: '3 CTAs', label: "tailored to each user's flow" },
@@ -1917,6 +1889,133 @@ const PROJECTS_EN: ProjectDetail[] = [
       'After years of getting humans to respect a system, the logical next step is getting AI to respect it too.',
   },
 
+  // ─── 8. Vela ───────────────────────────────────────────────────────────────
+  {
+    id: '8',
+    slug: 'vela',
+    title: 'Vela, a SaaS designed and built solo',
+    tagline: 'The patient-tracking tool that never gets noticed during a session',
+    description:
+      'A practice management SaaS for psychologists, sexologists and coaches. Brand, design system, Next.js front end, database, GDPR compliance and user testing: all of it, end to end, with Claude Code plugged into the design system.',
+    coverImage: '/projects/vela.png',
+    tags: ['Product Design', 'Design System', 'UX Research'],
+    caseStudyUrl: null,
+    featured: false,
+    role: 'Product Designer & developer',
+    company: 'Vela, personal project',
+    period: '2026',
+    status: 'MVP tested, archived Oct 2026',
+    team: 'Solo, with Claude Code',
+    metrics: [
+      { value: '2', label: 'user tests, including one practising therapist' },
+      { value: '5', label: 'legal pages written and shipped' },
+      { value: '0', label: 'hard-coded values in the code' },
+      { value: '1', label: 'single strong colour, the Wine' },
+    ],
+    intro:
+      "Care practitioners (psychologists, sexologists, hypnotherapists, coaches) track their patients across a notebook, Notion and their memory. Medical software exists, but it's cold and built for clinics. Vela is the tool I imagined for them: as rigorous as medical software, as quiet as a notebook. And I built it end to end, on my own.",
+    sections: [
+      {
+        title: 'A brand that knows how to stay quiet',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Vela comes from the Latin velum, the veil. The logo is an open arc, drawn in one stroke, that never closes: a presence in the background, available. Everything else flows from that idea. Reference territory: Notion, Linear, Cron. Professional tools that earn trust through discretion.',
+          },
+          {
+            type: 'list',
+            items: [
+              'A warm, sober palette: Sand for the background, Ink for text, Sage for quiet states, and Wine as the only strong colour.',
+              'Fraunces kept for the brand, Inter for the whole interface, IBM Plex Mono for factual data (dates, IDs). The serif never enters the product.',
+              'A direct tone: short sentences, the practitioner\'s vocabulary, no exclamation marks, no emoji in the interface.',
+            ],
+          },
+          {
+            type: 'callout',
+            text: 'Wine stays rare: one primary button, the logo, a link. That scarcity is what keeps Vela discreet during a session, when the practitioner is focused on the person in front of them.',
+          },
+          {
+            type: 'img',
+            src: '/projects/vela/dashboard.png',
+            caption: "The dashboard: today's and this week's appointments, two actions, nothing else",
+          },
+        ],
+      },
+      {
+        title: 'A design system before the first screen',
+        blocks: [
+          {
+            type: 'p',
+            text: 'After WAATOM, I wanted to test a hunch: a DS set up from day one changes the speed of everything else. A white-label shadcn/ui base, semantic tokens in a single file, and the brand book colours reassigned to the existing variables. Every new interface composes with the components in place before creating a new one.',
+          },
+          {
+            type: 'p',
+            text: 'The design system is plugged into Claude Code through MCP. When I generate a screen, the AI draws on the real tokens and the real components. The result: a consistent front end, with no going back to fix off-token colours or approximate spacing.',
+          },
+          {
+            type: 'img',
+            src: '/projects/vela/nouvelle-consultation.png',
+            caption: 'New consultation: one field, one action',
+          },
+        ],
+      },
+      {
+        title: 'Designing all the way into the code',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Vela handles health data. So every technical decision is also a design decision, because it touches trust.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Next.js, TypeScript, PostgreSQL. Every query is scoped to the practitioner, and integration tests check that one practitioner never sees another\'s patients.',
+              'Mandatory GDPR consent at sign-up, and 5 legal pages written then shipped: terms, privacy, legal notice, cookies, data processing agreement.',
+              'Error monitoring with no session replay: a screenshot could contain a consultation note. Request bodies are stripped before every send.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Two user tests, two lessons',
+        blocks: [
+          {
+            type: 'h3',
+            text: 'Test 1: the wrong persona, the right bugs',
+          },
+          {
+            type: 'p',
+            text: 'First test with a technical profile, far from the target. The business hypotheses stayed open, but the session surfaced two critical bugs: a consultation duplicated on every back-and-forth navigation, and appointments that could be scheduled in the past. It also revealed a paradox: the auto-save badge, meant to reassure, was stressful.',
+          },
+          {
+            type: 'quote',
+            text: 'It saves too often, on every keystroke, it stresses me out.',
+            source: 'User test #1',
+          },
+          {
+            type: 'h3',
+            text: 'Test 2: a real practitioner',
+          },
+          {
+            type: 'p',
+            text: 'Second test with a sexologist early in her practice, who tracked her patients between a notebook and Notion. Full journey completed with no blocker: sign-up, creating a patient, first consultation. The custom fields and the Sage green landed. The remaining frictions were precise: no patient search, a fuzzy list of specialities, the difference between template and consultation to clarify.',
+          },
+          {
+            type: 'quote',
+            text: "I never understood how to create a consultation, but in the end it's super clear.",
+            source: 'Sexologist, user test #2',
+          },
+          {
+            type: 'callout',
+            text: 'The real wall showed up at the end of the session: certified health data hosting (HDS in France). Sales calls, high costs, incompatible with a simple subscription. "Can\'t we just pay €10 a month?"',
+          },
+        ],
+      },
+    ],
+    learnings:
+      'Vela had me hold the whole chain, from the brand to the database. Three things stuck. A test with the wrong persona is still useful, as long as you know what it actually validates. Badly dosed reassurance turns into stress. And in health, compliance gets designed from the first screen, just like the journey.',
+  },
+
   // ─── 7. Recruitment SaaS ───────────────────────────────────────────────────
   {
     id: '7',
@@ -1931,7 +2030,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     featured: false,
     role: 'Product Designer',
     company: 'Kilpailutapalkkasi.fi',
-    period: '2023',
+    period: '2022',
     status: 'Delivered',
     metrics: [
       { value: '2', label: 'distinct user types' },
@@ -1993,161 +2092,6 @@ const PROJECTS_EN: ProjectDetail[] = [
       'Two-sided marketplaces are among the most demanding exercises in product design, because a bad decision on the supply side immediately hits the demand side, and vice versa. This project taught me to map the tensions before designing, and to find patterns that solve both sides at once rather than compromising one for the other.',
   },
 
-  // ─── 8. Practitioner Dashboard ─────────────────────────────────────────────
-  {
-    id: '8',
-    slug: 'dashboard-praticien',
-    title: 'Practitioner Dashboard, managing consultations',
-    tagline: 'Replacing four scattered tools with one space that holds up',
-    description:
-      'A custom Notion dashboard for a self-employed health practitioner: bringing the calendar, patient tracking, invoicing and consultation notes together in one coherent space.',
-    coverImage: null,
-    tags: ['Freelance'],
-    caseStudyUrl: null,
-    featured: false,
-    role: 'Notion Designer',
-    company: 'Freelance client',
-    period: 'Dec 2024 → Jan 2025',
-    status: 'Delivered',
-    metrics: [
-      { value: '4→1', label: 'tools replaced by a single space' },
-      { value: '6 wks', label: 'of use before positive client feedback' },
-    ],
-    intro:
-      "A self-employed health practitioner running their practice across a paper diary, an Excel spreadsheet for invoicing, a notes app, and sticky notes for patient tracking. They wanted to simplify: a single place where everything lives, accessible from any device.",
-    sections: [
-      {
-        title: "Framing: understanding the practitioner's day-to-day",
-        blocks: [
-          {
-            type: 'p',
-            text: 'Before touching Notion, I spent an hour mapping the real workflow: how does a day of consultations start? What wastes time? What can\'t go away even if it\'s a constraint (legal obligations, patient data confidentiality)?',
-          },
-          {
-            type: 'list',
-            items: [
-              'The main pain point: finding a patient\'s information before a consultation (history, last session, notes) took 5 to 10 minutes every time',
-              'Second point: manual invoicing at month-end and re-keying data from the paper diary into Excel, with a constant risk of things slipping through',
-              'A non-negotiable constraint: no named patient data could be stored in Notion (GDPR, medical confidentiality). The system had to work with anonymised identifiers',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Architecture of the Notion space',
-        blocks: [
-          {
-            type: 'p',
-            text: "The space was built around three linked databases: Patients (anonymised), Consultations, and Invoicing. A Dashboard view on the home page sums up the day's information: scheduled consultations, those awaiting notes, and invoices to issue.",
-          },
-          {
-            type: 'callout',
-            text: 'The guiding principle: each piece of information should be entered only once. The relations between the databases do the rest: a consultation automatically creates a linked entry in invoicing, with no re-keying.',
-          },
-          {
-            type: 'list',
-            items: [
-              'Home page: a day view with consultations filtered by date + summary counters',
-              'Patients database: records with history, consultation frequency, and a log of past sessions',
-              'Consultations database: a standardised note template, a link to the patient record, duration, type',
-              'Invoicing database: generated automatically from the consultations, with payment status',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Adoption and training',
-        blocks: [
-          {
-            type: 'p',
-            text: "The deliverable: a working Notion space, with pre-structured databases, test entries, and a 15-minute tutorial video recorded for the client. The client had never opened Notion, so the learning curve had to be near zero.",
-          },
-          {
-            type: 'p',
-            text: 'Six weeks after delivery, the feedback: the space was used daily, monthly invoicing now took 20 minutes instead of 2 hours, and not a single appointment had been missed since rollout.',
-          },
-        ],
-      },
-    ],
-    learnings:
-      "Designing for a non-technical user means designing for their real constraints. Notion can do complex things. But if the end user doesn't understand why they have to click there, the system won't be used. This project reminded me that the value of a good information system comes, above all, from its adoption rate.",
-  },
-
-  // ─── 9. Strategy Dashboard ─────────────────────────────────────────────────
-  {
-    id: '9',
-    slug: 'dashboard-strategie',
-    title: 'Strategy & Finance Dashboard',
-    tagline: 'Turning a spreadsheet into a strategic steering tool',
-    description:
-      'A Notion dashboard for the strategic and financial tracking of a freelance business: a consolidated view of revenue, pipeline and goals in one actionable space.',
-    coverImage: null,
-    tags: ['Freelance'],
-    caseStudyUrl: null,
-    featured: false,
-    role: 'Notion Designer',
-    company: 'Freelance client',
-    period: 'Aug 2024',
-    status: 'Delivered',
-    metrics: [
-      { value: '3 days', label: 'of design and delivery' },
-      { value: '4 views', label: 'to see it all: revenue, pipeline, goals' },
-    ],
-    intro:
-      'A freelancer with a well-established business but a fuzzy view of their actual situation: how much they\'d invoiced this month, how much was still awaiting payment, how many prospects were in the pipe. The data existed in different places. The challenge: connecting it in a space that gives an instant, actionable read.',
-    sections: [
-      {
-        title: 'The problem: data that means nothing in isolation',
-        blocks: [
-          {
-            type: 'p',
-            text: 'A freelancer running everything alone wears several hats at once: provider, salesperson, accountant, strategist. The risk: being so deep in the day-to-day that you no longer step back to look at the overall trajectory. Is the annual target reachable? Should you sign more projects this month or focus on the deliverables in progress?',
-          },
-          {
-            type: 'list',
-            items: [
-              'Invoiced revenue vs monthly target: a gap visible in real time, not at month-end',
-              'Sales pipeline: leads in discussion, proposals sent, projects signed, in progress, delivered',
-              "Forecast cash flow: what's signed but not yet invoiced, what's invoiced but not yet paid",
-              'Quarterly retrospective: a dedicated space to step back over the past three months',
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Architecture and database logic',
-        blocks: [
-          {
-            type: 'p',
-            text: 'Two central databases: Projects (with status, amount, dates) and Invoices (linked to projects, with payment status). Calculated properties do the work: current-month revenue, pending revenue, percentage of target reached.',
-          },
-          {
-            type: 'callout',
-            text: "The main dashboard is a plain Notion page, built purely from filtered views of the two databases, arranged so each section answers one specific question. The readability comes from the layout.",
-          },
-          {
-            type: 'p',
-            text: 'The pipeline view (a kanban by status) gives an instant sales read. The invoicing view (a table with month filters) gives the financial read. The dashboard view brings both together with key indicators at the top of the page.',
-          },
-        ],
-      },
-      {
-        title: 'What it changes in practice',
-        blocks: [
-          {
-            type: 'p',
-            text: "The promise of this kind of system: clearer decisions. When you can see 80% of the monthly target is reached by the 15th, you can afford to turn down a poorly scoped project. When you see the pipeline is empty, you know you need to prospect now.",
-          },
-          {
-            type: 'p',
-            text: 'Delivery included a 30-minute handover session and a short guide to the monthly updates: what to do, when, and how to read the numbers shown.',
-          },
-        ],
-      },
-    ],
-    learnings:
-      "Designing steering tools means understanding how the person makes their decisions, beyond the data they have. Two freelancers with the same metrics can need very different visualisations depending on how they work. This project was short (three days) but dense with framing questions. And it's that framing that made the tool still in use a week after delivery.",
-  },
 ]
 
 export const PROJECTS: Record<Lang, ProjectDetail[]> = {

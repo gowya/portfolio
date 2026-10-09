@@ -28,7 +28,7 @@ const italiana = Italiana({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://margauxfrancillard.com'),
+  metadataBase: new URL('https://gaumsportfolio.vercel.app'),
   title: {
     default: 'Margaux Francillard • Product & System Designer SaaS B2B',
     template: '%s | Margaux Francillard',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://margauxfrancillard.com',
+    url: 'https://gaumsportfolio.vercel.app',
     siteName: 'Margaux Francillard',
     title: 'Margaux Francillard • Product & System Designer SaaS B2B',
     description:

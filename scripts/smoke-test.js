@@ -17,8 +17,7 @@ const PAGES = [
   '/projects/ajout-de-lia',
   '/projects/design-system',
   '/projects/saas-recrutement',
-  '/projects/dashboard-praticien',
-  '/projects/dashboard-strategie',
+  '/projects/vela',
 ]
 
 const TIMEOUT_MS = 10_000
