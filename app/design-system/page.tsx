@@ -8,7 +8,7 @@ import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 // Swatches are driven by live CSS variables so they stay accurate AND adapt to
-// the active theme (dark/light). The "value" shown is the token reference — the
+// the active theme (dark/light). The "value" shown is the token reference: the
 // resolved hex differs per theme, so quoting a fixed hex would be wrong in one of them.
 const COLORS: { token: string; css: string; group: string; isBorder?: boolean }[] = [
   { token: 'bg',         css: '--color-bg',         group: 'Background' },
@@ -202,7 +202,7 @@ export default function DesignSystemPage() {
             Design System
           </h1>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)', border: '1px solid rgb(var(--color-accent) / 0.3)', borderRadius: '999px', padding: '3px 10px', whiteSpace: 'nowrap' }}>
-            — internal use only
+            internal use only
           </span>
         </div>
         <p style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'var(--muted)', marginTop: '8px' }}>
@@ -217,7 +217,7 @@ export default function DesignSystemPage() {
           style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '12px' }}
         >
 
-          {/* ── COLORS — 8×2 ─────────────────────────────────────────────── */}
+          {/* ── COLORS: 8×2 ─────────────────────────────────────────────── */}
           <div className="bento-cell cell-colors" style={CELL_BASE}>
             <CellLabel>Core</CellLabel>
             <CellTitle>Colors</CellTitle>
@@ -241,7 +241,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── SPACING — 4×2 ────────────────────────────────────────────── */}
+          {/* ── SPACING: 4×2 ────────────────────────────────────────────── */}
           <div className="bento-cell cell-spacing" style={CELL_BASE}>
             <CellLabel>Core</CellLabel>
             <CellTitle>Spacing</CellTitle>
@@ -255,7 +255,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── TYPOGRAPHY — 12×2 ────────────────────────────────────────── */}
+          {/* ── TYPOGRAPHY: 12×2 ────────────────────────────────────────── */}
           <div className="bento-cell cell-typography" style={CELL_BASE}>
             <CellLabel>Core</CellLabel>
             <CellTitle>Typography</CellTitle>
@@ -270,7 +270,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── BUTTONS — 4×2 ────────────────────────────────────────────── */}
+          {/* ── BUTTONS: 4×2 ────────────────────────────────────────────── */}
           <div className="bento-cell cell-buttons" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Buttons</CellTitle>
@@ -297,7 +297,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── TAGS — 4×1 ───────────────────────────────────────────────── */}
+          {/* ── TAGS: 4×1 ───────────────────────────────────────────────── */}
           <div className="bento-cell cell-tags" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Tags / Chips</CellTitle>
@@ -312,11 +312,11 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── BADGE — 4×1 ──────────────────────────────────────────────── */}
+          {/* ── BADGE: 4×1 ──────────────────────────────────────────────── */}
           <div className="bento-cell cell-badge" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Badge</CellTitle>
-            {/* Mirrors the live hero badge exactly — accent dot, muted/70 text, border-border/50 */}
+            {/* Mirrors the live hero badge exactly: accent dot, muted/70 text, border-border/50 */}
             <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
               <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
               Montpellier &amp; Remote
@@ -324,7 +324,7 @@ export default function DesignSystemPage() {
             <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>Accent dot · pulse · 0.6rem uppercase · ls 0.22em · pill border</p>
           </div>
 
-          {/* ── RADIUS — 4×2 ─────────────────────────────────────────────── */}
+          {/* ── RADIUS: 4×2 ─────────────────────────────────────────────── */}
           <div className="bento-cell cell-radius" style={CELL_BASE}>
             <CellLabel>Core</CellLabel>
             <CellTitle>Radius</CellTitle>
@@ -346,7 +346,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          {/* ── CARDS — 6×3 ──────────────────────────────────────────────── */}
+          {/* ── CARDS: 6×3 ──────────────────────────────────────────────── */}
           <div className="bento-cell cell-cards" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Cards</CellTitle>
@@ -356,7 +356,7 @@ export default function DesignSystemPage() {
             <LiveCard />
           </div>
 
-          {/* ── NAVIGATION — 6×3 ─────────────────────────────────────────── */}
+          {/* ── NAVIGATION: 6×3 ─────────────────────────────────────────── */}
           <div className="bento-cell cell-nav" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Navigation</CellTitle>

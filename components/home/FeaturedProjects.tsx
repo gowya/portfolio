@@ -34,7 +34,7 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
           willChange: 'transform',
         }}
       >
-        {/* Content — sits above utility-injected overlay via DOM order */}
+        {/* Content: sits above utility-injected overlay via DOM order */}
         <div className="relative z-10 flex flex-col flex-1">
           <p
             className="font-sans text-muted mb-4"

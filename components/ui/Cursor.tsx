@@ -19,11 +19,11 @@ export default function Cursor() {
     // Center cursor on the pointer coordinate
     gsap.set(el, { xPercent: -50, yPercent: -50 })
 
-    // Position — responsive but not instant, feels physically attached
+    // Position: responsive but not instant, feels physically attached
     const setX = gsap.quickTo(el, 'x', { duration: 0.15, ease: 'power2.out' })
     const setY = gsap.quickTo(el, 'y', { duration: 0.15, ease: 'power2.out' })
 
-    // Deformation — separate quickTo per axis for independent easing
+    // Deformation: separate quickTo per axis for independent easing
     const setScaleX  = gsap.quickTo(el, 'scaleX',   { duration: 0.1, ease: 'power2.out' })
     const setScaleY  = gsap.quickTo(el, 'scaleY',   { duration: 0.1, ease: 'power2.out' })
     const setRot     = gsap.quickTo(el, 'rotation', { duration: 0.1, ease: 'power2.out' })
@@ -46,7 +46,7 @@ export default function Cursor() {
       const vx = x - prevX
       const vy = y - prevY
       const speed = Math.sqrt(vx * vx + vy * vy)
-      const t = Math.min(speed / 20, 1) // normalise to 0–1
+      const t = Math.min(speed / 20, 1) // normalise to 0-1
 
       if (speed > 2) {
         setScaleX(1 + t * 1.5)                    // 1 → 2.5

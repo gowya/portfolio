@@ -300,7 +300,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* Nav links — vertically centered */}
+        {/* Nav links: vertically centered */}
         <div
           ref={menuLinksRef}
           className="flex flex-col items-center justify-center flex-1 gap-8"

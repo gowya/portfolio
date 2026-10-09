@@ -5,17 +5,17 @@ const PROJECTS_FR: ProjectDetail[] = [
   {
     id: '1',
     slug: 'trial-by-card',
-    title: 'L\'onboarding\ qui a multiplié la conversion par 2,5',
-    tagline: 'Transformer un creu dans le flow d entrée en machine de conversion',
+    title: "L'onboarding qui a multiplié la conversion par 2,5",
+    tagline: "Transformer un creux du flow d'entrée en machine à conversion",
     description:
-      "Conception d'un flow de fin d'onboarding pour améliorer la valeur perçue de l'app - audit, A/B tests, contraintes légales et cognitives. La refonte a généré +25% d'utilisateurs qui ajoutent leur CB, et ×2,5 sur les premiers abonnements Business.",
+      "Conception d'un flow de fin d'onboarding pour améliorer la valeur perçue de l'app : audit, A/B tests, contraintes légales et cognitives. Résultat : +25% d'utilisateurs qui ajoutent leur CB, et ×2,5 sur les premiers abonnements Business.",
     coverImage: '/projects/trial-by-card.png',
     tags: ['Conversion', 'Product Design'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Oct/Déc 2025',
+    period: 'Oct. → Déc. 2025',
     status: 'Livré en production',
     team: '1 PM · 1 dev growth · 1 designer',
     metrics: [
@@ -39,12 +39,12 @@ const PROJECTS_FR: ProjectDetail[] = [
             items: [
               "Sessions de replay (Mixpanel / PostHog) : beaucoup d'utilisateurs ne trouvaient pas le bouton pour sortir du trial sans s'engager. Résultat : des tickets support générés par des gens qui voulaient juste passer leur chemin.",
               "Analyse du flow existant : l'information \"0€ aujourd'hui\", pourtant l'argument principal pour convaincre de rentrer sa CB, se perdait dans la page.",
-              "Benchmark sur Mobbin : les produits SaaS les plus performants sur ce pattern partagent 3 principes (réassurance maximale, sortie visible, engagement cognitif minimal.)",
+              "Benchmark sur Mobbin : les produits SaaS les plus performants sur ce pattern partagent 3 principes (réassurance maximale, sortie visible, engagement cognitif minimal).",
             ],
           },
           {
             type: 'callout',
-            text: "Rentrer sa carte bancaire, c'est un acte chargé émotionnellement. La question n'est pas \"est-ce que je veux essayer Business\".  C'est \"est-ce que je fais confiance à ce produit pour ne pas me piéger ?\" Notre hypothèse : si on réduit la charge cognitive au minimum, qu'on rend la sortie évidente, et qu'on insiste sur le \"0€\" comme information principale, on peut significativement augmenter le taux de complétion.",
+            text: "Rentrer sa carte bancaire, c'est un acte chargé émotionnellement. La vraie question dans la tête de l'utilisateur : \"est-ce que je fais confiance à ce produit pour ne pas me piéger ?\" Notre hypothèse : si on réduit la charge cognitive au minimum, qu'on rend la sortie évidente, et qu'on insiste sur le \"0€\" comme information principale, on peut significativement augmenter le taux de complétion.",
           },
         ],
       },
@@ -62,12 +62,12 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/trial-by-card/image.png',
-            caption: "Version Business • A/B test 50/50 entre le plan Business et le plan Advanced",
+            caption: "Version Business : A/B test 50/50 entre le plan Business et le plan Advanced",
           },
           {
             type: 'img',
             src: '/projects/trial-by-card/image-1.png',
-            caption: 'Version Advanced ',
+            caption: 'Version Advanced',
           },
         ],
       },
@@ -112,11 +112,11 @@ const PROJECTS_FR: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Nouvelles itérations • mai 2026',
+        title: 'Nouvelles itérations, mai 2026',
         blocks: [
           {
             type: 'p',
-            text: "Le trial by card continue d'évoluer. La refonte graphique aligne le flow avec la nouvelle direction visuelle de la marque et les derniers composants Stripe, plus minimalistes, plus simples à remplir. Nous continuons les tests pour voir si on peut encore améliorer le taux de conversion en jouant sur la demande de la carte banquaire : est-ce que c'est mieux de la demander d'emblée, ou de la proposer après une première étape d'engagement ?",
+            text: "Le trial by card a continué d'évoluer. La refonte graphique aligne le flow sur la nouvelle direction visuelle de la marque et sur les derniers composants Stripe, plus minimalistes, plus simples à remplir. Les tests tournaient encore à mon départ, avec une question ouverte : vaut-il mieux demander la carte bancaire d'emblée, ou après une première étape d'engagement ?",
           },
           {
             type: 'img',
@@ -125,7 +125,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Les apprentissages des A/B tests ont confirmé que l'Advanced convertit mieux comme premier abonnement. Le flow a été simplifié : moins d'information, une meilleure intégration dans le flow, ajout de cas réels d'utilisateurs comme social proof...",
+            text: "Les apprentissages des A/B tests ont confirmé que l'Advanced convertit mieux comme premier abonnement. Le flow a été simplifié : moins d'information, une meilleure intégration dans le flow, ajout de cas réels d'utilisateurs en social proof.",
           },
           {
             type: 'img',
@@ -139,7 +139,7 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "Après la refonte, on a lancé un A/B test : Trial by Card contre Trial sans carte. La nouvelle version visuelle a généré +25% d'utilisateurs qui ajoutent leur carte bancaire — un écart assez net pour qu'on décide de ne pas prendre le risque d'impacter le business à court terme.",
+            text: "Après la refonte, on a lancé un A/B test : Trial by Card contre Trial sans carte. La nouvelle version visuelle a généré +25% d'utilisateurs qui ajoutent leur carte bancaire. Un écart assez net pour qu'on décide de ne pas prendre le risque d'impacter le business à court terme.",
           },
           {
             type: 'p',
@@ -153,7 +153,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Ce projet m'a confirmé quelque chose : la friction perçue est souvent plus grande que la friction réelle. Demander une CB, c'est techniquement 7 champs. Mais psychologiquement, c'est un acte de confiance. Mon boulot c'était de  gérer l'émotion autour de cet acte. L'autre apprentissage : ne pas supposer qu'on sait ce qui va convertir. L'Advanced qui surperforme sur le Business était contre-intuitif. Sans l'A/B test, on n'aurait pas su. Enfin : la vitesse était possible ici parce qu'on avait un Design System solide. Le DS n'était pas visible sur la prod, mais il était dans le délai hihi.",
+      "Ce projet m'a confirmé quelque chose : la friction perçue est souvent plus grande que la friction réelle. Demander une CB, c'est techniquement 7 champs. Mais psychologiquement, c'est un acte de confiance. Mon boulot, c'était de gérer l'émotion autour de cet acte. L'autre apprentissage : ne pas supposer qu'on sait ce qui va convertir. L'Advanced qui surperforme sur le Business était contre-intuitif. Sans l'A/B test, on n'aurait pas su. Enfin : la vitesse était possible ici parce qu'on avait un Design System solide. Le DS n'était pas visible sur la prod, mais il était dans le délai hihi.",
   },
 
   // ─── 2. Parcours d'upgrade ─────────────────────────────────────────────────
@@ -163,14 +163,14 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: "Pousser l'achat au bon moment",
     tagline: 'Passer de 2% à 10% de conversion avec des modales contextuelles',
     description:
-      "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l\'utilisateur\.",
+      "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
     coverImage: '/projects/parcours-upgrade.png',
     tags: ['Conversion', 'Product Design', 'UX'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Oct/Nov 2025',
+    period: 'Oct. → Nov. 2025',
     status: 'Livré en production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
@@ -180,7 +180,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: '3 CTA', label: 'personnalisés selon le flow de chaque user' },
     ],
     intro:
-      "Waalaxy monétise via plusieurs plans et des add-ons. Le parcours d'upgrade existant avait un défaut structurel : l'utilisateur qui voulait passer à un plan supérieur était immédiatement redirigé vers le panier, sans jamais comprendre ce qu'il allait gagner. L'abandon ne se produisait pas au paiement mais avant, au moment où l'utilisateur ne trouvait pas de réponse à sa question implicite : \"est-ce que ça vaut vraiment le coup pour ma situation ?\"",
+      "Waalaxy monétise via plusieurs plans et des add-ons. Le parcours d'upgrade existant avait un défaut structurel : l'utilisateur qui voulait passer à un plan supérieur était immédiatement redirigé vers le panier, sans jamais comprendre ce qu'il allait gagner. L'abandon arrivait avant le paiement, au moment où l'utilisateur ne trouvait pas de réponse à sa question implicite : \"est-ce que ça vaut vraiment le coup pour ma situation ?\"",
     sections: [
       {
         title: 'Audit de l\'existant : ce qui ne fonctionnait pas',
@@ -191,7 +191,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "En prod, les boutons d'upgrade ramenaient systématiquement sur la page des tarifs, sans aucun lien avec ce que l'utilisateur était en train d'essayer de faire. Même wording pour tout le monde. Même structure. Aucune hiérarchie. Pour un utilisateur qui vient de se heurter à un quota dépassé, l'information dont il a besoin n'est pas \"voici les plans que nous proposons\" -> c'est \"voici pourquoi le plan supérieur résout ton problème maintenant\".",
+            text: "En prod, les boutons d'upgrade ramenaient systématiquement sur la page des tarifs, sans aucun lien avec ce que l'utilisateur était en train d'essayer de faire. Même wording pour tout le monde. Même structure. Aucune hiérarchie. Un utilisateur qui vient de se heurter à un quota dépassé a besoin d'une seule information : \"voici pourquoi le plan supérieur résout ton problème maintenant\".",
           },
           {
             type: 'img',
@@ -281,19 +281,19 @@ const PROJECTS_FR: ProjectDetail[] = [
             items: [
               "Taux d'ouverture de la modale comparative : 13,61% depuis un CTA contextuel vs 10,89% depuis un paywall",
               "Taux de conversion jusqu'à l'upgrade finalisé : 9,08% depuis un CTA contextuel vs 7,32% depuis un paywall",
-              "Pour rappel, la baseline de départ était le taux de conversion depuis la page de pricing, à 2%. Le parcours contextuel le dépasse de plus de 4 points.",
+              "Pour rappel, la baseline de départ était le taux de conversion depuis la page de pricing, à 2%. Le parcours contextuel le dépasse de plus de 7 points.",
             ],
           },
           {
             type: 'img',
             src: '/projects/parcours-upgrade/Capture_decran_2026-01-22_a_13.27.48.png',
-            caption: 'Données Mixpanel post-release • funnel contextuel vs paywall classique',
+            caption: 'Données Mixpanel post-release : funnel contextuel vs paywall classique',
           },
         ],
       },
     ],
     learnings:
-      "Ce projet m'a confirmé quelque chose sur les parcours de conversion : le vrai blocage n'était pas le prix, ni même le formulaire de paiement. C'était l'absence de lien entre le problème de l'utilisateur et la solution proposée. Une modale qui s'ouvre sans contexte crée de la méfiance, pas de la conviction. La refonte de l'order summary illustre un autre principe : la transparence réduit la friction. Montrer le calcul du prorata, c'est une ligne de plus à afficher et des dizaines de tickets support en moins et un utilisateur qui passe au paiement avec confiance plutôt qu'avec des doutes.",
+      "Ce projet m'a confirmé quelque chose sur les parcours de conversion : le vrai blocage se cachait avant le prix et avant le formulaire de paiement, dans l'absence de lien entre le problème de l'utilisateur et la solution proposée. Une modale qui s'ouvre sans contexte crée de la méfiance. La refonte de l'order summary illustre un autre principe : la transparence réduit la friction. Montrer le calcul du prorata, c'est une ligne de plus à afficher. Et derrière, des dizaines de tickets support en moins et un utilisateur qui passe au paiement en confiance.",
   },
 
   // ─── 3. CSV Import ─────────────────────────────────────────────────────────
@@ -303,7 +303,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Mapping de données pour débutants',
     tagline: "De l'URL LinkedIn unique au mapping multi-colonnes",
     description:
-      "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font, pas de ce qu'on espère qu'ils fassent.",
+      "83,5% des utilisateurs réussissent leur mapping du premier coup. Le résultat d'un flow conçu autour de ce que les gens font vraiment.",
     coverImage: '/projects/csv-import.png',
     tags: ['Product Design', 'UX'],
     caseStudyUrl: null,
@@ -314,7 +314,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     status: 'Livré en production',
     team: '1 PM · 1 EM · 2 devs · 1 designer',
     metrics: [
-      { value: '83,5%', label: 'utilisent le mapping multi-colonnes' },
+      { value: '83,5%', label: 'réussissent leur mapping au 1er essai' },
       { value: '24', label: 'colonnes importées en moyenne' },
       { value: '10 485', label: 'imports analysés (3 mois)' },
       { value: '25%', label: "des fichiers proviennent de Waalaxy lui-même" },
@@ -353,7 +353,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Volontairement simple : choix de la liste d'import et upload par drag&drop. Pas de décision à prendre, si le fichier est valide, on passe automatiquement à l'étape suivante. Le parser gère les cas complexes en arrière-plan sans les exposer à l'utilisateur.",
+            text: "Volontairement simple : choix de la liste d'import et upload par drag&drop. Aucune décision à prendre : si le fichier est valide, on passe automatiquement à l'étape suivante. Le parser gère les cas complexes en arrière-plan sans les exposer à l'utilisateur.",
           },
           {
             type: 'img',
@@ -362,7 +362,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'h3',
-            text: "Étape 2 : Match data - l'écran central",
+            text: "Étape 2 : Match data, l'écran central",
           },
           {
             type: 'p',
@@ -371,7 +371,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              "Le nombre de prospects détectés est mis en avant dans le titre • rassurer l'utilisateur qu'il a bien le bon fichier et lui permettre de détecter immédiatement une erreur.",
+              "Le nombre de prospects détectés est mis en avant dans le titre, pour rassurer l'utilisateur qu'il a bien le bon fichier et lui permettre de détecter immédiatement une erreur.",
               "La checkbox par ligne permet de choisir quelles colonnes importer. Pas obligé de mapper tout le CSV.",
               "Le dropdown liste toutes les propriétés disponibles. Quand une propriété est déjà utilisée, un tooltip \"This property is already used\" apparaît ; l'utilisateur ne peut pas mapper 2 colonnes sur le même champ sans s'en rendre compte.",
             ],
@@ -415,7 +415,7 @@ const PROJECTS_FR: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Résultats • 3 mois post-release',
+        title: 'Résultats, 3 mois après la release',
         blocks: [
           {
             type: 'quote',
@@ -425,7 +425,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              "83,5% utilisent le mapping multi-colonnes. Seulement 16,5% importent encore uniquement l'URL LinkedIn (l'ancienne façon de faire).",
+              "83,5% des utilisateurs réussissent leur mapping du premier coup.",
               "Moyenne de 24 colonnes par import : les sources qui auraient été inutilisables avec l'ancien flow.",
               "25% des fichiers proviennent de Waalaxy lui-même : des utilisateurs qui exportent leurs contacts d'un compte pour les réimporter dans un autre. Un cas d'usage qui n'existait pas avant.",
             ],
@@ -444,18 +444,18 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: "Ajout de l'IA",
     tagline: "Corriger la forme des messages de prospection grâce à l'IA, sans toucher au fond",
     description:
-      "Les utilisateurs débutants de Waalaxy savent quoi dire — ils ne savent pas comment le formuler. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
+      "Les utilisateurs débutants de Waalaxy savent quoi dire. Ce qui coince, c'est la formulation. Intégration de boutons d'amélioration IA dans les zones de rédaction : le message est réécrit selon les bonnes pratiques, l'utilisateur garde le contrôle du résultat.",
     coverImage: '/projects/ajout-ia.png',
     tags: ['IA', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Jan. • Mai 2026',
+    period: 'Janv. → Mai 2026',
     status: 'Livré en production',
     metrics: [
       { value: '4% à 7%', label: "taux de réponse moyen d'une campagne de prospection" },
-      { value: '15% à 20%', label: "objectif x3 du taux de réponse moyen" },
+      { value: '15% à 20%', label: "l'objectif : ×3 sur le taux de réponse moyen" },
       { value: '3', label: "surfaces couvertes : message, note d'invitation, email" },
       { value: 'Keep / Retry / Cancel', label: "contrôle total sur le résultat IA" },
     ],
@@ -463,11 +463,11 @@ const PROJECTS_FR: ProjectDetail[] = [
       "En analysant 64 millions de campagnes LinkedIn sur la base Waalaxy, nous avons pu identifier les patterns rédactionnels qui impactent les taux de réponse : le top 1% des utilisateurs atteint 47,4% de réponses, contre 5% en moyenne selon les personas.",
     sections: [
       {
-        title: "Le vrai problème : la forme, pas le fond",
+        title: "Le vrai problème se cache dans la forme",
         blocks: [
           {
             type: 'p',
-            text: "Waalaxy est positionné comme l'outil de prospection le plus simple du marché. 75% des utilisateurs n'ont jamais utilisé ce type d'outil. Résultat : les taux de réponse sont plombés par des erreurs de forme basiques (messages trop longs, ton trop commercial, absence de personnalisation visible...) pas par un manque d'idées.",
+            text: "Waalaxy est positionné comme l'outil de prospection le plus simple du marché. 75% des utilisateurs n'ont jamais utilisé ce type d'outil. Résultat : des taux de réponse plombés par des erreurs de forme basiques (messages trop longs, ton trop commercial, aucune personnalisation visible). Les idées, elles, sont là.",
           },
           {
             type: 'callout',
@@ -478,7 +478,7 @@ const PROJECTS_FR: ProjectDetail[] = [
             items: [
               "Analyse Waalaxy : corrélation entre le peu d'expérience en prospection et le taux de réponse faible",
               "Analyse Mixpanel : corrélation entre messages trop longs / trop formels et taux de réponse faibles",
-              "Positionnement produit : Waalaxy recommande des bonnes pratiques dans sa documentation, l'IA doit les incarner pour les rendre accessibles à tous les utilisateurs, pas seulement à ceux qui savent déjà comment faire.",
+              "Positionnement produit : Waalaxy recommande des bonnes pratiques dans sa documentation, l'IA doit les incarner pour les rendre accessibles à tous les utilisateurs, débutants compris.",
             ],
           },
         ],
@@ -493,7 +493,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/ajout-de-lia/Enregistrement_de_lecran_2026-01-22_a_17.49.41.gif',
-            caption: "Feature IA - réécriture de message avec prévisualisation du résultat",
+            caption: "Feature IA : réécriture de message avec prévisualisation du résultat",
           },
           {
             type: 'p',
@@ -534,7 +534,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Ce projet m'a appris à distinguer deux types d'assistance IA : celle qui écrit à la place de l'utilisateur, et celle qui améliore ce que l'utilisateur a commencé. La deuxième crée beaucoup moins de résistance. Le flow keep/retry/cancel n'est pas un détail d'UX — c'est ce qui fait que l'utilisateur reste auteur de son message. Sans ce contrôle explicite, l'IA devient une boîte noire. Avec lui, elle devient un outil.",
+      "Ce projet m'a appris à distinguer deux types d'assistance IA : celle qui écrit à la place de l'utilisateur, et celle qui améliore ce que l'utilisateur a commencé. La deuxième crée beaucoup moins de résistance. Le flow keep/retry/cancel, c'est ce qui fait que l'utilisateur reste l'auteur de son message. Sans ce contrôle explicite, l'IA devient une boîte noire. Avec lui, elle devient un outil.",
   },
 
   // ─── 5. Refacto Campaign Manager ───────────────────────────────────────────
@@ -544,15 +544,15 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Refacto du Manager de Campagne',
     tagline: "Des cards illisibles à une liste de pilotage",
     description:
-      "Refonte de la page centrale de Waalaxy • passage d'une grille de cards à une vue liste avec métriques en temps réel. Basé sur interviews utilisateurs churners et opportunity tree.",
+      "Refonte de la page centrale de Waalaxy : d'une grille de cards à une vue liste avec métriques en temps réel. Basée sur des interviews d'utilisateurs churners et un opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
     tags: ['UX Research', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Avr. • Mai 2026',
-    status: 'Hands-off, livraison prochaine',
+    period: 'Avr. → Mai 2026',
+    status: 'Handoff dev en mai 2026',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
       { value: '3', label: "signaux convergents vers le problème" },
@@ -560,7 +560,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: '→ Liste', label: 'passage de la grille de cards' },
     ],
     intro:
-      "Le Campaign Manager est la page centrale de Waalaxy • la première que l'utilisateur voit quand il ouvre l'app. Et c'était l'une des pages les plus problématiques du produit. Les cards avaient des avatars colorés, un nom tronqué, et c'est tout. Pas de stats, pas de hiérarchie, pas d'action possible sans ouvrir chaque campagne une par une.",
+      "Le Campaign Manager est la page centrale de Waalaxy, la première que l'utilisateur voit quand il ouvre l'app. Et c'était l'une des pages les plus problématiques du produit. Les cards avaient des avatars colorés, un nom tronqué, et c'est tout. Pas de stats, pas de hiérarchie, pas d'action possible sans ouvrir chaque campagne une par une.",
     sections: [
       {
         title: 'Recherche : entendre les utilisateurs',
@@ -591,13 +591,13 @@ const PROJECTS_FR: ProjectDetail[] = [
             items: [
               "Les users qui ont plus de 5 campagnes ne voient plus leurs noms : les cards ont une largeur fixe, les noms longs sont tronqués. Certains avaient adapté leur façon de nommer pour contourner.",
               "Aucune stat visible depuis cette vue. Pour savoir comment performe une campagne, il faut l'ouvrir. Les users ouvrent tout, comparent de tête, reviennent en arrière.",
-              "La distinction entre campagnes actives, en pause et en brouillon n'est pas lisible d'un coup d'œil • tout a le même poids visuel.",
+              "La distinction entre campagnes actives, en pause et en brouillon n'est pas lisible d'un coup d'œil : tout a le même poids visuel.",
             ],
           },
           {
             type: 'img',
             src: '/projects/campaign-manager/Capture_decran_2026-05-13_a_17.31.08.png',
-            caption: "Opportunity tree • de l'insight à la solution",
+            caption: "Opportunity tree : de l'insight à la solution",
           },
         ],
       },
@@ -623,11 +623,11 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "La vue en prod avait des avatars circulaires colorés sur chaque card • fonctionnellement inutiles, mais pour un utilisateur qui n'a jamais utilisé d'outil d'automation, ils rendaient la page vivante. Le feedback du PM : \"c'est moins playful qu'avant, j'en veux plus\".",
+            text: "La vue en prod avait des avatars circulaires colorés sur chaque card. Fonctionnellement inutiles, mais pour un utilisateur qui n'a jamais utilisé d'outil d'automation, ils rendaient la page vivante. Le feedback du PM : \"c'est moins playful qu'avant, j'en veux plus\".",
           },
           {
             type: 'callout',
-            text: "Ce débat a forcé une question plus précise : qu'est-ce que \"playful\" veut dire fonctionnellement pour notre utilisateur ? Ce n'est pas \"mettre des couleurs\". C'est concevoir pour quelqu'un qui a besoin de se sentir à l'aise avec ses données, pas intimidé par elles. La réponse n'était pas de supprimer les éléments identitaires • c'était de les réintégrer dans une structure qui, elle, permettait de piloter.",
+            text: "Ce débat a forcé une question plus précise : qu'est-ce que \"playful\" veut dire fonctionnellement pour notre utilisateur ? Réponse : concevoir pour quelqu'un qui a besoin de se sentir à l'aise avec ses données. Les éléments identitaires sont restés, réintégrés dans une structure qui, elle, permettait de piloter.",
           },
         ],
       },
@@ -653,7 +653,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Cette orientation a été challengée : risque de transformer une page de pilotage en page de to-do, et de générer une surutilisation de certaines fonctionnalités coûteuses. On a recentré sur une conviction claire : le Campaign Manager est une page de comparaison et de lecture des résultats, pas une page d'action directe.",
+            text: "Cette orientation a été challengée : risque de transformer une page de pilotage en page de to-do, et de générer une surutilisation de certaines fonctionnalités coûteuses. On a recentré sur une conviction claire : le Campaign Manager sert à comparer et à lire les résultats. Les actions vivent ailleurs.",
           },
         ],
       },
@@ -664,7 +664,7 @@ const PROJECTS_FR: ProjectDetail[] = [
             type: 'list',
             items: [
               "La colonne \"Actions in queue\" est l'indicateur central : avancement des prospects dans la séquence, avec cercle de progression et statut texte.",
-              "Les actions classiques (pause/play, dupliquer, archiver) restent dans le menu \"...\" en fin de ligne • présentes, mais pas en compétition avec la lecture des données.",
+              "Les actions classiques (pause/play, dupliquer, archiver) restent dans le menu \"...\" en fin de ligne : présentes, sans entrer en compétition avec la lecture des données.",
               "Le CTA \"Review\" a été retiré de cette vue et repositionné dans le détail de chaque campagne, là où son contexte est immédiatement compréhensible.",
               "Une checkbox par ligne permet les bulk actions sans surcharger l'interface.",
               "L'état vide est designé à part entière : modèles de séquences proposés directement dans la page.",
@@ -700,7 +700,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Ce projet m'a confirmé que les allers-retours ne sont pas des échecs de conception • ce sont des apprentissages documentés. La version avec le side panel était une bonne réponse à une vraie question. On l'a mise de côté parce qu'elle répondait à un problème différent de celui de cette page. Savoir ce qu'une page n'est pas censée faire est aussi important que savoir ce qu'elle doit faire. La tension \"playful\" m'a aussi appris quelque chose : quand un feedback est flou, il faut le décomposer avant de répondre. \"Moins playful\" était en réalité \"moins rassurant pour un utilisateur non-technique face à un tableau de données\". Ce n'est pas le même problème, et ce n'est pas la même solution.",
+      "Ce projet m'a confirmé que les allers-retours sont des apprentissages documentés. La version avec le side panel était une bonne réponse à une vraie question. On l'a mise de côté parce qu'elle répondait à un problème différent de celui de cette page. Savoir ce qu'une page n'est pas censée faire est aussi important que savoir ce qu'elle doit faire. La tension \"playful\" m'a aussi appris quelque chose : quand un feedback est flou, il faut le décomposer avant de répondre. \"Moins playful\" était en réalité \"moins rassurant pour un utilisateur non-technique face à un tableau de données\". Autre problème, donc autre solution.",
   },
 
   // ─── 6. Design System ──────────────────────────────────────────────────────
@@ -710,15 +710,15 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Lead Design System from scratch',
     tagline: "Product Designer & Lead Design System chez Waalaxy. WAATOM, c'est le nom du bébé.",
     description:
-      "Construction du Design System de Waalaxy depuis zéro • audit complet, fondations en tokens, triangle Main Component/Storybook/documentation, process de contribution et de deprecation, aujourd'hui poussé plus loin via MCP avec Claude.",
+      "Construction du design system de Waalaxy depuis zéro : audit complet, fondations en tokens, triangle Main Component/Storybook/documentation, process de contribution et de deprecation. Puis la suite logique : brancher un design system sur Claude via MCP.",
     coverImage: '/projects/design-system.png',
     tags: ['Design System'],
     caseStudyUrl: null,
     featured: false,
     role: 'Lead Design System & Product Designer',
     company: 'Waalaxy',
-    period: 'Nov. 2023 • Présent',
-    status: 'En cours',
+    period: 'Nov. 2023 → Juil. 2026',
+    status: 'Livré en production',
     metrics: [
       { value: '∅', label: 'zéro DS existant au départ' },
       { value: '2024', label: 'formation Design System Expertise' },
@@ -754,7 +754,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/design-system/image.png',
-            caption: 'Le Main Component dans la library • anatomie, props et states',
+            caption: 'Le Main Component dans la library : anatomie, props et states',
           },
           {
             type: 'p',
@@ -794,7 +794,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Deprecate un composant, c'est aussi tout un sujet. On vérifie d'abord les occurrences en prod avec les devs, on renomme avec un petit \".\" et [OLD] devant, on ajoute un \"DEPRECATE 💀\" bien visible au publish. Histoire que la disparition d'un composant reste une décision assumée, pas une surprise en pleine intégration un vendredi 17h.",
+            text: "Deprecate un composant, c'est aussi tout un sujet. On vérifie d'abord les occurrences en prod avec les devs, on renomme avec un petit \".\" et [OLD] devant, on ajoute un \"DEPRECATE 💀\" bien visible au publish. Histoire que la disparition d'un composant reste une décision assumée. Personne n'a envie de la découvrir en pleine intégration un vendredi 17h.",
           },
         ],
       },
@@ -816,7 +816,7 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "Aujourd'hui, WAATOM est devenu un vrai langage commun entre design et dev. Les designers savent où chercher avant de recréer. Les devs savent ce qu'ils intègrent avant de commencer. Et moi, je suis passée de \"celle qui fait des boutons\" à garante d'une cohérence qui tient sur des dizaines d'écrans et plusieurs équipes.",
+            text: "WAATOM est devenu un vrai langage commun entre design et dev. Les designers savaient où chercher avant de recréer. Les devs savaient ce qu'ils intégraient avant de commencer. Et moi, je suis passée de \"celle qui fait des boutons\" à garante d'une cohérence qui tient sur des dizaines d'écrans et plusieurs équipes.",
           },
           {
             type: 'callout',
@@ -825,15 +825,15 @@ const PROJECTS_FR: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Et maintenant',
+        title: 'Et après',
         blocks: [
           {
             type: 'p',
-            text: "Ce système que j'ai construit à la main pendant des années, je suis en train de le pousser plus loin. Sur Vela, mon propre produit, je pars direct sur les bonnes bases : tokens propres, un DS pensé dès le premier composant plutôt que rattrapé trois ans après.",
+            text: "Ce système construit à la main pendant des années, je l'ai poussé plus loin après Waalaxy. Sur Vela, mon SaaS pour psys et coachs, je suis partie direct sur les bonnes bases : tokens propres, un DS pensé dès le premier composant.",
           },
           {
             type: 'p',
-            text: "Et j'explore aujourd'hui un truc qui m'obsède un peu : connecter mon design system directement à Claude et à Claude Design via MCP, pour que le système devienne une contrainte que l'IA respecte nativement quand elle génère du front, plutôt qu'une référence que je vais chercher à côté. Moins de temps passé à corriger des couleurs hors token ou des espacements approximatifs, plus de temps sur ce qui compte vraiment : les décisions produit.",
+            text: "Et j'ai creusé un truc qui m'obsède un peu : brancher mon design system directement sur Claude Code via MCP. Le système devient une contrainte que l'IA respecte nativement quand elle génère du front. Ce portfolio a été livré comme ça. Moins de temps passé à corriger des couleurs hors token ou des espacements approximatifs, plus de temps sur ce qui compte vraiment : les décisions produit.",
           },
         ],
       },
@@ -849,14 +849,14 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'SaaS de recrutement à double entrée',
     tagline: "Deux types d'utilisateurs, une seule cohérence de produit",
     description:
-      "Conception d'une marketplace mettant en relation chasseurs de têtes et candidats • UX à double entrée, onboarding distinct pour chaque profil, logique de matching et interfaces adaptées.",
+      "Conception d'une marketplace qui met en relation chasseurs de têtes et candidats : UX à double entrée, onboarding distinct pour chaque profil, logique de matching et interfaces adaptées.",
     coverImage: '/projects/saas-recrutement.png',
     tags: ['Product Design', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer',
     company: 'Kilpailutapalkkasi.fi',
-    period: 'Jan. 2025',
+    period: '2023',
     status: 'Livré',
     metrics: [
       { value: '2', label: "types d'utilisateurs distincts" },
@@ -875,7 +875,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              "Cartographie des deux parcours utilisateurs en parallèle • identifier les points de contact partagés vs les surfaces spécifiques à chaque rôle",
+              "Cartographie des deux parcours utilisateurs en parallèle, pour identifier les points de contact partagés vs les surfaces spécifiques à chaque rôle",
               "Onboarding bifurqué : dès le premier écran, l'utilisateur choisit son rôle et entre dans un parcours d'inscription adapté à ses besoins spécifiques",
               "Dashboard distinct par rôle : le chasseur de têtes voit ses recherches actives et candidats en cours de traitement ; le candidat voit ses candidatures et les offres recommandées",
             ],
@@ -892,11 +892,11 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/saas-recrutement/image.png',
-            caption: "Interface principale de la marketplace • vue candidat",
+            caption: "Interface principale de la marketplace, vue candidat",
           },
           {
             type: 'p',
-            text: "La fonctionnalité centrale • le matching • devait être transparente pour les deux parties. J'ai conçu un système de tags de compétences partagé, visible des deux côtés, pour que les critères de matching soient compréhensibles et éditables par chacun.",
+            text: "La fonctionnalité centrale, le matching, devait être transparente pour les deux parties. J'ai conçu un système de tags de compétences partagé, visible des deux côtés, pour que les critères de matching soient compréhensibles et éditables par chacun.",
           },
         ],
       },
@@ -905,41 +905,41 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'callout',
-            text: "Une contrainte forte : le projet s'est déroulé sur 3 semaines. Il a fallu prioriser rapidement • définir les écrans critiques (onboarding, profil, matching, messagerie) et accepter de différer les fonctionnalités secondaires pour une V2.",
+            text: "Une contrainte forte : le projet s'est déroulé sur 3 semaines. Il a fallu prioriser vite : définir les écrans critiques (onboarding, profil, matching, messagerie) et accepter de différer les fonctionnalités secondaires pour une V2.",
           },
           {
             type: 'p',
-            text: "La messagerie intégrée était le point de rencontre des deux rôles : le seul endroit où les deux types d'utilisateurs interagissent directement. Elle devait être simple, sans ambiguïté sur qui a initié la conversation et pourquoi. Un contexte de mise en relation visible dans chaque conversation • l'offre ou le profil qui a déclenché le premier contact.",
+            text: "La messagerie intégrée était le point de rencontre des deux rôles : le seul endroit où les deux types d'utilisateurs interagissent directement. Elle devait être simple, sans ambiguïté sur qui a initié la conversation et pourquoi. Un contexte de mise en relation visible dans chaque conversation : l'offre ou le profil qui a déclenché le premier contact.",
           },
         ],
       },
     ],
     learnings:
-      "Les marketplaces à double entrée sont parmi les exercices les plus exigeants en product design, parce qu'une mauvaise décision côté offre impacte immédiatement le côté demande • et vice versa. Ce projet m'a appris à cartographier les tensions avant de concevoir, et à trouver des patterns qui résolvent les deux sides en même temps plutôt que de compromettre l'un pour l'autre.",
+      "Les marketplaces à double entrée sont parmi les exercices les plus exigeants en product design, parce qu'une mauvaise décision côté offre impacte immédiatement le côté demande, et vice versa. Ce projet m'a appris à cartographier les tensions avant de concevoir, et à trouver des patterns qui résolvent les deux sides en même temps plutôt que de compromettre l'un pour l'autre.",
   },
 
   // ─── 8. Dashboard Praticien ────────────────────────────────────────────────
   {
     id: '8',
     slug: 'dashboard-praticien',
-    title: 'Dashboard Praticien • gestion de consultations',
+    title: 'Dashboard Praticien, gestion de consultations',
     tagline: "Remplacer 4 outils éparpillés par un seul espace qui tient la route",
     description:
-      "Dashboard Notion sur mesure pour un praticien de santé libéral • centralisation de l'agenda, du suivi patient, de la facturation et des notes de consultation dans un seul espace cohérent.",
+      "Dashboard Notion sur mesure pour un praticien de santé libéral : centralisation de l'agenda, du suivi patient, de la facturation et des notes de consultation dans un seul espace cohérent.",
     coverImage: null,
     tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Designer Notion',
     company: 'Client freelance',
-    period: 'Déc. 2024 • Jan. 2025',
+    period: 'Déc. 2024 → Janv. 2025',
     status: 'Livré',
     metrics: [
       { value: '4→1', label: 'outils remplacés par un seul espace' },
       { value: '6 sem.', label: "d'utilisation avant retour client positif" },
     ],
     intro:
-      "Un praticien de santé libéral qui gérait son activité entre un agenda papier, un tableur Excel pour la facturation, une application de notes, et des post-its pour le suivi patient. Il voulait simplifier • pas forcément digitaliser pour digitaliser, mais avoir un seul endroit où tout se trouve, accessible depuis n'importe quel appareil.",
+      "Un praticien de santé libéral qui gérait son activité entre un agenda papier, un tableur Excel pour la facturation, une application de notes, et des post-its pour le suivi patient. Il voulait simplifier : un seul endroit où tout se trouve, accessible depuis n'importe quel appareil.",
     sections: [
       {
         title: "Cadrage : comprendre le quotidien du praticien",
@@ -967,7 +967,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'callout',
-            text: "Le principe directeur : chaque information ne doit être saisie qu'une seule fois. La relation entre les bases de données fait le reste • une consultation crée automatiquement une entrée liée dans la facturation, sans ressaisie.",
+            text: "Le principe directeur : chaque information ne doit être saisie qu'une seule fois. La relation entre les bases de données fait le reste : une consultation crée automatiquement une entrée liée dans la facturation, sans ressaisie.",
           },
           {
             type: 'list',
@@ -985,7 +985,7 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "La livraison n'était pas un Figma ou un document • c'était un espace Notion fonctionnel avec les bases de données pré-structurées, des entrées de test, et une vidéo tutoriel de 15 minutes enregistrée pour le client. Le client n'était pas un utilisateur Notion • la courbe d'apprentissage devait être quasi nulle.",
+            text: "Le livrable : un espace Notion fonctionnel, avec les bases de données pré-structurées, des entrées de test, et une vidéo tutoriel de 15 minutes enregistrée pour le client. Le client n'avait jamais ouvert Notion, la courbe d'apprentissage devait être quasi nulle.",
           },
           {
             type: 'p',
@@ -995,7 +995,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Concevoir pour un utilisateur non-technique, c'est concevoir pour les contraintes réelles et non pour les possibilités théoriques de l'outil. Notion peut faire des choses complexes • mais si l'utilisateur final ne comprend pas pourquoi il doit cliquer là, le système ne sera pas utilisé. Ce projet m'a rappelé que la valeur d'un bon système d'information, c'est avant tout son taux d'adoption.",
+      "Concevoir pour un utilisateur non-technique, c'est concevoir pour ses contraintes réelles. Notion peut faire des choses complexes. Mais si l'utilisateur final ne comprend pas pourquoi il doit cliquer là, le système ne sera pas utilisé. Ce projet m'a rappelé que la valeur d'un bon système d'information, c'est avant tout son taux d'adoption.",
   },
 
   // ─── 9. Dashboard Stratégie ────────────────────────────────────────────────
@@ -1005,7 +1005,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Dashboard Stratégie financière et suivi',
     tagline: "Transformer un tableur en outil de pilotage stratégique",
     description:
-      "Tableau de bord Notion pour le suivi stratégique et financier d'une activité freelance • vision consolidée des revenus, du pipeline, et des objectifs en un seul espace actionnable.",
+      "Tableau de bord Notion pour le suivi stratégique et financier d'une activité freelance : vision consolidée des revenus, du pipeline, et des objectifs en un seul espace actionnable.",
     coverImage: null,
     tags: ['Freelance'],
     caseStudyUrl: null,
@@ -1019,7 +1019,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: '4 vues', label: 'pour tout voir : CA, pipeline, objectifs' },
     ],
     intro:
-      "Un freelance avec une activité bien lancée, mais une vision floue de sa situation réelle : combien il avait facturé ce mois-ci, combien restait en attente de paiement, combien de prospects étaient dans le pipe. Les données existaient dans différents endroits • l'enjeu était de les connecter dans un espace qui donne une lecture instantanée et actionnable.",
+      "Un freelance avec une activité bien lancée, mais une vision floue de sa situation réelle : combien il avait facturé ce mois-ci, combien restait en attente de paiement, combien de prospects étaient dans le pipe. Les données existaient à différents endroits. L'enjeu : les connecter dans un espace qui donne une lecture instantanée et actionnable.",
     sections: [
       {
         title: "Le problème : des données qui n'ont pas de sens isolément",
@@ -1048,7 +1048,7 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'callout',
-            text: "Le dashboard principal est une page Notion sans base de données • c'est uniquement des vues filtrées des deux bases, arrangées pour répondre à une question spécifique par section. La lisibilité vient de la mise en page, pas de la complexité des données.",
+            text: "Le dashboard principal est une simple page Notion, faite uniquement de vues filtrées des deux bases, arrangées pour répondre à une question précise par section. La lisibilité vient de la mise en page.",
           },
           {
             type: 'p',
@@ -1061,17 +1061,17 @@ const PROJECTS_FR: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "La promesse de ce type de système n'est pas de faire gagner du temps sur la saisie • c'est de rendre les décisions plus claires. Quand on voit que 80% de l'objectif mensuel est atteint le 15, on peut se permettre de refuser un projet mal cadré. Quand on voit que le pipeline est vide, on sait qu'il faut prospecter maintenant et pas dans 3 semaines.",
+            text: "La promesse de ce type de système : des décisions plus claires. Quand on voit que 80% de l'objectif mensuel est atteint le 15, on peut se permettre de refuser un projet mal cadré. Quand on voit que le pipeline est vide, on sait qu'il faut prospecter maintenant.",
           },
           {
             type: 'p',
-            text: "La livraison incluait une session de passation de 30 minutes et un court guide des mises à jour mensuelles • ce qui doit être fait, quand, et comment interpréter les chiffres affichés.",
+            text: "La livraison incluait une session de passation de 30 minutes et un court guide des mises à jour mensuelles : ce qui doit être fait, quand, et comment interpréter les chiffres affichés.",
           },
         ],
       },
     ],
     learnings:
-      "La conception d'outils de pilotage demande de comprendre comment la personne prend ses décisions, pas seulement quelles données elle a. Deux freelances avec les mêmes métriques peuvent avoir besoin de visualisations très différentes selon leur façon de travailler. Ce projet a été court (3 jours), mais dense en questions de cadrage • et c'est ce cadrage qui a fait que l'outil était utilisé une semaine après la livraison.",
+      "La conception d'outils de pilotage demande de comprendre comment la personne prend ses décisions, au-delà des données qu'elle a. Deux freelances avec les mêmes métriques peuvent avoir besoin de visualisations très différentes selon leur façon de travailler. Ce projet a été court (3 jours), mais dense en questions de cadrage. Et c'est ce cadrage qui a fait que l'outil était utilisé une semaine après la livraison.",
   },
 ]
 
@@ -1083,14 +1083,14 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'The onboarding that multiplied conversion by 2.5',
     tagline: 'Turning a gap in the entry flow into a conversion engine',
     description:
-      "Designing an end-of-onboarding flow to lift the app's perceived value — audit, A/B tests, legal and cognitive constraints. The redesign drove a +25% increase in users adding their card, and ×2.5 on first Business subscriptions.",
+      "Designing an end-of-onboarding flow to lift the app's perceived value: audit, A/B tests, legal and cognitive constraints. The redesign drove a +25% increase in users adding their card, and ×2.5 on first Business subscriptions.",
     coverImage: '/projects/trial-by-card.png',
     tags: ['Conversion', 'Product Design'],
     caseStudyUrl: null,
     featured: true,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Oct–Dec 2025',
+    period: 'Oct → Dec 2025',
     status: 'Shipped to production',
     team: '1 PM · 1 growth dev · 1 designer',
     metrics: [
@@ -1113,13 +1113,13 @@ const PROJECTS_EN: ProjectDetail[] = [
             type: 'list',
             items: [
               "Session replays (Mixpanel / PostHog): many users couldn't find the button to leave the trial without committing. The result: support tickets from people who just wanted to move on.",
-              'Analysis of the existing flow: the "€0 today" message — the main argument for entering a card — got lost on the page.',
+              'Analysis of the existing flow: the "€0 today" message, the main argument for entering a card, got lost on the page.',
               'Mobbin benchmark: the SaaS products that perform best on this pattern share three principles (maximum reassurance, a visible exit, minimal cognitive effort).',
             ],
           },
           {
             type: 'callout',
-            text: 'Entering your card is an emotionally loaded act. The question isn\'t "do I want to try Business?" It\'s "do I trust this product not to trap me?" Our hypothesis: if we cut cognitive load to the minimum, make the exit obvious, and lead with "€0" as the primary message, we can significantly raise the completion rate.',
+            text: 'Entering your card is an emotionally loaded act. The real question in the user\'s head: "do I trust this product not to trap me?" Our hypothesis: if we cut cognitive load to the minimum, make the exit obvious, and lead with "€0" as the primary message, we can significantly raise the completion rate.',
           },
         ],
       },
@@ -1128,7 +1128,7 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "Before designing, we set the non-negotiable constraints: the legal notices tied to card collection (GDPR, recurring billing, cancellation terms) had to appear on screen. The card form required several fields. And fitting all of it — form, legal notices, reassurance elements — onto a single screen with no scroll was one of the main challenges.",
+            text: "Before designing, we set the non-negotiable constraints: the legal notices tied to card collection (GDPR, recurring billing, cancellation terms) had to appear on screen. The card form required several fields. And fitting all of it (form, legal notices, reassurance elements) onto a single screen with no scroll was one of the main challenges.",
           },
           {
             type: 'p',
@@ -1137,7 +1137,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/trial-by-card/image.png',
-            caption: 'Business version • 50/50 A/B test between the Business and Advanced plans',
+            caption: 'Business version: 50/50 A/B test between the Business and Advanced plans',
           },
           {
             type: 'img',
@@ -1187,11 +1187,11 @@ const PROJECTS_EN: ProjectDetail[] = [
         ],
       },
       {
-        title: 'New iterations • May 2026',
+        title: 'New iterations, May 2026',
         blocks: [
           {
             type: 'p',
-            text: "Trial by card keeps evolving. The visual redesign aligns the flow with the brand's new visual direction and the latest Stripe components — more minimal, easier to fill in. We're still testing to see whether we can push conversion further by playing with when we ask for the card: is it better to ask up front, or to offer it after a first step of commitment?",
+            text: "Trial by card kept evolving. The visual redesign aligns the flow with the brand's new visual direction and the latest Stripe components: more minimal, easier to fill in. Tests were still running when I left, around one open question: is it better to ask for the card up front, or after a first step of commitment?",
           },
           {
             type: 'img',
@@ -1214,7 +1214,7 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "After the redesign, we ran an A/B test: Trial by Card against Trial without Card. The new visual version drove a +25% increase in users adding their credit card — a gap clear enough that we decided not to risk impacting the business short-term.",
+            text: "After the redesign, we ran an A/B test: Trial by Card against Trial without Card. The new visual version drove a +25% increase in users adding their credit card. A gap clear enough that we decided not to risk impacting the business short-term.",
           },
           {
             type: 'p',
@@ -1245,7 +1245,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     featured: true,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Oct–Nov 2025',
+    period: 'Oct → Nov 2025',
     status: 'Shipped to production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
@@ -1255,7 +1255,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       { value: '3 CTAs', label: "tailored to each user's flow" },
     ],
     intro:
-      'Waalaxy monetizes through several plans and add-ons. The existing upgrade journey had a structural flaw: a user who wanted to move up a plan was immediately redirected to the cart, without ever understanding what they\'d gain. Abandonment didn\'t happen at payment but before — at the moment the user couldn\'t answer their implicit question: "is this really worth it for my situation?"',
+      'Waalaxy monetizes through several plans and add-ons. The existing upgrade journey had a structural flaw: a user who wanted to move up a plan was immediately redirected to the cart, without ever understanding what they\'d gain. Abandonment happened before payment, at the moment the user couldn\'t answer their implicit question: "is this really worth it for my situation?"',
     sections: [
       {
         title: "Auditing the existing flow: what wasn't working",
@@ -1266,12 +1266,12 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: 'In production, the upgrade buttons always sent users back to the pricing page, with no connection to what they were actually trying to do. Same wording for everyone. Same structure. No hierarchy. For a user who\'s just hit a quota limit, the information they need isn\'t "here are the plans we offer" — it\'s "here\'s why the higher plan solves your problem right now."',
+            text: 'In production, the upgrade buttons always sent users back to the pricing page, with no connection to what they were actually trying to do. Same wording for everyone. Same structure. No hierarchy. A user who\'s just hit a quota limit needs one piece of information: "here\'s why the higher plan solves your problem right now."',
           },
           {
             type: 'img',
             src: '/projects/parcours-upgrade/Capture_decran_2026-05-13_a_19.00.46.png',
-            caption: 'The old upgrade modal — same design for every context',
+            caption: 'The old upgrade modal, same design for every context',
           },
           {
             type: 'p',
@@ -1298,7 +1298,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/parcours-upgrade/Capture_decran_2026-05-13_a_18.27.31.png',
-            caption: 'The two variants — Freemium and Pro — for the same quota context',
+            caption: 'The two variants, Freemium and Pro, for the same quota context',
           },
           {
             type: 'img',
@@ -1356,19 +1356,19 @@ const PROJECTS_EN: ProjectDetail[] = [
             items: [
               'Comparison-modal open rate: 13.61% from a contextual CTA vs 10.89% from a paywall',
               'Conversion through to a completed upgrade: 9.08% from a contextual CTA vs 7.32% from a paywall',
-              'For reference, the starting baseline was the 2% conversion rate from the pricing page. The contextual journey beats it by more than four points.',
+              'For reference, the starting baseline was the 2% conversion rate from the pricing page. The contextual journey beats it by more than seven points.',
             ],
           },
           {
             type: 'img',
             src: '/projects/parcours-upgrade/Capture_decran_2026-01-22_a_13.27.48.png',
-            caption: 'Post-release Mixpanel data • contextual funnel vs classic paywall',
+            caption: 'Post-release Mixpanel data: contextual funnel vs classic paywall',
           },
         ],
       },
     ],
     learnings:
-      "This project confirmed something about conversion journeys: the real blocker wasn't the price, or even the payment form. It was the missing link between the user's problem and the proposed solution. A modal that opens with no context breeds distrust, not conviction. The order-summary redesign illustrates another principle: transparency reduces friction. Showing the pro-rata calculation is one extra line to display — and dozens fewer support tickets, plus a user who reaches payment with confidence rather than doubt.",
+      "This project confirmed something about conversion journeys: the real blocker sat before the price and before the payment form, in the missing link between the user's problem and the proposed solution. A modal that opens with no context breeds distrust. The order-summary redesign illustrates another principle: transparency reduces friction. Showing the pro-rata calculation is one extra line to display. Behind it: dozens fewer support tickets, and a user who reaches payment with confidence.",
   },
 
   // ─── 3. CSV Import ─────────────────────────────────────────────────────────
@@ -1378,7 +1378,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Data mapping for beginners',
     tagline: 'From a single LinkedIn URL to multi-column mapping',
     description:
-      "83.5% of users get their mapping right on the first try — the result of a flow designed around what people actually do, not what we hope they'll do.",
+      "83.5% of users get their mapping right on the first try. The result of a flow designed around what people actually do.",
     coverImage: '/projects/csv-import.png',
     tags: ['Product Design', 'UX'],
     caseStudyUrl: null,
@@ -1389,7 +1389,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     status: 'Shipped to production',
     team: '1 PM · 1 EM · 2 devs · 1 designer',
     metrics: [
-      { value: '83.5%', label: 'use multi-column mapping' },
+      { value: '83.5%', label: 'get their mapping right on the first try' },
       { value: '24', label: 'columns imported on average' },
       { value: '10,485', label: 'imports analysed (3 months)' },
       { value: '25%', label: 'of files come from Waalaxy itself' },
@@ -1428,7 +1428,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: 'Deliberately simple: pick the import list and upload by drag & drop. No decision to make — if the file is valid, you move to the next step automatically. The parser handles the complex cases in the background without exposing them to the user.',
+            text: 'Deliberately simple: pick the import list and upload by drag & drop. No decision to make: if the file is valid, you move to the next step automatically. The parser handles the complex cases in the background without exposing them to the user.',
           },
           {
             type: 'img',
@@ -1437,7 +1437,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'h3',
-            text: 'Step 2: Match data — the core screen',
+            text: 'Step 2: Match data, the core screen',
           },
           {
             type: 'p',
@@ -1446,7 +1446,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              'The number of prospects detected is featured in the title • reassuring the user they have the right file and letting them spot an error immediately.',
+              'The number of prospects detected is featured in the title, to reassure the user they have the right file and letting them spot an error immediately.',
               'A checkbox per row lets you choose which columns to import. No need to map the whole CSV.',
               'The dropdown lists every available property. When a property is already in use, a "This property is already used" tooltip appears; the user can\'t map two columns to the same field without noticing.',
             ],
@@ -1490,7 +1490,7 @@ const PROJECTS_EN: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Results • 3 months post-release',
+        title: 'Results, 3 months after release',
         blocks: [
           {
             type: 'quote',
@@ -1500,8 +1500,8 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              '83.5% use multi-column mapping. Only 16.5% still import the LinkedIn URL alone (the old way).',
-              'An average of 24 columns per import — sources that would have been unusable with the old flow.',
+              '83.5% of users get their mapping right on the first try.',
+              'An average of 24 columns per import: sources that would have been unusable with the old flow.',
               "25% of files come from Waalaxy itself: users exporting their contacts from one account to re-import them into another. A use case that didn't exist before.",
             ],
           },
@@ -1519,14 +1519,14 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Adding AI',
     tagline: 'Using AI to fix the form of outreach messages, without touching the substance',
     description:
-      "Beginner Waalaxy users know what to say — they just don't know how to phrase it. Adding AI-improvement buttons inside the writing areas: the message is rewritten following best practices, and the user stays in control of the result.",
+      "Beginner Waalaxy users know what to say. What trips them up is the phrasing. Adding AI-improvement buttons inside the writing areas: the message is rewritten following best practices, and the user stays in control of the result.",
     coverImage: '/projects/ajout-ia.png',
     tags: ['AI', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Jan • May 2026',
+    period: 'Jan → May 2026',
     status: 'Shipped to production',
     metrics: [
       { value: '4% to 7%', label: 'average reply rate for an outreach campaign' },
@@ -1538,11 +1538,11 @@ const PROJECTS_EN: ProjectDetail[] = [
       'By analysing 64 million LinkedIn campaigns across the Waalaxy base, we identified the writing patterns that drive reply rates: the top 1% of users reach 47.4% replies, versus 5% on average depending on the persona.',
     sections: [
       {
-        title: 'The real problem: the form, not the substance',
+        title: 'The real problem hides in the form',
         blocks: [
           {
             type: 'p',
-            text: 'Waalaxy is positioned as the simplest outreach tool on the market. 75% of users have never used a tool like this. The result: reply rates are dragged down by basic form mistakes (messages too long, too salesy a tone, no visible personalisation) — not by a lack of ideas.',
+            text: 'Waalaxy is positioned as the simplest outreach tool on the market. 75% of users have never used a tool like this. The result: reply rates dragged down by basic form mistakes (messages too long, too salesy a tone, no visible personalisation). The ideas are there.',
           },
           {
             type: 'callout',
@@ -1553,7 +1553,7 @@ const PROJECTS_EN: ProjectDetail[] = [
             items: [
               'Waalaxy analysis: correlation between little outreach experience and low reply rates',
               'Mixpanel analysis: correlation between messages that are too long / too formal and low reply rates',
-              'Product positioning: Waalaxy recommends best practices in its documentation; the AI has to embody them to make them accessible to every user, not just those who already know how.',
+              'Product positioning: Waalaxy recommends best practices in its documentation; the AI has to embody them to make them accessible to every user, beginners included.',
             ],
           },
         ],
@@ -1568,7 +1568,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/ajout-de-lia/Enregistrement_de_lecran_2026-01-22_a_17.49.41.gif',
-            caption: 'AI feature — message rewrite with a preview of the result',
+            caption: 'AI feature: message rewrite with a preview of the result',
           },
           {
             type: 'p',
@@ -1609,7 +1609,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       },
     ],
     learnings:
-      "This project taught me to distinguish two kinds of AI assistance: the kind that writes for the user, and the kind that improves what the user has started. The second creates far less resistance. The keep/retry/cancel flow isn't a UX detail — it's what keeps the user the author of their message. Without that explicit control, AI becomes a black box. With it, it becomes a tool.",
+      "This project taught me to distinguish two kinds of AI assistance: the kind that writes for the user, and the kind that improves what the user has started. The second creates far less resistance. The keep/retry/cancel flow is what keeps the user the author of their message. Without that explicit control, AI becomes a black box. With it, it becomes a tool.",
   },
 
   // ─── 5. Campaign Manager refactor ──────────────────────────────────────────
@@ -1619,15 +1619,15 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Refactoring the Campaign Manager',
     tagline: 'From unreadable cards to a control-room list',
     description:
-      "Redesigning Waalaxy's central page • moving from a grid of cards to a list view with real-time metrics. Based on interviews with churned users and an opportunity tree.",
+      "Redesigning Waalaxy's central page: moving from a grid of cards to a list view with real-time metrics. Based on interviews with churned users and an opportunity tree.",
     coverImage: '/projects/campaign-manager.png',
     tags: ['UX Research', 'Product Design'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer & Lead Design System',
     company: 'Waalaxy',
-    period: 'Apr • May 2026',
-    status: 'Handed off, shipping soon',
+    period: 'Apr → May 2026',
+    status: 'Handed off to dev, May 2026',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
       { value: '3', label: 'signals converging on the problem' },
@@ -1635,7 +1635,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       { value: '→ List', label: 'moving on from the card grid' },
     ],
     intro:
-      'The Campaign Manager is Waalaxy\'s central page • the first thing a user sees when they open the app. And it was one of the most problematic pages in the product. The cards had colourful avatars, a truncated name, and that was it. No stats, no hierarchy, no action possible without opening each campaign one by one.',
+      'The Campaign Manager is Waalaxy\'s central page, the first thing a user sees when they open the app. And it was one of the most problematic pages in the product. The cards had colourful avatars, a truncated name, and that was it. No stats, no hierarchy, no action possible without opening each campaign one by one.',
     sections: [
       {
         title: 'Research: hearing the users',
@@ -1666,13 +1666,13 @@ const PROJECTS_EN: ProjectDetail[] = [
             items: [
               'Users with more than five campaigns can no longer see their names: the cards have a fixed width and long names get truncated. Some had adapted how they named campaigns to work around it.',
               'No stats visible from this view. To see how a campaign is performing, you have to open it. Users open everything, compare in their heads, and backtrack.',
-              "The distinction between active, paused and draft campaigns isn't readable at a glance • everything has the same visual weight.",
+              "The distinction between active, paused and draft campaigns isn't readable at a glance: everything has the same visual weight.",
             ],
           },
           {
             type: 'img',
             src: '/projects/campaign-manager/Capture_decran_2026-05-13_a_17.31.08.png',
-            caption: 'Opportunity tree • from insight to solution',
+            caption: 'Opportunity tree: from insight to solution',
           },
         ],
       },
@@ -1698,11 +1698,11 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: 'The production view had colourful circular avatars on every card • functionally useless, but for a user who\'s never used an automation tool, they made the page feel alive. The PM\'s feedback: "it\'s less playful than before, I want more of that."',
+            text: 'The production view had colourful circular avatars on every card. Functionally useless, but for a user who\'s never used an automation tool, they made the page feel alive. The PM\'s feedback: "it\'s less playful than before, I want more of that."',
           },
           {
             type: 'callout',
-            text: 'That debate forced a sharper question: what does "playful" mean, functionally, for our user? It\'s not "add colours." It\'s designing for someone who needs to feel comfortable with their data, not intimidated by it. The answer wasn\'t to remove the identity elements • it was to reintegrate them into a structure that actually let people steer.',
+            text: 'That debate forced a sharper question: what does "playful" mean, functionally, for our user? Answer: designing for someone who needs to feel comfortable with their data. The identity elements stayed, reintegrated into a structure that actually let people steer.',
           },
         ],
       },
@@ -1728,7 +1728,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: 'This direction was challenged: it risked turning a control page into a to-do page, and driving over-use of certain costly features. We refocused on a clear conviction: the Campaign Manager is a page for comparing and reading results, not a page for direct action.',
+            text: 'This direction was challenged: it risked turning a control page into a to-do page, and driving over-use of certain costly features. We refocused on a clear conviction: the Campaign Manager is for comparing and reading results. Actions live elsewhere.',
           },
         ],
       },
@@ -1739,7 +1739,7 @@ const PROJECTS_EN: ProjectDetail[] = [
             type: 'list',
             items: [
               'The "Actions in queue" column is the central indicator: prospects\' progress through the sequence, with a progress circle and a text status.',
-              'The standard actions (pause/play, duplicate, archive) stay in the "..." menu at the end of the row • present, but not competing with reading the data.',
+              'The standard actions (pause/play, duplicate, archive) stay in the "..." menu at the end of the row: present, without competing with reading the data.',
               'The "Review" CTA was removed from this view and moved into each campaign\'s detail, where its context is immediately clear.',
               'A checkbox per row enables bulk actions without overloading the interface.',
               'The empty state is designed as a first-class screen: sequence templates offered right on the page.',
@@ -1775,7 +1775,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       },
     ],
     learnings:
-      'This project confirmed that back-and-forth isn\'t a design failure • it\'s documented learning. The side-panel version was a good answer to a real question. We set it aside because it answered a different problem from this page\'s. Knowing what a page isn\'t meant to do is as important as knowing what it should do. The "playful" tension taught me something too: when feedback is vague, you have to break it down before responding. "Less playful" actually meant "less reassuring for a non-technical user facing a table of data." That\'s not the same problem, and it\'s not the same solution.',
+      'This project confirmed that back-and-forth is documented learning. The side-panel version was a good answer to a real question. We set it aside because it answered a different problem from this page\'s. Knowing what a page isn\'t meant to do is as important as knowing what it should do. The "playful" tension taught me something too: when feedback is vague, you have to break it down before responding. "Less playful" actually meant "less reassuring for a non-technical user facing a table of data." A different problem, so a different solution.',
   },
 
   // ─── 6. Design System ──────────────────────────────────────────────────────
@@ -1783,109 +1783,138 @@ const PROJECTS_EN: ProjectDetail[] = [
     id: '6',
     slug: 'design-system',
     title: 'Leading a Design System from scratch',
-    tagline: 'Building the foundations that let us ship fast and consistent',
+    tagline: "Product Designer & Lead Design System at Waalaxy. WAATOM is the baby's name.",
     description:
-      "Creating and maintaining Waalaxy's Design System since Nov 2023 • documented Figma components, an operational Notion space, a DS process, and an ISO Figma/Storybook review every sprint.",
+      "Building Waalaxy's design system from zero: full audit, token foundations, the Main Component/Storybook/documentation triangle, contribution and deprecation processes. Then the logical next step: plugging a design system into Claude through MCP.",
     coverImage: '/projects/design-system.png',
     tags: ['Design System'],
     caseStudyUrl: null,
     featured: false,
     role: 'Lead Design System & Product Designer',
     company: 'Waalaxy',
-    period: 'Nov 2023 • Present',
-    status: 'Ongoing',
+    period: 'Nov 2023 → Jul 2026',
+    status: 'Shipped to production',
     metrics: [
       { value: '∅', label: 'zero existing DS at the start' },
       { value: '2024', label: 'Design System Expertise training' },
       { value: '30 min', label: 'monthly workshops with the devs' },
     ],
     intro:
-      "When Waalaxy offered me the Lead DS role, there wasn't really a Design System. There were scattered Figma components, different practices from one designer to the next, and no clear process between design and dev. Every project generated needless back-and-forth because nobody shared the same view of what existed or how to use it.",
+      'At the start, WAATOM was a Figma folder full of components that looked alike without ever really matching. Three "primary" buttons with three different radii. An input that existed in four versions depending on who had made it. The devs kept recoding what already existed, just slightly differently.',
     sections: [
       {
-        title: 'Figma: rebuilding from the ground up',
+        title: 'The starting point',
         blocks: [
           {
             type: 'p',
-            text: 'Every existing component was audited, rebuilt or fixed. The goal: components that follow a consistent logic of props, variants and states, so any designer can use them without guessing.',
+            text: 'Without a system, every designer invents their own logic. And at some point, the whole app starts speaking several languages at once.',
           },
           {
             type: 'p',
-            text: "Each component is documented directly in Figma: definition, anatomy, available props, states, use cases and what not to do. The documentation isn't separate from the component. The main workstreams: buttons, inputs, icons and variables. Then aligning the props between Figma and Storybook.",
+            text: "My way in has always been the same: a component needs a system behind it to earn its place in the product. Tokens everywhere, components designed to live together. It sounds simple to say. It takes years to hold.",
+          },
+        ],
+      },
+      {
+        title: 'Laying the foundations',
+        blocks: [
+          {
+            type: 'p',
+            text: "I started with a full audit. An inventory of every interface, screenshots of every variant of every pattern (down to listing every way to close a modal in the app, yes, all of them). Painstaking work, and exactly what reveals where the real chaos is.",
+          },
+          {
+            type: 'p',
+            text: "Then, structuring the library in layers: the foundations (colours, type, spacing, radius, all as Figma variables), the core components, then the more business-specific ones. Each layer has its reason to exist, each token has a single source of truth. That's the base that keeps everything else standing, even when the brand colour changes overnight.",
           },
           {
             type: 'img',
             src: '/projects/design-system/image.png',
-            caption: 'Figma documentation for the Input component • anatomy, props and states',
-          },
-        ],
-      },
-      {
-        title: 'Notion: the central documentation',
-        blocks: [
-          {
-            type: 'p',
-            text: "I built the DS's Notion space from scratch. It's not just a wiki • it's an operational FAQ: the right links, step-by-step tutorials, illustrated design processes, decision trees, and the Initial Mockup Templates that catalogue the app's main pages with the most recent mockups.",
-          },
-          {
-            type: 'callout',
-            text: 'The goal: anyone, designer or dev, can find an answer without having to ping me.',
-          },
-          {
-            type: 'img',
-            src: '/projects/design-system/image-1.png',
-            caption: 'Home page of the Waatom DS Notion space',
-          },
-        ],
-      },
-      {
-        title: 'DS process & Storybook',
-        blocks: [
-          {
-            type: 'p',
-            text: 'I set up a full process from opening Figma through to DS sign-off. Before every kick-off, I go through the mockups to validate component usage. A systematic message in #design-system alerts the team before each kick-off.',
-          },
-          {
-            type: 'img',
-            src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
-            caption: 'Tutorial for contributing on Figma branches',
+            caption: 'The Main Component in the library: anatomy, props and states',
           },
           {
             type: 'p',
-            text: 'Storybook is maintained by the devs. I steer the priorities, check the consistency with Figma, and make sure what\'s documented in code matches what\'s been designed.',
+            text: "A WAATOM component is three things that have to stay aligned at all times: the Main Component in the library, the code in Storybook, and the documentation that explains how to use it (and when to avoid it).",
           },
           {
             type: 'img',
             src: '/projects/design-system/image-2.png',
-            caption: 'Storybook: the Button component with its documented props',
+            caption: 'The code in Storybook, in sync with Figma',
+          },
+          {
+            type: 'img',
+            src: '/projects/design-system/image-1.png',
+            caption: 'The documentation that explains how to use a component, and when to avoid it',
+          },
+          {
+            type: 'callout',
+            text: "The day one of the three falls behind the other two, the system starts drifting out of sync. And an out-of-sync design system is the worst case: nobody knows what to trust anymore.",
           },
         ],
       },
       {
-        title: 'The human side: convincing, training, bringing people on board',
+        title: 'Keeping the process alive',
         blocks: [
           {
             type: 'p',
-            text: 'A DS only lives if the people who work with it actually want to use it. I ran 30-minute sessions with the devs: 10 minutes of presentation, then 20 minutes of workshop where everyone could share their ideas.',
+            text: "A component library is the beginning. What makes it last is the contribution process behind it. I set up contribution tiers (Light, Medium, Heavy) so everyone knows what they're getting into before they start. Figma branches named [NEW], [MAJ], [FIX], always on a branch, always one person per component at a time. A Definition of Ready before even thinking about dev, a Definition of Done before calling a component shippable, with a real quality checklist behind it: UI consistency, behaviour consistency, accessibility actually tested.",
           },
           {
-            type: 'quote',
-            text: 'Your micro-interaction workshop went down really well — the devs would like to do a bit more product. Go level them up, it\'s great!',
-            source: 'Waalaxy CPO',
-          },
-          {
-            type: 'h3',
-            text: 'Adapting when resources shrink',
+            type: 'img',
+            src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
+            caption: 'Tutorial for contributing on Figma branches [NEW], [MAJ], [FIX]',
           },
           {
             type: 'p',
-            text: 'In late 2025, budget cuts reduced the number of available contributors. The "everyone contributes in their spare time" model no longer held. I adapted: rather than waiting for contributions, I embedded them into ongoing projects. And when plan A didn\'t fly, I\'d "kidnap" a dev for two hours to work in pairs • pairing sessions, quick decisions, fewer tickets left hanging. It\'s not the ideal model, but it\'s the one that kept things moving in a constrained context.',
+            text: "For rituals, I kept the frame deliberately light: an async stand-up every other day, weekly office hours to be available live, reviews run by the contributors themselves once trained (the goal is for them to become autonomous, so I'm not signing off on everything forever), and a quarterly retro to step back. To channel requests, a dead-simple Slack automation: one command, one emoji, and a card creates itself in the right board.",
+          },
+          {
+            type: 'p',
+            text: 'Deprecating a component is a whole topic too. First we check its occurrences in production with the devs, then rename it with a little "." and [OLD] in front, and add a very visible "DEPRECATE 💀" on publish. So that a component disappearing stays a deliberate decision. Nobody wants to find out mid-integration at 5pm on a Friday.',
+          },
+        ],
+      },
+      {
+        title: 'What was hard',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Getting a design system adopted is 20% Figma and 80% communication. Convincing a dev to reuse the existing component instead of recoding their own "because it\'s faster that way." Prioritising between what\'s fun to design and what really has a business impact. Accepting that a system grows with the product and gets re-evaluated all the time.',
+          },
+          {
+            type: 'p',
+            text: "The hardest part, honestly, was taking on the role of guardrail. Reminding people that a component needs more work before it ships. Defending the documentation even when everyone's in a rush. Holding the line on exceptions. Staying the person people want to come to while holding that line took me a while to balance.",
+          },
+        ],
+      },
+      {
+        title: 'What it changed',
+        blocks: [
+          {
+            type: 'p',
+            text: 'WAATOM became a real shared language between design and dev. Designers knew where to look before recreating. Devs knew what they were integrating before they started. And I went from "the one who makes buttons" to the person guaranteeing a consistency that held across dozens of screens and several teams.',
+          },
+          {
+            type: 'callout',
+            text: "That work, invisible most of the time, is what keeps a product consistent sprint after sprint.",
+          },
+        ],
+      },
+      {
+        title: 'What came next',
+        blocks: [
+          {
+            type: 'p',
+            text: "I pushed this system, built by hand over years, further after Waalaxy. On Vela, my SaaS for psychologists and coaches, I started straight on the right foundations: clean tokens, a DS designed from the very first component.",
+          },
+          {
+            type: 'p',
+            text: "And I dug into something I'm a little obsessed with: plugging my design system straight into Claude Code through MCP. The system becomes a constraint the AI respects natively when it generates front-end code. This portfolio was shipped that way. Less time fixing off-token colours or approximate spacing, more time on what really matters: product decisions.",
           },
         ],
       },
     ],
     learnings:
-      "Leading a DS is a role that demands as much people skill as technical skill. Building clean components and writing docs is the visible part. The invisible part is convincing people it's worth investing time in, adapting the process when the context changes, and being there at the right moment so best practices don't get forgotten under pressure. What I learned above all: a DS is never finished. It's alive, and it evolves with the product.",
+      'After years of getting humans to respect a system, the logical next step is getting AI to respect it too.',
   },
 
   // ─── 7. Recruitment SaaS ───────────────────────────────────────────────────
@@ -1895,14 +1924,14 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'A two-sided recruitment SaaS',
     tagline: 'Two kinds of users, one coherent product',
     description:
-      'Designing a marketplace connecting headhunters and candidates • two-sided UX, a distinct onboarding for each profile, matching logic and tailored interfaces.',
+      'Designing a marketplace connecting headhunters and candidates: two-sided UX, a distinct onboarding for each profile, matching logic and tailored interfaces.',
     coverImage: '/projects/saas-recrutement.png',
     tags: ['Product Design', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer',
     company: 'Kilpailutapalkkasi.fi',
-    period: 'Jan 2025',
+    period: '2023',
     status: 'Delivered',
     metrics: [
       { value: '2', label: 'distinct user types' },
@@ -1921,7 +1950,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'list',
             items: [
-              'Mapping the two user journeys in parallel • identifying the shared touchpoints vs the surfaces specific to each role',
+              'Mapping the two user journeys in parallel, to identify the shared touchpoints vs the surfaces specific to each role',
               'A forked onboarding: from the very first screen, the user picks their role and enters a sign-up flow tailored to their specific needs',
               'A distinct dashboard per role: the headhunter sees their active searches and candidates in progress; the candidate sees their applications and recommended offers',
             ],
@@ -1938,11 +1967,11 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/saas-recrutement/image.png',
-            caption: "The marketplace's main interface • candidate view",
+            caption: "The marketplace's main interface, candidate view",
           },
           {
             type: 'p',
-            text: 'The core feature • matching • had to be transparent for both sides. I designed a shared skill-tag system, visible to both, so the matching criteria are understandable and editable by everyone.',
+            text: 'The core feature, matching, had to be transparent for both sides. I designed a shared skill-tag system, visible to both, so the matching criteria are understandable and editable by everyone.',
           },
         ],
       },
@@ -1951,41 +1980,41 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'callout',
-            text: 'A strong constraint: the project ran over three weeks. We had to prioritise fast • define the critical screens (onboarding, profile, matching, messaging) and accept deferring secondary features to a V2.',
+            text: 'A strong constraint: the project ran over three weeks. We had to prioritise fast: define the critical screens (onboarding, profile, matching, messaging) and accept deferring secondary features to a V2.',
           },
           {
             type: 'p',
-            text: 'The built-in messaging was where the two roles meet: the only place the two user types interact directly. It had to be simple, with no ambiguity about who started the conversation and why. A connection context visible in every conversation • the offer or profile that triggered the first contact.',
+            text: 'The built-in messaging was where the two roles meet: the only place the two user types interact directly. It had to be simple, with no ambiguity about who started the conversation and why. A connection context visible in every conversation: the offer or profile that triggered the first contact.',
           },
         ],
       },
     ],
     learnings:
-      'Two-sided marketplaces are among the most demanding exercises in product design, because a bad decision on the supply side immediately hits the demand side • and vice versa. This project taught me to map the tensions before designing, and to find patterns that solve both sides at once rather than compromising one for the other.',
+      'Two-sided marketplaces are among the most demanding exercises in product design, because a bad decision on the supply side immediately hits the demand side, and vice versa. This project taught me to map the tensions before designing, and to find patterns that solve both sides at once rather than compromising one for the other.',
   },
 
   // ─── 8. Practitioner Dashboard ─────────────────────────────────────────────
   {
     id: '8',
     slug: 'dashboard-praticien',
-    title: 'Practitioner Dashboard • managing consultations',
+    title: 'Practitioner Dashboard, managing consultations',
     tagline: 'Replacing four scattered tools with one space that holds up',
     description:
-      'A custom Notion dashboard for a self-employed health practitioner • bringing the calendar, patient tracking, invoicing and consultation notes together in one coherent space.',
+      'A custom Notion dashboard for a self-employed health practitioner: bringing the calendar, patient tracking, invoicing and consultation notes together in one coherent space.',
     coverImage: null,
     tags: ['Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Notion Designer',
     company: 'Freelance client',
-    period: 'Dec 2024 • Jan 2025',
+    period: 'Dec 2024 → Jan 2025',
     status: 'Delivered',
     metrics: [
       { value: '4→1', label: 'tools replaced by a single space' },
       { value: '6 wks', label: 'of use before positive client feedback' },
     ],
     intro:
-      "A self-employed health practitioner running their practice across a paper diary, an Excel spreadsheet for invoicing, a notes app, and sticky notes for patient tracking. They wanted to simplify • not to digitise for the sake of it, but to have a single place where everything lives, accessible from any device.",
+      "A self-employed health practitioner running their practice across a paper diary, an Excel spreadsheet for invoicing, a notes app, and sticky notes for patient tracking. They wanted to simplify: a single place where everything lives, accessible from any device.",
     sections: [
       {
         title: "Framing: understanding the practitioner's day-to-day",
@@ -2013,7 +2042,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'callout',
-            text: 'The guiding principle: each piece of information should be entered only once. The relations between the databases do the rest • a consultation automatically creates a linked entry in invoicing, with no re-keying.',
+            text: 'The guiding principle: each piece of information should be entered only once. The relations between the databases do the rest: a consultation automatically creates a linked entry in invoicing, with no re-keying.',
           },
           {
             type: 'list',
@@ -2031,7 +2060,7 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "The deliverable wasn't a Figma or a document • it was a working Notion space with pre-structured databases, test entries, and a 15-minute tutorial video recorded for the client. The client wasn't a Notion user • the learning curve had to be near zero.",
+            text: "The deliverable: a working Notion space, with pre-structured databases, test entries, and a 15-minute tutorial video recorded for the client. The client had never opened Notion, so the learning curve had to be near zero.",
           },
           {
             type: 'p',
@@ -2041,7 +2070,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       },
     ],
     learnings:
-      "Designing for a non-technical user means designing for real constraints, not for the tool's theoretical possibilities. Notion can do complex things • but if the end user doesn't understand why they have to click there, the system won't be used. This project reminded me that the value of a good information system comes, above all, from its adoption rate.",
+      "Designing for a non-technical user means designing for their real constraints. Notion can do complex things. But if the end user doesn't understand why they have to click there, the system won't be used. This project reminded me that the value of a good information system comes, above all, from its adoption rate.",
   },
 
   // ─── 9. Strategy Dashboard ─────────────────────────────────────────────────
@@ -2051,7 +2080,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Strategy & Finance Dashboard',
     tagline: 'Turning a spreadsheet into a strategic steering tool',
     description:
-      'A Notion dashboard for the strategic and financial tracking of a freelance business • a consolidated view of revenue, pipeline and goals in one actionable space.',
+      'A Notion dashboard for the strategic and financial tracking of a freelance business: a consolidated view of revenue, pipeline and goals in one actionable space.',
     coverImage: null,
     tags: ['Freelance'],
     caseStudyUrl: null,
@@ -2065,7 +2094,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       { value: '4 views', label: 'to see it all: revenue, pipeline, goals' },
     ],
     intro:
-      'A freelancer with a well-established business but a fuzzy view of their actual situation: how much they\'d invoiced this month, how much was still awaiting payment, how many prospects were in the pipe. The data existed in different places • the challenge was to connect it in a space that gives an instant, actionable read.',
+      'A freelancer with a well-established business but a fuzzy view of their actual situation: how much they\'d invoiced this month, how much was still awaiting payment, how many prospects were in the pipe. The data existed in different places. The challenge: connecting it in a space that gives an instant, actionable read.',
     sections: [
       {
         title: 'The problem: data that means nothing in isolation',
@@ -2094,7 +2123,7 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'callout',
-            text: "The main dashboard is a Notion page with no database of its own • it's purely filtered views of the two databases, arranged so each section answers one specific question. The readability comes from the layout, not from the complexity of the data.",
+            text: "The main dashboard is a plain Notion page, built purely from filtered views of the two databases, arranged so each section answers one specific question. The readability comes from the layout.",
           },
           {
             type: 'p',
@@ -2107,17 +2136,17 @@ const PROJECTS_EN: ProjectDetail[] = [
         blocks: [
           {
             type: 'p',
-            text: "The promise of this kind of system isn't to save time on data entry • it's to make decisions clearer. When you can see 80% of the monthly target is reached by the 15th, you can afford to turn down a poorly scoped project. When you see the pipeline is empty, you know you need to prospect now, not in three weeks.",
+            text: "The promise of this kind of system: clearer decisions. When you can see 80% of the monthly target is reached by the 15th, you can afford to turn down a poorly scoped project. When you see the pipeline is empty, you know you need to prospect now.",
           },
           {
             type: 'p',
-            text: 'Delivery included a 30-minute handover session and a short guide to the monthly updates • what to do, when, and how to read the numbers shown.',
+            text: 'Delivery included a 30-minute handover session and a short guide to the monthly updates: what to do, when, and how to read the numbers shown.',
           },
         ],
       },
     ],
     learnings:
-      "Designing steering tools means understanding how the person makes their decisions, not just what data they have. Two freelancers with the same metrics can need very different visualisations depending on how they work. This project was short (three days) but dense with framing questions • and it's that framing that made the tool still in use a week after delivery.",
+      "Designing steering tools means understanding how the person makes their decisions, beyond the data they have. Two freelancers with the same metrics can need very different visualisations depending on how they work. This project was short (three days) but dense with framing questions. And it's that framing that made the tool still in use a week after delivery.",
   },
 ]
 
@@ -2127,39 +2156,47 @@ export const PROJECTS: Record<Lang, ProjectDetail[]> = {
 }
 
 const ABOUT_FR: AboutContent = {
-  bio: "Product Designer & Lead Design System chez Waalaxy. Mon point d'entrée c'est toujours l'utilisateur : ce qu'il fait, ce qu'il évite, ce qu'il ne sait pas encore formuler. C'est là que se cachent les décisions qui font bouger les chiffres.\n\n  Mon chien, lui, vient au bureau et réclame toujours son accès Figma.",
+  bio: "Product Designer, 6 ans en SaaS B2B, dont 3,5 chez Waalaxy où j'ai construit le design system WAATOM de zéro. Depuis mai 2026, je conçois et je code en freelance, avec l'IA branchée sur mes design systems.\n\nMon point d'entrée c'est toujours l'utilisateur : ce qu'il fait, ce qu'il évite, ce qu'il ne sait pas encore formuler. C'est là que se cachent les décisions qui font bouger les chiffres.\n\nPoppy, lui, a gardé son badge du bureau et réclame toujours son accès Figma.",
   experiences: [
+    {
+      id: 'e0',
+      company: 'Freelance · Montpellier & remote',
+      role: 'Product Designer & AI Builder',
+      period: 'Mai 2026 → aujourd\'hui',
+      description:
+        "Conception et développement de produits numériques pour des startups et des TPE, de la recherche utilisateur à la mise en ligne. Vela, un SaaS de gestion de patientèle pour psys et coachs, conçu et codé en solo. Un design system branché sur Claude Code via MCP : le front généré respecte tokens et composants sans correction à la main.",
+    },
     {
       id: 'e1',
       company: 'Waalaxy · CDI · Montpellier',
       role: 'Lead Design System',
-      period: 'Nov. 2023 • Présent',
+      period: 'Nov. 2023 → Juil. 2026',
       description:
-        "Construction, maintien et gouvernance du Design System from scratch. Roadmap, management des devs front DS, bibliothèque de composants Figma/Storybook ISO, documentation et accompagnement des équipes pour l'adoption.",
+        "Construction, maintien et gouvernance du design system WAATOM, de zéro. Roadmap, management des devs front DS, bibliothèque de composants ISO Figma/Storybook, documentation, et accompagnement des équipes jusqu'à l'adoption.",
     },
     {
       id: 'e2',
       company: 'Waalaxy · CDI · Montpellier',
       role: 'Product Designer',
-      period: 'Fev. 2023 • Présent',
+      period: 'Fév. 2023 → Juil. 2026',
       description:
-        "Recherche utilisateur, conception d'expériences pour des centaines de milliers d'utilisateurs, définition des parcours clés de l'app et priorisation, mise en place des prototypes pour pouvoir tester rapidement des idées de parcours.",
+        "Recherche utilisateur, conception d'expériences pour des centaines de milliers d'utilisateurs, définition et priorisation des parcours clés de l'app, prototypes pour tester vite des idées de parcours.",
     },
     {
       id: 'e3',
       company: 'Gowya Studio · Freelance · Paris',
-      role: 'Brand & Web Designer',
-      period: 'Avr. 2021 • Août 2023',
+      role: 'Product & Brand Designer',
+      period: 'Avr. 2022 → Juin 2023',
       description:
-        "Création de branding et landing page WordPress pour petits commerces et restaurants. UX Research, maquettage app ou SaaS et accompagnement client de A à Z  ",
+        "Identités de marque, UX research et landing pages pour des petits commerces et des restaurants. Maquettes d'apps et de SaaS, relation client de A à Z. Quelques missions ponctuelles ensuite, jusqu'en 2024.",
     },
     {
       id: 'e4',
       company: 'SOS Accessoire · Alternance · Versailles',
       role: 'UX/UI Designer',
-      period: 'Sept. 2020 • Août 2022',
+      period: 'Août 2020 → Sept. 2022',
       description:
-        "Solo designer de la boîte. Refonte de 2 sites de marque, maquettage, intégration et maintien WordPress. Création d'une bibliothèque de composants pour uniformiser les interfaces et accélérer les développements.",
+        "Seule designer de la boîte. Refonte des 2 sites de marque jusqu'à l'intégration, première bibliothèque de composants pour uniformiser les interfaces, propositions présentées au CODIR.",
     },
   ],
   formations: [
@@ -2178,52 +2215,60 @@ const ABOUT_FR: AboutContent = {
     {
       id: 'f3',
       school: 'Sup de Pub · Paris',
-      degree: 'M2 Direction Artistique et de la Création · 17,5/20',
+      degree: 'Master 2 Direction Artistique Digitale · 17,5/20',
       year: '2022',
     },
     {
       id: 'f4',
       school: 'Sup de Pub · Paris',
-      degree: 'Bachelor Communication Digitale et Création',
+      degree: 'Bachelor Communication Digitale & Création',
       year: '2020',
     },
   ],
 }
 
 const ABOUT_EN: AboutContent = {
-  bio: "Product Designer & Lead Design System at Waalaxy. I always start with the user — what they do, what they avoid, what they can't quite put into words yet. That's where the decisions that move the numbers are hiding.\n\n  My dog, meanwhile, comes to the office and still insists on his own Figma seat.",
+  bio: "Product Designer, 6 years in B2B SaaS, including 3.5 at Waalaxy where I built the WAATOM design system from scratch. Since May 2026, I design and code as a freelancer, with AI plugged straight into my design systems.\n\nI always start with the user: what they do, what they avoid, what they can't quite put into words yet. That's where the decisions that move the numbers are hiding.\n\nPoppy, my dog, kept his office badge and still insists on his own Figma seat.",
   experiences: [
+    {
+      id: 'e0',
+      company: 'Freelance · Montpellier & remote',
+      role: 'Product Designer & AI Builder',
+      period: 'May 2026 → present',
+      description:
+        "Designing and building digital products for startups and small businesses, from user research to launch. Vela, a practice management SaaS for psychologists and coaches, designed and coded solo. A design system plugged into Claude Code through MCP: generated front-end code respects tokens and components with no manual fixing.",
+    },
     {
       id: 'e1',
       company: 'Waalaxy · Full-time · Montpellier',
       role: 'Lead Design System',
-      period: 'Nov 2023 • Present',
+      period: 'Nov 2023 → Jul 2026',
       description:
-        "Built, maintained and governed the Design System from scratch. Roadmap, managing the front-end DS developers, an ISO Figma/Storybook component library, documentation, and supporting teams through adoption.",
+        "Built, maintained and governed the WAATOM design system from scratch. Roadmap, managing the front-end DS developers, a Figma/Storybook component library kept in sync, documentation, and supporting teams all the way to adoption.",
     },
     {
       id: 'e2',
       company: 'Waalaxy · Full-time · Montpellier',
       role: 'Product Designer',
-      period: 'Feb 2023 • Present',
+      period: 'Feb 2023 → Jul 2026',
       description:
-        "User research, designing experiences for hundreds of thousands of users, defining and prioritising the app's key flows, and building prototypes to test ideas fast.",
+        "User research, designing experiences for hundreds of thousands of users, defining and prioritising the app's key flows, prototypes to test journey ideas fast.",
     },
     {
       id: 'e3',
       company: 'Gowya Studio · Freelance · Paris',
-      role: 'Brand & Web Designer',
-      period: 'Apr 2021 • Aug 2023',
+      role: 'Product & Brand Designer',
+      period: 'Apr 2022 → Jun 2023',
       description:
-        "Branding and WordPress landing pages for small businesses and restaurants. UX research, app and SaaS mockups, and end-to-end client support.",
+        "Brand identities, UX research and landing pages for small businesses and restaurants. App and SaaS mockups, client relationship from start to finish. A few one-off projects after that, through 2024.",
     },
     {
       id: 'e4',
       company: 'SOS Accessoire · Apprenticeship · Versailles',
       role: 'UX/UI Designer',
-      period: 'Sept 2020 • Aug 2022',
+      period: 'Aug 2020 → Sept 2022',
       description:
-        "Sole designer in the company. Redesigned two brand sites, handled mockups, integration and WordPress upkeep, and built a component library to unify the interfaces and speed up development.",
+        "Sole designer in the company. Redesigned both brand websites through to integration, built the first component library to unify the interfaces, presented proposals to the executive committee.",
     },
   ],
   formations: [
@@ -2242,13 +2287,13 @@ const ABOUT_EN: AboutContent = {
     {
       id: 'f3',
       school: 'Sup de Pub · Paris',
-      degree: 'MA Art Direction & Creation · 17.5/20',
+      degree: 'MA in Digital Art Direction · 17.5/20',
       year: '2022',
     },
     {
       id: 'f4',
       school: 'Sup de Pub · Paris',
-      degree: 'Bachelor in Digital Communication & Creative',
+      degree: 'BA in Digital Communication & Creative',
       year: '2020',
     },
   ],
