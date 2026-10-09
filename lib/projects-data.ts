@@ -64,11 +64,9 @@ const PROJECTS_FR: ProjectDetail[] = [
             text: "Le design system est branché sur Claude Code via MCP. Quand je génère un écran, l'IA pioche dans les vrais tokens et les vrais composants. Résultat : un front cohérent sans repasser derrière pour corriger des couleurs hors token ou des marges approximatives.",
           },
           {
-            type: 'grid',
-            images: [
-              { src: '/projects/vela/nouvelle-consultation.png', caption: 'Nouvelle consultation : un champ, une action' },
-              { src: '/projects/vela/fiche-patient.png', caption: 'La fiche patient, rangée par blocs : identité, consultations, contact, suivi' },
-            ],
+            type: 'img',
+            src: '/projects/vela/consultation-fiche-patient.png',
+            caption: "Une consultation ouverte, la fiche patient à côté : tout le contexte sans changer de page. Une demande du test #1, livrée.",
           },
         ],
       },
@@ -1107,11 +1105,9 @@ const PROJECTS_EN: ProjectDetail[] = [
             text: 'The design system is plugged into Claude Code through MCP. When I generate a screen, the AI draws on the real tokens and the real components. The result: a consistent front end, with no going back to fix off-token colours or approximate spacing.',
           },
           {
-            type: 'grid',
-            images: [
-              { src: '/projects/vela/nouvelle-consultation.png', caption: 'New consultation: one field, one action' },
-              { src: '/projects/vela/fiche-patient.png', caption: 'The patient record, grouped in blocks: identity, consultations, contact, follow-up' },
-            ],
+            type: 'img',
+            src: '/projects/vela/consultation-fiche-patient.png',
+            caption: 'An open consultation with the patient record alongside: all the context without leaving the page. A request from test #1, shipped.',
           },
         ],
       },
