@@ -55,7 +55,7 @@ export default function Hero() {
         backgroundPosition: 'center',
       }}
     >
-      {/* Reeded glass texture — theme-aware */}
+      {/* Reeded glass texture: theme-aware */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -119,7 +119,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats — 2 cols on mobile, 3 on md+ */}
+        {/* Stats: 2 cols on mobile, 3 on md+ */}
         <div className="grid grid-cols-2 md:grid-cols-3 border-t border-border pt-10 gap-0">
           <div className="hero-stat pr-4 sm:pr-8 border-r border-border">
             <div className="font-sans font-black italic text-[1.5rem] sm:text-5xl md:text-6xl text-accent leading-none mb-2">{t.hero.stats[0].value}</div>

@@ -40,7 +40,7 @@ export default function AboutCTA() {
             style={{ background: 'radial-gradient(circle, rgba(184,92,42,0.12) 0%, transparent 70%)' }}
           />
 
-          {/* Left: text content — 60% */}
+          {/* Left: text content: 60% */}
           <div className="relative flex-[3] p-10 sm:p-14 flex flex-col justify-center min-h-[320px]">
             <p className="section-label mb-5">{t.aboutCta.label}</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text leading-tight mb-4 text-balance">
@@ -75,7 +75,7 @@ export default function AboutCTA() {
             </Link>
           </div>
 
-          {/* Right: portrait photo — 40% */}
+          {/* Right: portrait photo: 40% */}
           <div className="relative flex-[2] hidden md:block">
             <Image
               src="/margaux.png"

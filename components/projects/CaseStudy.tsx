@@ -49,6 +49,20 @@ function BlockRenderer({ block }: { block: Block }) {
         </div>
       )
 
+    case 'link':
+      return (
+        <p className="my-6">
+          <a
+            href={block.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost inline-flex items-center gap-2"
+          >
+            {block.label} ↗
+          </a>
+        </p>
+      )
+
     case 'list':
       return (
         <ul className="space-y-3 mb-6">

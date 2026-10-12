@@ -16,7 +16,7 @@ export default function Ticker() {
     const track = trackRef.current
     if (!container || !track) return
 
-    // Scroll loop — x: '-50%' = one full content-width (two copies in DOM)
+    // Scroll loop: x: '-50%' = one full content-width (two copies in DOM)
     const tl = gsap.timeline({ repeat: -1 })
     tl.fromTo(track, { x: '0%' }, { x: '-50%', duration: 100, ease: 'none' })
     tlRef.current = tl

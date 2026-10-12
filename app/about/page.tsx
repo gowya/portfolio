@@ -4,7 +4,7 @@ import AboutView from '@/components/about/AboutView'
 export const metadata: Metadata = {
   title: 'À propos',
   description:
-    'Margaux Francillard • Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Parcours, expériences et formations.',
+    'Margaux Francillard, Product Designer & AI Builder basée à Montpellier, ex-Lead Design System chez Waalaxy. Parcours, expériences et formations.',
   alternates: { canonical: '/about' },
 }
 

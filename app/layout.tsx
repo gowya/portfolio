@@ -28,13 +28,13 @@ const italiana = Italiana({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://margauxfrancillard.com'),
+  metadataBase: new URL('https://gaumsportfolio.vercel.app'),
   title: {
     default: 'Margaux Francillard • Product & System Designer SaaS B2B',
     template: '%s | Margaux Francillard',
   },
   description:
-    'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée.',
+    'Product Designer & Lead Design System basée à Montpellier. 3,5 ans chez Waalaxy, freelance depuis 2026. Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée.',
   keywords: [
     'product designer SaaS B2B',
     'lead design system',
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://margauxfrancillard.com',
+    url: 'https://gaumsportfolio.vercel.app',
     siteName: 'Margaux Francillard',
     title: 'Margaux Francillard • Product & System Designer SaaS B2B',
     description:
-      'Lead Design System & Product Designer chez Waalaxy, basée à Montpellier. Interfaces qui convertissent, design systems qui tiennent dans la durée.',
+      'Product Designer & Lead Design System basée à Montpellier. Interfaces qui convertissent, design systems qui tiennent dans la durée.',
     images: [
       {
         url: '/og-image.png',
@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable} ${italiana.variable}`}>
       <head>
-        {/* Runs before first paint — prevents flash of wrong theme */}
+        {/* Runs before first paint: prevents flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))}catch(e){}})()`,

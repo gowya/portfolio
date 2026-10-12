@@ -34,7 +34,7 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
           willChange: 'transform',
         }}
       >
-        {/* Content — sits above utility-injected overlay via DOM order */}
+        {/* Content: sits above utility-injected overlay via DOM order */}
         <div className="relative z-10 flex flex-col flex-1">
           <p
             className="font-sans text-muted mb-4"
@@ -73,9 +73,9 @@ export default function FeaturedProjects() {
   const bySlug = (slug: string, fallback: number) =>
     projects.find((p) => p.slug === slug) ?? projects[fallback]
 
-  const hero  = bySlug('parcours-upgrade', 0)
+  const hero  = bySlug('vela',             0)
   const card1 = bySlug('trial-by-card',    1)
-  const card2 = bySlug('csv-import',       2)
+  const card2 = bySlug('parcours-upgrade', 2)
 
   useEffect(() => {
     const ctx = gsap.context(() => {

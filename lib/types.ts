@@ -42,6 +42,7 @@ export type Block =
   | { type: 'grid'; images: Array<{ src: string; caption?: string }> }
   | { type: 'list'; items: string[] }
   | { type: 'callout'; text: string }
+  | { type: 'link'; href: string; label: string }
 
 export interface CaseStudySection {
   title: string
