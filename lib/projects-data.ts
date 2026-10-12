@@ -104,12 +104,12 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: "Deuxième test avec une sexologue en début d'activité, qui suivait ses patients entre un carnet et Notion. Parcours complet réussi sans blocage : inscription, création d'un patient, première consultation. Les champs personnalisés et le vert Sauge ont fait mouche. Les frictions restantes étaient précises : pas de recherche patients, une liste de spécialités floue, la différence entre modèle et consultation à clarifier.",
+            text: "Deuxième test avec Astrid Macret, sexologue en début d'activité, qui suivait ses patients entre un carnet et Notion. Parcours complet réussi sans blocage : inscription, création d'un patient, première consultation. Les champs personnalisés et le vert Sauge ont fait mouche. Les frictions restantes étaient précises : pas de recherche patients, une liste de spécialités floue, la différence entre modèle et consultation à clarifier.",
           },
           {
             type: 'quote',
             text: "J'avais peur de ne pas m'y retrouver, mais finalement c'est super clair.",
-            source: 'Sexologue, test utilisateur #2',
+            source: 'Astrid Macret, sexologue, test utilisateur #2',
           },
           {
             type: 'callout',
@@ -887,6 +887,11 @@ const PROJECTS_FR: ProjectDetail[] = [
             caption: 'Le code dans Storybook, synchronisé avec Figma',
           },
           {
+            type: 'link',
+            href: 'https://storybook.waalaxy.com/',
+            label: 'Voir le Storybook WAATOM',
+          },
+          {
             type: 'img',
             src: '/projects/design-system/image-1.png',
             caption: "La documentation qui explique comment utiliser un composant, et comment l'éviter",
@@ -1145,12 +1150,12 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'p',
-            text: 'Second test with a sexologist early in her practice, who tracked her patients between a notebook and Notion. Full journey completed with no blocker: sign-up, creating a patient, first consultation. The custom fields and the Sage green landed. The remaining frictions were precise: no patient search, a fuzzy list of specialities, the difference between template and consultation to clarify.',
+            text: 'Second test with Astrid Macret, a sexologist early in her practice, who tracked her patients between a notebook and Notion. Full journey completed with no blocker: sign-up, creating a patient, first consultation. The custom fields and the Sage green landed. The remaining frictions were precise: no patient search, a fuzzy list of specialities, the difference between template and consultation to clarify.',
           },
           {
             type: 'quote',
             text: "I was worried I'd get lost, but in the end it's super clear.",
-            source: 'Sexologist, user test #2',
+            source: 'Astrid Macret, sexologist, user test #2',
           },
           {
             type: 'callout',
@@ -1926,6 +1931,11 @@ const PROJECTS_EN: ProjectDetail[] = [
             type: 'img',
             src: '/projects/design-system/image-2.png',
             caption: 'The code in Storybook, in sync with Figma',
+          },
+          {
+            type: 'link',
+            href: 'https://storybook.waalaxy.com/',
+            label: 'Browse the WAATOM Storybook',
           },
           {
             type: 'img',
