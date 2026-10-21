@@ -2,7 +2,7 @@
 
 [▶ gaumsportfolio.vercel.app](https://gaumsportfolio.vercel.app)
 
-![Aperçu du projet Vela](public/projects/vela.png)
+![Page d'accueil du portfolio](docs/apercu.png)
 
 Mon portfolio, conçu dans Figma puis codé par mes soins. Il présente mes études de cas produit (Waalaxy, Vela) ainsi que le design system du site lui-même.
 
