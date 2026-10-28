@@ -96,6 +96,28 @@ function BlockRenderer({ block }: { block: Block }) {
         </figure>
       )
 
+    case 'video':
+      return (
+        <figure className="my-8">
+          <div className="relative rounded-xl overflow-hidden border border-border bg-bg-card">
+            <video
+              src={block.src}
+              poster={block.poster}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-auto block"
+              aria-label={block.caption}
+            />
+          </div>
+          {block.caption && (
+            <figcaption className="text-muted text-xs text-center mt-3">
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
+      )
+
     case 'grid':
       return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
@@ -245,7 +267,24 @@ export default function CaseStudy({ slug }: { slug: string }) {
       </header>
 
       {/* Cover image */}
-      {project.coverImage && (
+      {project.coverVideo ? (
+        <div className="max-w-6xl mx-auto px-6 mb-16">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border bg-bg-card">
+            <video
+              src={project.coverVideo}
+              poster={project.coverImage ?? undefined}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover"
+              aria-label={project.title}
+            />
+          </div>
+        </div>
+      ) : project.coverImage && (
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border">
             <Image

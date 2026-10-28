@@ -40,6 +40,7 @@ export type Block =
   | { type: 'quote'; text: string; source?: string }
   | { type: 'img'; src: string; caption?: string; portrait?: boolean }
   | { type: 'grid'; images: Array<{ src: string; caption?: string }> }
+  | { type: 'video'; src: string; poster?: string; caption?: string }
   | { type: 'list'; items: string[] }
   | { type: 'callout'; text: string }
   | { type: 'link'; href: string; label: string }
@@ -55,6 +56,7 @@ export interface Metric {
 }
 
 export interface ProjectDetail extends Project {
+  coverVideo?: string
   tagline: string
   role: string
   company: string
