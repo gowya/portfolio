@@ -975,30 +975,30 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Phone Verif : sortir une app vibe-codée du look par défaut',
     tagline: "Le produit était déjà bon. Maintenant, il en a l'air.",
     description:
-      "Refonte du haut de page d'une API de vérification de numéro par WhatsApp, construite avec Lovable. Audit mesuré, mini design system en tokens, maquette codée : 14 tailles de texte ramenées à 6, un seul bouton principal.",
-    coverImage: '/projects/phone-verif.png',
+      "Refonte du haut de page d'une API de vérification de numéro par WhatsApp, construite avec Lovable. Audit mesuré, deux passes de design, maquette codée et animée avec GSAP : 14 tailles de texte ramenées à 7, 36 couleurs ramenées à 8 tokens, un seul bouton principal.",
+    coverImage: '/projects/phone-verif-v3.png',
     tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer • design & code',
     company: 'Phone Verif',
     period: 'Oct. 2026',
-    status: 'Maquette codée',
+    status: 'Maquette codée et animée',
     metrics: [
-      { value: '14 → 6', label: 'tailles de texte' },
+      { value: '14 → 7', label: 'tailles de texte' },
+      { value: '36 → 8', label: 'couleurs, passées en tokens' },
       { value: '3 → 1', label: 'style de bouton principal' },
-      { value: '36 → 11', label: 'couleurs, passées en tokens' },
       { value: '4 → 2', label: "appels à l'action en haut de page" },
     ],
     intro:
-      "Phone Verif est une API de vérification de numéro de téléphone par WhatsApp : l'utilisateur envoie un message, le service reçoit son numéro prouvé. Pas de SMS, pas de code à taper. Un très bon produit, des chiffres mesurés en production, construit avec Lovable. Mais une page d'accueil avec le look par défaut des apps générées par IA. Pour un produit qui vend de la confiance, ça coûte cher. J'ai audité la page, puis refait le haut de page, directement en code.",
+      "Phone Verif est une API de vérification de numéro de téléphone par WhatsApp : l'utilisateur envoie un message, le service reçoit son numéro prouvé. Pas de SMS, pas de code à taper. Un très bon produit, des chiffres mesurés en production, construit avec Lovable. Mais une page d'accueil avec le look par défaut des apps générées par IA. Pour un produit qui vend de la confiance, ça coûte cher. J'ai audité la page, puis refait le haut de page en deux passes, directement en code.",
     sections: [
       {
         title: "L'audit : mesurer avant de juger",
         blocks: [
           {
             type: 'p',
-            text: "Plutôt qu'un avis à l'œil, j'ai relevé les styles calculés de la page dans le navigateur. Le fond était solide : une promesse claire (« Stop asking phone numbers. Start receiving proof. »), un comparatif honnête, des chiffres mesurés en prod. C'est la forme qui grignotait la confiance.",
+            text: "J'ai relevé les styles calculés de la page dans le navigateur, pour juger sur des mesures. Le fond était solide : une promesse claire (« Stop asking phone numbers. Start receiving proof. »), un comparatif honnête, des chiffres mesurés en prod. C'est la forme qui grignotait la confiance.",
           },
           {
             type: 'list',
@@ -1017,45 +1017,73 @@ const PROJECTS_FR: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Deux explorations, une direction',
+        title: 'Première passe : le reçu',
         blocks: [
           {
             type: 'p',
-            text: "Le hero devait parler à deux publics : le développeur qui intègre l'API et la personne qui signe. J'ai exploré deux pistes. A, le reçu : un ticket de preuve perforé qui montre ce que le produit vend (un numéro vérifié, rien de tapé, 0,01 € facturé au succès). B, le parcours : les trois étapes réelles, du QR code à la réponse JSON.",
+            text: "Le hero devait parler à deux publics : le développeur qui intègre l'API et la personne qui signe. J'ai exploré deux pistes. A, le reçu : un ticket de preuve perforé qui montre ce que le produit vend (un numéro vérifié, rien de tapé, 0,01 € facturé au succès). B, le parcours : les trois étapes réelles, du QR code à la réponse JSON. J'ai gardé les deux : A en hero, B juste en dessous, à la place de la section animée buguée.",
           },
           {
-            type: 'callout',
-            text: "Le reçu capte la confiance et le décideur, le parcours convertit le développeur. J'ai gardé les deux : A en hero, B juste en dessous à la place de la section animée buguée. Les acteurs crédibles du secteur montrent un artefact réel du produit, jamais une illustration abstraite. Le produit vend une preuve, la page en montre une.",
+            type: 'img',
+            src: '/projects/phone-verif/v2.png',
+            caption: 'Première passe : le reçu de preuve, sur papier crème',
           },
         ],
       },
       {
-        title: 'Un système plutôt que des retouches',
+        title: 'Deuxième passe : sortir du look IA « de bon goût »',
         blocks: [
+          {
+            type: 'p',
+            text: "En relisant cette première version trois semaines plus tard, j'ai vu le problème : elle avait quitté le look IA de 2024 pour celui de 2026. Papier crème, titre à moitié en italique, mono sur toutes les petites mentions, reçu perforé avec tampon penché, quatre chiffres en colonnes égales. C'est exactement ce que sort une IA quand on lui demande une page « éditoriale ».",
+          },
+          {
+            type: 'callout',
+            text: "Une page faite à la main tient à quatre choses : une idée propre poussée loin, le vrai produit à l'écran, un accident volontaire dans la grille, et une voix. J'ai tout repris avec cette grille de lecture.",
+          },
           {
             type: 'list',
             items: [
-              "Une identité : un seul vert de marque, tiré du logo. Adieu le bleu, le violet et les dégradés. Papier clair chaud à la place du dark mode : un produit de preuve se lit comme un document.",
-              "Une typo de presse (Schibsted Grotesk) et du mono uniquement pour ce qui est une donnée.",
-              "6 tailles de texte, 11 tokens de couleur, 2 rayons d'arrondi, une échelle d'espacement en base 4. Aucune valeur en dur dans les composants.",
-              "Un seul bouton principal (« Try the live demo »), un secondaire, des liens. Le prix au succès remonte dans le hero.",
-              "Les chiffres affichés une seule fois, sans compteur animé, dans une bande de preuves juste sous le hero.",
+              "Des aplats francs : le vert de marque pour le hero et le témoignage, l'encre pour les chiffres, le blanc pour le parcours. Le vert est calé pour que le texte encre passe à 5,2:1.",
+              "Une seule famille, Archivo : serrée et très grasse pour les titres en affiche, normale pour le texte. Le titre change de couleur à mi-parcours, sans italique.",
+              "La vraie démo dans le hero : un grand QR code scannable. C'est le seul élément qui sort de la grille, posé à cheval sur la section suivante.",
+              "Un seul chiffre en très grand (62,9 % de conversion), les trois autres en liste à côté.",
+              "« How it works » devient « One session, timed. » : une règle de 15 secondes à l'échelle et trois étapes repérées par leur temps. Le grand vide entre 0 et 11,6 s raconte le produit mieux qu'un paragraphe.",
+              "8 couleurs en tokens, 7 tailles de texte, un seul arrondi (la bulle WhatsApp), des filets de 2 px. Aucune valeur en dur dans les composants.",
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Le mouvement au service du propos',
+        blocks: [
+          {
+            type: 'p',
+            text: "Dernière couche : des animations GSAP (ScrollTrigger et SplitText), avec une règle simple. Chaque animation raconte le produit.",
+          },
+          {
+            type: 'list',
+            items: [
+              "Une barre de scan balaie le QR code en boucle, comme un téléphone qui le lit.",
+              "Au scroll, la règle chronométrée reste collée en haut de l'écran et se remplit. Quand le chrono atteint une étape, son temps passe au vert.",
+              "Le 62,9 % surgit caractère par caractère. Le vrai chiffre est révélé d'emblée, sans compteur qui part de zéro : c'était un des bugs de la page d'origine.",
+              "La citation du client s'allume mot à mot, au rythme de la lecture.",
             ],
           },
           {
             type: 'img',
-            src: '/projects/phone-verif/scroll.gif',
-            caption: "De l'avant à l'après : la home refaite, du hero aux témoignages",
+            src: '/projects/phone-verif/scroll-v3.gif',
+            caption: "L'avant, puis la nouvelle version animée, du hero au témoignage",
           },
           {
             type: 'p',
-            text: "La maquette est livrée en HTML avec ses tokens, recettée sur 5 tailles d'écran (de 375 à 1920 px), avec les micro-interactions documentées (boutons, liens soulignés, tampon « Verified ») et le respect du réglage « réduire les animations ».",
+            text: "La maquette est livrée en HTML avec ses tokens, recettée en desktop, tablette et mobile. Avec le réglage « réduire les animations », rien ne bouge et tout s'affiche d'emblée.",
           },
         ],
       },
     ],
     learnings:
-      "L'IA code vite. La cohérence, elle, ne se génère pas encore toute seule. Ce projet m'a confirmé que le plus utile, sur un produit vibe-codé, n'est pas de repeindre : c'est de poser un système minimal que l'IA pourra respecter aux prochains prompts. Et que des chiffres mesurés valent mieux qu'un « ça fait IA » pour convaincre un fondateur.",
+      "L'IA code vite, et elle a désormais aussi un goût par défaut. Ce projet m'a appris à me méfier de ma propre première version : quand elle ressemble à ce qu'un outil sortirait seul, il faut une deuxième passe. Le reste tient toujours : un système minimal que l'IA pourra respecter aux prochains prompts, et des chiffres mesurés pour convaincre un fondateur.",
   },
 
   // ─── 11. RSVP Party ────────────────────────────────────────────────────────
@@ -2261,30 +2289,30 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Phone Verif: taking a vibe-coded app out of the default look',
     tagline: 'The product was already good. Now it looks it.',
     description:
-      "Redesign of the top of the homepage for a WhatsApp phone verification API built with Lovable. Measured audit, minimal token-based design system, coded mockup: 14 font sizes down to 6, a single primary button.",
-    coverImage: '/projects/phone-verif.png',
+      "Redesign of the top of the homepage for a WhatsApp phone verification API built with Lovable. Measured audit, two design passes, a coded mockup animated with GSAP: 14 font sizes down to 7, 36 colours down to 8 tokens, a single primary button.",
+    coverImage: '/projects/phone-verif-v3.png',
     tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer • design & code',
     company: 'Phone Verif',
     period: 'Oct. 2026',
-    status: 'Coded mockup',
+    status: 'Coded, animated mockup',
     metrics: [
-      { value: '14 → 6', label: 'font sizes' },
+      { value: '14 → 7', label: 'font sizes' },
+      { value: '36 → 8', label: 'colours, turned into tokens' },
       { value: '3 → 1', label: 'primary button style' },
-      { value: '36 → 11', label: 'colours, turned into tokens' },
       { value: '4 → 2', label: 'calls to action above the fold' },
     ],
     intro:
-      "Phone Verif is a phone number verification API that works over WhatsApp: the user sends one message, the service receives their proven number. No SMS, no code to type. A really good product, with figures measured in production, built with Lovable. But a homepage with the default look of AI-generated apps. For a product that sells trust, that's expensive. I audited the page, then rebuilt the top of it, directly in code.",
+      "Phone Verif is a phone number verification API that works over WhatsApp: the user sends one message, the service receives their proven number. No SMS, no code to type. A really good product, with figures measured in production, built with Lovable. But a homepage with the default look of AI-generated apps. For a product that sells trust, that's expensive. I audited the page, then rebuilt the top of it in two passes, directly in code.",
     sections: [
       {
         title: 'The audit: measure before judging',
         blocks: [
           {
             type: 'p',
-            text: "Rather than an eyeballed opinion, I pulled the computed styles of the page in the browser. The substance was solid: a clear promise (\"Stop asking phone numbers. Start receiving proof.\"), an honest comparison, figures measured in production. It was the form that was eroding trust.",
+            text: "I pulled the computed styles of the page in the browser, so the verdict rests on measurements. The substance was solid: a clear promise (\"Stop asking phone numbers. Start receiving proof.\"), an honest comparison, figures measured in production. It was the form that was eroding trust.",
           },
           {
             type: 'list',
@@ -2303,45 +2331,73 @@ const PROJECTS_EN: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Two explorations, one direction',
+        title: 'First pass: the receipt',
         blocks: [
           {
             type: 'p',
-            text: "The hero had to speak to two audiences: the developer integrating the API and the person signing off. I explored two directions. A, the receipt: a perforated proof ticket showing what the product sells (a verified number, nothing typed, €0.01 billed on success). B, the journey: the three real steps, from QR code to JSON response.",
+            text: "The hero had to speak to two audiences: the developer integrating the API and the person signing off. I explored two directions. A, the receipt: a perforated proof ticket showing what the product sells (a verified number, nothing typed, €0.01 billed on success). B, the journey: the three real steps, from QR code to JSON response. I kept both: A as the hero, B right below, in place of the buggy animated section.",
           },
           {
-            type: 'callout',
-            text: "The receipt wins over trust and the decision-maker, the journey converts the developer. I kept both: A as the hero, B right below in place of the buggy animated section. Credible players in this space show a real product artefact, never an abstract illustration. The product sells proof, so the page shows one.",
+            type: 'img',
+            src: '/projects/phone-verif/v2.png',
+            caption: 'First pass: the proof receipt, on cream paper',
           },
         ],
       },
       {
-        title: 'A system rather than touch-ups',
+        title: 'Second pass: out of the "tasteful" AI look',
         blocks: [
+          {
+            type: 'p',
+            text: "Rereading that first version three weeks later, I saw the problem: it had left the 2024 AI look for the 2026 one. Cream paper, a half-italic headline, monospace on every small caption, a perforated receipt with a tilted stamp, four figures in equal columns. That is exactly what an AI produces when you ask it for an \"editorial\" page.",
+          },
+          {
+            type: 'callout',
+            text: "A handmade page comes down to four things: one idea of its own pushed far, the real product on screen, a deliberate accident in the grid, and a voice. I rebuilt everything through that lens.",
+          },
           {
             type: 'list',
             items: [
-              "An identity: a single brand green, taken from the logo. Goodbye blue, violet and gradients. Warm light paper instead of dark mode: a proof product reads like a document.",
-              "A newspaper grotesque (Schibsted Grotesk), and monospace only for what is actual data.",
-              "6 font sizes, 11 colour tokens, 2 corner radii, a 4-based spacing scale. No hard-coded values in components.",
-              "One primary button (\"Try the live demo\"), one secondary, then links. Pay-on-success pricing moves up into the hero.",
-              "Figures shown once, with no animated counter, in a proof strip right below the hero.",
+              "Bold colour fields: brand green for the hero and the testimonial, ink for the figures, white for the journey. The green is tuned so ink text reaches 5.2:1.",
+              "A single family, Archivo: condensed and heavy for poster headlines, normal width for body text. The headline switches colour halfway, with no italics.",
+              "The real demo in the hero: a large scannable QR code. It is the only element that breaks the grid, straddling the next section.",
+              "One figure set very large (62.9% conversion), the other three listed beside it.",
+              "\"How it works\" becomes \"One session, timed.\": a 15-second ruler drawn to scale and three steps marked by their timestamp. The long gap between 0 and 11.6 s tells the product better than a paragraph.",
+              "8 colour tokens, 7 font sizes, a single rounded shape (the WhatsApp bubble), 2 px rules. No hard-coded values in components.",
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Motion that carries the message',
+        blocks: [
+          {
+            type: 'p',
+            text: "Last layer: GSAP animations (ScrollTrigger and SplitText), with one simple rule. Every animation tells the product.",
+          },
+          {
+            type: 'list',
+            items: [
+              "A scan bar sweeps the QR code on a loop, like a phone reading it.",
+              "On scroll, the timed ruler sticks to the top of the screen and fills up. When the clock reaches a step, its timestamp turns green.",
+              "The 62.9% rises character by character. The real figure is revealed straight away, with no counter climbing from zero: that was one of the original page's bugs.",
+              "The customer quote lights up word by word, at reading pace.",
             ],
           },
           {
             type: 'img',
-            src: '/projects/phone-verif/scroll.gif',
-            caption: 'From before to after: the rebuilt homepage, from hero to testimonials',
+            src: '/projects/phone-verif/scroll-v3.gif',
+            caption: 'The before, then the new animated version, from hero to testimonial',
           },
           {
             type: 'p',
-            text: "The mockup is delivered as HTML with its tokens, QA'd on 5 screen sizes (375 to 1920 px), with documented micro-interactions (buttons, underlined links, \"Verified\" stamp) and support for the reduced-motion setting.",
+            text: "The mockup is delivered as HTML with its tokens, QA'd on desktop, tablet and mobile. With the reduced-motion setting on, nothing moves and everything shows at once.",
           },
         ],
       },
     ],
     learnings:
-      "AI codes fast. Consistency doesn't generate itself yet. This project confirmed that the most useful thing on a vibe-coded product isn't a new coat of paint: it's a minimal system the AI can respect in future prompts. And that measured figures beat \"it looks AI-made\" when convincing a founder.",
+      "AI codes fast, and it now has a default taste too. This project taught me to distrust my own first version: when it looks like what a tool would produce on its own, it needs a second pass. The rest still holds: a minimal system the AI can respect in future prompts, and measured figures to convince a founder.",
   },
 
   // ─── 11. RSVP Party ────────────────────────────────────────────────────────
