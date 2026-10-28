@@ -1044,8 +1044,8 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'img',
-            src: '/projects/phone-verif/apres.png',
-            caption: 'Après : le hero refait, le reçu de preuve et la bande de chiffres',
+            src: '/projects/phone-verif/scroll.gif',
+            caption: "De l'avant à l'après : la home refaite, du hero aux témoignages",
           },
           {
             type: 'p',
@@ -2270,8 +2270,8 @@ const PROJECTS_EN: ProjectDetail[] = [
           },
           {
             type: 'img',
-            src: '/projects/phone-verif/apres.png',
-            caption: 'After: the rebuilt hero, the proof receipt and the figures strip',
+            src: '/projects/phone-verif/scroll.gif',
+            caption: 'From before to after: the rebuilt homepage, from hero to testimonials',
           },
           {
             type: 'p',
