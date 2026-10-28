@@ -968,6 +968,96 @@ const PROJECTS_FR: ProjectDetail[] = [
       "Après des années à faire respecter un système à des humains, la suite logique, c'est de le faire respecter à l'IA aussi.",
   },
 
+  // ─── 11. RSVP Party ────────────────────────────────────────────────────────
+  {
+    id: '11',
+    slug: 'rsvp-party',
+    title: "RSVP Party : un site d'invitation pensé pour le pouce",
+    tagline: "D'une vraie invitation d'anniversaire à un modèle open source",
+    description:
+      "Site d'invitation animé où les invités répondent, voient qui vient, disent ce qu'ils ramènent et remplissent la playlist, en direct depuis leur téléphone. Né d'un vrai anniversaire, devenu un modèle open source configurable avec un système de thèmes.",
+    coverImage: '/projects/rsvp-party.jpg',
+    tags: ['Product Design', 'Side project'],
+    caseStudyUrl: 'https://rsvp-party-demo.vercel.app',
+    featured: false,
+    role: 'Product Designer • design & code',
+    company: 'Projet perso, open source',
+    period: 'Oct. 2026',
+    status: 'En ligne • démo publique',
+    metrics: [
+      { value: '10 s', label: 'pour répondre à l’invitation' },
+      { value: '221 → 99 ko', label: 'de polices, malgré la 3D' },
+      { value: '1 fichier', label: 'de config pour créer son événement' },
+      { value: 'MIT', label: 'repo public, en modèle réutilisable' },
+    ],
+    intro:
+      "Le projet est né d'un vrai site d'invitation, conçu pour les 18 ans d'une proche. Le lien allait circuler sur WhatsApp : presque tout le monde l'ouvrirait sur un téléphone. Une fois la fête lancée, j'en ai fait un modèle open source, sans aucune donnée personnelle, avec une démo publique sur un événement fictif : les 30 ans de Camille (rsvp-party-demo.vercel.app).",
+    sections: [
+      {
+        title: 'Ce que ça fait',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              "Répondre en 10 secondes : prénom, oui / peut-être / non. Confettis, et la pastille du prénom vole jusqu'à la liste des invités.",
+              "Ils seront là : la liste des confirmés, mise à jour en direct.",
+              "Qui ramène quoi : chacun coche ce qu'il apporte, avec une limite par truc (6 paquets de chips, pas 12).",
+              "La playlist : chacun propose ses sons, la liste reste anonyme.",
+              "L'adresse protégée : elle ne s'affiche qu'une fois la venue confirmée, parce qu'un lien WhatsApp circule vite.",
+              "Une page admin pour les organisateurs : qui vient, qui ramène quoi, qui a proposé quel son.",
+            ],
+          },
+          {
+            type: 'img',
+            src: '/projects/rsvp-party/mobile.jpg',
+            caption: "Sur téléphone : le premier écran, les invités confirmés, le sondage et ses limites, la playlist",
+          },
+        ],
+      },
+      {
+        title: 'Le téléphone d’abord, et un récit plutôt qu’une page',
+        blocks: [
+          {
+            type: 'p',
+            text: "Sur téléphone, pas de survol. Les effets réagissent donc au pouce, au scroll et à l'inclinaison : le soleil se couche au fil du scroll, la boule disco 3D suit l'inclinaison du téléphone, un tiroir caché se tire au doigt. Le fond raconte une soirée : jaune en haut, orange au milieu, nuit étoilée à la fin. Le ciel se recalcule selon les sections actives, pour que le dégradé reste continu.",
+          },
+          {
+            type: 'img',
+            src: '/projects/rsvp-party/scroll.gif',
+            caption: 'Le scroll : le ciel passe du jour à la nuit',
+          },
+          {
+            type: 'grid',
+            images: [
+              { src: '/projects/rsvp-party/desktop-bar.jpg', caption: "L'easter egg : la carte du bar et ses 20 cocktails dessinés" },
+              { src: '/projects/rsvp-party/desktop-admin.jpg', caption: "L'admin des organisateurs" },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Les choix qui ne se voient pas',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              "La vie privée par défaut : l'adresse n'est envoyée qu'aux invités qui ont répondu, la playlist ne dit pas qui a proposé quoi, les prénoms du sondage restent dans l'admin.",
+              "Léger malgré la 3D : polices réduites de 221 à 99 ko, 3D chargée pendant l'écran de chargement et rendue seulement quand elle est à l'écran, tiroir construit à la première ouverture.",
+              "Accessible : les animations s'arrêtent avec « réduire les animations », les décors sont ignorés par les lecteurs d'écran, la boule disco a une version CSS si WebGL n'est pas disponible.",
+              "Une démo sans risque : chaque visiteur peut tout essayer sans voir ce que tapent les autres, et ses ajouts s'effacent au bout de 2 jours.",
+            ],
+          },
+          {
+            type: 'callout',
+            text: "Pour en faire un modèle, tout passe par un seul fichier de configuration (date, lieu, sections à la carte, dress code, sondage, textes) et un système de thèmes : couleurs aux noms neutres, polices, premier écran, animation signature, easter egg et voix du texte. Le premier thème est un anniversaire disco ; un mariage pourrait passer au vouvoiement sans toucher au reste.",
+          },
+        ],
+      },
+    ],
+    learnings:
+      "Concevoir pour un vrai événement, avec de vrais invités, oblige à trancher vite : j'ai retiré des effets qui déroutaient s'ils ne marchaient pas du premier coup. Et transformer un projet perso en modèle réutilisable, c'est un exercice de design system à petite échelle : séparer ce qui est commun de ce qui est propre à un thème.",
+  },
+
   // ─── 7. SaaS recrutement ───────────────────────────────────────────────────
   {
     id: '7',
@@ -2012,6 +2102,96 @@ const PROJECTS_EN: ProjectDetail[] = [
     ],
     learnings:
       'After years of getting humans to respect a system, the logical next step is getting AI to respect it too.',
+  },
+
+  // ─── 11. RSVP Party ────────────────────────────────────────────────────────
+  {
+    id: '11',
+    slug: 'rsvp-party',
+    title: 'RSVP Party: an invitation site designed for the thumb',
+    tagline: 'From a real birthday invitation to an open source template',
+    description:
+      "An animated invitation site where guests reply, see who's coming, say what they're bringing and fill the playlist, live from their phone. Born from a real birthday, turned into a configurable open source template with a theme system.",
+    coverImage: '/projects/rsvp-party.jpg',
+    tags: ['Product Design', 'Side project'],
+    caseStudyUrl: 'https://rsvp-party-demo.vercel.app',
+    featured: false,
+    role: 'Product Designer • design & code',
+    company: 'Personal project, open source',
+    period: 'Oct. 2026',
+    status: 'Live • public demo',
+    metrics: [
+      { value: '10 s', label: 'to reply to the invitation' },
+      { value: '221 → 99 KB', label: 'of fonts, despite the 3D' },
+      { value: '1 file', label: 'of config to create your event' },
+      { value: 'MIT', label: 'public repo, reusable template' },
+    ],
+    intro:
+      "The project started as a real invitation site, designed for a relative's 18th birthday. The link was going to travel over WhatsApp: almost everyone would open it on a phone. Once the party was set, I turned it into an open source template, with no personal data, and a public demo for a fictional event: Camille's 30th (rsvp-party-demo.vercel.app).",
+    sections: [
+      {
+        title: 'What it does',
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              "Reply in 10 seconds: first name, yes / maybe / no. Confetti, and the name pill flies over to the guest list.",
+              "They'll be there: the list of confirmed guests, updated live.",
+              "Who brings what: everyone ticks what they're bringing, with a cap per item (6 bags of crisps, not 12).",
+              "The playlist: everyone suggests tracks, the list stays anonymous.",
+              "A protected address: it only shows once attendance is confirmed, because a WhatsApp link travels fast.",
+              "An admin page for the hosts: who's coming, who brings what, who suggested which track.",
+            ],
+          },
+          {
+            type: 'img',
+            src: '/projects/rsvp-party/mobile.jpg',
+            caption: 'On phone: the first screen, confirmed guests, the poll and its caps, the playlist',
+          },
+        ],
+      },
+      {
+        title: 'Phone first, and a story rather than a page',
+        blocks: [
+          {
+            type: 'p',
+            text: "On a phone there's no hover. So the effects respond to the thumb, the scroll and the tilt: the sun sets as you scroll, the 3D disco ball follows the phone's tilt, a hidden drawer pulls out with a finger. The background tells the story of an evening: yellow at the top, orange in the middle, a starry night at the end. The sky recalculates based on the active sections, so the gradient stays continuous.",
+          },
+          {
+            type: 'img',
+            src: '/projects/rsvp-party/scroll.gif',
+            caption: 'The scroll: the sky goes from day to night',
+          },
+          {
+            type: 'grid',
+            images: [
+              { src: '/projects/rsvp-party/desktop-bar.jpg', caption: 'The easter egg: the bar menu and its 20 drawn cocktails' },
+              { src: '/projects/rsvp-party/desktop-admin.jpg', caption: "The hosts' admin" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "The choices you don't see",
+        blocks: [
+          {
+            type: 'list',
+            items: [
+              "Privacy by default: the address is only sent to guests who replied, the playlist doesn't say who suggested what, poll names stay in the admin.",
+              "Light despite the 3D: fonts cut from 221 to 99 KB, 3D loaded during the loading screen and rendered only when on screen, drawer built on first open.",
+              "Accessible: animations stop with \"reduce motion\", decorations are ignored by screen readers, the disco ball has a CSS fallback when WebGL isn't available.",
+              "A risk-free demo: every visitor can try everything without seeing what others type, and their additions are wiped after 2 days.",
+            ],
+          },
+          {
+            type: 'callout',
+            text: "To make it a template, everything goes through a single config file (date, venue, à la carte sections, dress code, poll, copy) and a theme system: neutrally named colours, fonts, first screen, signature animation, easter egg and tone of voice. The first theme is a disco birthday; a wedding could switch to a formal tone without touching the rest.",
+          },
+        ],
+      },
+    ],
+    learnings:
+      "Designing for a real event, with real guests, forces quick calls: I removed effects that confused people when they didn't work the first time. And turning a personal project into a reusable template is a small-scale design system exercise: separating what's shared from what belongs to a theme.",
   },
 
   // ─── 7. Recruitment SaaS ───────────────────────────────────────────────────
