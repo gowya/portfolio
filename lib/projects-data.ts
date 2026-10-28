@@ -66,6 +66,11 @@ const PROJECTS_FR: ProjectDetail[] = [
           },
           {
             type: 'img',
+            src: '/projects/vela/claude-code-audit.png',
+            caption: "Claude Code au travail sur Vela : un audit du design system, de l'exploration des écrans au rapport.",
+          },
+          {
+            type: 'img',
             src: '/projects/vela/app-consultation-panel.jpg',
             caption: "Une consultation ouverte, la fiche patient à côté : tout le contexte sans changer de page. Une demande du test #1, livrée.",
           },
@@ -1407,6 +1412,11 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'p',
             text: 'The design system is plugged into Claude Code through MCP. When I generate a screen, the AI draws on the real tokens and the real components. The result: a consistent front end, with no going back to fix off-token colours or approximate spacing.',
+          },
+          {
+            type: 'img',
+            src: '/projects/vela/claude-code-audit.png',
+            caption: 'Claude Code at work on Vela: a design system audit, from exploring the screens to the report.',
           },
           {
             type: 'img',
