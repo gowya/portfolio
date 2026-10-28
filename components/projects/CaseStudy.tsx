@@ -77,7 +77,7 @@ function BlockRenderer({ block }: { block: Block }) {
 
     case 'img':
       return (
-        <figure className="my-8">
+        <figure className={block.portrait ? 'my-8 max-w-[280px] mx-auto' : 'my-8'}>
           <div className="relative rounded-xl overflow-hidden border border-border bg-bg-card">
             <Image
               src={block.src}

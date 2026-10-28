@@ -38,7 +38,7 @@ export type Block =
   | { type: 'p'; text: string }
   | { type: 'h3'; text: string }
   | { type: 'quote'; text: string; source?: string }
-  | { type: 'img'; src: string; caption?: string }
+  | { type: 'img'; src: string; caption?: string; portrait?: boolean }
   | { type: 'grid'; images: Array<{ src: string; caption?: string }> }
   | { type: 'list'; items: string[] }
   | { type: 'callout'; text: string }
