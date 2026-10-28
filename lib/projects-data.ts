@@ -142,7 +142,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     title: 'Phone Verif : sortir une app vibe-codée du look par défaut',
     tagline: "Le produit était déjà bon. Maintenant, il en a l'air.",
     description:
-      "Refonte du haut de page d'une API de vérification de numéro par WhatsApp, construite avec Lovable. Audit mesuré, deux passes de design, maquette codée et animée avec GSAP : 14 tailles de texte ramenées à 7, 36 couleurs ramenées à 8 tokens, un seul bouton principal.",
+      "Refonte du haut de page d'une API de vérification de numéro par WhatsApp, construite avec Lovable. Audit mesuré, deux versions, maquette codée et animée avec GSAP : 14 tailles de texte ramenées à 7, 36 couleurs ramenées à 8 tokens, un seul bouton principal.",
     coverImage: '/projects/phone-verif-v3.png',
     tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
@@ -158,7 +158,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: '4 → 2', label: "appels à l'action en haut de page" },
     ],
     intro:
-      "Phone Verif est une API de vérification de numéro de téléphone par WhatsApp : l'utilisateur envoie un message, le service reçoit son numéro prouvé. Pas de SMS, pas de code à taper. Un très bon produit, des chiffres mesurés en production, construit avec Lovable. Mais une page d'accueil avec le look par défaut des apps générées par IA. Pour un produit qui vend de la confiance, ça coûte cher. J'ai audité la page, puis refait le haut de page en deux passes, directement en code.",
+      "Phone Verif est une API de vérification de numéro de téléphone par WhatsApp : l'utilisateur envoie un message, le service reçoit son numéro prouvé. Pas de SMS, pas de code à taper. Un très bon produit, des chiffres mesurés en production, construit avec Lovable. Mais une page d'accueil avec le look par défaut des apps générées par IA. Pour un produit qui vend de la confiance, ça coûte cher. J'ai audité la page, puis refait le haut de page en deux versions, directement en code.",
     sections: [
       {
         title: "L'audit : mesurer avant de juger",
@@ -184,7 +184,7 @@ const PROJECTS_FR: ProjectDetail[] = [
         ],
       },
       {
-        title: 'Première passe : le reçu',
+        title: 'V1 : le reçu',
         blocks: [
           {
             type: 'p',
@@ -193,16 +193,16 @@ const PROJECTS_FR: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/phone-verif/v2.png',
-            caption: 'Première passe : le reçu de preuve, sur papier crème',
+            caption: 'V1 : le reçu de preuve sur papier crème. Propre, mais trop épuré',
           },
         ],
       },
       {
-        title: 'Deuxième passe : sortir du look IA « de bon goût »',
+        title: 'V2 : une vraie personnalité',
         blocks: [
           {
             type: 'p',
-            text: "En relisant cette première version trois semaines plus tard, j'ai vu le problème : elle avait quitté le look IA de 2024 pour celui de 2026. Papier crème, titre à moitié en italique, mono sur toutes les petites mentions, reçu perforé avec tampon penché, quatre chiffres en colonnes égales. C'est exactement ce que sort une IA quand on lui demande une page « éditoriale ».",
+            text: "La V1 était propre, mais trop épurée pour Erwann, le fondateur : il voulait une vraie personnalité pour son produit. En reprenant la page avec ce retour, j'ai mis le doigt sur ce qui la rendait anonyme : elle avait quitté le look IA de 2024 pour celui de 2026. Papier crème, titre à moitié en italique, mono sur toutes les petites mentions, reçu perforé avec tampon penché, quatre chiffres en colonnes égales. C'est exactement ce que sort une IA quand on lui demande une page « éditoriale ».",
           },
           {
             type: 'callout',
@@ -238,8 +238,10 @@ const PROJECTS_FR: ProjectDetail[] = [
             ],
           },
           {
-            type: 'img',
-            src: '/projects/phone-verif/scroll-v3.gif',
+            type: 'video',
+            src: '/projects/phone-verif/scroll-v3.mp4',
+            poster: '/projects/phone-verif/scroll-v3-poster.jpg',
+            autoplay: true,
             caption: "L'avant, puis la nouvelle version animée, du hero au témoignage",
           },
           {
@@ -250,7 +252,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       },
     ],
     learnings:
-      "L'IA code vite, et elle a désormais aussi un goût par défaut. Ce projet m'a appris à me méfier de ma propre première version : quand elle ressemble à ce qu'un outil sortirait seul, il faut une deuxième passe. Le reste tient toujours : un système minimal que l'IA pourra respecter aux prochains prompts, et des chiffres mesurés pour convaincre un fondateur.",
+      "L'IA code vite, et elle a désormais aussi un goût par défaut. Le retour d'Erwann me l'a rappelé : un produit a besoin d'une personnalité, au-delà d'une page propre. Quand une version ressemble à ce qu'un outil sortirait seul, il en faut une autre. Le reste tient toujours : un système minimal que l'IA pourra respecter aux prochains prompts, et des chiffres mesurés pour convaincre un fondateur.",
   },
 
   // ─── 1. Trial by Card ──────────────────────────────────────────────────────
@@ -1469,7 +1471,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     title: 'Phone Verif: taking a vibe-coded app out of the default look',
     tagline: 'The product was already good. Now it looks it.',
     description:
-      "Redesign of the top of the homepage for a WhatsApp phone verification API built with Lovable. Measured audit, two design passes, a coded mockup animated with GSAP: 14 font sizes down to 7, 36 colours down to 8 tokens, a single primary button.",
+      "Redesign of the top of the homepage for a WhatsApp phone verification API built with Lovable. Measured audit, two versions, a coded mockup animated with GSAP: 14 font sizes down to 7, 36 colours down to 8 tokens, a single primary button.",
     coverImage: '/projects/phone-verif-v3.png',
     tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
@@ -1485,7 +1487,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       { value: '4 → 2', label: 'calls to action above the fold' },
     ],
     intro:
-      "Phone Verif is a phone number verification API that works over WhatsApp: the user sends one message, the service receives their proven number. No SMS, no code to type. A really good product, with figures measured in production, built with Lovable. But a homepage with the default look of AI-generated apps. For a product that sells trust, that's expensive. I audited the page, then rebuilt the top of it in two passes, directly in code.",
+      "Phone Verif is a phone number verification API that works over WhatsApp: the user sends one message, the service receives their proven number. No SMS, no code to type. A really good product, with figures measured in production, built with Lovable. But a homepage with the default look of AI-generated apps. For a product that sells trust, that's expensive. I audited the page, then rebuilt the top of it in two versions, directly in code.",
     sections: [
       {
         title: 'The audit: measure before judging',
@@ -1511,7 +1513,7 @@ const PROJECTS_EN: ProjectDetail[] = [
         ],
       },
       {
-        title: 'First pass: the receipt',
+        title: 'V1: the receipt',
         blocks: [
           {
             type: 'p',
@@ -1520,16 +1522,16 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'img',
             src: '/projects/phone-verif/v2.png',
-            caption: 'First pass: the proof receipt, on cream paper',
+            caption: 'V1: the proof receipt on cream paper. Clean, but too plain',
           },
         ],
       },
       {
-        title: 'Second pass: out of the "tasteful" AI look',
+        title: 'V2: a real personality',
         blocks: [
           {
             type: 'p',
-            text: "Rereading that first version three weeks later, I saw the problem: it had left the 2024 AI look for the 2026 one. Cream paper, a half-italic headline, monospace on every small caption, a perforated receipt with a tilted stamp, four figures in equal columns. That is exactly what an AI produces when you ask it for an \"editorial\" page.",
+            text: "V1 was clean, but too plain for Erwann, the founder: he wanted his product to have a real personality. Reworking the page with that feedback, I put my finger on what made it anonymous: it had left the 2024 AI look for the 2026 one. Cream paper, a half-italic headline, monospace on every small caption, a perforated receipt with a tilted stamp, four figures in equal columns. That is exactly what an AI produces when you ask it for an \"editorial\" page.",
           },
           {
             type: 'callout',
@@ -1565,8 +1567,10 @@ const PROJECTS_EN: ProjectDetail[] = [
             ],
           },
           {
-            type: 'img',
-            src: '/projects/phone-verif/scroll-v3.gif',
+            type: 'video',
+            src: '/projects/phone-verif/scroll-v3.mp4',
+            poster: '/projects/phone-verif/scroll-v3-poster.jpg',
+            autoplay: true,
             caption: 'The before, then the new animated version, from hero to testimonial',
           },
           {
@@ -1577,7 +1581,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       },
     ],
     learnings:
-      "AI codes fast, and it now has a default taste too. This project taught me to distrust my own first version: when it looks like what a tool would produce on its own, it needs a second pass. The rest still holds: a minimal system the AI can respect in future prompts, and measured figures to convince a founder.",
+      "AI codes fast, and it now has a default taste too. Erwann's feedback reminded me: a product needs a personality, beyond a clean page. When a version looks like what a tool would produce on its own, it needs another one. The rest still holds: a minimal system the AI can respect in future prompts, and measured figures to convince a founder.",
   },
 
   // ─── 1. Trial by Card ──────────────────────────────────────────────────────

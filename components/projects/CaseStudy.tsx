@@ -103,7 +103,10 @@ function BlockRenderer({ block }: { block: Block }) {
             <video
               src={block.src}
               poster={block.poster}
-              controls
+              // autoplay : une démo en boucle, muette, comme un GIF. Sinon : un film avec ses contrôles.
+              {...(block.autoplay
+                ? { autoPlay: true, muted: true, loop: true }
+                : { controls: true })}
               playsInline
               preload="metadata"
               className="w-full h-auto block"
