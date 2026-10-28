@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Italiana, Space_Grotesk } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
@@ -92,6 +93,7 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
