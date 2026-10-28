@@ -248,6 +248,11 @@ const PROJECTS_FR: ProjectDetail[] = [
             type: 'p',
             text: "La maquette est livrée en HTML avec ses tokens, recettée en desktop, tablette et mobile. Avec le réglage « réduire les animations », rien ne bouge et tout s'affiche d'emblée.",
           },
+          {
+            type: 'link',
+            href: 'https://gaums-refonte-pv.vercel.app',
+            label: 'Voir la démo en ligne',
+          },
         ],
       },
     ],
@@ -1576,6 +1581,11 @@ const PROJECTS_EN: ProjectDetail[] = [
           {
             type: 'p',
             text: "The mockup is delivered as HTML with its tokens, QA'd on desktop, tablet and mobile. With the reduced-motion setting on, nothing moves and everything shows at once.",
+          },
+          {
+            type: 'link',
+            href: 'https://gaums-refonte-pv.vercel.app',
+            label: 'See the live demo',
           },
         ],
       },
