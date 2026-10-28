@@ -977,7 +977,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Refonte du haut de page d'une API de vérification de numéro par WhatsApp, construite avec Lovable. Audit mesuré, mini design system en tokens, maquette codée : 14 tailles de texte ramenées à 6, un seul bouton principal.",
     coverImage: '/projects/phone-verif.png',
-    tags: ['Product Design', 'Design System', 'Freelance'],
+    tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer • design & code',
@@ -1067,7 +1067,7 @@ const PROJECTS_FR: ProjectDetail[] = [
     description:
       "Un site d'invitation qui remplace le message WhatsApp, le sondage ou les 👍, et la liste de qui ramène quoi qu'on garde en tête. Les invités répondent en 10 secondes, voient qui vient, disent ce qu'ils ramènent et remplissent la playlist ; l'organisateur suit tout depuis une vue admin. L'objectif : créer l'effet wow avant même la fête.",
     coverImage: '/projects/rsvp-party.jpg',
-    tags: ['Product Design', 'Side project'],
+    tags: ['Side project'],
     caseStudyUrl: 'https://rsvp-party-demo.vercel.app',
     featured: false,
     role: 'Product Designer • design & code',
@@ -1081,7 +1081,7 @@ const PROJECTS_FR: ProjectDetail[] = [
       { value: 'MIT', label: 'repo public, en modèle réutilisable' },
     ],
     intro:
-      "Inviter, aujourd'hui, c'est un message dans un groupe WhatsApp, avec un sondage ou un 👍 / 👎 à mettre sous le message. Et pour savoir qui ramène quoi, on compte sur sa mémoire (sauf pour un mariage, mais c'est un autre sport). Ça marche, mais ça ne donne envie à personne. RSVP Party part d'une autre idée : l'invitation est le premier moment de la fête. L'objectif est de créer l'effet wow avant que les invités n'arrivent, pour qu'ils viennent à fond, en se disant : « si le site d'invitation c'est ça, ça va être quoi le jour J ? ». Le projet est né d'un vrai site, conçu pour les 18 ans d'une proche, puis je l'ai transformé en modèle open source, avec une démo sur un événement fictif : les 30 ans de Camille (rsvp-party-demo.vercel.app).",
+      "Inviter, aujourd'hui, c'est un message dans un groupe WhatsApp, avec un sondage ou un 👍 / 👎 à mettre sous le message. Et pour savoir qui ramène quoi, on compte sur sa mémoire (sauf pour un mariage, mais c'est un autre sport). Ça marche, mais ça ne donne envie à personne. RSVP Party part d'une autre idée : l'invitation est le premier moment de la fête. L'objectif est de créer l'effet wow avant que les invités n'arrivent, pour qu'ils viennent à fond, en se disant : « si le site d'invitation c'est ça, ça va être quoi le jour J ? ». Le projet est né d'un vrai site, conçu pour les 18 ans d'une proche, puis je l'ai transformé en modèle open source, avec une démo sur un événement fictif : les 30 ans de Camille.",
     sections: [
       {
         title: "Le problème : inviter, c'est devenu de la logistique",
@@ -1190,6 +1190,16 @@ const PROJECTS_FR: ProjectDetail[] = [
               "Baby shower et baptême : pronostics (date, prénom, poids), liste de naissance, et des mots pour l'enfant à ouvrir plus tard.",
               "Pour toutes les fêtes : des indices qui se débloquent avant le jour J, et après la fête, un mur de photos partagé pour que l'effet continue.",
             ],
+          },
+          {
+            type: 'link',
+            href: 'https://rsvp-party-demo.vercel.app',
+            label: 'Voir la démo en ligne',
+          },
+          {
+            type: 'link',
+            href: 'https://github.com/gowya/rsvp-party',
+            label: 'Voir le code sur GitHub',
           },
         ],
       },
@@ -2253,7 +2263,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "Redesign of the top of the homepage for a WhatsApp phone verification API built with Lovable. Measured audit, minimal token-based design system, coded mockup: 14 font sizes down to 6, a single primary button.",
     coverImage: '/projects/phone-verif.png',
-    tags: ['Product Design', 'Design System', 'Freelance'],
+    tags: ['Design System', 'Freelance'],
     caseStudyUrl: null,
     featured: false,
     role: 'Product Designer • design & code',
@@ -2343,7 +2353,7 @@ const PROJECTS_EN: ProjectDetail[] = [
     description:
       "An invitation site that replaces the WhatsApp message, the poll or the 👍 reactions, and the who-brings-what list you keep in your head. Guests reply in 10 seconds, see who's coming, say what they're bringing and fill the playlist; the host follows everything from an admin view. The goal: create the wow effect before the party even starts.",
     coverImage: '/projects/rsvp-party.jpg',
-    tags: ['Product Design', 'Side project'],
+    tags: ['Side project'],
     caseStudyUrl: 'https://rsvp-party-demo.vercel.app',
     featured: false,
     role: 'Product Designer • design & code',
@@ -2357,7 +2367,7 @@ const PROJECTS_EN: ProjectDetail[] = [
       { value: 'MIT', label: 'public repo, reusable template' },
     ],
     intro:
-      "Inviting people today means a message in a WhatsApp group, with a poll or a 👍 / 👎 to react with. And to know who brings what, you rely on your memory (weddings aside, that's a whole other sport). It works, but it excites no one. RSVP Party starts from another idea: the invitation is the first moment of the party. The goal is to create the wow effect before guests arrive, so they show up already hyped, thinking: \"if this is the invitation, what will the party be like?\" The project started as a real site, designed for a relative's 18th birthday, then I turned it into an open source template, with a demo for a fictional event: Camille's 30th (rsvp-party-demo.vercel.app).",
+      "Inviting people today means a message in a WhatsApp group, with a poll or a 👍 / 👎 to react with. And to know who brings what, you rely on your memory (weddings aside, that's a whole other sport). It works, but it excites no one. RSVP Party starts from another idea: the invitation is the first moment of the party. The goal is to create the wow effect before guests arrive, so they show up already hyped, thinking: \"if this is the invitation, what will the party be like?\" The project started as a real site, designed for a relative's 18th birthday, then I turned it into an open source template, with a demo for a fictional event: Camille's 30th.",
     sections: [
       {
         title: 'The problem: inviting has become logistics',
@@ -2466,6 +2476,16 @@ const PROJECTS_EN: ProjectDetail[] = [
               "Baby shower and christening: predictions (date, name, weight), a baby registry, and notes for the child to open later.",
               "For every party: clues that unlock before the day, and after the party, a shared photo wall so the effect keeps going.",
             ],
+          },
+          {
+            type: 'link',
+            href: 'https://rsvp-party-demo.vercel.app',
+            label: 'Try the live demo',
+          },
+          {
+            type: 'link',
+            href: 'https://github.com/gowya/rsvp-party',
+            label: 'See the code on GitHub',
           },
         ],
       },
