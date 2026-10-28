@@ -247,6 +247,20 @@ export default function CaseStudy({ slug }: { slug: string }) {
           {project.tagline}
         </p>
 
+        {/* Enveloppé : GSAP anime le bloc, la transition CSS du bouton ne se bat pas avec lui */}
+        {project.caseStudyUrl && (
+          <div className="mb-8">
+            <a
+              href={project.caseStudyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {t.caseStudy.liveDemo} ↗
+            </a>
+          </div>
+        )}
+
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted text-sm border-t border-border pt-6">
           <span>
             <span className="text-text/60 mr-1.5">{t.caseStudy.role}</span>

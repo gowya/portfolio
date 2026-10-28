@@ -89,6 +89,7 @@ const UI_FR = {
   },
   caseStudy: {
     back: 'Projets',
+    liveDemo: 'Voir la démo en ligne',
     role: 'Rôle',
     company: 'Entreprise',
     period: 'Période',
@@ -193,6 +194,7 @@ const UI_EN: UIStrings = {
   },
   caseStudy: {
     back: 'Work',
+    liveDemo: 'See the live demo',
     role: 'Role',
     company: 'Company',
     period: 'Period',
