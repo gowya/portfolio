@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import gsap from 'gsap'
 import { useLang } from '@/lib/i18n'
+import { BOOKING_URL } from '@/lib/links'
 
 type Theme = 'dark' | 'light'
 
@@ -217,7 +218,7 @@ export default function NavBar() {
             </button>
             <LangToggle />
             <a
-              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-bg bg-accent rounded-full hover:bg-accent-dim transition-colors"
@@ -319,7 +320,7 @@ export default function NavBar() {
           ))}
 
           <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}

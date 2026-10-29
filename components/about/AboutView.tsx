@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Timeline from '@/components/about/Timeline'
 import { useLang, getAbout } from '@/lib/i18n'
+import { BOOKING_URL } from '@/lib/links'
 
 export default function AboutView() {
   const { t, lang } = useLang()
@@ -38,7 +39,7 @@ export default function AboutView() {
 
             <div className="flex flex-col gap-3 mb-10">
               <a
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-fit"

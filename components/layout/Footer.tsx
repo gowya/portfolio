@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useLang } from '@/lib/i18n'
+import { BOOKING_URL } from '@/lib/links'
 
 export default function Footer() {
   const { t } = useLang()
@@ -24,7 +25,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted text-sm hover:text-text transition-colors"

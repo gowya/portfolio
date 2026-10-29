@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
 import { useLang } from '@/lib/i18n'
+import { BOOKING_URL } from '@/lib/links'
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -114,7 +115,7 @@ export default function Hero() {
               <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
-          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0c0YANfA-PSK7D6Lq8ZlTKa0X9DLWUhb7RpKVTlxFGiVGJg3c3fa4cm8d5c9yeSMrNk2jYJZt0" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost">
             {t.hero.ctaTalk}
           </a>
         </div>
