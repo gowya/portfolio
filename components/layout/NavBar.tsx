@@ -67,6 +67,7 @@ const NAV_ITEMS = [
   { href: '/', key: 'home' },
   { href: '/projects', key: 'work' },
   { href: '/about', key: 'about' },
+  { href: '/pricing', key: 'pricing' },
 ] as const
 
 function LangToggle() {
