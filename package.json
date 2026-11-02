@@ -11,7 +11,6 @@
     "smoke:prod": "node scripts/smoke-test.js https://portfolio-gilt-two-umm2k0jmsh.vercel.app"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.15",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "gsap": "^3.12.5",
