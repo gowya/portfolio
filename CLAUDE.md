@@ -9,7 +9,8 @@ Portfolio de Margaux Francillard (Product Designer, Design System Lead). Next.js
 ```
 app/          pages (App Router)
 components/   composants, rangés par page (home/, about/, projects/, pricing/) + layout/ et ui/
-lib/          i18n.ts (textes UI), projects-data.ts (contenu des projets), types.ts, animations GSAP, links.ts
+lib/          i18n.ts (textes UI), projects/ (une étude de cas par fichier), about-data.ts,
+              projects-data.ts (assemble le contenu + accesseurs), types.ts, animations GSAP, links.ts
 scripts/      smoke-test.js
 ```
 
@@ -42,7 +43,9 @@ Si une étape échoue, corrige ou dis-le clairement. Ne déclare jamais une tâc
 ## Contenu et i18n
 
 - **FR et EN toujours ensemble.** Un texte ajouté ou modifié en FR l'est aussi en EN dans le même commit, et inversement.
-- Textes d'interface : `lib/i18n.ts` (`UI_FR` / `UI_EN`). Contenu des projets : `lib/projects-data.ts` (`PROJECTS_FR` / `PROJECTS_EN`). Aucun texte visible en dur dans un composant.
+- Textes d'interface : `lib/i18n.ts` (`UI_FR` / `UI_EN`). Aucun texte visible en dur dans un composant.
+- Études de cas : un fichier par projet, `lib/projects/<slug>.ts`, avec `fr` et `en` côte à côte. L'ordre d'affichage se règle uniquement dans `lib/projects/index.ts`. Nouveau projet : nouveau fichier + une ligne dans l'index.
+- Page À propos : `lib/about-data.ts`. Ne pas remettre de contenu dans `lib/projects-data.ts`, qui ne fait qu'assembler.
 - Un projet = même `slug` et même `id` en FR et en EN. Le smoke test lit les slugs automatiquement, pas besoin de le modifier.
 - Liens externes (réservation, réseaux) : passer par `lib/links.ts`, jamais d'URL dupliquée.
 
@@ -61,7 +64,7 @@ Si une étape échoue, corrige ou dis-le clairement. Ne déclare jamais une tâc
 - **Pas de code mort.** Quand tu retires une fonctionnalité, supprime aussi le fichier, ses imports, ses dépendances, ses variables d'environnement et sa mention dans le README.
 - Ne documente dans le README que ce qui existe et fonctionne réellement.
 - Respecte `prefers-reduced-motion` pour toute nouvelle animation GSAP.
-- Fichier qui dépasse ~400 lignes (hors `projects-data.ts`) : propose un découpage avant d'en rajouter.
+- Fichier qui dépasse ~400 lignes : propose un découpage avant d'en rajouter.
 
 ## Git
 
