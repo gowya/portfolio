@@ -36,17 +36,11 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
       >
         {/* Content: sits above utility-injected overlay via DOM order */}
         <div className="relative z-10 flex flex-col flex-1">
-          <p
-            className="font-sans text-muted mb-4"
-            style={{ fontSize: '11px', letterSpacing: '0.08em', opacity: 0.5, textTransform: 'uppercase' }}
-          >
+          <p className="meta opacity-60 mb-4">
             {project.tags.slice(0, 3).join(' · ')}
           </p>
 
-          <h3
-            className="font-sans font-bold text-text leading-tight mb-3"
-            style={{ fontSize: isHero ? 'clamp(1.4rem, 2.5vw, 1.9rem)' : 'clamp(1.1rem, 1.8vw, 1.4rem)' }}
-          >
+          <h3 className={`font-sans font-bold text-text leading-tight mb-3 ${isHero ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'}`}>
             {project.title}
           </h3>
 
@@ -55,7 +49,7 @@ function ProjectCard({ project, isHero }: { project: Project; isHero: boolean })
           </p>
 
           <div className="mt-auto pt-5">
-            <span data-card-cta className="inline-flex items-center gap-1" style={{ fontSize: '13px', color: 'var(--accent)' }}>
+            <span data-card-cta className="inline-flex items-center gap-1 text-sm text-accent">
               {t.featured.viewCase}
             </span>
           </div>
