@@ -9,6 +9,7 @@ const PAGES = [
   '/',
   '/projects',
   '/about',
+  '/pricing',
   '/design-system',
   '/projects/parcours-upgrade',
   '/projects/trial-by-card',
