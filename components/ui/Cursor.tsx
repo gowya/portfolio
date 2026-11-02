@@ -5,6 +5,9 @@ import gsap from 'gsap'
 
 const HOVERABLE = 'a, button, [role="button"]'
 
+// GSAP needs a resolved colour: read the accent token at call time so it follows the theme
+const accent = () => `rgb(${getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim()})`
+
 export default function Cursor() {
   const elRef = useRef<HTMLDivElement>(null)
 
@@ -73,7 +76,7 @@ export default function Cursor() {
         width: 40, height: 40,
         opacity: 0.3,
         backgroundColor: 'transparent',
-        boxShadow: '0 0 0 1.5px #B85C2A',
+        boxShadow: `0 0 0 1.5px ${accent()}`,
         scaleX: 1, scaleY: 1, rotation: 0,
         duration: 0.25, ease: 'power2.out',
         overwrite: 'auto',
@@ -86,10 +89,12 @@ export default function Cursor() {
       gsap.to(el, {
         width: 10, height: 10,
         opacity: 1,
-        backgroundColor: '#B85C2A',
+        backgroundColor: accent(),
         boxShadow: '0 0 0 0px transparent',
         duration: 0.3, ease: 'power2.out',
         overwrite: 'auto',
+        // Hand the colour back to the bg-accent class so theme changes apply
+        clearProps: 'backgroundColor,boxShadow',
       })
     }
 
@@ -108,8 +113,8 @@ export default function Cursor() {
   return (
     <div
       ref={elRef}
-      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block"
-      style={{ width: 10, height: 10, borderRadius: '50%', backgroundColor: '#B85C2A' }}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block bg-accent"
+      style={{ width: 10, height: 10, borderRadius: '50%' }}
     />
   )
 }

@@ -10,14 +10,7 @@ export default function ProjectsView() {
   return (
     <div className="min-h-screen pb-20">
       <header
-        className="relative pt-40 pb-20 px-6"
-        style={{
-          backgroundImage: [
-            'radial-gradient(ellipse 80% 35% at 50% 0%, rgba(160,80,20,0.18) 0%, transparent 60%)',
-            'var(--hero-reed-stripes)',
-          ].join(', '),
-          backgroundSize: '100% 100%, 6px 100%',
-        }}
+        className="relative page-header-bg pt-40 pb-20 px-6"
       >
         <div className="max-w-6xl mx-auto">
           <p className="section-label mb-4">{t.projectsPage.label}</p>

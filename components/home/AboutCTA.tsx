@@ -36,8 +36,7 @@ export default function AboutCTA() {
         <div className="about-cta-inner relative rounded-2xl border border-border bg-bg-card overflow-hidden flex items-stretch">
           {/* Accent glow */}
           <div
-            className="absolute -top-32 -left-32 w-64 h-64 rounded-full pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(184,92,42,0.12) 0%, transparent 70%)' }}
+            className="glow-accent absolute -top-32 -left-32 w-64 h-64 rounded-full pointer-events-none"
           />
 
           {/* Left: text content: 60% */}
@@ -53,15 +52,7 @@ export default function AboutCTA() {
               {t.aboutCta.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="font-sans"
-                  style={{
-                    fontSize: '12px',
-                    color: '#B85C2A',
-                    border: '1px solid rgba(184,92,42,0.3)',
-                    borderRadius: '4px',
-                    padding: '3px 10px',
-                    letterSpacing: '0.02em',
-                  }}
+                  className="font-sans text-xs tracking-wide text-accent border border-accent/30 rounded px-2.5 py-0.5"
                 >
                   {skill}
                 </span>
@@ -85,8 +76,7 @@ export default function AboutCTA() {
               className="object-cover object-top"
             />
             <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: 'rgba(184,92,42,0.08)', mixBlendMode: 'multiply' }}
+              className="absolute inset-0 pointer-events-none bg-accent/10 mix-blend-multiply"
             />
           </div>
         </div>

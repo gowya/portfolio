@@ -68,3 +68,6 @@ export interface ProjectDetail extends Project {
   sections: CaseStudySection[]
   learnings: string
 }
+
+// One case study in both languages: same slug and id in fr and en.
+export type LocalizedProject = Record<Lang, ProjectDetail>

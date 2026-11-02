@@ -203,4 +203,17 @@
   .meta {
     @apply text-xs tracking-[0.08em] uppercase text-muted;
   }
+
+  /* Soft accent glow blob (AboutCTA corner) */
+  .glow-accent {
+    background: radial-gradient(circle, rgb(var(--color-accent) / 0.12) 0%, transparent 70%);
+  }
+
+  /* Page header background: warm top glow + reed stripes (Projects, Pricing) */
+  .page-header-bg {
+    background-image:
+      radial-gradient(ellipse 80% 35% at 50% 0%, rgb(var(--color-accent-dim) / 0.18) 0%, transparent 60%),
+      var(--hero-reed-stripes);
+    background-size: 100% 100%, 6px 100%;
+  }
 }

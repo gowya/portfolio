@@ -4,24 +4,25 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
 import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
+import { useLang, getFeaturedProjects } from '@/lib/i18n'
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 // Swatches are driven by live CSS variables so they stay accurate AND adapt to
 // the active theme (dark/light). The "value" shown is the token reference: the
 // resolved hex differs per theme, so quoting a fixed hex would be wrong in one of them.
-const COLORS: { token: string; css: string; group: string; isBorder?: boolean }[] = [
-  { token: 'bg',         css: '--color-bg',         group: 'Background' },
-  { token: 'bg-subtle',  css: '--color-bg-subtle',  group: 'Background' },
-  { token: 'bg-card',    css: '--color-bg-card',    group: 'Background' },
-  { token: 'surface',    css: '--color-surface',    group: 'Background' },
-  { token: 'text',       css: '--color-text',       group: 'Text' },
-  { token: 'muted',      css: '--color-muted',      group: 'Text' },
-  { token: 'accent',     css: '--color-accent',     group: 'Accent' },
-  { token: 'accent-dim', css: '--color-accent-dim', group: 'Accent' },
-  { token: 'ember',      css: '--color-ember',      group: 'Accent' },
-  { token: 'sienna',     css: '--color-sienna',     group: 'Accent' },
-  { token: 'border',     css: '--color-border',     group: 'Border', isBorder: true },
+const COLORS: { token: string; css: string; group: string; swatch: string; isBorder?: boolean }[] = [
+  { token: 'bg',         css: '--color-bg',         group: 'Background', swatch: 'bg-bg' },
+  { token: 'bg-subtle',  css: '--color-bg-subtle',  group: 'Background', swatch: 'bg-bg-subtle' },
+  { token: 'bg-card',    css: '--color-bg-card',    group: 'Background', swatch: 'bg-bg-card' },
+  { token: 'surface',    css: '--color-surface',    group: 'Background', swatch: 'bg-surface' },
+  { token: 'text',       css: '--color-text',       group: 'Text', swatch: 'bg-text' },
+  { token: 'muted',      css: '--color-muted',      group: 'Text', swatch: 'bg-muted' },
+  { token: 'accent',     css: '--color-accent',     group: 'Accent', swatch: 'bg-accent' },
+  { token: 'accent-dim', css: '--color-accent-dim', group: 'Accent', swatch: 'bg-accent-dim' },
+  { token: 'ember',      css: '--color-ember',      group: 'Accent', swatch: 'bg-ember' },
+  { token: 'sienna',     css: '--color-sienna',     group: 'Accent', swatch: 'bg-sienna' },
+  { token: 'border',     css: '--color-border',     group: 'Border', swatch: 'border-border', isBorder: true },
 ]
 
 const RADII = [
@@ -33,7 +34,9 @@ const RADII = [
 
 // Type example colors use the live theme tokens (var(--text), var(--muted), var(--accent))
 // so the specimens render exactly as they do on the site, in either theme.
-const TYPE_SCALE: { name: string; spec: string; text: string; style: React.CSSProperties }[] = [
+type TypeRow = { name: string; spec: string; text: string; style?: React.CSSProperties; className?: string }
+
+const TYPE_SCALE: TypeRow[] = [
   { name: 'Display/Hero',  spec: 'Italiana · clamp(2.5rem,5vw,4rem)',   text: 'Product & System Designer',                style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: 'var(--text)', lineHeight: 1.1 } },
   { name: 'Display/Title', spec: 'Italiana · clamp(1.5rem,3vw,2.5rem)', text: 'Projets récents',                          style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.3rem,2.5vw,2rem)',   color: 'var(--text)', lineHeight: 1.15 } },
   { name: 'Body/Large',    spec: 'Inter 400 · 18px',                    text: 'Je conçois des interfaces qui convertissent', style: { fontFamily: 'var(--font-sans)', fontSize: '18px', fontWeight: 400, color: 'var(--text)' } },
@@ -81,7 +84,7 @@ function CellTitle({ children }: { children: React.ReactNode }) {
 
 // ─── Live card ────────────────────────────────────────────────────────────────
 
-function LiveCard() {
+function LiveCard({ tags, title, description, cta }: { tags: string; title: string; description: string; cta: string }) {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (!ref.current) return
@@ -94,18 +97,16 @@ function LiveCard() {
       style={{ background: 'var(--bg-card)', border: '0.5px solid var(--border)', borderRadius: '12px', padding: '20px', minHeight: '160px', willChange: 'transform' }}
     >
       <div className="relative z-10 flex flex-col flex-1">
-        <p style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', opacity: 0.7, marginBottom: '10px' }}>
-          Product Design · Conversion
-        </p>
+        <p className="meta opacity-60 mb-2.5">{tags}</p>
         <h3 style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.25, marginBottom: '8px', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-          Pousser l&apos;achat au bon moment
+          {title}
         </h3>
-        <p style={{ fontSize: '12px', color: 'var(--muted)', lineHeight: 1.55 }}>
-          Refonte du parcours upgrade pour déclencher la conversion.
+        <p className="line-clamp-2" style={{ fontSize: '12px', color: 'var(--muted)', lineHeight: 1.55 }}>
+          {description}
         </p>
         <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
           <span data-card-cta style={{ fontSize: '12px', color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-            Voir le case study →
+            {cta}
           </span>
         </div>
       </div>
@@ -117,6 +118,18 @@ function LiveCard() {
 
 export default function DesignSystemPage() {
   const gridRef = useRef<HTMLDivElement>(null)
+  const { t, lang } = useLang()
+  const featured = getFeaturedProjects(lang)[0]
+  const cardTags = featured?.tags.slice(0, 3).join(' · ') ?? ''
+
+  // Reusable text styles rendered with their real class, fed with live site copy,
+  // so the specimen can never drift from production.
+  const typeRows: TypeRow[] = [
+    ...TYPE_SCALE.slice(0, 2),
+    { name: 'Lead', spec: '.lead · Inter 400 · 18px → 20px (md) · muted', text: t.hero.sub, className: 'lead' },
+    ...TYPE_SCALE.slice(2),
+    { name: 'Meta', spec: '.meta · Inter 400 · 12px · uppercase · ls 0.08em · muted', text: cardTags, className: 'meta' },
+  ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -144,6 +157,7 @@ export default function DesignSystemPage() {
         .cell-radius     { grid-column: 9 / span 4;  grid-row: 5 / span 2; }
         .cell-cards      { grid-column: 1 / span 6;  grid-row: 7 / span 3; }
         .cell-nav        { grid-column: 7 / span 6;  grid-row: 7 / span 3; }
+        .cell-effects    { grid-column: 1 / span 12; grid-row: 10 / span 1; }
 
         /* ── Typography inner table ────────────────────────────── */
         .typo-row {
@@ -152,9 +166,6 @@ export default function DesignSystemPage() {
           gap: 16px;
           align-items: center;
           padding: 14px 0;
-        }
-        .typo-row + .typo-row {
-          border-top: 1px solid rgb(var(--color-border) / 0.3);
         }
 
         /* ── Colors inner grid ─────────────────────────────────── */
@@ -176,7 +187,8 @@ export default function DesignSystemPage() {
           .cell-badge,
           .cell-radius,
           .cell-cards,
-          .cell-nav {
+          .cell-nav,
+          .cell-effects {
             grid-column: 1 / -1;
             grid-row: auto;
           }
@@ -201,7 +213,7 @@ export default function DesignSystemPage() {
           <h1 style={{ fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(2.2rem,5vw,4rem)', color: 'var(--text)', lineHeight: 1 }}>
             Design System
           </h1>
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)', border: '1px solid rgb(var(--color-accent) / 0.3)', borderRadius: '999px', padding: '3px 10px', whiteSpace: 'nowrap' }}>
+          <span className="text-accent border border-accent/30" style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '999px', padding: '3px 10px', whiteSpace: 'nowrap' }}>
             internal use only
           </span>
         </div>
@@ -222,18 +234,14 @@ export default function DesignSystemPage() {
             <CellLabel>Core</CellLabel>
             <CellTitle>Colors</CellTitle>
             <div className="colors-grid">
-              {COLORS.map(({ token, css, group, isBorder }) => (
+              {COLORS.map(({ token, css, group, swatch, isBorder }) => (
                 <div key={token}>
-                  {/* swatch renders the live CSS variable → always accurate + theme-aware */}
-                  <div style={{
-                    height: '60px',
-                    borderRadius: '8px',
-                    background: isBorder ? 'transparent' : `rgb(var(${css}))`,
-                    border: isBorder
-                      ? `3px solid rgb(var(${css}))`
-                      : '1px solid rgb(var(--color-border))',
-                    marginBottom: '8px',
-                  }} />
+                  {/* swatch uses the Tailwind token class → always accurate + theme-aware.
+                      border-[3px]: thicker than border-2 so the border token reads as a colour */}
+                  <div
+                    className={isBorder ? `border-[3px] ${swatch}` : `border border-border ${swatch}`}
+                    style={{ height: '60px', borderRadius: '8px', marginBottom: '8px' }}
+                  />
                   <p style={{ ...MONO, color: 'var(--text)', fontSize: '10px', marginBottom: '2px', lineHeight: 1.4 }}>{group}/{token}</p>
                   <p style={{ ...MONO, fontSize: '9px' }}>{css}</p>
                 </div>
@@ -259,12 +267,12 @@ export default function DesignSystemPage() {
           <div className="bento-cell cell-typography" style={CELL_BASE}>
             <CellLabel>Core</CellLabel>
             <CellTitle>Typography</CellTitle>
-            <div>
-              {TYPE_SCALE.map(({ name, spec, text, style: typoStyle }) => (
+            <div className="divide-y divide-border/30">
+              {typeRows.map(({ name, spec, text, style: typoStyle, className }) => (
                 <div key={name} className="typo-row">
                   <p className="typo-name" style={{ ...MONO, color: 'var(--muted)' }}>{name}</p>
                   <p className="typo-spec" style={MONO}>{spec}</p>
-                  <p style={typoStyle}>{text}</p>
+                  <p className={className} style={typoStyle}>{text}</p>
                 </div>
               ))}
             </div>
@@ -306,7 +314,7 @@ export default function DesignSystemPage() {
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', alignItems: 'center' }}>
               {TAGS.slice(0, 2).map(t => (
-                <span key={t} className="tag" style={{ borderColor: 'rgb(var(--color-accent) / 0.5)', color: 'var(--accent)' }}>{t}</span>
+                <span key={t} className="tag border-accent/50 text-accent">{t}</span>
               ))}
               <span style={{ ...MONO, fontSize: '10px' }}>← active</span>
             </div>
@@ -316,12 +324,12 @@ export default function DesignSystemPage() {
           <div className="bento-cell cell-badge" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Badge</CellTitle>
-            {/* Mirrors the live hero badge exactly: accent dot, muted/70 text, border-border/50 */}
-            <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
+            {/* Same classes as the live hero badge (components/home/Hero.tsx) */}
+            <span className="section-label tracking-[0.12em] sm:tracking-[0.2em] inline-flex items-center gap-2 border border-border/50 rounded-full px-3 py-1.5">
               <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
-              Montpellier &amp; Remote
+              {t.hero.badge}
             </span>
-            <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>Accent dot · pulse · 0.6rem uppercase · ls 0.22em · pill border</p>
+            <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>.section-label · accent dot · pulse · pill border</p>
           </div>
 
           {/* ── RADIUS: 4×2 ─────────────────────────────────────────────── */}
@@ -331,12 +339,10 @@ export default function DesignSystemPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {RADII.map(({ name, value, note }) => (
                 <div key={name} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{
-                    width: '40px', height: '40px', flexShrink: 0,
-                    background: 'rgb(var(--color-surface) / 0.5)',
-                    border: '1px solid rgb(var(--color-accent) / 0.4)',
-                    borderRadius: value,
-                  }} />
+                  <div
+                    className="bg-surface/50 border border-accent/40"
+                    style={{ width: '40px', height: '40px', flexShrink: 0, borderRadius: value }}
+                  />
                   <div>
                     <p style={{ ...MONO, color: 'var(--text)', fontSize: '11px', marginBottom: '2px' }}>{name} · {value}</p>
                     <p style={{ ...MONO, fontSize: '10px' }}>{note}</p>
@@ -353,7 +359,12 @@ export default function DesignSystemPage() {
             <p style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: 'var(--font-sans)', marginBottom: '20px', lineHeight: 1.5 }}>
               Hover to preview: reed overlay · 3D tilt · amber border · title shift · CTA slide
             </p>
-            <LiveCard />
+            <LiveCard
+              tags={cardTags}
+              title={featured?.title ?? ''}
+              description={featured?.description ?? ''}
+              cta={t.featured.viewCase}
+            />
           </div>
 
           {/* ── NAVIGATION: 6×3 ─────────────────────────────────────────── */}
@@ -362,11 +373,11 @@ export default function DesignSystemPage() {
             <CellTitle>Navigation</CellTitle>
 
             {/* Navbar mockup */}
-            <div className="nav-mockup" style={{ background: 'rgb(var(--color-bg) / 0.7)', backdropFilter: 'blur(20px)', borderRadius: '12px', border: '1px solid var(--border)', padding: '10px 16px', marginBottom: '28px', gap: '8px' }}>
+            <div className="nav-mockup bg-bg/70" style={{ backdropFilter: 'blur(20px)', borderRadius: '12px', border: '1px solid var(--border)', padding: '10px 16px', marginBottom: '28px', gap: '8px' }}>
               <span style={{ fontWeight: 700, fontSize: '14px', color: 'var(--text)', letterSpacing: '-0.02em', fontFamily: 'var(--font-sans)', flexShrink: 0 }}>MF</span>
               <div className="nav-mockup-links">
                 {['Accueil', 'Mes projets', 'Qui je suis'].map((l, i) => (
-                  <span key={l} style={{ padding: '5px 12px', fontSize: '13px', borderRadius: '999px', color: i === 0 ? 'var(--text)' : 'var(--muted)', background: i === 0 ? 'rgb(var(--color-surface) / 0.5)' : 'transparent', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
+                  <span key={l} className={i === 0 ? 'bg-surface/50' : undefined} style={{ padding: '5px 12px', fontSize: '13px', borderRadius: '999px', color: i === 0 ? 'var(--text)' : 'var(--muted)', fontFamily: 'var(--font-sans)', whiteSpace: 'nowrap' }}>
                     {l}
                   </span>
                 ))}
@@ -403,12 +414,12 @@ export default function DesignSystemPage() {
             <p style={{ ...MONO, marginBottom: '12px' }}>Link states</p>
             <div style={{ display: 'flex', gap: '12px', marginBottom: '24px', flexWrap: 'wrap' }}>
               {[
-                { label: 'Default', color: 'var(--muted)',  bg: 'transparent' },
-                { label: 'Hover',   color: 'var(--text)',   bg: 'transparent' },
-                { label: 'Active',  color: 'var(--text)',   bg: 'rgb(var(--color-surface) / 0.5)' },
+                { label: 'Default', color: 'var(--muted)',  bg: '' },
+                { label: 'Hover',   color: 'var(--text)',   bg: '' },
+                { label: 'Active',  color: 'var(--text)',   bg: 'bg-surface/50' },
               ].map(({ label, color, bg }) => (
                 <div key={label}>
-                  <div style={{ padding: '5px 12px', borderRadius: '999px', background: bg, marginBottom: '6px', display: 'inline-block' }}>
+                  <div className={bg || undefined} style={{ padding: '5px 12px', borderRadius: '999px', marginBottom: '6px', display: 'inline-block' }}>
                     <span style={{ fontSize: '13px', color, fontFamily: 'var(--font-sans)' }}>Accueil</span>
                   </div>
                   <p style={MONO}>{label}</p>
@@ -424,7 +435,7 @@ export default function DesignSystemPage() {
                 { label: 'Hover',   color: 'var(--accent)' },
               ].map(({ label, color }) => (
                 <div key={label}>
-                  <div style={{ padding: '6px', borderRadius: '50%', background: 'rgb(var(--color-surface) / 0.3)', marginBottom: '6px', display: 'inline-flex', color }}>
+                  <div className="bg-surface/30" style={{ padding: '6px', borderRadius: '50%', marginBottom: '6px', display: 'inline-flex', color }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M10 4.5V18C10 19.08 9.56 20.07 8.86 20.79L8.82 20.83C8.54 21.08 8.24 21.34 7.9 21.54 7.55 21.68 7.22 21.81 6.83 21.94 6.41 22 6 22 5.73 22 5.46 21.97 5.2 21.92 4.94 21.86 4.65 21.77 4.35 21.65 4.06 21.51 3.79 21.35 3.54 21.16L3.53 21.15C3.4 21.05 3.17 20.83 2.95 20.59 2.65 20.21 2.35 19.66 2.18 19.19 2.03 18.54 2 18.27 2 18V4.5C2 3 3 2 4.5 2H7.5C9 2 10 3 10 4.5Z" />
                       <path d="M22 16.5V19.5C22 21 21 22 19.5 22H6C6.83 21.94 7.55 21.68 8.54 21.08L8.86 20.79 15.66 14H19.5C21 14 22 15 22 16.5Z" />
@@ -435,6 +446,24 @@ export default function DesignSystemPage() {
                   <p style={MONO}>{label}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* ── EFFECTS: 12×1 ───────────────────────────────────────────── */}
+          <div className="bento-cell cell-effects" style={CELL_BASE}>
+            <CellLabel>Core</CellLabel>
+            <CellTitle>Effects</CellTitle>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <div className="page-header-bg h-28 rounded-lg border border-border" />
+                <p style={{ ...MONO, marginTop: '8px' }}>.page-header-bg · accent-dim glow + reed stripes · headers Projects, Pricing</p>
+              </div>
+              <div>
+                <div className="relative h-28 rounded-lg border border-border overflow-hidden">
+                  <div className="glow-accent absolute -top-16 -left-16 w-48 h-48 rounded-full" />
+                </div>
+                <p style={{ ...MONO, marginTop: '8px' }}>.glow-accent · radial accent 12% · About CTA</p>
+              </div>
             </div>
           </div>
 

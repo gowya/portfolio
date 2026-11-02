@@ -1,4 +1,4 @@
-# Portfolio — Margaux Francillard, Product Designer
+# Portfolio de Margaux Francillard, Product Designer
 
 [▶ gaumsportfolio.vercel.app](https://gaumsportfolio.vercel.app)
 
@@ -11,8 +11,9 @@ Mon portfolio, conçu dans Figma puis codé par mes soins. Il présente mes étu
 - **Design system documenté** : page [`/design-system`](https://gaumsportfolio.vercel.app/design-system) qui expose les tokens et les composants utilisés sur le site
 - **Bilingue FR/EN** : i18n maison, sans dépendance (`lib/i18n.ts`)
 - **Animations** : GSAP, effets de tilt et de survol sur les cartes (`lib/tiltEffect.ts`, `lib/cardHoverAnimation.ts`)
-- **Contenu** : études de cas typées (`lib/projects-data.ts`), avec une intégration Notion possible (`lib/notion.ts`)
-- **Fiabilité** : smoke test qui vérifie que chaque page publique répond (`npm run smoke`)
+- **Contenu** : une étude de cas par fichier, FR et EN côte à côte, typées (`lib/projects/`)
+- **Fiabilité** : lint et typage stricts (`npm run check`), smoke test qui vérifie que chaque page publique répond, projets inclus automatiquement (`npm run smoke`)
+- **Travail avec l'IA** : règles projet pour Claude Code dans [`CLAUDE.md`](CLAUDE.md)
 
 ## Stack
 
@@ -22,6 +23,5 @@ Next.js 14 (App Router) · TypeScript · Tailwind CSS · GSAP · Vercel
 
 ```bash
 npm install
-cp .env.local.example .env.local   # optionnel : clés Notion
 npm run dev
 ```

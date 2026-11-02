@@ -3,28 +3,40 @@
 // Usage:  node scripts/smoke-test.js [BASE_URL]
 // Exit 0: all pages OK.  Exit 1: one or more failures (CI-friendly).
 
+const fs = require('node:fs')
+const path = require('node:path')
+
 const BASE_URL = process.argv[2] ?? 'http://localhost:3000'
 
-const PAGES = [
-  '/',
-  '/projects',
-  '/about',
-  '/pricing',
-  '/design-system',
-  '/projects/parcours-upgrade',
-  '/projects/trial-by-card',
-  '/projects/csv-import',
-  '/projects/campaign-manager',
-  '/projects/ajout-de-lia',
-  '/projects/design-system',
-  '/projects/saas-recrutement',
-  '/projects/vela',
-]
+const STATIC_PAGES = ['/', '/projects', '/about', '/pricing', '/design-system']
+
+// Project pages are read from lib/projects/ (one file per case study) so the list
+// can never drift from the content. The first slug of each file is the FR one;
+// EN reuses the same slug.
+function readProjectSlugs() {
+  const dir = path.join(__dirname, '..', 'lib', 'projects')
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.ts') && f !== 'index.ts')
+  const slugs = files.map((f) => {
+    const match = fs.readFileSync(path.join(dir, f), 'utf8').match(/slug:\s*'([^']+)'/)
+    if (!match) {
+      console.error(`✗ No slug found in lib/projects/${f}`)
+      process.exit(1)
+    }
+    return match[1]
+  })
+  if (slugs.length === 0) {
+    console.error('✗ No case study found in lib/projects/')
+    process.exit(1)
+  }
+  return slugs
+}
+
+const PAGES = [...STATIC_PAGES, ...readProjectSlugs().map((slug) => `/projects/${slug}`)]
 
 const TIMEOUT_MS = 10_000
 
-async function checkPage(path) {
-  const url = BASE_URL + path
+async function checkPage(pagePath) {
+  const url = BASE_URL + pagePath
   const start = Date.now()
   try {
     const res = await fetch(url, {
@@ -36,12 +48,12 @@ async function checkPage(path) {
     const ok = res.status === 200
     const icon = ok ? '✓' : '✗'
     const status = ok ? '' : ` (HTTP ${res.status})`
-    console.log(`  ${icon} ${path.padEnd(40)} ${ms}ms${status}`)
+    console.log(`  ${icon} ${pagePath.padEnd(40)} ${ms}ms${status}`)
     return ok
   } catch (err) {
     const ms = Date.now() - start
     const reason = err.name === 'TimeoutError' ? `timeout after ${TIMEOUT_MS}ms` : err.message
-    console.log(`  ✗ ${path.padEnd(40)} ${ms}ms  ERROR: ${reason}`)
+    console.log(`  ✗ ${pagePath.padEnd(40)} ${ms}ms  ERROR: ${reason}`)
     return false
   }
 }
