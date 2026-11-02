@@ -65,10 +65,19 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto w-full">
+      {/* Bottom fade: blends the hero photo into the page background */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-64 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--bg) 45%, transparent) 45%, color-mix(in srgb, var(--bg) 85%, transparent) 75%, var(--bg) 100%)',
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto w-full">
         {/* Badge */}
         <div className="hero-badge mb-10">
-          <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
+          <span className="section-label tracking-[0.12em] sm:tracking-[0.2em] inline-flex items-center gap-2 border border-border/50 rounded-full px-3 py-1.5">
             <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
             {t.hero.badge}
           </span>
@@ -103,7 +112,7 @@ export default function Hero() {
         </h1>
 
         {/* Sub */}
-        <p className="hero-sub max-w-lg text-muted text-[0.9rem] leading-relaxed mb-10 text-balance">
+        <p className="hero-sub lead max-w-2xl mb-10 text-balance">
           {t.hero.sub}
         </p>
 
@@ -120,20 +129,33 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats: 2 cols on mobile, 3 on md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-3 border-t border-border pt-10 gap-0">
-          <div className="hero-stat pr-4 sm:pr-8 border-r border-border">
-            <div className="font-sans font-black italic text-[1.5rem] sm:text-5xl md:text-6xl text-accent leading-none mb-2">{t.hero.stats[0].value}</div>
-            <div className="text-muted text-[9px] sm:text-[0.65rem] tracking-[0.12em] sm:tracking-[0.2em] uppercase">{t.hero.stats[0].label}</div>
-          </div>
-          <div className="hero-stat pl-4 sm:px-8 md:border-r border-border">
-            <div className="font-sans font-black italic text-[1.5rem] sm:text-5xl md:text-6xl text-accent leading-none mb-2">{t.hero.stats[1].value}</div>
-            <div className="text-muted text-[9px] sm:text-[0.65rem] tracking-[0.12em] sm:tracking-[0.2em] uppercase">{t.hero.stats[1].label}</div>
-          </div>
-          <div className="hero-stat hidden md:block pl-8">
-            <div className="font-sans font-black italic text-5xl md:text-6xl text-text/30 leading-none mb-2">{t.hero.stats[2].value}</div>
-            <div className="text-muted text-[0.65rem] tracking-[0.2em] uppercase">{t.hero.stats[2].label}</div>
-          </div>
+        {/* How I deliver • design → pull request → dev review, then the entry offer */}
+        <div className="border-t border-border pt-8">
+          <p className="hero-stat section-label mb-3">{t.hero.stepsLabel}</p>
+          <p className="hero-stat text-base font-medium text-text mb-6">{t.hero.stepsIntro}</p>
+          <ol className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-0 mb-8">
+            {t.pricing.steps.map((step, i) => (
+              <li
+                key={step.title}
+                className={`hero-stat flex items-baseline gap-3 lg:px-6 lg:first:pl-0 ${i < 2 ? 'lg:border-r border-border' : ''}`}
+              >
+                <span className="w-8 shrink-0 font-sans font-black italic text-accent text-xl leading-none tabular-nums">0{i + 1}</span>
+                <div>
+                  <p className="text-base text-text">{step.title}</p>
+                  <p className="text-sm text-muted">{step.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <Link
+            href="/pricing"
+            className="hero-stat group inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted hover:text-text transition-colors"
+          >
+            <span>{t.hero.entry}</span>
+            <span className="text-accent underline underline-offset-4 decoration-accent/40 group-hover:decoration-accent">
+              {t.hero.entryCta} →
+            </span>
+          </Link>
         </div>
       </div>
     </section>

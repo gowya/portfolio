@@ -46,7 +46,7 @@ export default function AboutCTA() {
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-text leading-tight mb-4 text-balance">
               {t.aboutCta.title}
             </h2>
-            <p className="mb-5" style={{ fontSize: '14px', color: 'var(--muted)', lineHeight: 1.6 }}>
+            <p className="mb-5 text-sm text-muted leading-relaxed">
               {t.aboutCta.subtitle}
             </p>
             <div className="flex flex-wrap gap-2 mb-8">

@@ -46,17 +46,14 @@ const UI_FR = {
     headlineRole: 'Designer',
     headlineTag: '• qui Vibecode',
     aria: 'Product & System Designer qui vibecode',
-    sub: 'Je conçois des interfaces qui convertissent et des design systems qui tiennent dans la durée. 3,5 ans chez Waalaxy, freelance depuis.',
+    sub: 'Votre produit a des clients, il lui manque une designer. Je repense vos parcours clés et je les livre directement dans votre code. Ex\u2011Lead Design System chez Waalaxy.',
+    ctaTalk: 'Réserver un appel',
     ctaProjects: 'Voir mes projets',
-    ctaTalk: 'On en parle ?',
-    stats: [
-      { value: '×2,5', label: 'sur les abonnements Business' },
-      { value: '83,5%', label: 'de réussite au 1er essai' },
-      { value: '1', label: 'chien en télétravail' },
-    ],
+    stepsLabel: 'Comment je livre',
+    stepsIntro: 'Pas de maquette à recoder : chaque parcours arrive dans votre code, relu par votre équipe.',
+    entry: 'Pour commencer : le Diagnostic, 1\u00a0semaine, 890\u00a0€ déduits du 1er mois',
+    entryCta: 'Voir les offres',
   },
-  ticker:
-    'FIGMA · POPPY · DESIGN SYSTEM · BLEU KLEIN · SAAS B2B · PLUIE SUR VELUX · CLAUDE CODE · EAU FRAÎCHE OU VIN BLANC · RECHERCHE UTILISATEUR · COUCHERS DE SOLEIL · IA · WAALAXY · PLAYLIST EN BOUCLE · ',
   featured: {
     label: 'Travaux sélectionnés',
     title: 'Projets récents',
@@ -127,15 +124,15 @@ const UI_FR = {
     title: 'Votre produit a des clients. Il lui manque une designer.',
     subtitle: 'Je repense vos parcours clés et je les livre directement dans votre code.',
     steps: [
-      { icon: 'ticket', title: 'Un ticket dans votre outil', detail: 'Jira, ClickUp, Asana' },
-      { icon: 'pullRequest', title: 'Une pull request', detail: 'sur votre GitHub' },
-      { icon: 'review', title: 'Relue par votre dev', detail: 'avant la mise en ligne' },
+      { icon: 'ticket', title: 'Je conçois et prototype', detail: 'à partir d’un ticket Jira, ClickUp ou Asana' },
+      { icon: 'pullRequest', title: 'J’ouvre une pull request', detail: 'directement sur votre GitHub' },
+      { icon: 'review', title: 'Votre dev relit chaque PR', detail: 'et valide avant la mise en ligne' },
     ],
     diagnostic: {
       name: 'Diagnostic',
       tagline: 'pour savoir par où commencer',
       description:
-        "En 1 semaine : l'audit de votre parcours principal, vos priorités classées et votre écran le plus critique en prototype codé.",
+        "En 1 semaine : votre écran le plus critique repensé et prototypé en code, à partir de l'audit de votre parcours principal et de vos priorités classées.",
       price: '890 €',
       note: 'déduit du 1er mois',
     },
@@ -148,7 +145,7 @@ const UI_FR = {
         featured: true,
         price: '3 590 €',
         meta: '2 à 3 jours par semaine',
-        listLabel: 'En 3 mois :',
+        listLabel: 'En 2 mois :',
         deliverables: [
           'vos parcours clés repensés, un par un',
           'prototypés puis livrés dans votre code',
@@ -170,24 +167,44 @@ const UI_FR = {
         ],
       },
     ],
-    billing: 'Facturé en début de mois. Engagement 3 mois, puis mois par mois avec un mois de préavis.',
+    billing: 'Facturé en début de mois. Engagement 2 mois, puis mois par mois avec un mois de préavis.',
     vat: 'TVA non applicable, art. 293 B du CGI',
     optionsLabel: 'Options',
     options: [
       { icon: 'sparkles', name: 'Règles de design pour vos outils IA', price: '900 €', includedIn: 'inclus dans Partenaire' },
       { icon: 'layout', name: 'Landing page designée et codée', price: 'dès 890 €', includedIn: '' },
       { icon: 'chart', name: 'Plan de tracking', price: '450 €', includedIn: 'inclus dans Partenaire' },
-      { icon: 'route', name: 'Parcours supplémentaire audité', price: '450 €', includedIn: '' },
+      { icon: 'route', name: 'Parcours supplémentaire audité', price: '225 €', includedIn: '' },
     ],
     faqLabel: 'Questions fréquentes',
     faq: [
       {
-        question: 'Qui relit le code que vous livrez ?',
-        answer: 'Votre dev relit chaque pull request sur GitHub, avant la mise en ligne.',
+        question: 'En quoi c’est différent d’un designer freelance ?',
+        answer: 'La plupart des designers livrent des maquettes que votre équipe doit ensuite recoder. Moi, je livre directement dans votre code, sous forme de pull request.',
+      },
+      {
+        question: 'Une designer dans notre code, ce n’est pas risqué ?',
+        answer: 'Chaque modification passe par une pull request que votre dev relit sur GitHub. Rien n’est mis en ligne sans sa validation.',
+      },
+      {
+        question: 'Vous travaillez sur quelle stack ?',
+        answer: 'Sur votre front web, quel que soit le framework : React, Next.js, Vue ou autre. Je m’adapte à votre code existant.',
+      },
+      {
+        question: 'Vous livrez aussi des maquettes Figma ?',
+        answer: 'Si vous en avez besoin. J’utilise Figma pour explorer, mais le livrable final, c’est le code.',
+      },
+      {
+        question: 'Et si notre dev n’a pas le temps de relire ?',
+        answer: 'Je m’adapte. Je peux par exemple vous livrer des prototypes codés, prêts à être intégrés quand votre équipe sera disponible.',
+      },
+      {
+        question: 'Vous codez avec l’IA : et la confidentialité ?',
+        answer: 'Je signe un NDA si vous le souhaitez, et je n’ai accès qu’au repo et aux outils nécessaires à la mission.',
       },
       {
         question: 'Dans quels outils vous travaillez ?',
-        answer: 'Les vôtres : Jira, ClickUp ou Asana pour les tickets, GitHub pour le code.',
+        answer: 'Les vôtres : Jira, ClickUp ou Asana pour les tickets, GitHub pour le code. Et de mon côté, Claude Code pour concevoir et coder plus vite.',
       },
       {
         question: 'Comment on se parle au quotidien ?',
@@ -198,8 +215,8 @@ const UI_FR = {
         answer: "Pour savoir par où commencer avant de s'engager au mois. Les 890 € sont déduits du premier mois.",
       },
       {
-        question: 'Et après les 3 mois ?',
-        answer: 'On continue au mois, et vous pouvez arrêter avec un mois de préavis.',
+        question: 'Et après les 2 mois ?',
+        answer: 'Au bout de 2 mois, vos parcours clés sont repensés et livrés dans votre code, et votre design system a ses bases. Ensuite, on continue au mois, sans nouvel engagement. Pour arrêter, prévenez-moi un mois à l’avance : ce dernier mois reste travaillé et facturé normalement, puis la mission s’arrête.',
       },
     ],
     cta: 'Réserver un appel',
@@ -234,17 +251,14 @@ const UI_EN: UIStrings = {
     headlineRole: 'Designer',
     headlineTag: '• who Vibecodes',
     aria: 'Product & System Designer who vibecodes',
-    sub: 'I design interfaces that convert and design systems built to last. 3.5 years at Waalaxy, freelance since.',
+    sub: "Your product has customers. It's missing a designer. I redesign your key user journeys and ship them straight into your code. Former Lead Design System at Waalaxy.",
+    ctaTalk: 'Book a call',
     ctaProjects: 'View my work',
-    ctaTalk: "Let's talk?",
-    stats: [
-      { value: '×2.5', label: 'on Business subscriptions' },
-      { value: '83.5%', label: 'first-try success' },
-      { value: '1', label: 'dog on remote duty' },
-    ],
+    stepsLabel: 'How I deliver',
+    stepsIntro: 'No mockup to rebuild: every journey lands in your code, reviewed by your team.',
+    entry: 'To start: the Diagnostic, 1\u00a0week, €890 deducted from your 1st month',
+    entryCta: 'See pricing',
   },
-  ticker:
-    'FIGMA · POPPY · DESIGN SYSTEM · BLEU KLEIN · SAAS B2B · RAIN ON SKYLIGHTS · CLAUDE CODE · COLD WATER OR WHITE WINE · USER RESEARCH · GOLDEN HOUR · AI · WAALAXY · THE SAME PLAYLIST ON REPEAT · ',
   featured: {
     label: 'Selected work',
     title: 'Recent projects',
@@ -315,15 +329,15 @@ const UI_EN: UIStrings = {
     title: "Your product has customers. It's missing a designer.",
     subtitle: 'I redesign your key user journeys and ship them straight into your code.',
     steps: [
-      { icon: 'ticket', title: 'A ticket in your tool', detail: 'Jira, ClickUp, Asana' },
-      { icon: 'pullRequest', title: 'A pull request', detail: 'on your GitHub' },
-      { icon: 'review', title: 'Reviewed by your dev', detail: 'before it goes live' },
+      { icon: 'ticket', title: 'I design and prototype', detail: 'from a Jira, ClickUp or Asana ticket' },
+      { icon: 'pullRequest', title: 'I open a pull request', detail: 'straight on your GitHub' },
+      { icon: 'review', title: 'Your dev reviews every PR', detail: 'and approves it before it goes live' },
     ],
     diagnostic: {
       name: 'Diagnostic',
       tagline: 'to know where to start',
       description:
-        'In 1 week: an audit of your main user journey, your priorities ranked and your most critical screen as a coded prototype.',
+        'In 1 week: your most critical screen redesigned and prototyped in code, based on an audit of your main user journey and your priorities ranked.',
       price: '€890',
       note: 'deducted from your 1st month',
     },
@@ -336,7 +350,7 @@ const UI_EN: UIStrings = {
         featured: true,
         price: '€3,590',
         meta: '2 to 3 days a week',
-        listLabel: 'In 3 months:',
+        listLabel: 'In 2 months:',
         deliverables: [
           'your key user journeys redesigned, one by one',
           'prototyped, then shipped into your code',
@@ -358,24 +372,44 @@ const UI_EN: UIStrings = {
         ],
       },
     ],
-    billing: "Billed at the start of each month. 3-month commitment, then month to month with one month's notice.",
+    billing: "Billed at the start of each month. 2-month commitment, then month to month with one month's notice.",
     vat: 'VAT not applicable, art. 293 B of the French Tax Code',
     optionsLabel: 'Add-ons',
     options: [
       { icon: 'sparkles', name: 'Design rules for your AI tools', price: '€900', includedIn: 'included in Partner' },
       { icon: 'layout', name: 'Landing page, designed and coded', price: 'from €890', includedIn: '' },
       { icon: 'chart', name: 'Measurement plan', price: '€450', includedIn: 'included in Partner' },
-      { icon: 'route', name: 'Extra user journey audit', price: '€450', includedIn: '' },
+      { icon: 'route', name: 'Extra user journey audit', price: '€225', includedIn: '' },
     ],
     faqLabel: 'FAQ',
     faq: [
       {
-        question: 'Who reviews the code you ship?',
-        answer: 'Your dev reviews every pull request on GitHub before it goes live.',
+        question: 'How is this different from a freelance designer?',
+        answer: 'Most designers hand over mockups your team then has to rebuild in code. I ship straight into your code, as a pull request.',
+      },
+      {
+        question: 'Isn’t it risky to have a designer in our code?',
+        answer: 'Every change goes through a pull request your dev reviews on GitHub. Nothing goes live without their approval.',
+      },
+      {
+        question: 'Which stack do you work on?',
+        answer: 'Your web front end, whatever the framework: React, Next.js, Vue or something else. I adapt to your existing code.',
+      },
+      {
+        question: 'Do you also deliver Figma mockups?',
+        answer: 'If you need them. I use Figma to explore, but the final deliverable is the code.',
+      },
+      {
+        question: 'What if our dev has no time to review?',
+        answer: 'I adapt. For example, I can deliver coded prototypes, ready to integrate when your team is available.',
+      },
+      {
+        question: 'You code with AI: what about confidentiality?',
+        answer: 'I sign an NDA if you want one, and I only access the repo and the tools the work needs.',
       },
       {
         question: 'Which tools do you work in?',
-        answer: 'Yours: Jira, ClickUp or Asana for tickets, GitHub for code.',
+        answer: 'Yours: Jira, ClickUp or Asana for tickets, GitHub for code. And on my side, Claude Code to design and build faster.',
       },
       {
         question: 'How do we stay in touch day to day?',
@@ -386,8 +420,8 @@ const UI_EN: UIStrings = {
         answer: 'To know where to start before committing monthly. The €890 is deducted from your first month.',
       },
       {
-        question: 'What happens after 3 months?',
-        answer: "We keep going month to month, and you can stop with one month's notice.",
+        question: 'What happens after 2 months?',
+        answer: 'After 2 months, your key user journeys are redesigned and shipped in your code, and your design system has its foundations. Then we keep going month to month, with no new commitment. To stop, give me one month’s notice: that last month is worked and billed as usual, then the engagement ends.',
       },
     ],
     cta: 'Book a call',
