@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
 import { applyCardHoverAnimation } from '@/lib/cardHoverAnimation'
+import { useLang, getFeaturedProjects } from '@/lib/i18n'
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -33,7 +34,9 @@ const RADII = [
 
 // Type example colors use the live theme tokens (var(--text), var(--muted), var(--accent))
 // so the specimens render exactly as they do on the site, in either theme.
-const TYPE_SCALE: { name: string; spec: string; text: string; style: React.CSSProperties }[] = [
+type TypeRow = { name: string; spec: string; text: string; style?: React.CSSProperties; className?: string }
+
+const TYPE_SCALE: TypeRow[] = [
   { name: 'Display/Hero',  spec: 'Italiana · clamp(2.5rem,5vw,4rem)',   text: 'Product & System Designer',                style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: 'var(--text)', lineHeight: 1.1 } },
   { name: 'Display/Title', spec: 'Italiana · clamp(1.5rem,3vw,2.5rem)', text: 'Projets récents',                          style: { fontFamily: 'var(--font-italiana),Georgia,serif', fontSize: 'clamp(1.3rem,2.5vw,2rem)',   color: 'var(--text)', lineHeight: 1.15 } },
   { name: 'Body/Large',    spec: 'Inter 400 · 18px',                    text: 'Je conçois des interfaces qui convertissent', style: { fontFamily: 'var(--font-sans)', fontSize: '18px', fontWeight: 400, color: 'var(--text)' } },
@@ -81,7 +84,7 @@ function CellTitle({ children }: { children: React.ReactNode }) {
 
 // ─── Live card ────────────────────────────────────────────────────────────────
 
-function LiveCard() {
+function LiveCard({ tags, title, description, cta }: { tags: string; title: string; description: string; cta: string }) {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (!ref.current) return
@@ -94,18 +97,16 @@ function LiveCard() {
       style={{ background: 'var(--bg-card)', border: '0.5px solid var(--border)', borderRadius: '12px', padding: '20px', minHeight: '160px', willChange: 'transform' }}
     >
       <div className="relative z-10 flex flex-col flex-1">
-        <p style={{ fontSize: '10px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--muted)', opacity: 0.7, marginBottom: '10px' }}>
-          Product Design · Conversion
-        </p>
+        <p className="meta opacity-60 mb-2.5">{tags}</p>
         <h3 style={{ fontSize: '0.9rem', color: 'var(--text)', lineHeight: 1.25, marginBottom: '8px', fontFamily: 'var(--font-sans)', fontWeight: 700 }}>
-          Pousser l&apos;achat au bon moment
+          {title}
         </h3>
-        <p style={{ fontSize: '12px', color: 'var(--muted)', lineHeight: 1.55 }}>
-          Refonte du parcours upgrade pour déclencher la conversion.
+        <p className="line-clamp-2" style={{ fontSize: '12px', color: 'var(--muted)', lineHeight: 1.55 }}>
+          {description}
         </p>
         <div style={{ marginTop: 'auto', paddingTop: '16px' }}>
           <span data-card-cta style={{ fontSize: '12px', color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-            Voir le case study →
+            {cta}
           </span>
         </div>
       </div>
@@ -117,6 +118,18 @@ function LiveCard() {
 
 export default function DesignSystemPage() {
   const gridRef = useRef<HTMLDivElement>(null)
+  const { t, lang } = useLang()
+  const featured = getFeaturedProjects(lang)[0]
+  const cardTags = featured?.tags.slice(0, 3).join(' · ') ?? ''
+
+  // Reusable text styles rendered with their real class, fed with live site copy,
+  // so the specimen can never drift from production.
+  const typeRows: TypeRow[] = [
+    ...TYPE_SCALE.slice(0, 2),
+    { name: 'Lead', spec: '.lead · Inter 400 · 18px → 20px (md) · muted', text: t.hero.sub, className: 'lead' },
+    ...TYPE_SCALE.slice(2),
+    { name: 'Meta', spec: '.meta · Inter 400 · 12px · uppercase · ls 0.08em · muted', text: cardTags, className: 'meta' },
+  ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -144,6 +157,7 @@ export default function DesignSystemPage() {
         .cell-radius     { grid-column: 9 / span 4;  grid-row: 5 / span 2; }
         .cell-cards      { grid-column: 1 / span 6;  grid-row: 7 / span 3; }
         .cell-nav        { grid-column: 7 / span 6;  grid-row: 7 / span 3; }
+        .cell-effects    { grid-column: 1 / span 12; grid-row: 10 / span 1; }
 
         /* ── Typography inner table ────────────────────────────── */
         .typo-row {
@@ -173,7 +187,8 @@ export default function DesignSystemPage() {
           .cell-badge,
           .cell-radius,
           .cell-cards,
-          .cell-nav {
+          .cell-nav,
+          .cell-effects {
             grid-column: 1 / -1;
             grid-row: auto;
           }
@@ -253,11 +268,11 @@ export default function DesignSystemPage() {
             <CellLabel>Core</CellLabel>
             <CellTitle>Typography</CellTitle>
             <div className="divide-y divide-border/30">
-              {TYPE_SCALE.map(({ name, spec, text, style: typoStyle }) => (
+              {typeRows.map(({ name, spec, text, style: typoStyle, className }) => (
                 <div key={name} className="typo-row">
                   <p className="typo-name" style={{ ...MONO, color: 'var(--muted)' }}>{name}</p>
                   <p className="typo-spec" style={MONO}>{spec}</p>
-                  <p style={typoStyle}>{text}</p>
+                  <p className={className} style={typoStyle}>{text}</p>
                 </div>
               ))}
             </div>
@@ -309,12 +324,12 @@ export default function DesignSystemPage() {
           <div className="bento-cell cell-badge" style={CELL_BASE}>
             <CellLabel>Components</CellLabel>
             <CellTitle>Badge</CellTitle>
-            {/* Mirrors the live hero badge exactly: accent dot, muted/70 text, border-border/50 */}
-            <span className="inline-flex items-center gap-2 text-[0.6rem] font-sans font-medium tracking-[0.22em] uppercase text-muted/70 border border-border/50 rounded-full px-3 py-1.5">
+            {/* Same classes as the live hero badge (components/home/Hero.tsx) */}
+            <span className="section-label tracking-[0.12em] sm:tracking-[0.2em] inline-flex items-center gap-2 border border-border/50 rounded-full px-3 py-1.5">
               <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
-              Montpellier &amp; Remote
+              {t.hero.badge}
             </span>
-            <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>Accent dot · pulse · 0.6rem uppercase · ls 0.22em · pill border</p>
+            <p style={{ ...MONO, marginTop: '12px', fontSize: '10px' }}>.section-label · accent dot · pulse · pill border</p>
           </div>
 
           {/* ── RADIUS: 4×2 ─────────────────────────────────────────────── */}
@@ -344,7 +359,12 @@ export default function DesignSystemPage() {
             <p style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: 'var(--font-sans)', marginBottom: '20px', lineHeight: 1.5 }}>
               Hover to preview: reed overlay · 3D tilt · amber border · title shift · CTA slide
             </p>
-            <LiveCard />
+            <LiveCard
+              tags={cardTags}
+              title={featured?.title ?? ''}
+              description={featured?.description ?? ''}
+              cta={t.featured.viewCase}
+            />
           </div>
 
           {/* ── NAVIGATION: 6×3 ─────────────────────────────────────────── */}
@@ -426,6 +446,24 @@ export default function DesignSystemPage() {
                   <p style={MONO}>{label}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* ── EFFECTS: 12×1 ───────────────────────────────────────────── */}
+          <div className="bento-cell cell-effects" style={CELL_BASE}>
+            <CellLabel>Core</CellLabel>
+            <CellTitle>Effects</CellTitle>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <div className="page-header-bg h-28 rounded-lg border border-border" />
+                <p style={{ ...MONO, marginTop: '8px' }}>.page-header-bg · accent-dim glow + reed stripes · headers Projects, Pricing</p>
+              </div>
+              <div>
+                <div className="relative h-28 rounded-lg border border-border overflow-hidden">
+                  <div className="glow-accent absolute -top-16 -left-16 w-48 h-48 rounded-full" />
+                </div>
+                <p style={{ ...MONO, marginTop: '8px' }}>.glow-accent · radial accent 12% · About CTA</p>
+              </div>
             </div>
           </div>
 
