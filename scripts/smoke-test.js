@@ -10,15 +10,22 @@ const BASE_URL = process.argv[2] ?? 'http://localhost:3000'
 
 const STATIC_PAGES = ['/', '/projects', '/about', '/pricing', '/design-system']
 
-// Project pages are read from lib/projects-data.ts so the list can never drift
-// from the content. Only the FR block is scanned: EN reuses the same slugs.
+// Project pages are read from lib/projects/ (one file per case study) so the list
+// can never drift from the content. The first slug of each file is the FR one;
+// EN reuses the same slug.
 function readProjectSlugs() {
-  const file = path.join(__dirname, '..', 'lib', 'projects-data.ts')
-  const source = fs.readFileSync(file, 'utf8')
-  const frBlock = source.slice(0, source.indexOf('const PROJECTS_EN'))
-  const slugs = [...frBlock.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1])
+  const dir = path.join(__dirname, '..', 'lib', 'projects')
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.ts') && f !== 'index.ts')
+  const slugs = files.map((f) => {
+    const match = fs.readFileSync(path.join(dir, f), 'utf8').match(/slug:\s*'([^']+)'/)
+    if (!match) {
+      console.error(`✗ No slug found in lib/projects/${f}`)
+      process.exit(1)
+    }
+    return match[1]
+  })
   if (slugs.length === 0) {
-    console.error('✗ No project slug found in lib/projects-data.ts')
+    console.error('✗ No case study found in lib/projects/')
     process.exit(1)
   }
   return slugs
