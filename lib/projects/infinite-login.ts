@@ -22,7 +22,7 @@ export const infiniteLogin: LocalizedProject = {
     metrics: [
       { value: '0', label: 'déconnexion pour les comptes connectés en 2FA' },
       { value: '42%', label: 'des utilisateurs connectés via la 2FA (avril-mai 2026)' },
-      { value: '-18%', label: 'de demandes au support, toutes demandes confondues' },
+      { value: '-18%', label: 'de demandes au support, de janvier à avril 2026' },
       { value: 'FR + EN', label: 'parcours et microcopy conçus dans les deux langues' },
     ],
     intro:
@@ -136,6 +136,10 @@ export const infiniteLogin: LocalizedProject = {
         blocks: [
           {
             type: 'p',
+            text: "Le brief est arrivé à la squad avec la solution choisie. J'ai mis au point les premiers wireframes avec le PM, puis le partage était clair : le PM a écrit les specs techniques, moi les maquettes et les specs d'interaction et de parcours. Le séparateur « ou » n'existait pas dans le design system : j'en ai fait une variante du composant séparateur, avec une propriété texte, ses specs, son ticket et sa documentation.",
+          },
+          {
+            type: 'p',
             text: "Le handoff est organisé parcours par parcours : une carte de couverture avec le statut, la langue, la date de mise à jour et la version, puis les écrans dans l'ordre, en français et en anglais. Chaque décision est annotée sur l'écran, avec sa date et son auteur.",
           },
           {
@@ -157,7 +161,7 @@ export const infiniteLogin: LocalizedProject = {
             items: [
               'Les comptes connectés en 2FA ne sont plus déconnectés.',
               "42% des utilisateurs étaient connectés via la 2FA au printemps 2026. Les autres restaient en connexion simple, plus une petite part de comptes gratuits qui gardent leur ordinateur allumé.",
-              'Les demandes au support ont baissé de 18%, toutes demandes confondues.',
+              'Les demandes au support ont baissé de 18%, toutes demandes confondues, de janvier à avril 2026.',
             ],
           },
           {
@@ -203,7 +207,7 @@ export const infiniteLogin: LocalizedProject = {
     metrics: [
       { value: '0', label: 'disconnections for accounts connected through 2FA' },
       { value: '42%', label: 'of users connected through 2FA (April-May 2026)' },
-      { value: '-18%', label: 'support requests, all topics combined' },
+      { value: '-18%', label: 'support requests, January to April 2026' },
       { value: 'FR + EN', label: 'flow and microcopy designed in both languages' },
     ],
     intro:
@@ -317,6 +321,10 @@ export const infiniteLogin: LocalizedProject = {
         blocks: [
           {
             type: 'p',
+            text: 'The brief reached the squad with the solution already chosen. I refined the first wireframes with the PM, then the split was clear: the PM wrote the technical specs, I did the mockups and the interaction and flow specs. The "or" divider did not exist in the design system: I added a variant of the divider component with a text property, along with its specs, ticket and documentation.',
+          },
+          {
+            type: 'p',
             text: 'The handoff is organised flow by flow: a cover card with status, language, last update date and version, then the screens in order, in French and English. Every decision is annotated on the screen, with its date and author.',
           },
           {
@@ -338,7 +346,7 @@ export const infiniteLogin: LocalizedProject = {
             items: [
               'Accounts connected through 2FA no longer get disconnected.',
               '42% of users were connected through 2FA in spring 2026. The others stayed on simple login, plus a small share of free accounts that keep their computer on.',
-              'Support requests dropped by 18%, all topics combined.',
+              'Support requests dropped by 18%, all topics combined, from January to April 2026.',
             ],
           },
           {
