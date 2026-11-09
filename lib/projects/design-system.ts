@@ -46,8 +46,14 @@ export const designSystem: LocalizedProject = {
             text: "J'ai commencé par un audit complet. Inventaire de toutes les interfaces, screenshots de chaque variante de chaque pattern (jusqu'à lister toutes les façons de fermer une modale dans l'app, oui, toutes). Un travail de fourmi, mais c'est exactement ce qui révèle où est le vrai chaos.",
           },
           {
-            type: 'p',
+            type: 'layers',
             text: "Ensuite, structurer la library en couches : les fondations (couleurs, typo, spacing, radius, tous en variables Figma), les composants core, puis les composants plus spécifiques au métier. Chaque couche a sa raison d'être, chaque token a une seule source de vérité. C'est la base qui permet à tout le reste de tenir debout, même quand la couleur de marque change du jour au lendemain.",
+            layers: [
+              { name: 'Composants métier', detail: 'propres au produit' },
+              { name: 'Composants core', detail: 'boutons, inputs, modales' },
+              { name: 'Fondations', detail: 'couleurs, typo, spacing, radius' },
+            ],
+            caption: "Chaque couche s'appuie sur celle du dessous",
           },
           {
             type: 'img',
@@ -88,6 +94,11 @@ export const designSystem: LocalizedProject = {
           },
           {
             type: 'img',
+            src: '/projects/design-system/contribution-flow.webp',
+            caption: "Le circuit de contribution : selon ce qui existe déjà, une demande devient une contribution Light, Medium ou Heavy, puis passe en review DS",
+          },
+          {
+            type: 'img',
             src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
             caption: 'Tuto pour contribuer sur des branches Figma [NEW], [MAJ], [FIX]',
           },
@@ -120,6 +131,10 @@ export const designSystem: LocalizedProject = {
           {
             type: 'p',
             text: "WAATOM est devenu un vrai langage commun entre design et dev. Les designers savaient où chercher avant de recréer. Les devs savaient ce qu'ils intégraient avant de commencer. Et moi, je suis passée de \"celle qui fait des boutons\" à garante d'une cohérence qui tient sur des dizaines d'écrans et plusieurs équipes.",
+          },
+          {
+            type: 'p',
+            text: "La preuve la plus concrète se trouve dans ClickUp. Quand une carte était renvoyée en recette, on renseignait la raison du retour, et l'une des options était « maquette non respectée ». À mesure que WAATOM s'installait, elle a servi de moins en moins, jusqu'à tomber à zéro. On a fini par la supprimer de la liste.",
           },
           {
             type: 'callout',
@@ -189,8 +204,14 @@ export const designSystem: LocalizedProject = {
             text: "I started with a full audit. An inventory of every interface, screenshots of every variant of every pattern (down to listing every way to close a modal in the app, yes, all of them). Painstaking work, and exactly what reveals where the real chaos is.",
           },
           {
-            type: 'p',
+            type: 'layers',
             text: "Then, structuring the library in layers: the foundations (colours, type, spacing, radius, all as Figma variables), the core components, then the more business-specific ones. Each layer has its reason to exist, each token has a single source of truth. That's the base that keeps everything else standing, even when the brand colour changes overnight.",
+            layers: [
+              { name: 'Business components', detail: 'specific to the product' },
+              { name: 'Core components', detail: 'buttons, inputs, modals' },
+              { name: 'Foundations', detail: 'colours, type, spacing, radius' },
+            ],
+            caption: 'Each layer builds on the one below',
           },
           {
             type: 'img',
@@ -231,6 +252,11 @@ export const designSystem: LocalizedProject = {
           },
           {
             type: 'img',
+            src: '/projects/design-system/contribution-flow.webp',
+            caption: 'The contribution flow: depending on what already exists, a request becomes a Light, Medium or Heavy contribution, then goes to DS review',
+          },
+          {
+            type: 'img',
             src: '/projects/design-system/Clipboard-20260518-193823-403.gif',
             caption: 'Tutorial for contributing on Figma branches [NEW], [MAJ], [FIX]',
           },
@@ -263,6 +289,10 @@ export const designSystem: LocalizedProject = {
           {
             type: 'p',
             text: 'WAATOM became a real shared language between design and dev. Designers knew where to look before recreating. Devs knew what they were integrating before they started. And I went from "the one who makes buttons" to the person guaranteeing a consistency that held across dozens of screens and several teams.',
+          },
+          {
+            type: 'p',
+            text: 'The most concrete proof lives in ClickUp. When a ticket was sent back during QA, we logged the reason, and one of the options was "design not followed". As WAATOM settled in, it was used less and less, until it dropped to zero. We ended up deleting it from the list.',
           },
           {
             type: 'callout',

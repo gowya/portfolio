@@ -43,6 +43,9 @@ export type Block =
   | { type: 'video'; src: string; poster?: string; caption?: string; autoplay?: boolean }
   | { type: 'list'; items: string[] }
   | { type: 'callout'; text: string }
+  // Paragraphe avec un petit schéma de couches empilées à sa droite (dessous sur mobile).
+  // Les couches se lisent de haut en bas : la dernière est le socle.
+  | { type: 'layers'; text: string; layers: Array<{ name: string; detail: string }>; caption?: string }
   | { type: 'link'; href: string; label: string }
 
 export interface CaseStudySection {
