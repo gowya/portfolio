@@ -22,7 +22,7 @@ export const infiniteLogin: LocalizedProject = {
     metrics: [
       { value: '0', label: 'déconnexion pour les comptes connectés en 2FA' },
       { value: '42%', label: 'des utilisateurs connectés via la 2FA (avril-mai 2026)' },
-      { value: '-18%', label: 'de demandes au support, toutes demandes confondues' },
+      { value: '-18%', label: 'de demandes au support, de janvier à avril 2026' },
       { value: 'FR + EN', label: 'parcours et microcopy conçus dans les deux langues' },
     ],
     intro:
@@ -46,11 +46,11 @@ export const infiniteLogin: LocalizedProject = {
         ],
       },
       {
-        title: "L'idée écartée : prévenir par email",
+        title: "L'idée mise de côté : prévenir par email",
         blocks: [
           {
             type: 'p',
-            text: "Ma première idée était d'envoyer un email à l'utilisateur au moment de sa déconnexion. Elle n'a pas été retenue, et avec le recul, c'était juste. L'email ne relançait pas les actions. Lu sur un téléphone, il ne permettait rien, à part constater le problème. Il traitait le symptôme, et il fallait régler la cause pour que personne n'ait à revivre la situation.",
+            text: "Ma première idée était d'envoyer un email à l'utilisateur au moment de sa déconnexion. Elle n'a pas été retenue, et je la défendrais encore aujourd'hui. Un utilisateur qui a préparé deux ou trois campagnes d'avance les laisse tourner et peut revenir deux semaines plus tard. Tant qu'il n'ouvre pas l'app, rien ne lui dit que tout s'est arrêté. Il lui faut une alerte au moment où ça arrive, et l'email est le canal qui l'atteint hors de l'app. L'email ne relance pas les actions : c'est la 2FA qui règle la cause. Pour les comptes restés en connexion simple, il reste le moyen le plus sûr de l'apprendre à temps.",
           },
         ],
       },
@@ -136,6 +136,10 @@ export const infiniteLogin: LocalizedProject = {
         blocks: [
           {
             type: 'p',
+            text: "Le brief est arrivé à la squad avec la solution choisie. J'ai mis au point les premiers wireframes avec le PM, puis le partage était clair : le PM a écrit les specs techniques, moi les maquettes et les specs d'interaction et de parcours. Le séparateur « ou » n'existait pas dans le design system : j'en ai fait une variante du composant séparateur, avec une propriété texte, ses specs, son ticket et sa documentation.",
+          },
+          {
+            type: 'p',
             text: "Le handoff est organisé parcours par parcours : une carte de couverture avec le statut, la langue, la date de mise à jour et la version, puis les écrans dans l'ordre, en français et en anglais. Chaque décision est annotée sur l'écran, avec sa date et son auteur.",
           },
           {
@@ -157,7 +161,7 @@ export const infiniteLogin: LocalizedProject = {
             items: [
               'Les comptes connectés en 2FA ne sont plus déconnectés.',
               "42% des utilisateurs étaient connectés via la 2FA au printemps 2026. Les autres restaient en connexion simple, plus une petite part de comptes gratuits qui gardent leur ordinateur allumé.",
-              'Les demandes au support ont baissé de 18%, toutes demandes confondues.',
+              'Les demandes au support ont baissé de 18%, toutes demandes confondues, de janvier à avril 2026.',
             ],
           },
           {
@@ -203,7 +207,7 @@ export const infiniteLogin: LocalizedProject = {
     metrics: [
       { value: '0', label: 'disconnections for accounts connected through 2FA' },
       { value: '42%', label: 'of users connected through 2FA (April-May 2026)' },
-      { value: '-18%', label: 'support requests, all topics combined' },
+      { value: '-18%', label: 'support requests, January to April 2026' },
       { value: 'FR + EN', label: 'flow and microcopy designed in both languages' },
     ],
     intro:
@@ -227,11 +231,11 @@ export const infiniteLogin: LocalizedProject = {
         ],
       },
       {
-        title: 'The idea we dropped: an email alert',
+        title: 'The idea set aside: an email alert',
         blocks: [
           {
             type: 'p',
-            text: 'My first idea was to email users when they got disconnected. It was not kept, and looking back, rightly so. The email did not restart the actions. Read on a phone, it only let people notice the problem. It treated the symptom, and the cause had to be fixed so nobody would live through it again.',
+            text: "My first idea was to email users when they got disconnected. It was not kept, and I would still argue for it today. A user who has prepared two or three campaigns ahead lets them run and may come back two weeks later. As long as they don't open the app, nothing tells them everything has stopped. They need an alert when it happens, and email is the channel that reaches them outside the app. Email does not restart the actions: 2FA is what fixes the cause. For accounts still on simple login, it remains the surest way to find out in time.",
           },
         ],
       },
@@ -317,6 +321,10 @@ export const infiniteLogin: LocalizedProject = {
         blocks: [
           {
             type: 'p',
+            text: 'The brief reached the squad with the solution already chosen. I refined the first wireframes with the PM, then the split was clear: the PM wrote the technical specs, I did the mockups and the interaction and flow specs. The "or" divider did not exist in the design system: I added a variant of the divider component with a text property, along with its specs, ticket and documentation.',
+          },
+          {
+            type: 'p',
             text: 'The handoff is organised flow by flow: a cover card with status, language, last update date and version, then the screens in order, in French and English. Every decision is annotated on the screen, with its date and author.',
           },
           {
@@ -338,7 +346,7 @@ export const infiniteLogin: LocalizedProject = {
             items: [
               'Accounts connected through 2FA no longer get disconnected.',
               '42% of users were connected through 2FA in spring 2026. The others stayed on simple login, plus a small share of free accounts that keep their computer on.',
-              'Support requests dropped by 18%, all topics combined.',
+              'Support requests dropped by 18%, all topics combined, from January to April 2026.',
             ],
           },
           {
