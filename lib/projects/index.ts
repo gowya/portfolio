@@ -9,10 +9,12 @@ import { csvImport } from './csv-import'
 import { ajoutDeLia } from './ajout-de-lia'
 import { campaignManager } from './campaign-manager'
 import { designSystem } from './design-system'
+import { infiniteLogin } from './infinite-login'
 import { saasRecrutement } from './saas-recrutement'
 
 export const PROJECTS_ORDERED: LocalizedProject[] = [
   vela,
+  infiniteLogin,
   phoneVerif,
   trialByCard,
   rsvpParty,
