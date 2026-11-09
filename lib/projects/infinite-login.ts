@@ -46,11 +46,11 @@ export const infiniteLogin: LocalizedProject = {
         ],
       },
       {
-        title: "L'idée écartée : prévenir par email",
+        title: "L'idée mise de côté : prévenir par email",
         blocks: [
           {
             type: 'p',
-            text: "Ma première idée était d'envoyer un email à l'utilisateur au moment de sa déconnexion. Elle n'a pas été retenue, et avec le recul, c'était juste. L'email ne relançait pas les actions. Lu sur un téléphone, il ne permettait rien, à part constater le problème. Il traitait le symptôme, et il fallait régler la cause pour que personne n'ait à revivre la situation.",
+            text: "Ma première idée était d'envoyer un email à l'utilisateur au moment de sa déconnexion. Elle n'a pas été retenue, et je la défendrais encore aujourd'hui. Un utilisateur qui a préparé deux ou trois campagnes d'avance les laisse tourner et peut revenir deux semaines plus tard. Tant qu'il n'ouvre pas l'app, rien ne lui dit que tout s'est arrêté. Il lui faut une alerte au moment où ça arrive, et l'email est le canal qui l'atteint hors de l'app. L'email ne relance pas les actions : c'est la 2FA qui règle la cause. Pour les comptes restés en connexion simple, il reste le moyen le plus sûr de l'apprendre à temps.",
           },
         ],
       },
@@ -231,11 +231,11 @@ export const infiniteLogin: LocalizedProject = {
         ],
       },
       {
-        title: 'The idea we dropped: an email alert',
+        title: 'The idea set aside: an email alert',
         blocks: [
           {
             type: 'p',
-            text: 'My first idea was to email users when they got disconnected. It was not kept, and looking back, rightly so. The email did not restart the actions. Read on a phone, it only let people notice the problem. It treated the symptom, and the cause had to be fixed so nobody would live through it again.',
+            text: "My first idea was to email users when they got disconnected. It was not kept, and I would still argue for it today. A user who has prepared two or three campaigns ahead lets them run and may come back two weeks later. As long as they don't open the app, nothing tells them everything has stopped. They need an alert when it happens, and email is the channel that reaches them outside the app. Email does not restart the actions: 2FA is what fixes the cause. For accounts still on simple login, it remains the surest way to find out in time.",
           },
         ],
       },
