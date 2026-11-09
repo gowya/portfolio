@@ -49,6 +49,40 @@ function BlockRenderer({ block }: { block: Block }) {
         </div>
       )
 
+    case 'layers':
+      return (
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 mb-5">
+          <p className="flex-1 text-muted leading-relaxed text-[1.0625rem]">
+            {block.text}
+          </p>
+          <figure className="w-full sm:w-56 shrink-0">
+            <ol className="flex flex-col gap-1.5">
+              {block.layers.map((layer, i) => {
+                const isBase = i === block.layers.length - 1
+                return (
+                  <li
+                    key={i}
+                    className={`rounded-lg border px-3 py-2 ${
+                      isBase ? 'border-accent/60 bg-accent/10' : 'border-border bg-surface'
+                    }`}
+                  >
+                    <span className={`block text-sm font-medium ${isBase ? 'text-accent' : 'text-text'}`}>
+                      {layer.name}
+                    </span>
+                    <span className="block text-muted text-xs leading-snug">{layer.detail}</span>
+                  </li>
+                )
+              })}
+            </ol>
+            {block.caption && (
+              <figcaption className="text-muted text-xs text-center mt-2">
+                {block.caption}
+              </figcaption>
+            )}
+          </figure>
+        </div>
+      )
+
     case 'link':
       return (
         <p className="my-6">
