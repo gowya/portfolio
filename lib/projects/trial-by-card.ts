@@ -19,7 +19,7 @@ export const trialByCard: LocalizedProject = {
     status: 'Livré en production',
     team: '1 PM · 1 dev growth · 1 designer',
     metrics: [
-      { value: '×2,5', label: 'sur les abonnements Business en tant que 1er abonnement acheté' },
+      { value: '×2,5', label: 'sur la part de Business dans les premiers abonnements (~10% → 25%)' },
       { value: '+25%', label: "d'utilisateurs qui ajoutent leur CB" },
       { value: '100%', label: 'des nouveaux users ont un trial' },
       { value: '2 sem.', label: 'de délai avant la première release' },
@@ -173,7 +173,7 @@ export const trialByCard: LocalizedProject = {
     status: 'Shipped to production',
     team: '1 PM · 1 growth dev · 1 designer',
     metrics: [
-      { value: '×2.5', label: 'on Business plans as the first subscription purchased' },
+      { value: '×2.5', label: 'on the Business share of first subscriptions (~10% → 25%)' },
       { value: '+25%', label: 'increase in users adding their card' },
       { value: '100%', label: 'of new users get a trial' },
       { value: '2 wks', label: 'to the first release' },
