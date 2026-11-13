@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useLang } from '@/lib/i18n'
-import { BOOKING_URL } from '@/lib/links'
+import { BOOKING_URL, LINKEDIN_URL } from '@/lib/links'
 
 export default function Footer() {
   const { t } = useLang()
@@ -17,7 +17,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href="https://www.linkedin.com/in/margaux-francillard/"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted text-sm hover:text-text transition-colors"

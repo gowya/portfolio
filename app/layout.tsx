@@ -7,6 +7,8 @@ import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
 import Cursor from '@/components/ui/Cursor'
 import { LanguageProvider } from '@/lib/i18n'
+import { SITE_URL } from '@/lib/links'
+import { PERSON_JSON_LD } from '@/lib/structured-data'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -29,7 +31,7 @@ const italiana = Italiana({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gaumsportfolio.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Margaux Francillard • Product & System Designer SaaS B2B',
     template: '%s | Margaux Francillard',
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://gaumsportfolio.vercel.app',
+    url: SITE_URL,
     siteName: 'Margaux Francillard',
     title: 'Margaux Francillard • Product & System Designer SaaS B2B',
     description:
@@ -83,6 +85,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))}catch(e){}})()`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
         />
       </head>
       <body>
