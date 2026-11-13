@@ -5,8 +5,8 @@ export const parcoursUpgrade: LocalizedProject = {
   fr: {
     id: '2',
     slug: 'parcours-upgrade',
-    title: "Modales d'upgrade contextuelles : de 2% à ~10%",
-    tagline: 'Passer de 2% à environ 10% de conversion avec des modales contextuelles',
+    title: "Modales d'upgrade contextuelles : 9,08% contre 7,32%",
+    tagline: 'Des CTA contextuels qui convertissent mieux que les paywalls, sur le même funnel',
     description:
       "Refonte du parcours d'upgrade : personnaliser le message selon la situation de l'utilisateur.",
     coverImage: '/projects/parcours-upgrade.png',
@@ -19,8 +19,8 @@ export const parcoursUpgrade: LocalizedProject = {
     status: 'Livré en production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
-      { value: '~10%', label: 'de conversion depuis les CTA contextuels' },
-      { value: '2%', label: 'taux de conversion initial (page tarifs)' },
+      { value: '9,08%', label: 'de conversion depuis les CTA contextuels' },
+      { value: '7,32%', label: 'de conversion depuis les paywalls, sur le même funnel' },
       { value: '13,61%', label: "ouverture modale depuis CTA in-app" },
       { value: '3 CTA', label: 'personnalisés selon le flow de chaque user' },
     ],
@@ -126,7 +126,7 @@ export const parcoursUpgrade: LocalizedProject = {
             items: [
               "Taux d'ouverture de la modale comparative : 13,61% depuis un CTA contextuel vs 10,89% depuis un paywall",
               "Taux de conversion jusqu'à l'upgrade finalisé : 9,08% depuis un CTA contextuel vs 7,32% depuis un paywall",
-              "Pour rappel, la baseline de départ était le taux de conversion depuis la page de pricing, à 2%. Le parcours contextuel le dépasse de plus de 7 points.",
+              "Pour contexte, la page de pricing convertissait à 2% au départ. Ce chiffre porte sur un autre périmètre et sert uniquement à situer le problème.",
             ],
           },
           {
@@ -144,8 +144,8 @@ export const parcoursUpgrade: LocalizedProject = {
   en: {
     id: '2',
     slug: 'parcours-upgrade',
-    title: 'Contextual upgrade modals: from 2% to ~10%',
-    tagline: 'From 2% to around 10% conversion with contextual modals',
+    title: 'Contextual upgrade modals: 9.08% vs 7.32%',
+    tagline: 'Contextual CTAs that convert better than paywalls, on the same funnel',
     description:
       "Reworking the upgrade journey: tailoring the message to each user's situation.",
     coverImage: '/projects/parcours-upgrade.png',
@@ -158,8 +158,8 @@ export const parcoursUpgrade: LocalizedProject = {
     status: 'Shipped to production',
     team: '1 PM · 2 devs · 1 designer',
     metrics: [
-      { value: '~10%', label: 'conversion from contextual CTAs' },
-      { value: '2%', label: 'initial conversion rate (pricing page)' },
+      { value: '9.08%', label: 'conversion from contextual CTAs' },
+      { value: '7.32%', label: 'conversion from paywalls, on the same funnel' },
       { value: '13.61%', label: 'modal open rate from in-app CTAs' },
       { value: '3 CTAs', label: "tailored to each user's flow" },
     ],
@@ -265,7 +265,7 @@ export const parcoursUpgrade: LocalizedProject = {
             items: [
               'Comparison-modal open rate: 13.61% from a contextual CTA vs 10.89% from a paywall',
               'Conversion through to a completed upgrade: 9.08% from a contextual CTA vs 7.32% from a paywall',
-              'For reference, the starting baseline was the 2% conversion rate from the pricing page. The contextual journey beats it by more than seven points.',
+              'For context, the pricing page converted at 2% at the start. That figure covers a different scope and only serves to frame the problem.',
             ],
           },
           {
